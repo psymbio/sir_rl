@@ -1,0 +1,18 @@
+TY  - JOUR
+AU  - Song, Sirui
+AU  - Liu, Xue
+AU  - Li, Yong
+AU  - Yu, Yang
+PY  - 2022
+DA  - 2022/08/16
+TI  - Pandemic policy assessment by artificial intelligence
+JO  - Scientific Reports
+SP  - 13843
+VL  - 12
+IS  - 1
+AB  - Mobility-control policy is a controversial nonpharmacological approach to pandemic control due to its restriction on people’s liberty and economic impacts. Due to the computational complexity of mobility control, it is challenging to assess or compare alternative policies. Here, we develop a pandemic policy assessment system that employs artificial intelligence (AI) to evaluate and analyze mobility-control policies. The system includes three components: (1) a general simulation framework that models different policies to comparable network-flow control problems; (2) a reinforcement-learning (RL) oracle to explore the upper-bound execution results of policies; and (3) comprehensive protocols for converting the RL results to policy-assessment measures, including execution complexity, effectiveness, cost and benefit, and risk. We applied the system to real-world metropolitan data and evaluated three popular policies: city lockdown, community quarantine, and route management. For each policy, we generated mobility-pandemic trade-off frontiers. The results manifest that the smartest policies, such as route management, have high execution complexity but limited additional gain from mobility retention. In contrast, a moderate-level intelligent policy such as community quarantine has acceptable execution complexity but can effectively suppress infections and largely mitigate mobility interventions. The frontiers also show one or two turning points, reflecting the safe threshold of mobility retention when considering policy-execution errors. In addition, we simulated different policy environments and found inspirations for the current policy debates on the zero-COVID policy, vaccination policy, and relaxing restrictions.
+SN  - 2045-2322
+UR  - https://doi.org/10.1038/s41598-022-17892-8
+DO  - 10.1038/s41598-022-17892-8
+ID  - Song2022
+ER  - 
