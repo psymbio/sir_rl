@@ -1,14 +1,15 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from collections import deque
+from stable_baselines3 import PPO
+from stable_baselines3.common.env_checker import check_env
+import os
 import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
 from scipy.integrate import odeint
-from stable_baselines3 import PPO
-import os
+from collections import deque
 import json
+import matplotlib.pyplot as plt
 
 from constants import LOCATION_CHOOSEN, OUTPUT_DIR, DATA_CACHE_DIR, STRINGENCY_BASED_GDP, OPTIMAL_VALUES_FILE, MODELS_DIR
 OUTPUT_RL = os.path.join(OUTPUT_DIR, "rl")
@@ -125,7 +126,7 @@ class SIREnvironment(gym.Env):
         info = {}
         return observation, self.reward, self.terminated, self.truncated, info
     
-    def render(self, score=0.0):
+    def render(self, score=0.0, learning=False):
         self.t = np.linspace(0, TOTAL_DAYS, TOTAL_DAYS + 1)
         fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(10, 8))
         axes[0, 0].plot(self.t, self.df['S']/self.N, 'b', alpha=0.5, lw=2, label='Susceptible Data')
@@ -157,19 +158,22 @@ class SIREnvironment(gym.Env):
         axes[1, 0].grid(True)
 
         axes[1, 1].plot(self.t, self.store_r_eff, label="R_eff")
+        axes[1, 1].axhline(y=1, color='r', linestyle='--', label="R_eff = 1")
+        first_time_r_eff_1 = next((t for t, r_eff in zip(self.t, self.store_r_eff) if r_eff <= 1), None)
+        axes[1, 1].text(first_time_r_eff_1, 1, f'R_eff=1\nat t={int(first_time_r_eff_1)} days', ha='right', va='bottom')
         axes[1, 1].set_xlabel("Time /days")
         axes[1, 1].set_ylabel("R_eff")
         axes[1, 1].set_title("Time vs. R_eff")
         axes[1, 1].set_ylim(bottom=0, top=2.0)
         axes[1, 1].grid(True)
+        axes[1, 1].legend()
 
         formatted_score = "{:.2f}".format(score)
         fig.suptitle(f"Episode Score: {formatted_score}", y=0.02)
         plt.tight_layout()
-        # don't savefig while learning
-        plt.savefig(os.path.join(OUTPUT_RL, str(score) + ".png"))
+        if (learning == False):
+            plt.savefig(os.path.join(OUTPUT_RL, str(score) + ".png"))
         plt.close()
-        # plt.show()
         
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
@@ -214,21 +218,3 @@ class SIREnvironment(gym.Env):
         observation = np.array(observation)
         info = {}
         return observation, info
-    
-env = SIREnvironment()
-env.reset()
-
-model_path = os.path.join(MODELS_DIR, "1701259030", "70000.zip")
-model = PPO.load(model_path, env=env)
-
-episodes = 10
-for episode in range(1, episodes+1):
-    obs, info = env.reset()
-    terminated = False
-    score = 0
-    while not terminated:
-        action, _states = model.predict(obs)
-        obs, reward, terminated, truncated, info = env.step(action)
-        score += reward
-    print(f'Episode: {episode}, Score: {score}')
-    env.render(score=score)

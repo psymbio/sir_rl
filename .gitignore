@@ -1,5 +1,6 @@
 env/
 models/
 logs/
-papers/
+paper/
+paper_draft/
 trash/
