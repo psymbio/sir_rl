@@ -1,4 +1,4 @@
-from rl_utils import *
+from rl_utils_copy import *
 import time
 
 # env = SIREnvironment()
@@ -26,14 +26,30 @@ if not os.path.exists(models_dir):
 if not os.path.exists(logdir):
 	os.makedirs(logdir)
 
-env = SIREnvironment()
-env.reset()
+if RL_LEARNING_TYPE == "normal":
+	### Normal Learning ###
+	env = SIREnvironment()
+	env.reset()
+	model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=logdir)
 
-model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=logdir)
-
-TIMESTEPS = 10000
-iters = 0
-while True:
-	iters += 1
-	model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name=f"PPO")
-	model.save(f"{models_dir}/{TIMESTEPS*iters}")
+	TIMESTEPS = 10000
+	iters = 0
+	while True:
+		iters += 1
+		model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name=f"PPO")
+		model.save(f"{models_dir}/{TIMESTEPS*iters}")
+elif RL_LEARNING_TYPE == "deep":
+	### Deep Learning ###
+	env = SIREnvironment()
+	env.reset()
+	policy_kwargs = dict(
+		features_extractor_class=CustomCombinedExtractor,
+	)
+	model = PPO("MultiInputPolicy", env, policy_kwargs=policy_kwargs, verbose=0)
+	TIMESTEPS = 10000
+	iters = 0
+	while True:
+		iters += 1
+		print("ITER", iters)
+		model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name=f"PPO")
+		model.save(f"{models_dir}/{TIMESTEPS*iters}")

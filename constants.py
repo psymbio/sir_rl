@@ -10,3 +10,5 @@ MODELS_DIR = "models"
 
 STRINGENCY_BASED_GDP = "stringency_based_gdp.npy"
 OPTIMAL_VALUES_FILE = "optimal_values.json"
+
+RL_LEARNING_TYPE = "deep" # can be deep or normal

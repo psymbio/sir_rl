@@ -3,7 +3,8 @@ from rl_utils import *
 env = SIREnvironment()
 env.reset()
 
-model_path = os.path.join(MODELS_DIR, "1701361856", "50000.zip")
+# model_path = os.path.join(MODELS_DIR, "1701361856", "50000.zip")
+model_path = os.path.join(MODELS_DIR, "1701364459", "120000.zip")
 model = PPO.load(model_path, env=env)
 
 episodes = 1
