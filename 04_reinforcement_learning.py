@@ -1,4 +1,4 @@
-from rl_utils_copy import *
+from rl_utils import *
 import time
 
 # env = SIREnvironment()
@@ -27,7 +27,6 @@ if not os.path.exists(logdir):
 	os.makedirs(logdir)
 
 if RL_LEARNING_TYPE == "normal":
-	### Normal Learning ###
 	env = SIREnvironment()
 	env.reset()
 	model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=logdir)
@@ -39,7 +38,6 @@ if RL_LEARNING_TYPE == "normal":
 		model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name=f"PPO")
 		model.save(f"{models_dir}/{TIMESTEPS*iters}")
 elif RL_LEARNING_TYPE == "deep":
-	### Deep Learning ###
 	env = SIREnvironment()
 	env.reset()
 	policy_kwargs = dict(

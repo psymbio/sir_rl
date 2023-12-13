@@ -3,18 +3,18 @@ import numpy as np
 from stable_baselines3 import PPO
 from stable_baselines3.common.env_checker import check_env
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
+from stable_baselines3.common.preprocessing import get_flattened_obs_dim
 import torch as th
 import torch.nn as nn
 import os
 import gymnasium as gym
-import numpy as np
 from gymnasium import spaces
 from scipy.integrate import odeint
 from collections import deque
 import json
 import matplotlib.pyplot as plt
 
-from constants import LOCATION_CHOOSEN, OUTPUT_DIR, DATA_CACHE_DIR, STRINGENCY_BASED_GDP, OPTIMAL_VALUES_FILE, MODELS_DIR
+from constants import LOCATION_CHOOSEN, OUTPUT_DIR, DATA_CACHE_DIR, STRINGENCY_BASED_GDP, OPTIMAL_VALUES_FILE, MODELS_DIR, RL_LEARNING_TYPE
 OUTPUT_RL = os.path.join(OUTPUT_DIR, "rl")
 
 with open(OPTIMAL_VALUES_FILE, 'r') as f:
@@ -74,8 +74,15 @@ class SIREnvironment(gym.Env):
     def __init__(self):
         super(SIREnvironment, self).__init__()
         self.action_space = spaces.Discrete(N_DISCRETE_ACTIONS)
-        self.observation_space = spaces.Box(low=-10.0, high=10, shape=(5+TOTAL_DAYS,), dtype=np.float64)
-    
+        if RL_LEARNING_TYPE == "normal":
+            self.observation_space = spaces.Box(low=-10.0, high=10.0, shape=(5 + TOTAL_DAYS + 1,), dtype=np.float64)
+        elif RL_LEARNING_TYPE == "deep":
+            # code reference: https://github.com/DLR-RM/stable-baselines3/issues/1713
+            self.observation_space = spaces.Dict({"stringency": spaces.Box(low=-10.0, high=10, shape=(TOTAL_DAYS + 1,), dtype=np.float64),
+                                                  "normalized_gdp": spaces.Box(low=-10.0, high=10, shape=(TOTAL_DAYS + 1,), dtype=np.float64),
+                                                  "r_eff": spaces.Box(low=-10.0, high=10, shape=(TOTAL_DAYS + 1,), dtype=np.float64),
+                                                  "other_stats": spaces.Box(low=-10.0, high=10, shape=(3,), dtype=np.float64)
+                                                  })
     def step(self, action):
         self.prev_actions.append(action)
             
@@ -118,10 +125,17 @@ class SIREnvironment(gym.Env):
         self.reward = self.normalized_GDP / self.r_eff
         self.store_reward[self.ith_day] = self.reward
 
-        observation = [self.S_proportion, self.I_proportion, 
-                       self.R_proportion, self.normalized_GDP, 
-                       self.r_eff] + list(self.prev_actions)
-        observation = np.array(observation)
+        if RL_LEARNING_TYPE == "normal":
+            observation = [self.S_proportion, self.I_proportion, 
+                        self.R_proportion, self.normalized_GDP, 
+                        self.r_eff] + list(self.prev_actions)
+            observation = np.array(observation)
+        else:
+            observation = {}
+            observation["stringency"] = np.array(self.prev_actions)
+            observation["normalized_gdp"] = np.array(self.store_normalized_gdp)
+            observation["r_eff"] = np.array(self.store_r_eff)
+            observation["other_stats"] = np.array([self.S_proportion, self.I_proportion, self.R_proportion])
 
         # after doing the action add to ith_day
         # and then if ith_day is the last day then end the environment
@@ -155,7 +169,7 @@ class SIREnvironment(gym.Env):
         axes[0, 1].set_ylim(bottom=0, top=150)
         axes[0, 1].grid(True)
 
-        axes[1, 0].plot(self.t, self.store_gdp, label="GDP")
+        axes[1, 0].plot(self.t, self.store_gdp, 'b--', label="GDP")
         axes[1, 0].set_xlabel("Time /days")
         axes[1, 0].set_ylabel("GDP")
         axes[1, 0].set_title("Time vs. GDP")
@@ -222,47 +236,53 @@ class SIREnvironment(gym.Env):
         beta_for_stringency = time_varying_beta(self.beta_optimal, self.s_weight_optimal, self.stringency_index)
         self.r_eff = (beta_for_stringency / self.gamma_optimal) * (self.store_S[self.ith_day] / self.N)
         
-        self.prev_actions = deque(maxlen = TOTAL_DAYS)
-        for i in range(TOTAL_DAYS):
+        self.prev_actions = deque(maxlen = TOTAL_DAYS + 1)
+        for i in range(TOTAL_DAYS + 1):
             self.prev_actions.append(-1) 
         
         # create the observation
-        observation = [self.S_proportion, self.I_proportion, 
+        if RL_LEARNING_TYPE == "normal":
+            observation = [self.S_proportion, self.I_proportion, 
                        self.R_proportion, self.normalized_GDP, 
                        self.r_eff] + list(self.prev_actions)
-        observation = np.array(observation)
+            observation = np.array(observation)
+        elif RL_LEARNING_TYPE == "deep":
+            observation = {}
+            observation["stringency"] = np.array(self.prev_actions)
+            observation["normalized_gdp"] = np.array(self.store_normalized_gdp)
+            observation["r_eff"] = np.array(self.store_r_eff)
+            observation["other_stats"] = np.array([self.S_proportion, self.I_proportion, self.R_proportion])
         info = {}
         return observation, info
 
-# Neural network for predicting action values
-class LSTMFeatureExtractor(BaseFeaturesExtractor):
-    """_summary_"""
-    def __init__(self, observation_space: gym.spaces.Box, features_dim: int = 614):  # type: ignore
-        super().__init__(observation_space, features_dim)
-        self.LSTM = nn.LSTM(input_size=features_dim, hidden_size=100, num_layers=1)
+class CustomCombinedExtractor(BaseFeaturesExtractor):
+    def __init__(self, observation_space: gym.spaces.Dict):
+        super().__init__(observation_space, features_dim=1)
 
-    def forward(self, observations: th.Tensor) -> th.Tensor:
-        # th.tensor(observations)
-        observations.clone().detach()
-        self.LSTM_output, self.LSTM_hidden = self.LSTM(observations)
-        return self.LSTM_output + self.LSTM_hidden[0] + self.LSTM_hidden[1]
-# class CustomCNN(BaseFeaturesExtractor):
-#     def __init__(self, observation_space: gym.spaces.Box, features_dim: int=128):
-#         super(CustomCNN, self).__init__(observation_space, features_dim)
-#         # CxHxW images (channels first)
-#         n_input_channels = observation_space.shape[0]
-#         print("N INPUT CHANNELS: ", n_input_channels)
-#         self.cnn = nn.Sequential(
-#             nn.Linear(in_features=(n_input_channels), out_features=(100), bias=False),
-#             nn.ReLU(),
-#             nn.Flatten(),
-#         )
-#         with torch.no_grad():
-#             n_flatten = self.cnn(
-#                 torch.as_tensor(observation_space.sample()[None]).float()
-#             ).shape[1]
+        self.extractors = nn.ModuleDict()
+        total_concat_size = 0
 
-#         self.linear = nn.Sequential(nn.Linear(n_flatten, features_dim), nn.ReLU())
+        for key, subspace in observation_space.spaces.items():
+            if subspace.shape[0] == 610:  # LSTM for keys with shape 610
+                self.extractors[key] = nn.LSTM(input_size=1, hidden_size=16, batch_first=True)
+                total_concat_size += 16
+            elif key == "other_stats":  # Flatten for 'other_stats'
+                self.extractors[key] = nn.Flatten()
+                total_concat_size += get_flattened_obs_dim(subspace)
 
-#     def forward(self, observations: torch.Tensor) -> torch.Tensor:
-#         return self.linear(self.cnn(observations))
+        self._features_dim = total_concat_size
+
+    def forward(self, observations) -> th.Tensor:
+        encoded_tensor_list = []
+
+        for key, extractor in self.extractors.items():
+            if isinstance(extractor, nn.LSTM):
+                # LSTM expects input of shape (batch, seq_len, input_size)
+                obs = observations[key].unsqueeze(-1)
+                out, _ = extractor(obs)
+                # We take the final hidden state
+                encoded_tensor_list.append(out[:, -1, :])
+            else:
+                encoded_tensor_list.append(extractor(observations[key]))
+
+        return th.cat(encoded_tensor_list, dim=1)
