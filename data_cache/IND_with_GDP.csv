@@ -1,4 +1,4 @@
-stringency_index,total_cases,total_deaths,total_vaccinations,population,people_fully_vaccinated,Gross Domestic Product (GDP)  Normalised
+stringency_index,total_cases,total_deaths,total_vaccinations,population,people_fully_vaccinated,gdp_normalized
 0.0,1.0,1.0,0.0,1417173120.0,7668.0,
 0.0,1.0,1.0,0.0,1417173120.0,7668.0,
 0.0,1.0,1.0,0.0,1417173120.0,7668.0,

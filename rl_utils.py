@@ -30,15 +30,9 @@ predicted_gdp = fit_line_loaded(stringency_data_points)
 MIN_GDP = min(predicted_gdp)
 MAX_GDP = max(predicted_gdp)
 
-data_path = os.path.join(DATA_CACHE_DIR, LOCATION_CHOOSEN + ".csv")
+data_path = os.path.join(DATA_CACHE_DIR, LOCATION_CHOOSEN + "_merged_data.csv")
 df = pd.read_csv(data_path)
 df['date'] = pd.to_datetime(df['date'])
-df = df[(df['date'].dt.year == 2021) & (df['date'].dt.month >= 5) | (df['date'].dt.year == 2022)]
-
-df['N'] = df['population']
-df['S'] = df['population'] - (df['total_cases'] + df['people_fully_vaccinated'])
-df['I'] = df['total_cases']
-df['R'] = df['people_fully_vaccinated']
 TOTAL_DAYS = (max(df['date']) - min(df['date'])).days
 print(f'Total Days: {TOTAL_DAYS}')
 
@@ -121,6 +115,7 @@ class SIREnvironment(gym.Env):
         self.store_r_eff[self.ith_day] = self.r_eff
         self.store_normalized_gdp[self.ith_day] = self.normalized_GDP
         
+        # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
         self.reward = self.normalized_GDP / self.r_eff
         self.store_reward[self.ith_day] = self.reward
@@ -148,12 +143,12 @@ class SIREnvironment(gym.Env):
     def render(self, score=0.0, learning=False):
         self.t = np.linspace(0, TOTAL_DAYS, TOTAL_DAYS + 1)
         fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(10, 12))
-        axes[0, 0].plot(self.t, self.df['S']/self.N, 'b', alpha=0.5, lw=2, label='Susceptible Data')
-        axes[0, 0].plot(self.t, self.df['I']/self.N, 'r', alpha=0.5, lw=2, label='Infected Data')
-        axes[0, 0].plot(self.t, self.df['R']/self.N, 'g', alpha=0.5, lw=2, label='Recovered Data')
-        axes[0, 0].plot(self.t, self.store_S/self.N, 'b--', alpha=0.5, lw=2, label='Susceptible (Model)')
-        axes[0, 0].plot(self.t, self.store_I/self.N, 'r--', alpha=0.5, lw=2, label='Infected (Model)')
-        axes[0, 0].plot(self.t, self.store_R/self.N, 'g--', alpha=0.5, lw=2, label='Recovered (Model)')
+        axes[0, 0].plot(self.t, self.df['S']/self.N, 'b', alpha=0.5, lw=2, label='Susceptible (actual)')
+        axes[0, 0].plot(self.t, self.df['I']/self.N, 'r', alpha=0.5, lw=2, label='Infected (actual)')
+        axes[0, 0].plot(self.t, self.df['R']/self.N, 'g', alpha=0.5, lw=2, label='Recovered (actual)')
+        axes[0, 0].plot(self.t, self.store_S/self.N, 'b--', alpha=0.5, lw=2, label='Susceptible (rl)')
+        axes[0, 0].plot(self.t, self.store_I/self.N, 'r--', alpha=0.5, lw=2, label='Infected (rl)')
+        axes[0, 0].plot(self.t, self.store_R/self.N, 'g--', alpha=0.5, lw=2, label='Recovered (rl)')
         axes[0, 0].set_xlabel('Time /days')
         axes[0, 0].set_ylabel('Percentage of Population')
         axes[0, 0].set_title('SIR Epidemic Trajectory')
@@ -162,41 +157,58 @@ class SIREnvironment(gym.Env):
         legend = axes[0, 0].legend(bbox_to_anchor=(1.05, 1), loc='upper left')
         legend.get_frame().set_alpha(0.5)
 
-        axes[0, 1].plot(self.t, self.store_stringency, label="Stringency")
+        axes[0, 1].plot(self.t, self.store_stringency, 'g', label="Stringency (rl)")
+        axes[0, 1].plot(self.t, self.df['stringency_index'], 'b', label="Stringency (actual)")
         axes[0, 1].set_xlabel("Time /days")
         axes[0, 1].set_ylabel("Stringency Index")
         axes[0, 1].set_title("Time vs. Stringency")
         axes[0, 1].set_ylim(bottom=0, top=150)
         axes[0, 1].grid(True)
+        axes[0, 1].legend()
 
-        axes[1, 0].plot(self.t, self.store_gdp, 'b--', label="GDP")
+        axes[1, 0].plot(self.t, self.store_gdp, 'g', label="GDP (rl)")
+        axes[1, 0].plot(self.t, self.df['gdp_normalized'], 'r', label="GDP (actual)")
         axes[1, 0].set_xlabel("Time /days")
         axes[1, 0].set_ylabel("GDP")
         axes[1, 0].set_title("Time vs. GDP")
         axes[1, 0].set_ylim(bottom=0, top=150)
         axes[1, 0].grid(True)
+        axes[1, 0].legend()
 
-        axes[1, 1].plot(self.t, self.store_r_eff, label="R_eff")
-        axes[1, 1].axhline(y=1, color='r', linestyle='--', label="R_eff = 1")
+        axes[1, 1].plot(self.t, self.store_r_eff, 'g', label="R_eff (rl)")
+        axes[1, 1].plot(self.t, self.df['r_eff_actual'], 'r', label="R_eff (actual)")
         first_time_r_eff_1 = next((t for t, r_eff in zip(self.t, self.store_r_eff) if r_eff <= 1), None)
-        axes[1, 1].text(first_time_r_eff_1, 1, f'R_eff=1\nat t={int(first_time_r_eff_1)} days', ha='right', va='bottom')
+        first_time_r_eff_actual_1 = next((t for t, r_eff in zip(self.t, self.df['r_eff_actual']) if r_eff <= 1), None)
         axes[1, 1].set_xlabel("Time /days")
         axes[1, 1].set_ylabel("R_eff")
         axes[1, 1].set_title("Time vs. R_eff")
         axes[1, 1].set_ylim(bottom=0, top=2.0)
         axes[1, 1].grid(True)
-        axes[1, 1].legend()
+        legend = axes[1, 1].legend()
+        legend.get_texts()[0].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
+        legend.get_texts()[1].set_text(f'R_eff (actual); R_eff=1 at {first_time_r_eff_actual_1}')
 
-        axes[2, 0].plot(self.t, self.store_reward, label="Reward")
+        axes[2, 0].plot(self.t, self.store_reward, 'g', label="Reward (rl)")
+        normalized_gdp_actual = (self.df['gdp_normalized'] - MIN_GDP) / (MAX_GDP - MIN_GDP)
+        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'], 'r', label="Reward (actual)")
         axes[2, 0].set_xlabel("Time /days")
         axes[2, 0].set_ylabel("Reward")
         axes[2, 0].set_title("Time vs. Reward")
         axes[2, 0].grid(True)
         axes[2, 0].legend()
 
+        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual']).sum())
         formatted_score = "{:.2f}".format(score)
-        fig.suptitle(f"Episode Score: {formatted_score}", y=0.02)
+        axes[2, 1].text(0.5, 0.5, f"Episode Score (rl): {formatted_score}\nEpisode score (actual): {formatted_actual_score}", ha='center', va='center', transform=axes[2, 1].transAxes, fontsize=14)
+        axes[2, 1].set_xticks([])
+        axes[2, 1].set_yticks([])
+        axes[2, 1].spines['top'].set_visible(False)
+        axes[2, 1].spines['right'].set_visible(False)
+        axes[2, 1].spines['bottom'].set_visible(False)
+        axes[2, 1].spines['left'].set_visible(False)
+        
         plt.tight_layout()
+
         if (learning == False):
             plt.savefig(os.path.join(OUTPUT_RL, str(score) + ".png"))
         plt.close()
@@ -263,7 +275,7 @@ class CustomCombinedExtractor(BaseFeaturesExtractor):
         total_concat_size = 0
 
         for key, subspace in observation_space.spaces.items():
-            if subspace.shape[0] == 610:  # LSTM for keys with shape 610
+            if subspace.shape[0] == TOTAL_DAYS + 1:
                 self.extractors[key] = nn.LSTM(input_size=1, hidden_size=16, batch_first=True)
                 total_concat_size += 16
             elif key == "other_stats":  # Flatten for 'other_stats'

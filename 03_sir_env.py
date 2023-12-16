@@ -20,15 +20,9 @@ predicted_gdp = fit_line_loaded(stringency_data_points)
 MIN_GDP = min(predicted_gdp)
 MAX_GDP = max(predicted_gdp)
 
-data_path = os.path.join(DATA_CACHE_DIR, LOCATION_CHOOSEN + ".csv")
+data_path = os.path.join(DATA_CACHE_DIR, LOCATION_CHOOSEN + "_merged_data.csv")
 df = pd.read_csv(data_path)
 df['date'] = pd.to_datetime(df['date'])
-df = df[(df['date'].dt.year == 2021) & (df['date'].dt.month >= 5) | (df['date'].dt.year == 2022)]
-
-df['N'] = df['population']
-df['S'] = df['population'] - (df['total_cases'] + df['people_fully_vaccinated'])
-df['I'] = df['total_cases']
-df['R'] = df['people_fully_vaccinated']
 TOTAL_DAYS = (max(df['date']) - min(df['date'])).days
 print(f'Total Days: {TOTAL_DAYS}')
 

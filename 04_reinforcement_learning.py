@@ -1,6 +1,7 @@
 from rl_utils import *
 import time
 
+# base testing code
 # env = SIREnvironment()
 # episodes = 10
 # for episode in range(1, episodes+1):
