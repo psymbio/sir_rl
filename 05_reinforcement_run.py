@@ -5,7 +5,10 @@ env.reset()
 
 # model_path = os.path.join(MODELS_DIR, "1701361856", "50000.zip")
 # model_path = os.path.join(MODELS_DIR, "1702301430", "280000.zip")
-model_path = os.path.join(MODELS_DIR, "1702646031", "210000.zip")
+# models/1702708503/610000.zip
+# models/1702805721/390000.zip
+# models/1702811576/1040000.zip
+model_path = os.path.join(MODELS_DIR, "1702811576", "1040000.zip")
 
 model = PPO.load(model_path, env=env)
 

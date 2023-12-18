@@ -79,7 +79,8 @@ class SIREnvironment(gym.Env):
                                                   })
     def step(self, action):
         self.prev_actions.append(action)
-            
+        
+        flag_inertia = False
         if action == 0:
             self.stringency_index = max(0, self.stringency_index - 10)
         elif action == 1:
@@ -88,6 +89,8 @@ class SIREnvironment(gym.Env):
             self.stringency_index = max(0, self.stringency_index - 2.5)
         elif action == 3:
             self.stringency_index = max(0, self.stringency_index + 0)
+            # reward for inertia
+            flag_inertia = True
         elif action == 4:
             self.stringency_index = min(100, self.stringency_index + 2.5)
         elif action == 5:
@@ -117,7 +120,11 @@ class SIREnvironment(gym.Env):
         
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
-        self.reward = self.normalized_GDP / self.r_eff
+
+        reward_inertia = 2 if flag_inertia else 0
+        reward_r_eff = 20 if self.r_eff <= 1 else 0
+
+        self.reward = self.normalized_GDP / self.r_eff + reward_inertia + reward_r_eff
         self.store_reward[self.ith_day] = self.reward
 
         if RL_LEARNING_TYPE == "normal":
@@ -190,14 +197,24 @@ class SIREnvironment(gym.Env):
 
         axes[2, 0].plot(self.t, self.store_reward, 'g', label="Reward (rl)")
         normalized_gdp_actual = (self.df['gdp_normalized'] - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'], 'r', label="Reward (actual)")
+        inertia_rewards = [0]
+        for i in range(1, len(self.df)):
+            diff = self.df['stringency_index'][i] - self.df['stringency_index'][i - 1]
+            inertia_reward = 2 if diff == 0 else 0
+            inertia_rewards.append(inertia_reward)
+        r_eff_rewards = []
+        for i in range(0, len(self.df)):
+            r_eff = self.df['r_eff_actual'][i]
+            r_eff_reward = 20 if r_eff <= 1 else 0
+            r_eff_rewards.append(r_eff_reward)
+        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards, 'r', label="Reward (actual)")
         axes[2, 0].set_xlabel("Time /days")
         axes[2, 0].set_ylabel("Reward")
         axes[2, 0].set_title("Time vs. Reward")
         axes[2, 0].grid(True)
         axes[2, 0].legend()
 
-        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual']).sum())
+        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards).sum())
         formatted_score = "{:.2f}".format(score)
         axes[2, 1].text(0.5, 0.5, f"Episode Score (rl): {formatted_score}\nEpisode score (actual): {formatted_actual_score}", ha='center', va='center', transform=axes[2, 1].transAxes, fontsize=14)
         axes[2, 1].set_xticks([])
