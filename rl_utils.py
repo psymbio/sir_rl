@@ -124,7 +124,7 @@ class SIREnvironment(gym.Env):
         reward_inertia = 2 if flag_inertia else 0
         reward_r_eff = 20 if self.r_eff <= 1 else 0
 
-        self.reward = self.normalized_GDP / self.r_eff + reward_inertia + reward_r_eff
+        self.reward = self.normalized_GDP / self.r_eff
         self.store_reward[self.ith_day] = self.reward
 
         if RL_LEARNING_TYPE == "normal":
@@ -207,14 +207,16 @@ class SIREnvironment(gym.Env):
             r_eff = self.df['r_eff_actual'][i]
             r_eff_reward = 20 if r_eff <= 1 else 0
             r_eff_rewards.append(r_eff_reward)
-        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards, 'r', label="Reward (actual)")
+        # axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards, 'r', label="Reward (actual)")
+        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'], 'r', label="Reward (actual)")
         axes[2, 0].set_xlabel("Time /days")
         axes[2, 0].set_ylabel("Reward")
         axes[2, 0].set_title("Time vs. Reward")
         axes[2, 0].grid(True)
         axes[2, 0].legend()
 
-        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards).sum())
+        # formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards).sum())
+        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual']).sum())
         formatted_score = "{:.2f}".format(score)
         axes[2, 1].text(0.5, 0.5, f"Episode Score (rl): {formatted_score}\nEpisode score (actual): {formatted_actual_score}", ha='center', va='center', transform=axes[2, 1].transAxes, fontsize=14)
         axes[2, 1].set_xticks([])
