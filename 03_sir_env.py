@@ -12,7 +12,6 @@ with open(OPTIMAL_VALUES_FILE, 'r') as f:
     optimal_values = json.loads(optimal_values_read)
 optimal_beta = optimal_values['optimal_beta']
 optimal_gamma = optimal_values['optimal_gamma']
-optimal_stringency_weight = optimal_values['optimal_stringency_weight']
 
 stringency_data_points = np.arange(0, 100, 0.5)
 fit_line_loaded = np.poly1d(np.load(STRINGENCY_BASED_GDP))
@@ -29,7 +28,6 @@ print(f'Total Days: {TOTAL_DAYS}')
 START_STRINGENCY = df.loc[min(df.index), ['stringency_index']].item()
 N = df.loc[min(df.index), ['N']].item()
 y0 = df.loc[min(df.index), ['S']].item(), df.loc[min(df.index), ['I']].item(), df.loc[min(df.index), ['R']].item()
-N_DISCRETE_ACTIONS = 7
 
 def compute_cost(data, predictions):
     return np.abs(data - predictions).mean()
