@@ -1,4 +1,4 @@
-from rl_utils_new import *
+from rl_utils_new_complex_reward import *
 import time
 
 # base testing code
@@ -32,7 +32,7 @@ if RL_LEARNING_TYPE == "normal":
 	env.reset()
 	model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=logdir)
 
-	TIMESTEPS = 10000
+	TIMESTEPS = 1033
 	iters = 0
 	while True:
 		iters += 1
@@ -45,7 +45,7 @@ elif RL_LEARNING_TYPE == "deep":
 		features_extractor_class=CustomCombinedExtractor,
 	)
 	model = PPO("MultiInputPolicy", env, policy_kwargs=policy_kwargs, verbose=0)
-	TIMESTEPS = 10000
+	TIMESTEPS = 1033
 	iters = 0
 	while True:
 		iters += 1

@@ -1,14 +1,16 @@
-from rl_utils_new import *
+from rl_utils_new_complex_reward import *
     
 env = SIREnvironment()
 env.reset()
 
 # models/1704106458/10000.zip
-model_path = os.path.join(MODELS_DIR, "1704106458", "10000.zip")
+# models/1704189286/1033.zip
+# models/1704190312/4132.zip
+model_path = os.path.join(MODELS_DIR, "1704190312", "4132.zip")
 
 model = PPO.load(model_path, env=env)
 
-episodes = 1
+episodes = 10
 for episode in range(1, episodes+1):
     obs, info = env.reset()
     terminated = False

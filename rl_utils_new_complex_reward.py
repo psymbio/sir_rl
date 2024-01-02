@@ -22,7 +22,6 @@ with open(OPTIMAL_VALUES_FILE, 'r') as f:
     optimal_values = json.loads(optimal_values_read)
 optimal_beta = optimal_values['optimal_beta']
 optimal_gamma = optimal_values['optimal_gamma']
-optimal_stringency_weight = optimal_values['optimal_stringency_weight']
 
 stringency_data_points = np.arange(0, 100, 0.5)
 fit_line_loaded = np.poly1d(np.load(STRINGENCY_BASED_GDP))
@@ -37,31 +36,30 @@ TOTAL_DAYS = (max(df['date']) - min(df['date'])).days
 print(f'Total Days: {TOTAL_DAYS}')
 
 START_STRINGENCY = df.loc[min(df.index), ['stringency_index']].item()
+print(f'Start stringency: {START_STRINGENCY}')
 N = df.loc[min(df.index), ['N']].item()
 y0 = df.loc[min(df.index), ['S']].item(), df.loc[min(df.index), ['I']].item(), df.loc[min(df.index), ['R']].item()
 N_DISCRETE_ACTIONS = 7
 
-def compute_cost(data, predictions):
-    return np.abs(data - predictions).mean()
-
-def deriv(y, t, N, beta, gamma):
+def deriv(y, t, N, beta, gamma, lockdown):
     S, I, R = y
-    dSdt = -beta * S * I / N
-    dIdt = beta * S * I / N - gamma * I
+    t = min(int(t), len(lockdown) - 1)  # Ensure t is an integer and within the range of 'lockdown'
+    dSdt = -beta * (1 - lockdown[int(t)]) * S * I / N
+    dIdt = beta * (1 - lockdown[int(t)]) * S * I / N - gamma * I
     dRdt = gamma * I
     return dSdt, dIdt, dRdt
 
-def time_varying_beta(optimal_beta, stringency_weight, stringency_index):
-    beta = optimal_beta + (stringency_weight * stringency_index)
-    return beta
-
-def objective_function_2(params, y0, t, N, df, gamma, current_stringency):
-    stringency_weight = params[0]
-    beta_array = time_varying_beta(optimal_beta, stringency_weight, current_stringency)
-    predictions = odeint(deriv, y0, t, args=(N, beta_array, gamma))
-    S, I, R = predictions.T
-    cost = compute_cost(df['S'], S) + compute_cost(df['I'], I) + compute_cost(df['R'], R)
-    return cost
+def calculate_reward_weighted(gdp_normalized_list, r_eff_list):
+    GDP_WEIGHT = 0.35 # change this value and see how it affects the reward
+    reward = []
+    for i in range(len(gdp_normalized_list)):
+        if r_eff_list[i] > 1.5:
+            # When r_eff > 1, the reward is more heavily influenced by the reduction in r_eff
+            reward.append(gdp_normalized_list[i] / (5 * r_eff_list[i]))
+        else:
+            # When r_eff <= 1, the reward is more heavily influenced by the increase in GDP
+            reward.append(GDP_WEIGHT * gdp_normalized_list[i])
+    return reward
 
 class SIREnvironment(gym.Env):
     metadata = {"render_modes": ["human"], "render_fps": 30}
@@ -80,28 +78,33 @@ class SIREnvironment(gym.Env):
     def step(self, action):
         self.prev_actions.append(action)
         
-        flag_inertia = False
+        diff = 0
         if action == 0:
             self.stringency_index = max(0, self.stringency_index - 10)
+            diff = -10
         elif action == 1:
             self.stringency_index = max(0, self.stringency_index - 5)
+            diff = -5
         elif action == 2:
             self.stringency_index = max(0, self.stringency_index - 2.5)
+            diff = -2.5
         elif action == 3:
             self.stringency_index = max(0, self.stringency_index + 0)
-            # reward for inertia
-            flag_inertia = True
+            diff = 0
         elif action == 4:
             self.stringency_index = min(100, self.stringency_index + 2.5)
+            diff = 2.5
         elif action == 5:
             self.stringency_index = min(100, self.stringency_index + 5)
+            diff = 5
         elif action == 6:
             self.stringency_index = min(100, self.stringency_index + 10)
+            diff = 10
         
         # each action is on ith day
         t = np.linspace(0, self.ith_day, self.ith_day + 1)
-        beta_for_stringency = time_varying_beta(self.beta_optimal, self.s_weight_optimal, self.stringency_index)
-        predictions = odeint(deriv, self.y0, t, args=(self.N, beta_for_stringency, self.gamma_optimal))
+        self.stringency_index_list.append(self.stringency_index)
+        predictions = odeint(deriv, y0, t, args=(N, optimal_beta, optimal_gamma, np.array(self.stringency_index_list) / 100))
         S, I, R = predictions.T
         self.store_S[self.ith_day] = S[-1]
         self.store_I[self.ith_day] = I[-1]
@@ -114,17 +117,23 @@ class SIREnvironment(gym.Env):
         self.I_proportion = self.store_I[self.ith_day]/self.N
         self.R_proportion = self.store_R[self.ith_day]/self.N
         self.normalized_GDP = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        self.r_eff = (beta_for_stringency / self.gamma_optimal) * (self.store_S[self.ith_day] / self.N)
+        self.r_eff = (self.optimal_beta / self.optimal_gamma) * (self.store_S[self.ith_day] / self.N)
         self.store_r_eff[self.ith_day] = self.r_eff
         self.store_normalized_gdp[self.ith_day] = self.normalized_GDP
         
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
 
-        reward_inertia = 2 if flag_inertia else 0
-        reward_r_eff = 20 if self.r_eff <= 1 else 0
+        reward_inertia = abs(diff)*-1*2
+        reward_r_eff = 1 if self.r_eff <= 1.8 else -1
+        reward_I_percentage = -70 if self.I_proportion >= 0.082 else 0
 
-        self.reward = self.normalized_GDP / self.r_eff
+        gdp_reward_weight = 0.35
+        if self.r_eff < 1.5:
+            self.reward = self.normalized_GDP / (5 * self.r_eff)
+        else:
+            self.reward = gdp_reward_weight * self.normalized_GDP
+        self.reward += reward_inertia + reward_r_eff + reward_I_percentage
         self.store_reward[self.ith_day] = self.reward
 
         if RL_LEARNING_TYPE == "normal":
@@ -148,11 +157,15 @@ class SIREnvironment(gym.Env):
         return observation, self.reward, self.terminated, self.truncated, info
     
     def render(self, score=0.0, learning=False):
+
         self.t = np.linspace(0, TOTAL_DAYS, TOTAL_DAYS + 1)
         fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(10, 12))
-        axes[0, 0].plot(self.t, self.df['S']/self.N, 'b', alpha=0.5, lw=2, label='Susceptible (actual)')
-        axes[0, 0].plot(self.t, self.df['I']/self.N, 'r', alpha=0.5, lw=2, label='Infected (actual)')
-        axes[0, 0].plot(self.t, self.df['R']/self.N, 'g', alpha=0.5, lw=2, label='Recovered (actual)')
+        axes[0, 0].plot(self.t, self.df['S']/self.df['N'], 'b', alpha=0.5, lw=2, label='Susceptible (actual)')
+        axes[0, 0].plot(self.t, self.df['I']/self.df['N'], 'r', alpha=0.5, lw=2, label='Infected (actual)')
+        axes[0, 0].plot(self.t, self.df['R']/self.df['N'], 'g', alpha=0.5, lw=2, label='Recovered (actual)')
+        axes[0, 0].plot(self.t, self.df['S_modelled_with_lockdown']/self.N, 'b:', alpha=0.5, lw=2, label='Susceptible (modelled)')
+        axes[0, 0].plot(self.t, self.df['I_modelled_with_lockdown']/self.N, 'r:', alpha=0.5, lw=2, label='Infected (modelled)')
+        axes[0, 0].plot(self.t, self.df['R_modelled_with_lockdown']/self.N, 'g:', alpha=0.5, lw=2, label='Recovered (modelled)')
         axes[0, 0].plot(self.t, self.store_S/self.N, 'b--', alpha=0.5, lw=2, label='Susceptible (rl)')
         axes[0, 0].plot(self.t, self.store_I/self.N, 'r--', alpha=0.5, lw=2, label='Infected (rl)')
         axes[0, 0].plot(self.t, self.store_R/self.N, 'g--', alpha=0.5, lw=2, label='Recovered (rl)')
@@ -164,8 +177,8 @@ class SIREnvironment(gym.Env):
         legend = axes[0, 0].legend(bbox_to_anchor=(1.05, 1), loc='upper left')
         legend.get_frame().set_alpha(0.5)
 
-        axes[0, 1].plot(self.t, self.store_stringency, 'g', label="Stringency (rl)")
         axes[0, 1].plot(self.t, self.df['stringency_index'], 'b', label="Stringency (actual)")
+        axes[0, 1].plot(self.t, self.store_stringency, 'g', label="Stringency (rl)")
         axes[0, 1].set_xlabel("Time /days")
         axes[0, 1].set_ylabel("Stringency Index")
         axes[0, 1].set_title("Time vs. Stringency")
@@ -173,8 +186,9 @@ class SIREnvironment(gym.Env):
         axes[0, 1].grid(True)
         axes[0, 1].legend()
 
-        axes[1, 0].plot(self.t, self.store_gdp, 'g', label="GDP (rl)")
-        axes[1, 0].plot(self.t, self.df['gdp_normalized'], 'r', label="GDP (actual)")
+        axes[1, 0].plot(self.t, self.df['gdp_normalized'], 'r', label="GDP normalized (actual)")
+        axes[1, 0].plot(self.t, self.df['gdp_normalized_modelled'], 'r', label="GDP normalized (modelled)")
+        axes[1, 0].plot(self.t, self.store_gdp, 'g', label="GDP normalized (rl)")
         axes[1, 0].set_xlabel("Time /days")
         axes[1, 0].set_ylabel("GDP")
         axes[1, 0].set_title("Time vs. GDP")
@@ -182,33 +196,44 @@ class SIREnvironment(gym.Env):
         axes[1, 0].grid(True)
         axes[1, 0].legend()
 
+        axes[1, 1].plot(self.t, self.df['r_eff_actual_with_lockdown'], 'r', label="R_eff (actual)")
+        axes[1, 1].plot(self.t, self.df['r_eff_modelled_with_lockdown'], 'b', label="R_eff (modelled)")
         axes[1, 1].plot(self.t, self.store_r_eff, 'g', label="R_eff (rl)")
-        axes[1, 1].plot(self.t, self.df['r_eff_actual'], 'r', label="R_eff (actual)")
+        first_time_r_eff_actual_1 = next((t for t, r_eff in zip(self.t, self.df['r_eff_actual_with_lockdown']) if r_eff <= 1), None)
+        first_time_r_eff_modelled_1 = next((t for t, r_eff in zip(self.t, self.df['r_eff_modelled_with_lockdown']) if r_eff <= 1), None)
         first_time_r_eff_1 = next((t for t, r_eff in zip(self.t, self.store_r_eff) if r_eff <= 1), None)
-        first_time_r_eff_actual_1 = next((t for t, r_eff in zip(self.t, self.df['r_eff_actual']) if r_eff <= 1), None)
         axes[1, 1].set_xlabel("Time /days")
         axes[1, 1].set_ylabel("R_eff")
         axes[1, 1].set_title("Time vs. R_eff")
-        axes[1, 1].set_ylim(bottom=0, top=2.0)
+        axes[1, 1].set_ylim(bottom=0, top=7.0)
         axes[1, 1].grid(True)
         legend = axes[1, 1].legend()
-        legend.get_texts()[0].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
-        legend.get_texts()[1].set_text(f'R_eff (actual); R_eff=1 at {first_time_r_eff_actual_1}')
+        legend.get_texts()[0].set_text(f'R_eff (actual); R_eff=1 at {first_time_r_eff_actual_1}')
+        legend.get_texts()[1].set_text(f'R_eff (modelled); R_eff=1 at {first_time_r_eff_modelled_1}')
+        legend.get_texts()[2].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
 
+        hospital_capacity = 0.082
+        hospital_capacity_reward = -70
+        I_reward_actual = np.array([0 if I_percentage < hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I"] / self.df["N"]])
+        I_reward_modelled = np.array([0 if I_percentage < hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_modelled_with_lockdown"] / self.N])
+        
+        r_eff_reward_choosen = 1
+        r_eff_punishment_choosen = -1
+        r_eff_level = 1.8
+        r_eff_reward_actual = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_actual_with_lockdown"]])
+        r_eff_reward_modelled = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_modelled_with_lockdown"]])
+        
+        inertia_rewards_actual = np.array([0] + [abs(diff)*2*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        # modelled reward for intertia is same as actual
+        inertia_rewards_modelled = np.array([0] + [abs(diff)*2*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        
+        reward_actual = np.array(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_with_lockdown"])) + I_reward_actual + r_eff_reward_actual + inertia_rewards_actual
+        reward_modelled = np.array(calculate_reward_weighted(self.df["gdp_normalized_modelled_min_max_normalized"], self.df["r_eff_modelled_with_lockdown"])) + I_reward_modelled + r_eff_reward_modelled + inertia_rewards_modelled
+        
+        print("len df", len(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_with_lockdown"])))
+        axes[2, 0].plot(self.t, reward_actual, 'r', label="Reward (actual)")
+        axes[2, 0].plot(self.t, reward_modelled, 'b', label="Reward (modelled)")
         axes[2, 0].plot(self.t, self.store_reward, 'g', label="Reward (rl)")
-        normalized_gdp_actual = (self.df['gdp_normalized'] - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        inertia_rewards = [0]
-        for i in range(1, len(self.df)):
-            diff = self.df['stringency_index'][i] - self.df['stringency_index'][i - 1]
-            inertia_reward = 2 if diff == 0 else 0
-            inertia_rewards.append(inertia_reward)
-        r_eff_rewards = []
-        for i in range(0, len(self.df)):
-            r_eff = self.df['r_eff_actual'][i]
-            r_eff_reward = 20 if r_eff <= 1 else 0
-            r_eff_rewards.append(r_eff_reward)
-        # axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards, 'r', label="Reward (actual)")
-        axes[2, 0].plot(self.t, normalized_gdp_actual / self.df['r_eff_actual'], 'r', label="Reward (actual)")
         axes[2, 0].set_xlabel("Time /days")
         axes[2, 0].set_ylabel("Reward")
         axes[2, 0].set_title("Time vs. Reward")
@@ -216,9 +241,12 @@ class SIREnvironment(gym.Env):
         axes[2, 0].legend()
 
         # formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual'] + inertia_rewards + r_eff_rewards).sum())
-        formatted_actual_score = "{:.2f}".format((normalized_gdp_actual / self.df['r_eff_actual']).sum())
-        formatted_score = "{:.2f}".format(score)
-        axes[2, 1].text(0.5, 0.5, f"Episode Score (rl): {formatted_score}\nEpisode score (actual): {formatted_actual_score}", ha='center', va='center', transform=axes[2, 1].transAxes, fontsize=14)
+        formatted_actual_score = "{:.2f}".format(reward_actual.sum())
+        formatted_modelled_score = "{:.2f}".format(reward_modelled.sum())
+        formatted_rl_score = "{:.2f}".format(score)
+        formatted_rl_score_2 = "{:.2f}".format(self.store_reward.sum())
+
+        axes[2, 1].text(0.5, 0.5, f"Episode score (actual): {formatted_actual_score}\nEpisode score (modelled): {formatted_modelled_score}\nEpisode Score (rl): {formatted_rl_score}\nEpisode Score (rl_2): {formatted_rl_score_2}", ha='center', va='center', transform=axes[2, 1].transAxes, fontsize=14)
         axes[2, 1].set_xticks([])
         axes[2, 1].set_yticks([])
         axes[2, 1].spines['top'].set_visible(False)
@@ -238,9 +266,8 @@ class SIREnvironment(gym.Env):
         self.stringency_index = START_STRINGENCY
         self.N = N
         self.y0 = y0
-        self.beta_optimal = optimal_beta
-        self.gamma_optimal = optimal_gamma
-        self.s_weight_optimal = optimal_stringency_weight
+        self.optimal_beta = optimal_beta
+        self.optimal_gamma = optimal_gamma
         self.df = df
         self.days_difference = (max(self.df['date']) - min(self.df['date'])).days
         self.t = np.linspace(0, self.days_difference, self.days_difference + 1)
@@ -251,6 +278,7 @@ class SIREnvironment(gym.Env):
         self.store_R = np.zeros(TOTAL_DAYS + 1)
         
         self.store_stringency = np.zeros(TOTAL_DAYS + 1)
+        self.stringency_index_list = []
         self.store_gdp = np.zeros(TOTAL_DAYS + 1)
         self.store_normalized_gdp = np.zeros(TOTAL_DAYS + 1)
         self.store_r_eff = np.zeros(TOTAL_DAYS + 1)
@@ -264,8 +292,7 @@ class SIREnvironment(gym.Env):
         self.I_proportion = self.y0[1]/self.N
         self.R_proportion = self.y0[2]/self.N
         self.normalized_GDP = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        beta_for_stringency = time_varying_beta(self.beta_optimal, self.s_weight_optimal, self.stringency_index)
-        self.r_eff = (beta_for_stringency / self.gamma_optimal) * (self.store_S[self.ith_day] / self.N)
+        self.r_eff = (self.optimal_beta / self.optimal_gamma) * (self.store_S[self.ith_day] / self.N)
         
         self.prev_actions = deque(maxlen = TOTAL_DAYS + 1)
         for i in range(TOTAL_DAYS + 1):
