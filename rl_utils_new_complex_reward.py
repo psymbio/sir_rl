@@ -81,25 +81,25 @@ class SIREnvironment(gym.Env):
         diff = 0
         if action == 0:
             self.stringency_index = max(0, self.stringency_index - 10)
-            diff = -10
+            # diff = -10
         elif action == 1:
             self.stringency_index = max(0, self.stringency_index - 5)
-            diff = -5
+            # diff = -5
         elif action == 2:
             self.stringency_index = max(0, self.stringency_index - 2.5)
-            diff = -2.5
+            # diff = -2.5
         elif action == 3:
             self.stringency_index = max(0, self.stringency_index + 0)
-            diff = 0
+            # diff = 0
         elif action == 4:
             self.stringency_index = min(100, self.stringency_index + 2.5)
-            diff = 2.5
+            # diff = 2.5
         elif action == 5:
             self.stringency_index = min(100, self.stringency_index + 5)
-            diff = 5
+            # diff = 5
         elif action == 6:
             self.stringency_index = min(100, self.stringency_index + 10)
-            diff = 10
+            # diff = 10
         
         # each action is on ith day
         t = np.linspace(0, self.ith_day, self.ith_day + 1)
@@ -111,6 +111,7 @@ class SIREnvironment(gym.Env):
         self.store_R[self.ith_day] = R[-1]
         
         self.store_stringency[self.ith_day] = self.stringency_index
+        diff = self.store_stringency[self.ith_day] - self.store_stringency[self.ith_day - 1]
         self.store_gdp[self.ith_day] = fit_line_loaded(self.stringency_index)
         
         self.S_proportion = self.store_S[self.ith_day]/self.N
@@ -126,14 +127,15 @@ class SIREnvironment(gym.Env):
 
         reward_inertia = abs(diff)*-1*2
         reward_r_eff = 1 if self.r_eff <= 1.8 else -1
-        reward_I_percentage = -70 if self.I_proportion >= 0.082 else 0
+        reward_I_percentage = -100 if self.I_proportion >= 0.082 else 0
 
         gdp_reward_weight = 0.35
-        if self.r_eff < 1.5:
-            self.reward = self.normalized_GDP / (5 * self.r_eff)
+        if self.r_eff > 1.5:
+            reward_weighted = self.normalized_GDP / (5 * self.r_eff)
         else:
-            self.reward = gdp_reward_weight * self.normalized_GDP
-        self.reward += reward_inertia + reward_r_eff + reward_I_percentage
+            reward_weighted = gdp_reward_weight * self.normalized_GDP
+
+        self.reward = reward_weighted + reward_inertia + reward_r_eff + reward_I_percentage
         self.store_reward[self.ith_day] = self.reward
 
         if RL_LEARNING_TYPE == "normal":
@@ -153,7 +155,15 @@ class SIREnvironment(gym.Env):
         self.ith_day += 1
         if self.ith_day > TOTAL_DAYS:
             self.terminated = True
-        info = {}
+        info = {
+            "action": action,
+            "reward_inertia": reward_inertia,
+            "reward_r_eff": reward_r_eff,
+            "reward_I_percentage": reward_I_percentage,
+            "reward_weigthed": reward_weighted,
+            "reward": self.reward,
+            "stringency_index": self.stringency_index
+            }
         return observation, self.reward, self.terminated, self.truncated, info
     
     def render(self, score=0.0, learning=False):
@@ -187,7 +197,7 @@ class SIREnvironment(gym.Env):
         axes[0, 1].legend()
 
         axes[1, 0].plot(self.t, self.df['gdp_normalized'], 'r', label="GDP normalized (actual)")
-        axes[1, 0].plot(self.t, self.df['gdp_normalized_modelled'], 'r', label="GDP normalized (modelled)")
+        axes[1, 0].plot(self.t, self.df['gdp_normalized_modelled'], 'b', label="GDP normalized (modelled)")
         axes[1, 0].plot(self.t, self.store_gdp, 'g', label="GDP normalized (rl)")
         axes[1, 0].set_xlabel("Time /days")
         axes[1, 0].set_ylabel("GDP")
@@ -213,9 +223,9 @@ class SIREnvironment(gym.Env):
         legend.get_texts()[2].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
 
         hospital_capacity = 0.082
-        hospital_capacity_reward = -70
-        I_reward_actual = np.array([0 if I_percentage < hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I"] / self.df["N"]])
-        I_reward_modelled = np.array([0 if I_percentage < hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_modelled_with_lockdown"] / self.N])
+        hospital_capacity_reward = -100
+        I_reward_actual = [hospital_capacity_reward if I_percentage >= hospital_capacity else 0 for I_percentage in self.df["I"] / self.df["N"]]
+        I_reward_modelled = [hospital_capacity_reward if I_percentage >= hospital_capacity else 0 for I_percentage in self.df["I_modelled_with_lockdown"] / self.N]
         
         r_eff_reward_choosen = 1
         r_eff_punishment_choosen = -1

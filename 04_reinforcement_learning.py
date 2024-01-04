@@ -27,12 +27,13 @@ if not os.path.exists(models_dir):
 if not os.path.exists(logdir):
 	os.makedirs(logdir)
 
+# https://stackoverflow.com/questions/56700948/understanding-the-total-timesteps-parameter-in-stable-baselines-models
+TIMESTEPS = 5165
+
 if RL_LEARNING_TYPE == "normal":
 	env = SIREnvironment()
 	env.reset()
 	model = PPO('MlpPolicy', env, verbose=1, tensorboard_log=logdir)
-
-	TIMESTEPS = 1033
 	iters = 0
 	while True:
 		iters += 1
@@ -45,7 +46,6 @@ elif RL_LEARNING_TYPE == "deep":
 		features_extractor_class=CustomCombinedExtractor,
 	)
 	model = PPO("MultiInputPolicy", env, policy_kwargs=policy_kwargs, verbose=0)
-	TIMESTEPS = 1033
 	iters = 0
 	while True:
 		iters += 1
