@@ -50,7 +50,7 @@ def deriv(y, t, N, beta, gamma, lockdown):
     return dSdt, dIdt, dRdt
 
 def calculate_reward_weighted(gdp_normalized_list, r_eff_list):
-    GDP_WEIGHT = 0.35 # change this value and see how it affects the reward
+    GDP_WEIGHT = 5 # change this value and see how it affects the reward
     reward = []
     for i in range(len(gdp_normalized_list)):
         if r_eff_list[i] > 1.5:
