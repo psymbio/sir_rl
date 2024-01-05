@@ -11,7 +11,8 @@ env.reset()
 # models/1704256387_ppo_100iter_hospital-100/103300.zip
 # models/1704275312/1033.zip
 # models/1704351335/542325.zip
-model_path = os.path.join(MODELS_DIR, "1704351335", "542325.zip")
+# models/1704382102/346055.zip
+model_path = os.path.join(MODELS_DIR, "1704382102", "346055.zip")
 
 model = PPO.load(model_path, env=env)
 

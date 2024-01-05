@@ -3,6 +3,7 @@
 # 'IDN' 'IND' 'CHN' 'A5M' 'LUX']
 # because GDP data is only present for them
 LOCATION_CHOOSEN = "IND"
+LOCATION_CHOOSEN_2 = "India"
 INPUT_DIR = "input"
 OUTPUT_DIR = "output"
 DATA_CACHE_DIR = "data_cache"

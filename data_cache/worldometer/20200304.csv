@@ -1,0 +1,85 @@
+"Country,Other",TotalCases,NewCases,TotalDeaths,NewDeaths,ActiveCases,TotalRecovered,"Serious,Critical"
+China,80282,131.0,2981.0,38.0,27301,50000.0,6416.0
+S. Korea,5621,435.0,35.0,3.0,5545,41.0,27.0
+Iran,2922,586.0,92.0,15.0,2278,552.0,
+Italy,2502,,79.0,,2263,160.0,229.0
+Diamond Princess,706,,6.0,,488,212.0,35.0
+Japan,319,26.0,6.0,,270,43.0,29.0
+Germany,244,41.0,,,228,16.0,2.0
+France,212,,4.0,,196,12.0,10.0
+Spain,194,29.0,1.0,,191,2.0,3.0
+USA,129,5.0,9.0,,111,9.0,8.0
+Singapore,110,,,,32,78.0,7.0
+Hong Kong,103,2.0,2.0,,64,37.0,6.0
+Switzerland,93,35.0,,,90,3.0,
+U.K.,85,34.0,,,77,8.0,
+Kuwait,56,,,,56,,
+Bahrain,52,3.0,,,51,1.0,
+Australia,50,11.0,2.0,1.0,27,21.0,1.0
+Malaysia,50,14.0,,,28,22.0,
+Norway,48,15.0,,,48,,
+Thailand,43,,1.0,,12,30.0,1.0
+Taiwan,42,,1.0,,29,12.0,
+Netherlands,38,15.0,,,38,,1.0
+Sweden,35,5.0,,,34,1.0,
+Canada,33,3.0,,,26,7.0,
+Iraq,32,,1.0,1.0,31,,
+India,28,21.0,,,25,3.0,
+Austria,27,3.0,,,27,,
+U.A.E.,27,,,,22,5.0,2.0
+Belgium,23,8.0,,,22,1.0,1.0
+Iceland,20,6.0,,,19,1.0,
+San Marino,16,6.0,1.0,,15,,3.0
+Vietnam,16,,,,0,16.0,
+Israel,15,3.0,,,14,1.0,
+Lebanon,13,,,,13,,
+Oman,12,,,,10,2.0,
+Macao,10,,,,1,9.0,
+Denmark,10,,,,10,,
+Croatia,9,,,,9,,
+Greece,9,2.0,,,9,,
+Algeria,8,,,,8,,
+Qatar,8,,,,8,,
+Ecuador,7,,,,7,,1.0
+Finland,7,,,,6,1.0,
+Belarus,6,2.0,,,6,,
+Mexico,6,,,,5,1.0,
+Romania,6,2.0,,,4,2.0,
+Czechia,5,,,,5,,
+Pakistan,5,,,,5,,
+Portugal,5,1.0,,,5,,
+Philippines,3,,1.0,,0,2.0,
+Azerbaijan,3,,,,3,,
+Georgia,3,,,,3,,
+Russia,3,,,,1,2.0,
+Brazil,2,,,,2,,
+Egypt,2,,,,1,1.0,
+Estonia,2,,,,2,,
+Indonesia,2,,,,2,,
+Ireland,2,,,,2,,
+New Zealand,2,,,,2,,
+Senegal,2,,,,2,,
+Afghanistan,1,,,,1,,
+Andorra,1,,,,1,,
+Armenia,1,,,,1,,
+Cambodia,1,,,,0,1.0,
+Dominican Republic,1,,,,1,,
+Jordan,1,,,,1,,
+Latvia,1,,,,1,,
+Lithuania,1,,,,1,,
+Luxembourg,1,,,,1,,
+North Macedonia,1,,,,1,,
+Monaco,1,,,,1,,
+Morocco,1,,,,1,,
+Nepal,1,,,,0,1.0,
+Nigeria,1,,,,1,,
+Saudi Arabia,1,,,,1,,
+Sri Lanka,1,,,,0,1.0,
+Tunisia,1,,,,1,,
+Ukraine,1,,,,1,,
+Argentina,1,,,,1,,
+Chile,1,,,,1,,
+Faeroe Islands,1,1.0,,,1,,
+Liechtenstein,1,,,,1,,
+Poland,1,1.0,,,1,,
+Total:,94348,1446.0,3222.0,58.0,39809,51317.0,6782.0
