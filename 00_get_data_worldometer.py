@@ -20,8 +20,8 @@ def return_middle_timestamp(df):
     timestamp = random_row['timestamp']
     return timestamp
 
-start_date = date(2020, 12, 1)
-end_date = date(2021, 4, 1)
+start_date = date(2022, 12, 1)
+end_date = date(2023, 12, 1)
 delta = timedelta(days=1)
 max_file_date = start_date
 
