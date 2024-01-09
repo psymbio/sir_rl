@@ -1,58 +1,61 @@
 "Country,Other",TotalCases,NewCases,TotalDeaths,NewDeaths,ActiveCases,TotalRecovered,"Serious,Critical"
-China,79826,575.0,2870.0,35.0,35131,41825.0,7365.0
-S. Korea,3526,376.0,17.0,,3479,30.0,10.0
-Italy,1128,,29.0,,1049,50.0,105.0
-Diamond Princess,705,,6.0,,689,10.0,36.0
-Iran,593,,43.0,,427,123.0,
-Japan,241,,6.0,1.0,203,32.0,19.0
-Singapore,102,,,,30,72.0,7.0
-France,100,,2.0,,86,12.0,8.0
-Hong Kong,95,,2.0,,63,30.0,6.0
-Germany,79,,,,63,16.0,2.0
-USA,69,1.0,1.0,,61,7.0,1.0
-Spain,58,,,,56,2.0,2.0
-Kuwait,45,,,,45,,
-Thailand,42,,,,14,28.0,2.0
-Bahrain,41,,,,41,,
-Taiwan,39,,1.0,,33,5.0,1.0
-Australia,25,,1.0,1.0,9,15.0,
-Malaysia,25,,,,3,22.0,
-U.K.,23,,,,15,8.0,
+China,79828,577.0,2870.0,35.0,34844,42114.0,7365.0
+S. Korea,3736,586.0,21.0,4.0,3685,30.0,10.0
+Italy,1694,566.0,34.0,5.0,1577,83.0,140.0
+Iran,978,385.0,54.0,11.0,749,175.0,
+Diamond Princess,705,,7.0,1.0,688,10.0,36.0
+Japan,252,11.0,6.0,1.0,214,32.0,19.0
+France,130,30.0,2.0,,116,12.0,9.0
+Germany,129,50.0,,,113,16.0,2.0
+Singapore,106,4.0,,,32,74.0,7.0
+Hong Kong,100,5.0,2.0,,62,36.0,6.0
+Spain,79,21.0,,,77,2.0,3.0
+USA,73,5.0,1.0,,63,9.0,3.0
+Bahrain,47,6.0,,,47,,
+Kuwait,46,1.0,,,46,,
+Thailand,42,,1.0,1.0,11,30.0,1.0
+Taiwan,40,1.0,1.0,,27,12.0,1.0
+U.K.,36,13.0,,,28,8.0,
+Malaysia,29,4.0,,,7,22.0,
+Australia,26,1.0,1.0,1.0,10,15.0,
 U.A.E.,21,,,,16,5.0,2.0
 Canada,20,,,,16,4.0,
-Switzerland,19,,,,19,,
+Iraq,19,6.0,,,19,,
+Norway,19,4.0,,,19,,
+Switzerland,19,,,,18,1.0,
 Vietnam,16,,,,0,16.0,
-Norway,15,,,,15,,
-Iraq,13,,,,13,,
+Austria,14,4.0,,,14,,
 Sweden,13,,,,13,,
-Austria,10,,,,10,,
 Macao,10,,,,4,6.0,
+Lebanon,10,3.0,,,10,,
+Netherlands,10,3.0,,,10,,1.0
+Croatia,7,1.0,,,7,,
 Greece,7,,,,7,,
 Israel,7,,,,6,1.0,
-Lebanon,7,,,,7,,
-Netherlands,7,,,,7,,
-Croatia,6,,,,6,,
+Finland,6,3.0,,,5,1.0,
 Oman,6,,,,5,1.0,
 Mexico,4,,,,4,,
 Pakistan,4,,,,4,,
 Philippines,3,,1.0,,0,2.0,
 Azerbaijan,3,,,,3,,
+Czechia,3,3.0,,,3,,
 Denmark,3,,,,3,,
-Finland,3,,,,2,1.0,
 Georgia,3,,,,3,,
 India,3,,,,0,3.0,
+Qatar,3,2.0,,,3,,
 Romania,3,,,,2,1.0,
+Algeria,2,1.0,,,2,,
+Belgium,2,1.0,,,1,1.0,
 Brazil,2,,,,2,,
+Iceland,2,1.0,,,2,,
 Russia,2,,,,0,2.0,
 Afghanistan,1,,,,1,,
-Algeria,1,,,,1,,
 Belarus,1,,,,1,,
-Belgium,1,,,,0,1.0,
 Cambodia,1,,,,0,1.0,
+Dominican Republic,1,1.0,,,1,,
 Ecuador,1,,,,1,,1.0
 Egypt,1,,,,0,1.0,
 Estonia,1,,,,1,,
-Iceland,1,,,,1,,
 Ireland,1,,,,1,,
 Lithuania,1,,,,1,,
 Luxembourg,1,,,,1,,
@@ -61,7 +64,7 @@ Monaco,1,,,,1,,
 Nepal,1,,,,0,1.0,
 New Zealand,1,,,,1,,
 Nigeria,1,,,,1,,
-Qatar,1,,,,1,,
 San Marino,1,,,,1,,1.0
 Sri Lanka,1,,,,0,1.0,
-Total:,86992,952.0,2979.0,37.0,41679,42334.0,7568.0
+Armenia,1,1.0,,,1,,
+Total:,88340,2300.0,3001.0,59.0,42611,42728.0,7607.0

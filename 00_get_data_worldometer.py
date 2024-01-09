@@ -20,8 +20,8 @@ def return_middle_timestamp(df):
     timestamp = random_row['timestamp']
     return timestamp
 
-start_date = date(2022, 12, 1)
-end_date = date(2023, 12, 1)
+start_date = date(2022, 11, 1)
+end_date = date(2023, 12, 31)
 delta = timedelta(days=1)
 max_file_date = start_date
 
@@ -52,11 +52,15 @@ while start_date <= end_date:
             timestamp = return_middle_timestamp(internet_archive_df)
             print("found timestamp: ", timestamp)
             worldometers_url = "https://web.archive.org/web/"+ timestamp + "/https://www.worldometers.info/coronavirus/"
+            print("worldometers_url: ", worldometers_url)
             attempts_2 = 0
             while attempts_2 < 3:
                 try:
                     r = requests.get(worldometers_url, headers=headers)
                     soup = BeautifulSoup(r.content, 'html5lib')
+                    # table = soup.find_all("table", id="table3")
+                    # table = soup.find_all("table", id="main_table_countries")
+
                     # below the date: date(2020, 3, 19)
                     # this works: table = soup.find_all("table", id="main_table_countries")
                     # above the date: date(2020, 3, 19)

@@ -1,0 +1,63 @@
+"Country,Other",TotalCases,NewCases,TotalDeaths,NewDeaths,ActiveCases,TotalRecovered,"Serious,Critical"
+China,79252,428.0,2835.0,47.0,37327,39090.0,7664.0
+S. Korea,2931,594.0,17.0,1.0,2890,24.0,7.0
+Italy,889,,21.0,,822,46.0,64.0
+Diamond Princess,705,,6.0,,689,10.0,36.0
+Iran,388,,34.0,,281,73.0,
+Japan,234,1.0,5.0,,197,32.0,20.0
+Singapore,98,,,,29,69.0,8.0
+Hong Kong,93,,2.0,,73,18.0,6.0
+USA,66,3.0,,,60,6.0,1.0
+Germany,60,,,,44,16.0,2.0
+France,57,,2.0,,44,11.0,1.0
+Kuwait,45,,,,45,,
+Thailand,41,,,,13,28.0,2.0
+Bahrain,38,,,,38,,
+Taiwan,34,,1.0,,28,5.0,1.0
+Spain,33,,,,31,2.0,2.0
+Australia,25,,,,10,15.0,
+Malaysia,25,,,,5,20.0,
+U.K.,20,,,,12,8.0,
+U.A.E.,19,,,,14,5.0,2.0
+Canada,16,1.0,,,13,3.0,
+Vietnam,16,,,,0,16.0,
+Switzerland,15,,,,15,,
+Sweden,11,,,,11,,
+Macao,10,,,,4,6.0,
+Iraq,8,,,,8,,
+Israel,7,,,,6,1.0,
+Austria,6,,,,6,,
+Norway,6,,,,6,,
+Oman,6,,,,6,,
+Croatia,5,,,,5,,
+Greece,4,,,,4,,
+Lebanon,4,,,,4,,
+Philippines,3,,1.0,,0,2.0,
+Finland,3,,,,2,1.0,
+India,3,,,,0,3.0,
+Mexico,3,1.0,,,3,,
+Romania,3,,,,2,1.0,
+Denmark,2,,,,2,,
+Georgia,2,,,,2,,
+Netherlands,2,,,,2,,
+Pakistan,2,,,,2,,
+Russia,2,,,,0,2.0,
+Afghanistan,1,,,,1,,
+Algeria,1,,,,1,,
+Azerbaijan,1,,,,1,,
+Belarus,1,,,,1,,
+Belgium,1,,,,0,1.0,
+Brazil,1,,,,1,,
+Cambodia,1,,,,0,1.0,
+Egypt,1,,,,0,1.0,
+Estonia,1,,,,1,,
+Iceland,1,,,,1,,
+Lithuania,1,,,,1,,
+North Macedonia,1,,,,1,,
+Monaco,1,,,,1,,
+Nepal,1,,,,0,1.0,
+New Zealand,1,,,,1,,
+Nigeria,1,,,,1,,
+San Marino,1,,,,1,,
+Sri Lanka,1,,,,0,1.0,
+Total:,85210,1028.0,2924.0,48.0,42768,39518.0,7816.0

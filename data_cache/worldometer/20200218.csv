@@ -1,0 +1,31 @@
+"Country, Other",Total Cases,New Cases,Total Deaths,NewDeaths,Total Recovered,"Serious, Critical",Region
+China,72440,1892.0,1870.0,100.0,12994.0,11741.0,Asia
+Diamond Princess,542,88.0,,,17.0,20.0,
+Singapore,81,4.0,,,29.0,4.0,Asia
+Japan,74,8.0,1.0,,20.0,4.0,Asia
+Hong Kong,62,2.0,1.0,,2.0,7.0,Asia
+Thailand,35,,,,17.0,2.0,Asia
+S. Korea,31,1.0,,,12.0,,Asia
+Taiwan,22,,1.0,,2.0,,Asia
+Malaysia,22,,,,11.0,,Asia
+Germany,16,,,,9.0,,Europe
+Vietnam,16,,,,7.0,,Asia
+Australia,15,,,,10.0,,Oceania
+USA,15,,,,3.0,,N.America
+France,12,,1.0,,5.0,,Europe
+Macao,10,,,,5.0,,Asia
+U.A.E.,9,,,,3.0,1.0,Asia
+U.K.,9,,,,8.0,,Europe
+Canada,8,,,,1.0,,N.America
+Philippines,3,,1.0,,2.0,,Asia
+Italy,3,,,,,2.0,Europe
+India,3,,,,3.0,,Asia
+Russia,2,,,,2.0,,Europe
+Spain,2,,,,2.0,,Europe
+Egypt,1,,,,,,Africa
+Cambodia,1,,,,1.0,,Asia
+Sweden,1,,,,,,Europe
+Nepal,1,,,,1.0,,Asia
+Belgium,1,,,,1.0,,Europe
+Sri Lanka,1,,,,1.0,,Asia
+Finland,1,,,,1.0,,Europe
