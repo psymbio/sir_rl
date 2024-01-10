@@ -1,4 +1,4 @@
-from rl_utils_new_complex_reward import *
+from rl_utils_new_complex_reward_sirvlockdown import *
     
 env = SIREnvironment()
 env.reset()
@@ -16,7 +16,10 @@ env.reset()
 # models/1704534388/1229270.zip
 # models/1704534388/356385.zip
 # models/1704534388/139455.zip
-model_path = os.path.join(MODELS_DIR, "1704534388", "139455.zip")
+
+# models/1704873042/5165.zip
+# models/1704874281/374740.zip
+model_path = os.path.join(MODELS_DIR, "1704874281", "374740.zip")
 
 model = PPO.load(model_path, env=env)
 

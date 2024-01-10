@@ -1,4 +1,4 @@
-from rl_utils_new_complex_reward import *
+from rl_utils_new_complex_reward_sirvlockdown import *
 import time
 
 # base testing code
@@ -28,7 +28,7 @@ if not os.path.exists(logdir):
 	os.makedirs(logdir)
 
 # https://stackoverflow.com/questions/56700948/understanding-the-total-timesteps-parameter-in-stable-baselines-models
-TIMESTEPS = 5165
+TIMESTEPS = 4570
 
 if RL_LEARNING_TYPE == "normal":
 	env = SIREnvironment()
