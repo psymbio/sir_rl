@@ -1,6 +1,5 @@
 env/
 models/
 logs/
-trash/
 owid-covid-data.csv
 prompt.txt

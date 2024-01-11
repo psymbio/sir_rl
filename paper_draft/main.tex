@@ -26,7 +26,7 @@
 \urlstyle{same}
 
 
-\title{SIR-RL: Reinforcement Learning for Optimized Policy Control during Epidemiological Outbreaks in Emerging Market and Developing Economies}
+\title{SIRV-RL: Reinforcement Learning for Optimized Policy Control during Epidemiological Outbreaks in Emerging Market and Developing Economies}
 \author[1,*]{Maeghal Jain}
 \author[1]{Ziya Uddin}
 
@@ -52,7 +52,7 @@ In this paper we want to optimize the government policies regarding stringency. 
 
 In order to capture competing costs within the environment and achieve a balance between health and economic outcomes, we intend to employ reinforcement learning~\cite{Nguyen2022, Bastani2021, Song2022, Ohi2020, PADMANABHAN2021102676}. Not only does the formulation of the model deal better with competing costs, but it also offers a more transparency behind the reasoning of the decisions being made in such circumstances. When we conceptualize our problem as a reinforcement learning task, an agent is tasked with making decisions in an environment with the aim of optimizing cumulative rewards. This approach relies on trial and error, in contrast to dynamic programming, which assumes complete knowledge of the environment~\cite{Lavet2018}. We make the use of deep reinforcement learning, which is an advancement to reinforcement learning as it allows to reduce the input dimensionality and normalize the input~\cite{Lavet2018, Arulkumaran2017, Henderson_Islam_Bachman_Pineau_Precup_Meger_2018, Mnih2015}. While our model is more transparent in terms of its dependency on the reward policy defined, it has its limitations. A universal optimal policy may not suit diverse socioeconomic contexts due to variations in healthcare resources and economic vulnerabilities across countries, regions, or cities and a comprehensive consideration of decision factors, extending beyond pure reinforcement learning results is needed~\cite{Song2022, Dunn2017, Demir2006}. Also, the current model doesn't account for the herd immunity reached through vaccination which it can be extended to account for~\cite{Marinov2022}.
 
-\subsection*{Methodology}
+\subsection*{Mathematical Formulation}
 In SIR-RL, we use a compartmental model to model infectious disease. Here we divide people of the population, based on whether they are yet to come into contact with an infected person (Susceptible), are infectious themselves (Infectious), or have recovered from the infection (Recovered). These compartments create the SIR model which can be represented as follows:
 
 \begin{figure}[H]
@@ -292,58 +292,96 @@ The agent observes the percentage of the population that is susceptible, infecte
 Using the simple SIR model (\ref{eq:S_without_lockdown}, ~\ref{eq:cost_without_lockdown}) to model the disease dynamics we get:
 \begin{figure}[H]
   \centering
-  \caption{SIR Model for India}
-  \begin{subfigure}[t]{0.48\textwidth}
+  \caption{SIR Model with lockdown for India}
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/SIR_model_IND.eps}
-    \caption{SIR model for India}
+    \includegraphics[scale=0.5]{images/SIR_model_IND.eps}
+    \caption{SIR model with lockdown}
+    \label{fig:SIR_mode_IND}
   \end{subfigure}
-  \label{fig:SIR_model_IND}
-  \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[scale=0.25]{images/SIR_model_infections_IND.eps}
+    \includegraphics[scale=0.50]{images/SIR_model_infections_IND.eps}
     \caption{Infections modelled with SIR model}
+    \label{fig:SIR_model_infections_IND}
   \end{subfigure}
-  \label{fig:SIR_model_infections_IND}
 \end{figure}
+
 
 Combining the lockdown dynamics in the SIR model we get this following:
 \begin{figure}[H]
   \centering
   \caption{SIR Model with lockdown for India}
-  \begin{subfigure}[t]{0.48\textwidth}
+
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/SIR_model_with_lockdown_IND.eps}
+    \includegraphics[scale=0.50]{images/SIR_model_with_lockdown_IND.eps}
     \caption{SIR model with lockdown}
+    \label{fig:SIR_model_with_lockdown_IND}
   \end{subfigure}
-  \label{fig:SIR_model_with_lockdown_IND}
-  \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
+  
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[scale=0.25]{images/SIR_model_with_lockdown_infections_IND.eps}
-    \caption{Infections modelled with SIR model with Lockdown}
+    \includegraphics[scale=0.50]{images/stringency_varying_with_time_IND.eps}
+    \caption{Stringency varying with Time}
+    \label{fig:stringency_varying_with_time_IND}
   \end{subfigure}
-  \label{fig:SIR_model_with_lockdown_infections_IND}
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
+  \begin{subfigure}[t]{\textwidth}
+    \centering
+    \includegraphics[scale=0.50]{images/SIR_model_with_lockdown_infections_IND.eps}
+    \caption{Infections modelled with SIR model with Lockdown}
+    \label{fig:SIR_model_with_lockdown_infections_IND}
+  \end{subfigure}
 \end{figure}
 
 Combining vaccination dynamics with SIR with lockdown model we get the following:
 \begin{figure}[H]
   \centering
   \caption{SIRV Model with lockdown for India}
-  \begin{subfigure}[t]{0.48\textwidth}
+
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/SIRV_model_with_lockdown_IND.eps}
+    \includegraphics[scale=0.50]{images/SIRV_model_with_lockdown_IND.eps}
     \caption{SIRV model with lockdown}
+    \label{fig:SIRV_model_with_lockdown_IND}
   \end{subfigure}
-  \label{fig:SIRV_model_with_lockdown_IND}
-  \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
+
+  \begin{subfigure}[t]{\textwidth}
     \centering
-    \includegraphics[scale=0.25]{images/SIRV_model_with_lockdown_infections_IND.eps}
+    \includegraphics[scale=0.50]{images/SIRV_model_with_lockdown_infections_IND.eps}
     \caption{Infections modelled with SIRV model with Lockdown}
+    \label{fig:SIRV_model_with_lockdown_infections_IND}
   \end{subfigure}
-  \label{fig:SIRV_model_with_lockdown_infections_IND}
+
+\end{figure}
+
+For time-varying $\nu$ we get the folllowing:
+\begin{figure}[H]
+  \centering
+  \caption{SIRV Model with lockdown and time-varying $\nu$ for India}
+
+  \begin{subfigure}[t]{\textwidth}
+    \centering
+    \includegraphics[scale=0.50]{images/SIRV_model_with_lockdown_time_varying_nu_IND.eps}
+    \caption{SIRV model with lockdown and time-varying $\nu$}
+    \label{fig:SIRV_model_with_lockdown_time_varying_nu_IND}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{\textwidth}
+    \centering
+    \includegraphics[scale=0.50]{images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.eps}
+    \caption{Infections modelled with SIRV model with Lockdown and time-varying $\nu$}
+    \label{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \caption{Loss for Different Models}
+  \includegraphics[width=\linewidth]{images/comparing_costs_IND.eps}
+  \label{fig:comparing_costs_IND}
 \end{figure}
 
 Stringency affects the economy of developing countries. Below are scatter plots with pearson correlation, for three countries (India, Mexico, Brazil) which are Emerging Market and Developing Economies~\cite{IMFCovid} from May, 2020 to October, 2022.

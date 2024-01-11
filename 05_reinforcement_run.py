@@ -1,4 +1,4 @@
-from rl_utils_new_complex_reward_sirvlockdown import *
+from rl_utils_new_complex_reward_sirvlockdown_nu_varying import *
     
 env = SIREnvironment()
 env.reset()
