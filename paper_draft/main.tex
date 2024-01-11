@@ -48,12 +48,12 @@ The need for a nuanced understanding of how interventions impact both health out
 
 Many economists have studied the effect of COVID-19 on the economy of nations~\cite{Gagnon2023, GagnonKorea, Deb2020,Eichenbaum2021}. In advanced economies like Korea, where the stringency index was below the median the recession was milder than other advanced economies like the United Kingdom where the stringency was much higher~\cite{GagnonKorea}, they achieved it mostly with very aggressive testing, contact tracing, and enforced quarantines and isolations~\cite{Lim2023, KoreaMinister}. In India, social distancing and containment measures have been effective in reducing the number of COVID-19 cases but have come with economic costs. Social distancing had the most adverse effect on the economy in areas with high urbanization~\cite{Deb2020}.
 
-In this paper we want to optimize the government policies regarding stringency. Therefore, alongside epidemiological data, we use the measures of globally comparable government responses~\cite{Hale2021}. We use the simple SIR model without vital dynamics~\cite{Hethcote1989, Hethcote2008, ALLEN2017128} as it is assumed that the time scale is short enough so that can be neglected~\cite{Cooper2020}. By lesioning the model, as opposed to proposing a new mathematical model with more specialized compartments to more accurately represent the actual environment~\cite{Bjrnstad2020, Mwalili2020}, we can effectively address the real-world conditions and propose a solution that is both effective and extendable. However, the study has limitations; the deterministic SIR model fails to account for chance in disease spread and lacks confidence intervals on results and while stochastic models incorporate chance, they are typically more challenging to analyze than their deterministic counterparts~\cite{Hethcote2008}.
+In this paper we want to optimize the government policies regarding stringency. Therefore, alongside epidemiological data, we use the measures of globally comparable government responses~\cite{Hale2021}. We use the simple SIR model without vital dynamics~\cite{Hethcote1989, Hethcote2008, ALLEN2017128} as it is assumed that the time scale is short enough so that can be neglected~\cite{Cooper2020}. By lesioning the model, as opposed to proposing a new mathematical model with more specialized compartments to more accurately represent the actual environment~\cite{Bjrnstad2020, Mwalili2020}, we can effectively address the real-world conditions and propose a solution that is both effective and extendable. The current model accounts for the recovery reached through vaccination~\cite{Marinov2022, MaurciodeCarvalho2023, Thater, Turkyilmazoglu2022, YALADANDA2022101052}. However, the study has limitations; the deterministic SIR model fails to account for chance in disease spread and lacks confidence intervals on results and while stochastic models incorporate chance, they are typically more challenging to analyze than their deterministic counterparts~\cite{Hethcote2008}.
 
-In order to capture competing costs within the environment and achieve a balance between health and economic outcomes, we intend to employ reinforcement learning~\cite{Nguyen2022, Bastani2021, Song2022, Ohi2020, PADMANABHAN2021102676}. Not only does the formulation of the model deal better with competing costs, but it also offers a more transparency behind the reasoning of the decisions being made in such circumstances. When we conceptualize our problem as a reinforcement learning task, an agent is tasked with making decisions in an environment with the aim of optimizing cumulative rewards. This approach relies on trial and error, in contrast to dynamic programming, which assumes complete knowledge of the environment~\cite{Lavet2018}. We make the use of deep reinforcement learning, which is an advancement to reinforcement learning as it allows to reduce the input dimensionality and normalize the input~\cite{Lavet2018, Arulkumaran2017, Henderson_Islam_Bachman_Pineau_Precup_Meger_2018, Mnih2015}. While our model is more transparent in terms of its dependency on the reward policy defined, it has its limitations. A universal optimal policy may not suit diverse socioeconomic contexts due to variations in healthcare resources and economic vulnerabilities across countries, regions, or cities and a comprehensive consideration of decision factors, extending beyond pure reinforcement learning results is needed~\cite{Song2022, Dunn2017, Demir2006}. Also, the current model doesn't account for the herd immunity reached through vaccination which it can be extended to account for~\cite{Marinov2022}.
+In order to capture competing costs within the environment and achieve a balance between health and economic outcomes, we intend to employ reinforcement learning~\cite{Nguyen2022, Bastani2021, Song2022, Ohi2020, PADMANABHAN2021102676}. Not only does the formulation of the model deal better with competing costs, but it also offers a more transparency behind the reasoning of the decisions being made in such circumstances. When we conceptualize our problem as a reinforcement learning task, an agent is tasked with making decisions in an environment with the aim of optimizing cumulative rewards. This approach relies on trial and error, in contrast to dynamic programming, which assumes complete knowledge of the environment~\cite{Lavet2018}. We make the use of deep reinforcement learning, which is an advancement to reinforcement learning as it allows to reduce the input dimensionality and normalize the input~\cite{Lavet2018, Arulkumaran2017, Henderson_Islam_Bachman_Pineau_Precup_Meger_2018, Mnih2015}. While our model is more transparent in terms of its dependency on the reward policy defined, it has its limitations. A universal optimal policy may not suit diverse socioeconomic contexts due to variations in healthcare resources and economic vulnerabilities across countries, regions, or cities and a comprehensive consideration of decision factors, extending beyond pure reinforcement learning results is needed~\cite{Song2022, Dunn2017, Demir2006}.
 
 \subsection*{Mathematical Formulation}
-In SIR-RL, we use a compartmental model to model infectious disease. Here we divide people of the population, based on whether they are yet to come into contact with an infected person (Susceptible), are infectious themselves (Infectious), or have recovered from the infection (Recovered). These compartments create the SIR model which can be represented as follows:
+In SIR-RL, we use a compartmental model to model infectious disease. We iteratively develop this model to fit the actual data better. In an SIR model people of the population are divided based on whether they are yet to come into contact with an infected person (Susceptible), are infectious themselves (Infectious), or have recovered from the infection (Recovered). These compartments create the SIR model which can be represented as follows:
 
 \begin{figure}[H]
 \centering    
@@ -114,7 +114,7 @@ $S$ is the number of susceptible people, $N$ is the total population. At the sta
 
 Most government policies look at the value of $R_{eff}$ to come us with an effective strategy to combat the disease as the fate of the evolution of the disease depends upon it. When $R_{eff}$ is less than one, the infected population $I$ will steadily decline to zero. Conversely, if $R_{eff}$ is greater than one, the infected population will increase. In other words, when $\frac{dI(t)}{dt} < 0 \Rightarrow R_{eff} < 1$ and $\frac{dI(t)}{dt} > 0 \Rightarrow R_{eff} > 1},$ the effective reproductive rate $R_{eff}$ serves as a critical threshold that determines whether an infectious disease will rapidly extinguish or escalate into an epidemic~\cite{Cooper2020}.
 
-To estimate the parameters $\beta$ and $\gamma$ for India, based on the data from January, 2020, to October, 2022, we simply define the cost to calibrate the model using the huber loss~\cite{huberloss}:
+To estimate the parameters $\beta$ and $\gamma$ for India, based on the data from May, 2020, to October, 2022, we simply define the cost to calibrate the model using the huber loss~\cite{huberloss}:
 
 \begin{equation}
   L_{\delta}(y, f(x)) = 
@@ -132,19 +132,19 @@ To estimate the parameters $\beta$ and $\gamma$ for India, based on the data fro
 Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted number of susceptible people, similarly, $I$ for infected and $\hat{I}$ for the predicted number of infected people, and $R$ for recovered. Minimizing this cost function using the Nelder-Mead method\cite{Gao2010}, we get:
 
 \begin{equation}
-  \beta_{optimal} = 0.07565820733562756
+  \beta_{optimal} = 0.04208479828695971
   \label{eq:beta_optimal_without_lockdown}
 \end{equation}
 \begin{equation}
-  \gamma_{optimal} = 0.046594691406826524
+  \gamma_{optimal} = 0.02388356686032017
   \label{eq:gamma_optimal_without_lockdown}
 \end{equation}
 \begin{equation}
-  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 1.6237516560640421
+  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 1.7620817917644795
   \label{eq:r0_without_lockdown}
 \end{equation}
 \begin{equation}
-  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 69949738.9977647
+  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 85051490.53250012
   \label{eq:cost_without_lockdown}
 \end{equation}
 See figure \ref{fig:sir_without_lockdown_IND} to see how the model compares with the real data.
@@ -154,42 +154,146 @@ Now that, we have a model -- we want to say $\beta$ is a time-varying parameter 
 To define the new time-varying beta that is dependent on the current stringency index, we say, 
 
 \begin{equation}
-  \frac{dS}{dt} = -\beta(t) \frac{S I}{N}
+  \frac{dS}{dt} = -\beta (1 - (s(t)/100)) \frac{S I}{N}
   \label{eq:S_with_lockdown}
 \end{equation}
 \begin{equation}
-  \frac{dI}{dt} = \beta(t) \frac{S I}{N} - \gamma I
+  \frac{dI}{dt} = -\beta (1 - (s(t)/100)) \frac{S I}{N} - \gamma I
   \label{eq:I_with_lockdown}
 \end{equation}
 \begin{equation}
   \frac{dR}{dt} = \gamma I
   \label{eq:R_with_lockdown}
 \end{equation}
-\begin{equation}
-  \beta(t) = \beta_{optimal} + (1 - s(t)/100)
-  \label{eq:beta_time_varying_and_stringency_dependent}
-\end{equation}
 
 Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor of 100 to normalize it and bring it in the range $[0, 1]$. Optimizing this using the Nelder-Mead method we get:
 
 \begin{equation}
-  \beta_{optimal} = 0.302941346409129
+  \beta_{optimal} = 0.4013340889432941
   \label{eq:beta_optimal_with_lockdown}
 \end{equation}
 \begin{equation}
-  \gamma_{optimal} = 0.07020572542840187
+  \gamma_{optimal} = 0.09017476605499258
   \label{eq:gamma_optimal_with_lockdown}
 \end{equation}
 \begin{equation}
-  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 4.315051864510377
+  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 4.450625230328213
   \label{eq:r0_with_lockdown}
 \end{equation}
 \begin{equation}
-  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 68015990.34546319
+  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 98438821.45587364
   \label{eq:cost_with_lockdown}
 \end{equation}
 
-See figure \ref{fig:sir_with_lockdown_IND} to see how the model compares with the real data. The model's fit is better, as the $cost = 68015990.34546319$ is $1933748.65230152$ less than the model without lockdown.
+Finally, an additional flow from the susceptible population to the can be shown by adding a vaccination rate $\nu$ in the model. 
+
+\begin{equation}
+  \frac{dS}{dt} = -\beta (1 - (s(t)/100)) \frac{S I}{N} - \nu S
+  \label{eq:S_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  \frac{dI}{dt} = \beta (1 - (s(t)/100)) \frac{S I}{N} - \gamma I
+  \label{eq:I_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  \frac{dR}{dt} = \gamma I + \nu S
+  \label{eq:R_with_lockdown_and_nu}
+\end{equation}
+
+Optimizing these equations with the Nelder-Mead method we get:
+
+\begin{equation}
+  \beta_{optimal} = 0.40897034072952304
+  \label{eq:beta_optimal_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  \gamma_{optimal} = 0.09196829370123338
+  \label{eq:gamma_optimal_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  \nu_{optimal} = 2.9044029843851936e-05
+  \label{eq:nu_optimal_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 4.446862329077204
+  \label{eq:r0_with_lockdown_and_nu}
+\end{equation}
+\begin{equation}
+  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 94636860.38436058
+  \label{eq:cost_with_lockdown_and_nu}
+\end{equation}
+
+However, as observed by the value of $\nu_{optimal}$ which is almost negligible and the overestimation of infected individuals in \ref{fig:SIRV_model_with_lockdown_infections_IND} suggests that $\nu$ might be varying with time, i.e., the flow of people from susceptibility to direct recovery changes with a time dependent vaccination rate. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \ref{eq:beta_optimal_with_lockdown_and_nu} and \ref{eq:gamma_optimal_with_lockdown_and_nu}, we optimize the value of $\nu$ given a sub-interval of $[{start}, {start} + {window}]$ where the ${window} = 20$. Here, ${window}$ is a hyperparameter that can be changed so as to reduce the cost function.
+
+\begin{equation}
+  \frac{dS}{dt} = -\beta_{optimal}  (1 - (s(t)/100))  \frac{S I}{N} - \nu S
+  \label{eq:S_with_lockdown_and_nu_calc_nu}
+\end{equation}
+\begin{equation}
+  \frac{dI}{dt} = \beta_{optimal}  (1 - (s(t)/100)) \frac{S I}{N} - \gamma_{optimal} I
+  \label{eq:I_with_lockdown_and_nu_calc_nu}
+\end{equation}
+\begin{equation}
+  \frac{dR}{dt} = \gamma_{optimal} I + \nu S
+  \label{eq:R_with_lockdown_and_nu_calc_nu}
+\end{equation}
+
+This model gives us how $\nu$ varies with time.
+
+\begin{figure}[H]
+  \centering
+  \caption{$\nu$ Varying with Time}
+  \includegraphics[width=\linewidth]{images/nu_varying_with_time_IND.eps}
+  \label{fig:nu_varying_with_time_IND}
+\end{figure}
+
+Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations below:
+
+\begin{figure}[H]
+\begin{tikzpicture}[node distance=1cm, auto,
+  >=Latex, 
+  every node/.append style={align=center},
+  int/.style={draw, minimum size=1cm}]
+ \node [int] (S)             {$S$};
+ \node [int, right=of S] (I) {$I$};
+ \node [int, right=of I] (R) {$R$};
+ \coordinate[right=of I] (out);
+ \path[->] (S) edge node {$\lambda$} (I)
+           (I) edge node {$\gamma$} (out)
+           (S) edge[bend left=45] node[above] {$\nu(t)$} (R); % Arrow from S to R with text \nu(t)
+\end{tikzpicture}
+\end{figure}
+
+\begin{equation}
+  \frac{dS}{dt} = -\beta  (1 - (s(t)/100))  \frac{S I}{N} - \nu(t) S
+  \label{eq:S_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  \frac{dI}{dt} = \beta  (1 - (s(t)/100)) \frac{S I}{N} - \gamma I
+  \label{eq:I_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  \frac{dR}{dt} = \gamma I + \nu(t) S
+  \label{eq:R_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  \beta_{optimal} = 0.5129414911377119
+  \label{eq:beta_optimal_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  \gamma_{optimal} = 0.12716245167626106
+  \label{eq:gamma_optimal_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 4.033749620081199
+  \label{eq:r0_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  cost = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R}) = 29742589.698910963
+  \label{eq:cost_with_lockdown_and_time_varying_nu}
+\end{equation}
+
+See (\ref{fig:SIR_model_IND}, ~\ref{fig:comparing_costs_IND}) to see how the different models compare against each other.
 
 Now, that we have set up the following relation between $\beta$ and $s(t)$, we investigate how stringency index affects the normalized Gross domestic product (GDP). To do this we fit a polynomial equation of the third degree to the points $(x, y)$ where $x$ is the $s(t)$ stringency at time t, and $y$ the normalized GDP and minimize the squared error. For India after fitting a 3 degree polynomial we get the following equation:
 
@@ -297,7 +401,7 @@ Using the simple SIR model (\ref{eq:S_without_lockdown}, ~\ref{eq:cost_without_l
     \centering
     \includegraphics[scale=0.5]{images/SIR_model_IND.eps}
     \caption{SIR model with lockdown}
-    \label{fig:SIR_mode_IND}
+    \label{fig:SIR_model_IND}
   \end{subfigure}
   \begin{subfigure}[t]{\textwidth}
     \centering

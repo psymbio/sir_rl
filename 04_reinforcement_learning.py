@@ -28,7 +28,7 @@ if not os.path.exists(logdir):
 	os.makedirs(logdir)
 
 # https://stackoverflow.com/questions/56700948/understanding-the-total-timesteps-parameter-in-stable-baselines-models
-TIMESTEPS = 4570
+TIMESTEPS = 2742
 
 if RL_LEARNING_TYPE == "normal":
 	env = SIREnvironment()

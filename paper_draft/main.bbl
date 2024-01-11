@@ -298,6 +298,41 @@
   \textbf{\bibinfo{volume}{13}}, \doiprefix\url{10.1186/s13104-020-05192-1}
   (\bibinfo{year}{2020}).
 
+\bibitem{Marinov2022}
+\bibinfo{author}{Marinov, T.~T.} \& \bibinfo{author}{Marinova, R.~S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Adaptive sir model with
+  vaccination: simultaneous identification of rates and functions illustrated
+  with covid-19}}.
+\newblock {\emph{\JournalTitle{Scientific Reports}}}
+  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.1038/s41598-022-20276-7}
+  (\bibinfo{year}{2022}).
+
+\bibitem{MaurciodeCarvalho2023}
+\bibinfo{author}{Maurício~de Carvalho, J. P.~S.} \&
+  \bibinfo{author}{Rodrigues, A.~A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Sir model with vaccination:
+  Bifurcation analysis}}.
+\newblock {\emph{\JournalTitle{Qualitative Theory of Dynamical Systems}}}
+  \textbf{\bibinfo{volume}{22}}, \doiprefix\url{10.1007/s12346-023-00802-2}
+  (\bibinfo{year}{2023}).
+
+\bibitem{Thater}
+\bibinfo{author}{Thäter, M.}, \bibinfo{author}{Chudej, K.} \&
+  \bibinfo{author}{Pesch, H.~J.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Optimal vaccination strategies for
+  an seir model of infectious diseases with logistic growth}}.
+\newblock {\emph{\JournalTitle{Mathematical Biosciences and Engineering}}}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{485--505},
+  \doiprefix\url{10.3934/mbe.2018022} (\bibinfo{year}{2018}).
+
+\bibitem{Turkyilmazoglu2022}
+\bibinfo{author}{Turkyilmazoglu, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{An extended epidemic model with
+  vaccination: Weak-immune sirvi}}.
+\newblock {\emph{\JournalTitle{Physica A: Statistical Mechanics and its
+  Applications}}} \textbf{\bibinfo{volume}{598}}, \bibinfo{pages}{127429},
+  \doiprefix\url{10.1016/j.physa.2022.127429} (\bibinfo{year}{2022}).
+
 \bibitem{Nguyen2022}
 \bibinfo{author}{Nguyen, Q.~D.} \& \bibinfo{author}{Prokopenko, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A general framework for optimising
@@ -360,15 +395,6 @@
 \newblock In \emph{\bibinfo{booktitle}{Handbook of Public Policy Analysis}},
   \bibinfo{pages}{137--147} (\bibinfo{publisher}{CRC Press},
   \bibinfo{year}{2006}).
-
-\bibitem{Marinov2022}
-\bibinfo{author}{Marinov, T.~T.} \& \bibinfo{author}{Marinova, R.~S.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Adaptive sir model with
-  vaccination: simultaneous identification of rates and functions illustrated
-  with covid-19}}.
-\newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.1038/s41598-022-20276-7}
-  (\bibinfo{year}{2022}).
 
 \bibitem{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}
 \bibinfo{author}{HENS, N.} \emph{et~al.}
