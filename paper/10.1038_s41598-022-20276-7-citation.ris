@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Marinov, Tchavdar T.
+AU  - Marinova, Rossitza S.
+PY  - 2022
+DA  - 2022/09/20
+TI  - Adaptive SIR model with vaccination: simultaneous identification of rates and functions illustrated with COVID-19
+JO  - Scientific Reports
+SP  - 15688
+VL  - 12
+IS  - 1
+AB  - An Adaptive Susceptible-Infected-Removed-Vaccinated (A-SIRV) epidemic model with time-dependent transmission and removal rates is constructed for investigating the dynamics of an epidemic disease such as the COVID-19 pandemic. Real data of COVID-19 spread is used for the simultaneous identification of the unknown time-dependent rates and functions participating in the A-SIRV system. The inverse problem is formulated and solved numerically using the Method of Variational Imbedding, which reduces the inverse problem to a problem for minimizing a properly constructed functional for obtaining the sought values. To illustrate and validate the proposed solution approach, the present study used available public data for several countries with diverse population and vaccination dynamics—the World, Israel, The United States of America, and Japan.
+SN  - 2045-2322
+UR  - https://doi.org/10.1038/s41598-022-20276-7
+DO  - 10.1038/s41598-022-20276-7
+ID  - Marinov2022
+ER  - 
