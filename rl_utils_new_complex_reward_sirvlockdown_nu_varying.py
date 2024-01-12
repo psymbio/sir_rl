@@ -80,28 +80,28 @@ class SIREnvironment(gym.Env):
     def step(self, action):
         self.prev_actions.append(action)
         
-        diff = 0
+        diff_action = 0
         if action == 0:
             self.stringency_index = max(0, self.stringency_index - 10)
-            # diff = -10
+            diff_action = -10
         elif action == 1:
             self.stringency_index = max(0, self.stringency_index - 5)
-            # diff = -5
+            diff_action = -5
         elif action == 2:
             self.stringency_index = max(0, self.stringency_index - 2.5)
-            # diff = -2.5
+            diff_action = -2.5
         elif action == 3:
             self.stringency_index = max(0, self.stringency_index + 0)
-            # diff = 0
+            diff_action = 0
         elif action == 4:
             self.stringency_index = min(100, self.stringency_index + 2.5)
-            # diff = 2.5
+            diff_action = 2.5
         elif action == 5:
             self.stringency_index = min(100, self.stringency_index + 5)
-            # diff = 5
+            diff_action = 5
         elif action == 6:
             self.stringency_index = min(100, self.stringency_index + 10)
-            # diff = 10
+            diff_action = 10
         
         # each action is on ith day
         t_ith_day = np.linspace(0, self.ith_day, self.ith_day + 1)
@@ -127,7 +127,7 @@ class SIREnvironment(gym.Env):
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
 
-        reward_inertia = abs(diff)*-1*5
+        reward_inertia = abs(diff_action)*-1*5
         reward_r_eff = 10 if self.r_eff <= 1.9 else -10
         reward_I_percentage = -5000 if self.I_proportion >= 0.003 else 20
 
@@ -171,9 +171,19 @@ class SIREnvironment(gym.Env):
         return observation, self.reward, self.terminated, self.truncated, info
     
     def render(self, score=0.0, learning=False):
-
+        # N = df.loc[min(df.index), ["N"]].item()
+        # y0 = df.loc[min(df.index), ["S"]].item(), df.loc[min(df.index), ["I"]].item(), df.loc[min(df.index), ["R"]].item()
+        # days_difference = (max(df["date"]) - min(df["date"])).days
+        # t = np.linspace(0, days_difference, days_difference + 1)
+        # nu_varying = list(df['nu_varying_with_time'])
+        
+        # stringency_index_random_choice = []
+        # store_S = np.zeros(days_difference + 1)
+        # store_I = np.zeros(days_difference + 1)
+        # store_R = np.zeros(days_difference + 1)
+        # moves_lockdown = moves / 100
         self.t = np.linspace(0, TOTAL_DAYS, TOTAL_DAYS + 1)
-        fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(10, 12))
+        fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(10, 12))
         modelling_type = "with_lockdown_with_vaccination_time_varying_nu"
         axes[0, 0].plot(self.t, self.df['S']/self.df['N'], 'b', alpha=0.5, lw=2, label='Susceptible (actual)')
         axes[0, 0].plot(self.t, self.df['I']/self.df['N'], 'r', alpha=0.5, lw=2, label='Infected (actual)')

@@ -2,14 +2,14 @@
 ["bibtex main"] 0 "main.aux" "main.bbl" "main" 0
   "./naturemag-doi.bst" 1701319204 36153 a59af0557a0f0c0e857533e984f737bb ""
   "main.aux" 0 -1 0 "pdflatex"
-  "sample.bib" 1705001759 40591 eb5983bb5b5d42127ebcde1c2bd0ab97 ""
+  "sample.bib" 1705064325 41287 487f9c8d645756d8b5325b204c11349d ""
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1705026718 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1705026718
+  "main.blg"
+["pdflatex"] 1705069864 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1705069864
   "/etc/texmf/web2c/texmf.cnf" 1650994201 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1705026718 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1705026716 38589 be362f52e3513af8e2a350b0d13c515f ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1705069864 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1705069863 41781 341880eda6ce0fd8a7bc993cc9a4909b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -264,14 +264,14 @@
   "jabbrv-ltwa-en.ldf" 1701319135 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1701318987 15480 2106da179daf9d5a102407956ba23e0c ""
   "main.aux" 0 -1 0 "pdflatex"
-  "main.bbl" 1705001759 22263 5e94f620ce09de51f8607e4073cc2906 "bibtex main"
+  "main.bbl" 1705064277 23022 131c20dcabafeee39672702db49eb1a8 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1705026716 38589 be362f52e3513af8e2a350b0d13c515f ""
+  "main.tex" 1705069863 41781 341880eda6ce0fd8a7bc993cc9a4909b ""
   "wlscirep.cls" 1701324279 5788 9df2749839c3a8af12c7b5623dab1715 ""
   (generated)
   "main.pdf"
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf"
   "main.aux"
-  "main.out"
   "main.log"
+  "main.out"
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf"
   "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.log"

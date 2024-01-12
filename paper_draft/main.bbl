@@ -28,12 +28,12 @@
 \bibitem{WHOCovid}
 \bibinfo{title}{Who coronavirus (covid-19) dashboard}.
 \newblock \bibinfo{howpublished}{\url{https://covid19.who.int/}}.
-\newblock \bibinfo{note}{Accessed: 2023-11-30}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{IMFCovid}
 \bibinfo{journal}{\bibinfo{title}{World economic outlook, april 2020: The great
   lockdown}}.
-\newblock }}} \bibinfo{note}{Accessed: 2023-11-30}.
+\newblock }}} \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{Nicola2020}
 \bibinfo{author}{Nicola, M.} \emph{et~al.}
@@ -238,7 +238,7 @@
 \bibinfo{title}{Coronavirus: South korea seeing a 'stabilising trend'}.
 \newblock
   \bibinfo{howpublished}{\url{https://www.bbc.com/news/av/world-asia-51897979}}.
-\newblock \bibinfo{note}{Accessed: 2023-11-30}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{Hale2021}
 \bibinfo{author}{Hale, T.} \emph{et~al.}
@@ -332,6 +332,17 @@
 \newblock {\emph{\JournalTitle{Physica A: Statistical Mechanics and its
   Applications}}} \textbf{\bibinfo{volume}{598}}, \bibinfo{pages}{127429},
   \doiprefix\url{10.1016/j.physa.2022.127429} (\bibinfo{year}{2022}).
+
+\bibitem{YALADANDA2022101052}
+\bibinfo{author}{Yaladanda, N.}, \bibinfo{author}{Mopuri, R.},
+  \bibinfo{author}{Vavilala, H.~P.} \& \bibinfo{author}{Mutheneni, S.~R.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Modelling the impact of perfect and
+  imperfect vaccination strategy against sars cov-2 by assuming varied vaccine
+  efficacy over india}}.
+\newblock {\emph{\JournalTitle{Clinical Epidemiology and Global Health}}}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{101052},
+  \doiprefix\url{https://doi.org/10.1016/j.cegh.2022.101052}
+  (\bibinfo{year}{2022}).
 
 \bibitem{Nguyen2022}
 \bibinfo{author}{Nguyen, Q.~D.} \& \bibinfo{author}{Prokopenko, M.}
@@ -445,6 +456,12 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Coronavirus pandemic (covid-19)}}.
 \newblock {\emph{\JournalTitle{Our World in Data}}}  (\bibinfo{year}{2020}).
 \newblock \bibinfo{note}{Https://ourworldindata.org/coronavirus}.
+
+\bibitem{AWSDeepRacer}
+\bibinfo{title}{Aws deepracer}.
+\newblock
+  \bibinfo{howpublished}{\url{https://aws.amazon.com/deepracer/league/}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{economic_indicators_data}
 \bibinfo{author}{OECD}.

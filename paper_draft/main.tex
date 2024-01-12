@@ -103,7 +103,7 @@ And, $\beta$ the effective transmission rate is defined as:
 
 During an epidemic, the fundamental drivers of an epidemic growth is the rate of infection $\beta$ i.e. the average number of infections per infected case and the infectious period $1/\gamma$ i.e. the average period for which the infected case is infected for. Epidemics can only happen if the case is infectious enough for long enough and this defined by $R_0 = \beta / \gamma$. Here, $R_0$ is The average number of secondary infections caused by each infected case, in an otherwise fully susceptible population.
 
-At the peak of an epidemic $R_0$ declines as there are no more susceptible people left in the pool, therefore, $R_{eff}$ comes into play. $R_{eff}$ is defined as the average number of secondary cases arising from an infected case, at a given point in an epidemic - therefore, it takes into account the existing immunity of the system. 
+At the peak of an epidemic $R_0$ declines as there are no more susceptible people left in the pool, therefore, $R_{eff}$ (effective reproductive number) comes into play. $R_{eff}$ is defined as the average number of secondary cases arising from an infected case, at a given point in an epidemic - therefore, it takes into account the existing immunity of the system. 
 
 \begin{equation}
   R_{eff} = R_0 \frac{S}{N}
@@ -158,7 +158,7 @@ To define the new time-varying beta that is dependent on the current stringency 
   \label{eq:S_with_lockdown}
 \end{equation}
 \begin{equation}
-  \frac{dI}{dt} = -\beta (1 - (s(t)/100)) \frac{S I}{N} - \gamma I
+  \frac{dI}{dt} = \beta (1 - (s(t)/100)) \frac{S I}{N} - \gamma I
   \label{eq:I_with_lockdown}
 \end{equation}
 \begin{equation}
@@ -223,7 +223,7 @@ Optimizing these equations with the Nelder-Mead method we get:
   \label{eq:cost_with_lockdown_and_nu}
 \end{equation}
 
-However, as observed by the value of $\nu_{optimal}$ which is almost negligible and the overestimation of infected individuals in \ref{fig:SIRV_model_with_lockdown_infections_IND} suggests that $\nu$ might be varying with time, i.e., the flow of people from susceptibility to direct recovery changes with a time dependent vaccination rate. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \ref{eq:beta_optimal_with_lockdown_and_nu} and \ref{eq:gamma_optimal_with_lockdown_and_nu}, we optimize the value of $\nu$ given a sub-interval of $[{start}, {start} + {window}]$ where the ${window} = 20$. Here, ${window}$ is a hyperparameter that can be changed so as to reduce the cost function.
+However, as observed by the value of $\nu_{optimal}$ from \ref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible (close to zero) and the overestimation of infected individuals in \ref{fig:SIRV_model_with_lockdown_infections_IND} suggests that $\nu$ might be varying with time. This suggests a time-varying vaccination rate, wherein the transition from susceptibility to direct recovery fluctuates with time. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \ref{eq:beta_optimal_with_lockdown_and_nu} and \ref{eq:gamma_optimal_with_lockdown_and_nu}, we optimize the value of $\nu$ given a sub-interval of $[{start}, {start} + {window}]$ where the ${window} = 20$ \cite{Marinov2022}. Here, ${window}$ is a hyperparameter that can be changed so as to reduce the cost function.
 
 \begin{equation}
   \frac{dS}{dt} = -\beta_{optimal}  (1 - (s(t)/100))  \frac{S I}{N} - \nu S
@@ -309,6 +309,7 @@ Given that the government is an agent that takes decisions in a deterministic en
 \begin{itemize}
     % \item \url{https://jmlr.org/papers/volume22/20-1364/20-1364.pdf} RL Paper that references \url{https://araffin.github.io/slides/rl-tuto-jnrr19/#/13} RL ppt (for our RL notes).
     \item Set of States $\altmathcal{S}$: The state of the environment are described through the descriptors like the normalized GDP ($(GDP_{predicted} - GDP_{min}) / (GDP_{max} - GDP_{min})$), $R_{eff}$, a list of all the previous actions (in changing the stringency) and the proportion of the population that was susceptible, infected and recovered. The starting states are simply these values at the starting date and no previous actions.
+    \item TODO: FIX BELOW ITEM AFTER MODEL RUNS
     \item Actions $\altmathcal{A}$: The stringency index variable was analyzed with a sample size of 1034. The mean value was approximately 59.62, with a standard deviation of 22.82. The minimum value was 0, while the maximum value reached 100. And the differences between two consecutive stringencies had a mean of 0.030474, and standard deviation of 2.387331, with the minimum being -14.360000 and maximum 55.560000. Based on this we define the discrete action space. There are 7 actions for the agent, it can keep the stringency index same, reduce/increase by 2.5, reduce/increase by 5, and reduce/increase by 10 given that the stringency index doesn't exceed 100 or go below 0.
     \item Transition dynamics $\altmathcal{T}\left(\mathbf{s}_{t+1} \mid \mathbf{s}_t, \mathbf{a}_t\right)$ that map a state-action pair at time $t$ onto a distribution of states at time $t+1$. This state transition is defined by the SIR model with lockdown and the model of how stringency index affects the GDP.
     \item Immediate reward $\altmathcal{R}\left(\mathbf{s}_t, \mathbf{a}_t, \mathbf{s}_{t+1}\right)$. Here we define a reward strategy however it should be noted that this strategy can be easily changed to prioritize different needs.
@@ -320,7 +321,11 @@ The stringency index emerges as a critical factor influencing both the Gross Dom
 
 With this basis we define the reward function~\cite{Ohi2020}. In Deep Reinforcement Learning (DRL), positive rewards promote and negative rewards demote actions. The agent tries to generate such a policy/knowledge to avoid the discouraging situation by following the policy. By designing a proper reward function, it is possible to generate such an agent that may follow the human desired situation.
 
+The reward function is parameterized to account for key factors influencing decision-making. To incentivize reduction of $R{eff}$ (effective reproductive number) a negative reward is imposed of $-20 * R_{eff}$, but as the $R_{eff}$ is between $[1.9, 1,5]$ we start to positively reward it with a multiple of the GDP ($100 * \textrm{min\_max\_normalized\_GDP}$) and if the $R_{eff}$ is below $1.5$ then $200 * \textrm{min\_max\_normalized\_GDP}$. Furthermore, there's a simple positive reward of $10$ if $R_{eff}$ is below the threshold value ($1.9$) and negative reward of $-10$ otherwise. To reward not changing the stringencies frequently, we reward the absolute different between the previous stringency and the current stringency negatively ($|s(t) - s(t-1)| * -1 * 5$) [TODO: this factor should be reduced back to 2 from 5]. If the proportion of the infected population were to rise above 0.003 the model is punished ($-5000$) and otherwise rewarded ($+20$). It should be realized there can be an infinite number of ways to design the reward function to be more human and upgrade the way a decision is taken given the situation \cite{AWSDeepRacer}. Therefore, this research act as a  framework for promoting the development of more efficient reward strategies for the same. 
+
 The agent observes the percentage of the population that is susceptible, infected, recovered, and the GDP which extrapolated from the stringency index and all the past moves played, i.e., all the past stringency indexes decided by the agent. The following values are fed into a simple network. Stable Baselines3 supports multiple inputs by using Dict Gym space. This can be done using MultiInputPolicy, which by default uses the CombinedExtractor features extractor to turn multiple inputs into a single vector, handled by the network arch network.
+
+For data that varies with time we use a simple LSTM architecture.
 
 % we utilized a custom combined extractor, a unique type of Long Short-Term Memory (LSTM) network, for processing our data. This network was designed to handle different types of input data encapsulated in an observation space, which is a common concept in reinforcement learning representing the information an agent observes from the environment. The CustomCombinedExtractor class, which inherits from the BaseFeaturesExtractor class, was initialized with an observation space that is a dictionary of Gym spaces. The Gym spaces module provides a set of high-level, easy-to-use data structures for defining observation and action spaces, which are essential components in reinforcement learning. The extractor contains a dictionary of individual extractors for each key in the observation space. If the subspace shape is equal to the total number of days plus one, an LSTM extractor is created with an input size of 1 and a hidden size of 16. This LSTM extractor is designed to handle sequential data, which is particularly useful for time-series data such as ours. For the 'other_stats' key, a Flatten extractor is used to flatten the input data. In the forward method, the observations are processed through their respective extractors. For LSTM extractors, the final hidden state is used as the output. All the processed observations are then concatenated into a single tensor. The observation space for the deep learning type is defined as a dictionary of four keys: 'stringency', 'normalized_gdp', 'r_eff', and 'other_stats'. Each key is associated with a Box space, which is a multi-dimensional box that allows for a range of numerical values. The shape of the Box space defines the dimensionality of the data, and the low and high parameters define the range of possible values. This LSTM network and the associated observation space provide a robust framework for processing and learning from our complex, multi-dimensional data.
 
@@ -410,9 +415,9 @@ Using the simple SIR model (\ref{eq:S_without_lockdown}, ~\ref{eq:cost_without_l
     \label{fig:SIR_model_infections_IND}
   \end{subfigure}
 \end{figure}
+Here, it can be observed that the SIR model accurately fits the susceptible population and recovered population but overestimates the infected population by a significant margin. Although overestimating the infected population may not always be problematic, in our specific case, it can create complications. This is because our research involves rewarding the agent when the proportion of infected individuals falls below a predetermined threshold. Consequently, an overestimation of the infected population could lead to incorrect decision-making and undesirable outcomes.
 
-
-Combining the lockdown dynamics in the SIR model we get this following:
+Combining the lockdown dynamics in the SIR model (\ref{eq:S_with_lockdown}, ~\ref{eq:cost_with_lockdown}) we get the following:
 \begin{figure}[H]
   \centering
   \caption{SIR Model with lockdown for India}
@@ -439,8 +444,9 @@ Combining the lockdown dynamics in the SIR model we get this following:
     \label{fig:SIR_model_with_lockdown_infections_IND}
   \end{subfigure}
 \end{figure}
+Here, it can be observed there's an overestimation of infected individuals, but, the two stages of the epidemic are being accounted for. This is what suggests that there might be depletion of infected individuals through vaccination.
 
-Combining vaccination dynamics with SIR with lockdown model we get the following:
+Combining vaccination dynamics with SIR with lockdown model (\ref{eq:S_with_lockdown_and_nu}, ~\ref{eq:cost_with_lockdown_and_nu}) we get the following:
 \begin{figure}[H]
   \centering
   \caption{SIRV Model with lockdown for India}
@@ -460,8 +466,9 @@ Combining vaccination dynamics with SIR with lockdown model we get the following
   \end{subfigure}
 
 \end{figure}
+Here, because the value of $\nu$ (\ref{eq:nu_optimal_with_lockdown_and_nu}) is negligible, it makes no change. However, time-varying $\nu$ shall be able to better account for the these dynamics.
 
-For time-varying $\nu$ we get the folllowing:
+For time-varying $\nu$ and SIRV model with lockdown (\ref{eq:S_with_lockdown_and_time_varying_nu}, ~\ref{eq:cost_with_lockdown_and_time_varying_nu}), we get the folllowing:
 \begin{figure}[H]
   \centering
   \caption{SIRV Model with lockdown and time-varying $\nu$ for India}
@@ -488,7 +495,9 @@ For time-varying $\nu$ we get the folllowing:
   \label{fig:comparing_costs_IND}
 \end{figure}
 
-Stringency affects the economy of developing countries. Below are scatter plots with pearson correlation, for three countries (India, Mexico, Brazil) which are Emerging Market and Developing Economies~\cite{IMFCovid} from May, 2020 to October, 2022.
+With a time-varying $\nu$ (vaccination rate) and the effect of lockdown, our model is able to account for the infected individuals and reduce the cost in comparison to all the previously formalized models for the data. This shows how interventions and changes in the way people behave in response of a epidemic \cite{Caldwell2021} play a major role in the way the epidemic unfolds.
+
+However, Non-pharmaceutical Interventions (NPIs) come with costs for developing nations. Below are scatter plots with pearson correlation, for three countries (India, Mexico, Brazil) which are Emerging Market and Developing Economies~\cite{IMFCovid} from May, 2020 to October, 2022.
 
 \begin{figure}[H]
   \centering
@@ -536,7 +545,7 @@ Stringency affects the economy of developing countries. Below are scatter plots 
   \label{fig:gdp_modelled_with_stringency_BRA}
 \end{figure}
 
-We observe that stringency has a negative impact on the normalized Gross domestic product (GDP) of each country. Therefore, in some countries policies made during an epidemic have competing costs. This is not the case for Advanced Economies like (USA, Japan, Canada).
+It can be observed that stringency has a negative impact on the normalized Gross domestic product (GDP). Therefore, in some countries policies made during an epidemic have competing costs. This is not the case for Advanced Economies like (USA, Japan, Canada).
 
 \begin{figure}[H]
   \centering
