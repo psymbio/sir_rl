@@ -6,10 +6,10 @@
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1705001771 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1705001771
+["pdflatex"] 1705026718 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1705026718
   "/etc/texmf/web2c/texmf.cnf" 1650994201 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1705001771 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1705001770 38600 2adacf588f8ab432cbc53c2f64fd9b1b ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1705026718 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1705026716 38589 be362f52e3513af8e2a350b0d13c515f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -266,12 +266,12 @@
   "main.aux" 0 -1 0 "pdflatex"
   "main.bbl" 1705001759 22263 5e94f620ce09de51f8607e4073cc2906 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1705001770 38600 2adacf588f8ab432cbc53c2f64fd9b1b ""
+  "main.tex" 1705026716 38589 be362f52e3513af8e2a350b0d13c515f ""
   "wlscirep.cls" 1701324279 5788 9df2749839c3a8af12c7b5623dab1715 ""
   (generated)
+  "main.pdf"
   "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf"
   "main.aux"
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.log"
-  "main.pdf"
-  "main.log"
   "main.out"
+  "main.log"
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.log"

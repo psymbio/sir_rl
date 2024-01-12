@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  12 JAN 2024 01:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  12 JAN 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1085,12 +1085,7 @@ l.115 ...c{dI(t)}{dt} > 0 \Rightarrow R_{eff} > 1}
                                                   ,$ the effective reproduct...
 
 ? 
-[3]
-
-LaTeX Warning: Reference `fig:sir_without_lockdown_IND' on page 4 undefined on 
-input line 150.
-
-[4] [5]
+[3] [4] [5]
 File: images/nu_varying_with_time_IND.eps Graphic file (type eps)
 <images/nu_varying_with_time_IND.eps>
  [6]
@@ -1098,7 +1093,8 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 11.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [7]
+)
+[7]
 Overfull \hbox (2.01968pt too wide) in paragraph at lines 389--390
 [][] 
  []
@@ -1340,10 +1336,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 600.
  ) 
 Here is how much of TeX's memory you used:
- 33159 strings out of 479819
- 645591 string characters out of 5895846
- 956651 words of memory out of 5000000
- 49739 multiletter control sequences out of 15000+600000
+ 33158 strings out of 479819
+ 645561 string characters out of 5895846
+ 956652 words of memory out of 5000000
+ 49738 multiletter control sequences out of 15000+600000
  589932 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,12n,74p,1949b,988s stack positions out of 5000i,500n,10000p,200000b,80000s

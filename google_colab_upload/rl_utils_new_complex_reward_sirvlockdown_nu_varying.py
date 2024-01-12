@@ -51,8 +51,8 @@ def deriv(y, t, N, beta, gamma, nu_varying, lockdown):
     return dSdt, dIdt, dRdt
 
 def calculate_reward_weighted(gdp_min_max_normalized_list, r_eff_list):
-    GDP_WEIGHT_1 = 100 # change this value and see how it affects the reward
-    GDP_WEIGHT_2 = 200 # change this value and see how it affects the reward
+    GDP_WEIGHT_1 = 10 # change this value and see how it affects the reward
+    GDP_WEIGHT_2 = 20 # change this value and see how it affects the reward
     reward = []
     for i in range(len(gdp_min_max_normalized_list)):
         if r_eff_list[i] > 1.9:
@@ -127,12 +127,12 @@ class SIREnvironment(gym.Env):
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
 
-        reward_inertia = abs(diff)*-1*5
-        reward_r_eff = 10 if self.r_eff <= 1.9 else -10
-        reward_I_percentage = -5000 if self.I_proportion >= 0.003 else 20
+        reward_inertia = abs(diff)*-1*2
+        reward_r_eff = 1 if self.r_eff <= 1.9 else -1
+        reward_I_percentage = -5000 if self.I_proportion >= 0.002 else 0
 
-        gdp_reward_weight_1 = 100
-        gdp_reward_weight_2 = 200
+        gdp_reward_weight_1 = 10
+        gdp_reward_weight_2 = 20
         if self.r_eff > 1.9:
             reward_weighted = -20 * self.r_eff
         elif self.r_eff <= 1.9 and self.r_eff >= 1.5:
@@ -227,21 +227,20 @@ class SIREnvironment(gym.Env):
         legend.get_texts()[1].set_text(f'R_eff (modelled); R_eff=1 at {first_time_r_eff_modelled_1}')
         legend.get_texts()[2].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
 
-        hospital_capacity = 0.003
-        hospital_capacity_punishment = -5000
-        hospital_capacity_reward = 20
-        I_reward_actual = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I"] / self.df["N"]]
-        I_reward_modelled = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_modelled_with_lockdown"] / self.N]
+        hospital_capacity = 0.002
+        hospital_capacity_reward = -5000
+        I_reward_actual = [hospital_capacity_reward if I_percentage >= hospital_capacity else 0 for I_percentage in self.df["I"] / self.df["N"]]
+        I_reward_modelled = [hospital_capacity_reward if I_percentage >= hospital_capacity else 0 for I_percentage in self.df["I_modelled_with_lockdown"] / self.N]
         
-        r_eff_reward_choosen = 10
-        r_eff_punishment_choosen = -10
+        r_eff_reward_choosen = 1
+        r_eff_punishment_choosen = -1
         r_eff_level = 1.9
         r_eff_reward_actual = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_actual_" + modelling_type]])
         r_eff_reward_modelled = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_modelled_" + modelling_type]])
         
-        inertia_rewards_actual = np.array([0] + [abs(diff)*5*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        inertia_rewards_actual = np.array([0] + [abs(diff)*2*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
         # modelled reward for intertia is same as actual
-        inertia_rewards_modelled = np.array([0] + [abs(diff)*5*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        inertia_rewards_modelled = np.array([0] + [abs(diff)*2*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
         
         reward_actual = np.array(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_" + modelling_type])) + I_reward_actual + r_eff_reward_actual + inertia_rewards_actual
         reward_modelled = np.array(calculate_reward_weighted(self.df["gdp_normalized_modelled_min_max_normalized"], self.df["r_eff_modelled_" + modelling_type])) + I_reward_modelled + r_eff_reward_modelled + inertia_rewards_modelled
