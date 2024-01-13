@@ -40,9 +40,9 @@ for episode in range(1, episodes+1):
         info_save.append(info)
         score += reward
     print(f'Episode: {episode}, Score: {score}')
-    env.render(score=score)
     with open(os.path.join(OUTPUT_DIR, "actions_taken", f"{score:.2f}.txt"), "w") as f:
         for action in actions_taken:
             f.write(str(action) +"\n")
     info_save_df = pd.DataFrame.from_dict(info_save)
     info_save_df.to_csv(os.path.join(OUTPUT_DIR, "info_save", f"{score:.2f}.csv"), index=False)
+    env.render(score=score, stringency=np.array(info_save_df['stringency_index']))
