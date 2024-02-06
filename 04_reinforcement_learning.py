@@ -18,8 +18,8 @@ import time
 env = SIREnvironment()
 check_env(env)
 
-models_dir = f"models/{int(time.time())}/"
-logdir = f"logs/{int(time.time())}/"
+models_dir = f"models/{int(time.time())}_herd/"
+logdir = f"logs/{int(time.time())}_herd/"
 
 if not os.path.exists(models_dir):
 	os.makedirs(models_dir)

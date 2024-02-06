@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Liao, Zhifang
+AU  - Lan, Peng
+AU  - Liao, Zhining
+AU  - Zhang, Yan
+AU  - Liu, Shengzong
+PY  - 2020
+DA  - 2020/12/31
+TI  - TW-SIR: time-window based SIR for COVID-19 forecasts
+JO  - Scientific Reports
+SP  - 22454
+VL  - 10
+IS  - 1
+AB  - Since the outbreak of COVID-19, many COVID-19 research studies have proposed different models for predicting the trend of COVID-19. Among them, the prediction model based on mathematical epidemiology (SIR) is the most widely used, but most of these models are adapted in special situations based on various assumptions. In this study, a general adapted time-window based SIR prediction model is proposed, which is characterized by introducing a time window mechanism for dynamic data analysis and using machine learning method predicts the basic reproduction number and the exponential growth rate of the epidemic. We analyzed COVID-19 data from February to July 2020 in seven countries–––China, South Korea, Italy, Spain, Brazil, Germany and France, and the numerical results showed that the framework can effectively measure the real-time changes of the parameters during the epidemic, and error rate of predicting the number of COVID-19 infections in a single day is within 5%.
+SN  - 2045-2322
+UR  - https://doi.org/10.1038/s41598-020-80007-8
+DO  - 10.1038/s41598-020-80007-8
+ID  - Liao2020
+ER  - 

@@ -1,3 +1,10 @@
+@book{sutton2018reinforcement,
+  title={Reinforcement learning: An introduction},
+  author={Sutton, Richard S and Barto, Andrew G},
+  year={2018},
+  publisher={MIT press}
+}
+
 @Article{Baker2022,
   author={Baker, Rachel E.
   and Mahmud, Ayesha S.
@@ -40,7 +47,7 @@
   eprint = {https://academic.oup.com/inthealth/article-pdf/13/6/493/41430650/ihab057.pdf},
 }
 
-  @ARTICLE{Hale2021,
+  @article{Hale2021,
   author={Hale, Thomas
   and Angrist, Noam
   and Goldszmidt, Rafael
@@ -451,7 +458,7 @@ keywords = {Branching process, Continuous-time Markov chain, Minor outbreak, Sto
 abstract = {Some mathematical methods for formulation and numerical simulation of stochastic epidemic models are presented. Specifically, models are formulated for continuous-time Markov chains and stochastic differential equations. Some well-known examples are used for illustration such as an SIR epidemic model and a host-vector malaria model. Analytical methods for approximating the probability of a disease outbreak are also discussed.}
 }
 
-@techreport{GagnonKorea,
+@article{GagnonKorea,
  URL = {http://www.jstor.org/stable/resrep51577},
  author = {Joseph E. Gagnon and Asher Rose},
  institution = {Peterson Institute for International Economics},
@@ -666,9 +673,23 @@ keywords = {open-source, PyTorch, reinforcement learning, baselines, Python, sof
   note = {Accessed: 2023-12-26}
 }
 
+@article{NBERw26981,
+ title = "A Simple Planning Problem for COVID-19 Lockdown",
+ author = "Alvarez, Fernando E and Argente, David and Lippi, Francesco",
+ institution = "National Bureau of Economic Research",
+ type = "Working Paper",
+ series = "Working Paper Series",
+ number = "26981",
+ year = "2020",
+ month = "April",
+ doi = {10.3386/w26981},
+ URL = "http://www.nber.org/papers/w26981",
+ abstract = {We study the optimal lockdown policy for a planner who wants to control the fatalities of a pandemic while minimizing the output costs of the lockdown. We use the SIR epidemiology model and a linear economy to formalize the planner's dynamic control problem. The optimal policy depends on the fraction of infected and susceptible in the population. We parametrize the model using data on the COVID19 pandemic and the economic breadth of the lockdown. The quantitative analysis identifies the features that shape the intensity and duration of the optimal lockdown policy. Our baseline parametrization is conditional on a 1% of infected agents at the outbreak, no cure for the disease, and the possibility of testing. The optimal policy prescribes a severe lockdown beginning two weeks after the outbreak, covers 60% of the population after a month, and is gradually withdrawn covering 20% of the population after 3 months. The intensity of the lockdown depends on the gradient of the fatality rate as a function of the infected, and on the assumed value of a statistical life. The absence of testing increases the economic costs of the lockdown, and shortens the duration of the optimal lockdown which ends more abruptly. Welfare under the optimal policy with testing is higher, equivalent to a one-time payment of 2% of GDP.},
+}
+
 
 @article{analytical_covid_lockdown_model,
-    author = {Łukasz Rachel},
+    author = {Lukasz Rachel},
     title = {An Analytical Model of Covid-19 Lockdowns},
     year = {2020},
     note = {https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-29-Paper.pdf}
@@ -823,6 +844,103 @@ The proposed modelling approach shows a range of assumptions on the efficacy of 
 
 @misc{InternetArchive,
   title = {Internet Archive},
-  howpublished = {\url{https://archive.org/}},
+  howpublished = {\url{https://archive.org}},
   note = {Accessed: 2024-01-12}
 }
+
+@misc{WorldometerCorona,
+  title = {COVID-19 Coronavirus Pandemic},
+  howpublished = {\url{https://www.worldometers.info/coronavirus/}},
+  note = {Accessed: 2024-01-12}
+}
+
+@misc{UnicefCovidVaccine,
+  title = {COVID-19 Vaccine launch in India},
+  howpublished = {\url{https://www.unicef.org/india/stories/covid-19-vaccine-launch-india}},
+  note = {Accessed: 2024-01-12}
+}
+
+@misc{PIBCovidVaccine,
+  title = {Press Information Bureau, Government of India, Prime Minister's Office, PM Launches pan India rollout of COVID-19 vaccination drive},
+  howpublished = {\url{https://pib.gov.in/Pressreleaseshare.aspx?PRID=1689021}},
+  note = {Accessed: 2024-01-12}
+}
+
+@misc{WikipediaCovidVaccine,
+  title = {COVID-19 vaccination in India},
+  howpublished = {\url{https://en.wikipedia.org/wiki/COVID-19_vaccination_in_India}},
+  note = {Accessed: 2024-01-12}
+}
+
+@article{LSTM,
+  author={Hochreiter, Sepp and Schmidhuber, Jürgen},
+  journal={Neural Computation}, 
+  title={Long Short-Term Memory}, 
+  year={1997},
+  volume={9},
+  number={8},
+  pages={1735-1780},
+  doi={10.1162/neco.1997.9.8.1735}}
+
+@inproceedings{NIPS2001_a38b1617,
+ author = {Bakker, Bram},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {T. Dietterich and S. Becker and Z. Ghahramani},
+ pages = {},
+ publisher = {MIT Press},
+ title = {Reinforcement Learning with Long Short-Term Memory},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2001/file/a38b16173474ba8b1a95bcbc30d3b8a5-Paper.pdf},
+ volume = {14},
+ year = {2001}
+}
+
+@article{NBERw26867,
+ title = "What Will Be the Economic Impact of COVID-19 in the US? Rough Estimates of Disease Scenarios",
+ author = "Atkeson, Andrew",
+ institution = "National Bureau of Economic Research",
+ type = "Working Paper",
+ series = "Working Paper Series",
+ number = "26867",
+ year = "2020",
+ month = "March",
+ doi = {10.3386/w26867},
+ URL = "http://www.nber.org/papers/w26867",
+ abstract = {This note is intended to introduce economists to a simple SIR model of the progression of COVID-19 in the United States over the next 12-18 months. An SIR model is a Markov model of the spread of an epidemic in a population in which the total population is divided into categories of being susceptible to the disease (S), actively infected with the disease (I), and recovered (or dead) and no longer contagious (R). How an epidemic plays out over time is determined by the transition rates between these three states. This model allows for quantitative statements regarding the tradeoff between the severity and timing of suppression of the disease through social distancing and the progression of the disease in the population. Example applications of the model are provided. Special attention is given to the question of if and when the fraction of active infections in the population exceeds 1% (at which point the health system is forecast to be severely challenged) and 10% (which may result in severe staffing shortages for key financial and economic infrastructure) as well as the cumulative burden of the disease over an 18 month horizon.},
+}
+
+@article{Liao2020,
+  title = {TW-SIR: time-window based SIR for COVID-19 forecasts},
+  volume = {10},
+  ISSN = {2045-2322},
+  url = {http://dx.doi.org/10.1038/s41598-020-80007-8},
+  DOI = {10.1038/s41598-020-80007-8},
+  number = {1},
+  journal = {Scientific Reports},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Liao,  Zhifang and Lan,  Peng and Liao,  Zhining and Zhang,  Yan and Liu,  Shengzong},
+  year = {2020},
+  month = dec 
+}
+
+@article{TimeDependentSIR,
+  author={Chen, Yi-Cheng and Lu, Ping-En and Chang, Cheng-Shang and Liu, Tzu-Hsuan},
+  journal={IEEE Transactions on Network Science and Engineering}, 
+  title={A Time-Dependent SIR Model for COVID-19 With Undetectable Infected Persons}, 
+  year={2020},
+  volume={7},
+  number={4},
+  pages={3279-3294},
+  keywords={Diseases;Numerical models;Mathematical model;Predictive models;Sociology;Statistics;Government;COVID-19;SARS-CoV-2;Coronavirus;time-dependent SIR model;undetectable infection;herd immunity;superspreader;independent cascade;social distancing.},
+  doi={10.1109/TNSE.2020.3024723}}
+
+@article{AlvarezLockdownSIR,
+Author = {Alvarez, Fernando and Argente, David and Lippi, Francesco},
+Title = {A Simple Planning Problem for COVID-19 Lock-down, Testing, and Tracing},
+Journal = {American Economic Review: Insights},
+Volume = {3},
+Number = {3},
+Year = {2021},
+Month = {September},
+Pages = {367-82},
+DOI = {10.1257/aeri.20200201},
+URL = {https://www.aeaweb.org/articles?id=10.1257/aeri.20200201}}

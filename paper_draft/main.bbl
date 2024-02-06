@@ -175,6 +175,21 @@
   \doiprefix\url{https://doi.org/10.1016/j.bspc.2021.102676}
   (\bibinfo{year}{2021}).
 
+\bibitem{NBERw26981}
+\bibinfo{author}{Alvarez, F.~E.}, \bibinfo{author}{Argente, D.} \&
+  \bibinfo{author}{Lippi, F.}
+\newblock \bibinfo{journal}{\bibinfo{title}{A simple planning problem for
+  covid-19 lockdown}}.
+\newblock }}} \doiprefix\url{10.3386/w26981} (\bibinfo{year}{2020}).
+
+\bibitem{analytical_covid_lockdown_model}
+\bibinfo{author}{Rachel, L.}
+\newblock \bibinfo{journal}{\bibinfo{title}{An analytical model of covid-19
+  lockdowns}}.
+\newblock }}}  (\bibinfo{year}{2020}).
+\newblock
+  \bibinfo{note}{Https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-29-Paper.pdf}.
+
 \bibitem{Redlin2022}
 \bibinfo{author}{Redlin, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Differences in npi strategies
@@ -203,10 +218,9 @@
 
 \bibitem{GagnonKorea}
 \bibinfo{author}{Gagnon, J.~E.} \& \bibinfo{author}{Rose, A.}
-\newblock \bibinfo{title}{23-8 how did korea’s fiscal accounts fare during
-  the covid-19 pandemic?}
-\newblock \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Peterson Institute
-  for International Economics} (\bibinfo{year}{2023}).
+\newblock \bibinfo{journal}{\bibinfo{title}{23-8 how did korea’s fiscal
+  accounts fare during the covid-19 pandemic?}}
+\newblock }}}  (\bibinfo{year}{2023}).
 
 \bibitem{Deb2020}
 \bibinfo{author}{Deb, P.}, \bibinfo{author}{Furceri, D.},
@@ -344,6 +358,27 @@
   \doiprefix\url{https://doi.org/10.1016/j.cegh.2022.101052}
   (\bibinfo{year}{2022}).
 
+\bibitem{SIRLockdown}
+\bibinfo{title}{Lockdowns in sir models}.
+\newblock
+  \bibinfo{howpublished}{\url{https://benjaminmoll.com/wp-content/uploads/2020/05/SIR_notes.pdf}}.
+\newblock \bibinfo{note}{Accessed: 2023-12-26}.
+
+\bibitem{NBERw26867}
+\bibinfo{author}{Atkeson, A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{What will be the economic impact of
+  covid-19 in the us? rough estimates of disease scenarios}}.
+\newblock }}} \doiprefix\url{10.3386/w26867} (\bibinfo{year}{2020}).
+
+\bibitem{TimeDependentSIR}
+\bibinfo{author}{Chen, Y.-C.}, \bibinfo{author}{Lu, P.-E.},
+  \bibinfo{author}{Chang, C.-S.} \& \bibinfo{author}{Liu, T.-H.}
+\newblock \bibinfo{journal}{\bibinfo{title}{A time-dependent sir model for
+  covid-19 with undetectable infected persons}}.
+\newblock {\emph{\JournalTitle{IEEE Transactions on Network Science and
+  Engineering}}} \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{3279--3294},
+  \doiprefix\url{10.1109/TNSE.2020.3024723} (\bibinfo{year}{2020}).
+
 \bibitem{Nguyen2022}
 \bibinfo{author}{Nguyen, Q.~D.} \& \bibinfo{author}{Prokopenko, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A general framework for optimising
@@ -360,6 +395,32 @@
 \newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{599}},
   \bibinfo{pages}{108–113}, \doiprefix\url{10.1038/s41586-021-04014-z}
   (\bibinfo{year}{2021}).
+
+\bibitem{sutton2018reinforcement}
+\bibinfo{author}{Sutton, R.~S.} \& \bibinfo{author}{Barto, A.~G.}
+\newblock \emph{\bibinfo{title}{Reinforcement learning: An introduction}}
+  (\bibinfo{publisher}{MIT press}, \bibinfo{year}{2018}).
+
+\bibitem{Dunn2017}
+\bibinfo{author}{Dunn, W.~N.}
+\newblock \emph{\bibinfo{title}{Public policy analysis}}
+  (\bibinfo{publisher}{Routledge}, \bibinfo{address}{London, England},
+  \bibinfo{year}{2017}), \bibinfo{edition}{6} edn.
+
+\bibitem{Demir2006}
+\bibinfo{author}{Demir, T.} \& \bibinfo{author}{Miller, H.}
+\newblock \bibinfo{title}{Policy communities}.
+\newblock In \emph{\bibinfo{booktitle}{Handbook of Public Policy Analysis}},
+  \bibinfo{pages}{137--147} (\bibinfo{publisher}{CRC Press},
+  \bibinfo{year}{2006}).
+
+\bibitem{Mnih2015}
+\bibinfo{author}{Mnih, V.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Human-level control through deep
+  reinforcement learning}}.
+\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{518}},
+  \bibinfo{pages}{529–533}, \doiprefix\url{10.1038/nature14236}
+  (\bibinfo{year}{2015}).
 
 \bibitem{Lavet2018}
 \bibinfo{author}{Francois-Lavet, V.}, \bibinfo{author}{Henderson, P.},
@@ -386,26 +447,20 @@
   Intelligence}}} \textbf{\bibinfo{volume}{32}},
   \doiprefix\url{10.1609/aaai.v32i1.11694} (\bibinfo{year}{2018}).
 
-\bibitem{Mnih2015}
-\bibinfo{author}{Mnih, V.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Human-level control through deep
-  reinforcement learning}}.
-\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{518}},
-  \bibinfo{pages}{529–533}, \doiprefix\url{10.1038/nature14236}
-  (\bibinfo{year}{2015}).
+\bibitem{NIPS2001_a38b1617}
+\bibinfo{author}{Bakker, B.}
+\newblock \bibinfo{title}{Reinforcement learning with long short-term memory}.
+\newblock In \bibinfo{editor}{Dietterich, T.}, \bibinfo{editor}{Becker, S.} \&
+  \bibinfo{editor}{Ghahramani, Z.} (eds.) \emph{\bibinfo{booktitle}{Advances in
+  Neural Information Processing Systems}}, vol.~\bibinfo{volume}{14}
+  (\bibinfo{publisher}{MIT Press}, \bibinfo{year}{2001}).
 
-\bibitem{Dunn2017}
-\bibinfo{author}{Dunn, W.~N.}
-\newblock \emph{\bibinfo{title}{Public policy analysis}}
-  (\bibinfo{publisher}{Routledge}, \bibinfo{address}{London, England},
-  \bibinfo{year}{2017}), \bibinfo{edition}{6} edn.
-
-\bibitem{Demir2006}
-\bibinfo{author}{Demir, T.} \& \bibinfo{author}{Miller, H.}
-\newblock \bibinfo{title}{Policy communities}.
-\newblock In \emph{\bibinfo{booktitle}{Handbook of Public Policy Analysis}},
-  \bibinfo{pages}{137--147} (\bibinfo{publisher}{CRC Press},
-  \bibinfo{year}{2006}).
+\bibitem{LSTM}
+\bibinfo{author}{Hochreiter, S.} \& \bibinfo{author}{Schmidhuber, J.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Long short-term memory}}.
+\newblock {\emph{\JournalTitle{Neural Computation}}}
+  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{1735--1780},
+  \doiprefix\url{10.1162/neco.1997.9.8.1735} (\bibinfo{year}{1997}).
 
 \bibitem{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}
 \bibinfo{author}{HENS, N.} \emph{et~al.}
@@ -431,11 +486,14 @@
   \textbf{\bibinfo{volume}{51}}, \bibinfo{pages}{259–277},
   \doiprefix\url{10.1007/s10589-010-9329-3} (\bibinfo{year}{2010}).
 
-\bibitem{SIRLockdown}
-\bibinfo{title}{Lockdowns in sir models}.
-\newblock
-  \bibinfo{howpublished}{\url{https://benjaminmoll.com/wp-content/uploads/2020/05/SIR_notes.pdf}}.
-\newblock \bibinfo{note}{Accessed: 2023-12-26}.
+\bibitem{AlvarezLockdownSIR}
+\bibinfo{author}{Alvarez, F.}, \bibinfo{author}{Argente, D.} \&
+  \bibinfo{author}{Lippi, F.}
+\newblock \bibinfo{journal}{\bibinfo{title}{A simple planning problem for
+  covid-19 lock-down, testing, and tracing}}.
+\newblock {\emph{\JournalTitle{American Economic Review: Insights}}}
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{367--82},
+  \doiprefix\url{10.1257/aeri.20200201} (\bibinfo{year}{2021}).
 
 \bibitem{SIRLockdown2}
 \bibinfo{title}{Lockdowns in sir models (code)}.
@@ -443,24 +501,57 @@
   \bibinfo{howpublished}{\url{https://benjaminmoll.com/wp-content/uploads/2020/05/SIR_lockdown.m}}.
 \newblock \bibinfo{note}{Accessed: 2023-12-26}.
 
-\bibitem{analytical_covid_lockdown_model}
-\bibinfo{author}{Łukasz Rachel}.
-\newblock \bibinfo{journal}{\bibinfo{title}{An analytical model of covid-19
-  lockdowns}}.
-\newblock }}}  (\bibinfo{year}{2020}).
-\newblock
-  \bibinfo{note}{Https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-29-Paper.pdf}.
-
 \bibitem{owidcoronavirus}
 \bibinfo{author}{Mathieu, E.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Coronavirus pandemic (covid-19)}}.
 \newblock {\emph{\JournalTitle{Our World in Data}}}  (\bibinfo{year}{2020}).
 \newblock \bibinfo{note}{Https://ourworldindata.org/coronavirus}.
 
+\bibitem{UnicefCovidVaccine}
+\bibinfo{title}{Covid-19 vaccine launch in india}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.unicef.org/india/stories/covid-19-vaccine-launch-india}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{PIBCovidVaccine}
+\bibinfo{title}{Press information bureau, government of india, prime minister's
+  office, pm launches pan india rollout of covid-19 vaccination drive}.
+\newblock
+  \bibinfo{howpublished}{\url{https://pib.gov.in/Pressreleaseshare.aspx?PRID=1689021}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{WikipediaCovidVaccine}
+\bibinfo{title}{Covid-19 vaccination in india}.
+\newblock
+  \bibinfo{howpublished}{\url{https://en.wikipedia.org/wiki/COVID-19_vaccination_in_India}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{OECDNormalizedGDP}
+\bibinfo{title}{Oecd system of composite leading indicators}.
+\newblock \bibinfo{howpublished}{\url{https://www.oecd.org/sdd/41629509.pdf}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{OECDNormalizedGDP2}
+\bibinfo{title}{Oecd system of composite leading indicators}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.oecd.org/sdd/leading-indicators/oecd-composite-leading-indicators-clis.htm}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
 \bibitem{AWSDeepRacer}
 \bibinfo{title}{Aws deepracer}.
 \newblock
   \bibinfo{howpublished}{\url{https://aws.amazon.com/deepracer/league/}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{WorldometerCorona}
+\bibinfo{title}{Covid-19 coronavirus pandemic}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.worldometers.info/coronavirus/}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
+
+\bibitem{InternetArchive}
+\bibinfo{title}{Internet archive}.
+\newblock \bibinfo{howpublished}{\url{https://archive.org}}.
 \newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{economic_indicators_data}

@@ -1,0 +1,10 @@
+The optimal strategy for the use of the broad lockdown policies is quite different,
+because locking down an economy is too costly to be in place indefinitely. A broad lockdown must thus be temporary, which means that the epidemic must run its course, with
+the level of susceptibility falling to at least the herd immunity threshold
+
+from: https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-29-Paper.pdf
+
+With the development of the epidemic, these epidemic parameters are constantly changing in different countries and regions
+
+from: https://www.nature.com/articles/s41598-020-80007-8
+

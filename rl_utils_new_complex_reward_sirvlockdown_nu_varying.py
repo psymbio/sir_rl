@@ -106,7 +106,7 @@ class SIREnvironment(gym.Env):
         # each action is on ith day
         t_ith_day = np.linspace(0, self.ith_day, self.ith_day + 1)
         self.stringency_index_list.append(self.stringency_index)
-        predictions = odeint(deriv, self.y0, t_ith_day, args=(self.N, self.optimal_beta, self.optimal_gamma, np.array(self.nu_varying), np.array(self.stringency_index_list) / 100))
+        predictions = odeint(deriv, self.y0, t_ith_day, args=(self.N, self.optimal_beta, self.optimal_gamma, np.array(self.nu_varying), np.array(self.stringency_index_list[:TOTAL_DAYS]) / 100))
         S, I, R = predictions.T
         self.store_S[self.ith_day] = S[-1]
         self.store_I[self.ith_day] = I[-1]
@@ -127,9 +127,12 @@ class SIREnvironment(gym.Env):
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP - (2 * self.r_eff)
 
-        reward_inertia = abs(diff_action)*-1*5
+        reward_inertia= abs(diff_action)*-1*5
+        # reward_inertia = abs(self.stringency_index_list[-2] - self.stringency_index_list[-1]) * -1 * 5
+        # print("reward_inertia: ", reward_inertia, "reward_inertia_old: ", reward_inertia_old)
         reward_r_eff = 10 if self.r_eff <= 1.9 else -10
-        reward_I_percentage = -5000 if self.I_proportion >= 0.003 else 20
+        reward_I_percentage = -5000 if self.I_proportion >= 0.003 else 0
+        reward_herd_immunity = 2000 if self.I_proportion <= 0.003 and self.I_proportion >= 0.0005 else 0
 
         gdp_reward_weight_1 = 100
         gdp_reward_weight_2 = 200
@@ -140,7 +143,8 @@ class SIREnvironment(gym.Env):
         else:
             reward_weighted = gdp_reward_weight_2 * self.normalized_GDP
 
-        self.reward = reward_weighted + reward_inertia + reward_r_eff + reward_I_percentage
+        self.reward = reward_weighted + reward_inertia + reward_r_eff + reward_I_percentage + reward_herd_immunity
+        # print(self.ith_day, self.reward)
         self.store_reward[self.ith_day] = self.reward
         if RL_LEARNING_TYPE == "normal":
             observation = [self.S_proportion, self.I_proportion, 
@@ -241,11 +245,12 @@ class SIREnvironment(gym.Env):
         plt.legend()
         plt.savefig(os.path.join(output_path_img, "rl_sir.png"))
         plt.savefig(os.path.join(output_path_img, "rl_sir.eps"))
+        plt.close()
 
         plt.figure(figsize=(12, 8))
-        plt.plot(self.df['date'], self.df['I']/self.df['N'], color="#C5373D", alpha=0.5, lw=2, label='Infected (actual)')
-        plt.plot(self.df['date'], self.df['I_modelled_' + modelling_type]/self.N, color="#006EAE", alpha=0.5, lw=2, label='Infected (modelled)')
-        plt.plot(self.df['date'], self.df['I_moves']/self.N, color="#429130", alpha=0.5, lw=2, label='Infected (rl)')
+        plt.plot(self.df['date'], self.df['I']/self.df['N'], color="#C5373D", label='Infected (actual)')
+        plt.plot(self.df['date'], self.df['I_modelled_' + modelling_type]/self.N, color="#006EAE", label='Infected (modelled)')
+        plt.plot(self.df['date'], self.df['I_moves']/self.N, color="#429130", label='Infected (rl)')
         plt.xlabel("Date")
         plt.ylabel("Percentage of Infected Population")
         plt.title("SIR Epidemic Trajectory (Infected)")
@@ -253,6 +258,7 @@ class SIREnvironment(gym.Env):
         plt.legend()
         plt.savefig(os.path.join(output_path_img, "rl_i.png"))
         plt.savefig(os.path.join(output_path_img, "rl_i.eps"))
+        plt.close()
 
         plt.figure(figsize=(12, 8))
         plt.plot(self.df['date'], self.df['stringency_index'], color="#006EAE", label="Stringency (actual)")
@@ -264,6 +270,7 @@ class SIREnvironment(gym.Env):
         plt.legend()
         plt.savefig(os.path.join(output_path_img, "rl_stringency.png"))
         plt.savefig(os.path.join(output_path_img, "rl_stringency.eps"))
+        plt.close()
 
         plt.figure(figsize=(12, 8))
         plt.plot(self.df['date'], self.df['gdp_normalized'], color="#C5373D", label="GDP normalized (actual)")
@@ -276,6 +283,7 @@ class SIREnvironment(gym.Env):
         plt.legend()
         plt.savefig(os.path.join(output_path_img, "rl_gdp.png"))
         plt.savefig(os.path.join(output_path_img, "rl_gdp.eps"))
+        plt.close()
 
         first_time_r_eff_actual_1 = next((t for t, r_eff in zip(self.df['date'], self.df['r_eff_actual_' + modelling_type]) if r_eff <= 1), None)
         first_time_r_eff_modelled_1 = next((t for t, r_eff in zip(self.df['date'], self.df['r_eff_modelled_' + modelling_type]) if r_eff <= 1), None)
@@ -295,6 +303,7 @@ class SIREnvironment(gym.Env):
         legend.get_texts()[2].set_text(f'R_eff (rl); R_eff=1 at {first_time_r_eff_1}')
         plt.savefig(os.path.join(output_path_img, "rl_r_eff.png"))
         plt.savefig(os.path.join(output_path_img, "rl_r_eff.eps"))
+        plt.close()
 
         # print("len df", len(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_" + modelling_type])))
 
@@ -309,7 +318,8 @@ class SIREnvironment(gym.Env):
         plt.legend()
         plt.savefig(os.path.join(output_path_img, "rl_reward.png"))
         plt.savefig(os.path.join(output_path_img, "rl_reward.eps"))
-        
+        plt.close()
+
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
 
@@ -329,7 +339,7 @@ class SIREnvironment(gym.Env):
         self.store_R = np.zeros(TOTAL_DAYS + 1)
         
         self.store_stringency = np.zeros(TOTAL_DAYS + 1)
-        self.stringency_index_list = []
+        self.stringency_index_list = [START_STRINGENCY]
         self.store_gdp = np.zeros(TOTAL_DAYS + 1)
         self.store_normalized_gdp = np.zeros(TOTAL_DAYS + 1)
         self.store_r_eff = np.zeros(TOTAL_DAYS + 1)

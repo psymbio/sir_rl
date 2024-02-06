@@ -9,7 +9,7 @@ env = SIREnvironment()
 # model_path = os.path.join(MODELS_DIR, "1705154668", "548400.zip")
 # models/1705318802/586788.zip
 model_path = os.path.join(MODELS_DIR, "1705318802", "586788.zip")
-iters = 586788 / TIMESTEPS
+iters = int(586788 / TIMESTEPS)
 model = PPO.load(model_path)
 env.reset()
 model.set_env(env)

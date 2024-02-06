@@ -24,8 +24,13 @@ env.reset()
 # models/1705085840/16452.zip
 # models/1705154668/548400.zi
 # models/1705305871/578562.zip
-# model_path = os.path.join(MODELS_DIR, "1705305871", "578562.zip")
-model_path = os.path.join(MODELS_DIR, "1705318802", "586788.zip")
+# model_path = os.path.join(MODELS_DIR, "1705305871", "578562.zip")\
+# models/1705330479/839052.zip
+# model_path = os.path.join(MODELS_DIR, "1705330479", "839052.zip")
+# model_path = os.path.join(MODELS_DIR, "1705049761", "79518.zip")
+# models/1705427702_herd/274200.zip
+# model_path = os.path.join(MODELS_DIR, "1705427702_herd", "274200.zip")
+model_path = os.path.join(MODELS_DIR, "hpc_run", "1746654.zip")
 model = PPO.load(model_path, env=env)
 
 episodes = 10
@@ -40,11 +45,17 @@ for episode in range(1, episodes+1):
         actions_taken.append(action)
         obs, reward, terminated, truncated, info = env.step(action)
         info_save.append(info)
-        score += reward
+        # score += reward
+        # score += info['reward']
+        # with open(os.path.join(OUTPUT_DIR, "score_check.txt"), "a") as f:
+        #     for action in actions_taken:
+        #         f.write(str(reward) +"\n")
+    info_save_df = pd.DataFrame.from_dict(info_save)
+    score = sum(info_save_df['reward'])
+    info_save_df.to_csv(os.path.join(OUTPUT_DIR, "info_save", f"{score:.2f}.csv"), index=False)
+    env.render(score=score, stringency=np.array(info_save_df['stringency_index']))
     print(f'Episode: {episode}, Score: {score}')
     with open(os.path.join(OUTPUT_DIR, "actions_taken", f"{score:.2f}.txt"), "w") as f:
         for action in actions_taken:
             f.write(str(action) +"\n")
-    info_save_df = pd.DataFrame.from_dict(info_save)
-    info_save_df.to_csv(os.path.join(OUTPUT_DIR, "info_save", f"{score:.2f}.csv"), index=False)
-    env.render(score=score, stringency=np.array(info_save_df['stringency_index']))
+    
