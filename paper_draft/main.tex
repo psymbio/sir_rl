@@ -71,9 +71,8 @@ In summary, by using reinforcement learning augmented with deep learning techniq
 
 \section{Mathematical Formulation and Numerical Computation}
 In SIRV-RL, we use a compartmental model to model infectious disease environment. We iteratively develop this model to fit the actual data better. In an SIR model people of the population are divided based on whether they are yet to come into contact with an infected person (Susceptible), are infectious themselves (Infectious), or have recovered from the infection (Recovered). These compartments create the SIR model which can be represented as follows:
-
 \subsection{Simple SIR Model}
-\begin{figure}[H]
+\begin{figure}[htbp!]
 \centering    
 \begin{tikzpicture}[node distance=1cm, auto,
     >=Latex, 
@@ -99,38 +98,30 @@ In SIRV-RL, we use a compartmental model to model infectious disease environment
   \frac{d R}{d t}=\gamma I
   \label{eq:R_without_lockdown}
 \end{equation}
-
 Here, $\lambda$ is the force of infection, it is the rate at which susceptible individuals acquire an infectious disease~\cite{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}. It depends on other factors:
-
 \begin{equation}
   \lambda = pc\frac{I}{N}
   \label{eq:lambda_force_of_infection}
 \end{equation}
-
 Here, $c$ is the average number of contacts a susceptible person makes per day. $p$ is the probability of the susceptible person becomes infectious after coming into contact with an infectious person. $\frac{I}{N}$ is the proportion of the contacts that are infectious.
 
 And, $\beta$ the effective transmission rate is defined as:
-
 \begin{equation}
   \beta = p c
   \label{eq:beta_effective_transmission_rate}
 \end{equation}
-
 During an epidemic, the fundamental drivers of an epidemic growth is the rate of infection $\beta$ i.e. the average number of infections per infected case and the infectious period $1/\gamma$ i.e. the average period for which the infected case is infected for. Epidemics can only happen if the case is infectious enough for long enough and this defined by $R_0 = \beta / \gamma$. Here, $R_0$ is The average number of secondary infections caused by each infected case, in an otherwise fully susceptible population.
 
 At the peak of an epidemic $R_0$ declines as there are no more susceptible people left in the pool, therefore, $R_e$ (effective reproductive number) comes into play. $R_e$ is defined as the average number of secondary cases arising from an infected case, at a given point in an epidemic, therefore, it takes into account the existing immunity of the system. 
-
 \begin{equation}
   R_e = R_0 \frac{S}{N}
   \label{eq:R_effective}
 \end{equation}
-
 $S$ is the number of susceptible people, $N$ is the total population. At the start of an epidemic when everyone is susceptible, $R_e = R_0$ as, $S = N$ (i.e., the whole population is susceptible). $\beta$ and $\gamma$ are also used to define probability of and infectious individual infecting another individual $\beta / (\beta + \gamma)$ and the probability of recovery, $\gamma / (\beta + \gamma)$.
 
 Most government policies look at the value of $R_e$ to come us with an effective strategy to combat the disease as the fate of the evolution of the disease depends upon it. When $R_e$ is less than one, the infected population $I$ will steadily decline to zero. Conversely, if $R_e$ is greater than one, the infected population will increase. In other words, when $\frac{dI(t)}{dt} < 0 \Rightarrow R_e < 1$ and $\frac{dI(t)}{dt} > 0 \Rightarrow R_e > 1$, therefore, the effective reproductive rate $R_e$ serves as a critical threshold that determines whether an infectious disease will rapidly extinguish or escalate into an epidemic~\cite{Cooper2020}.
 
 To estimate the parameters $\beta$ and $\gamma$ for India, based on the data from May, 2020, to October, 2022, we simply define two cost functions \cref{eq:cost_SIR,eq:cost_I} to calibrate the model with the use of huber loss~\cite{huberloss}. We generally calibrate the model using \cref{eq:cost_SIR}. However, sometimes we must strike a balance between modeling all three population groups (susceptible, infected, and recovered) and focusing just on the infected group, which is most important because it drives the spread of the disease, therefore, in that case we consider the loss obtained from \cref{eq:cost_SIR,eq:cost_I} (see \cref{optimizing_window_length}).
-
 \begin{equation}
   L_{\delta}(y, f(x)) = 
   \begin{cases}
@@ -139,9 +130,7 @@ To estimate the parameters $\beta$ and $\gamma$ for India, based on the data fro
   \end{cases}
   \label{eq:huberloss}
 \end{equation}
-
 In the above equation, $y$ is the actual data and $f(x)$ is the prediction.
-
 \begin{equation}
   \begin{split}
   \textrm{loss\_SIR} = \textrm{cost\_function\_SIR}(S, \hat{S}, I, \hat{I}, R, \hat{R}) \\
@@ -153,9 +142,7 @@ In the above equation, $y$ is the actual data and $f(x)$ is the prediction.
   \textrm{loss\_I} = \textrm{cost\_function\_I}(I, \hat{I}) = L_{\delta = 1}(I, \hat{I})
   \label{eq:cost_I}
 \end{equation}
-
 Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted number of susceptible people, similarly, $I$ for infected and $\hat{I}$ for the predicted number of infected people, and $R$ for recovered. Using the equations \Crefrange{eq:S_without_lockdown}{eq:R_without_lockdown} , we minimize the cost function \cref{eq:cost_SIR_without_lockdown} using the Nelder-Mead method\cite{Gao2010} to estimate the parameters like $\beta$, $\gamma$, and fit the model to actual data. The following parameters and loss is obtained:
-
 \begin{equation}
   \beta_{optimal} = 0.042
   \label{eq:beta_optimal_without_lockdown}
@@ -176,14 +163,11 @@ Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted nu
   \textrm{loss\_I} = 45187665.281
   \label{eq:cost_I_without_lockdown}
 \end{equation}
-
 See \cref{fig:SIR_model_IND} to see how the model compares with the actual data.
 
 \subsection{SIR Model with Lockdown}
 Now that, a simple SIR model has been established -- we need to model the effects of the stringency index (measure for the strictness of lockdown) on $\beta$ (the effective transmission rate). To do this, we say the flow of susceptibles not only depend on $\beta$ but also $s(t)$ the stringency index at time~\cite{NBERw26867,AlvarezLockdownSIR,SIRLockdown,SIRLockdown2,analytical_covid_lockdown_model}. The stringency index is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)~\cite{owidcoronavirus}. This index simply records the strictness of government policies and does not measure or imply the appropriateness or effectiveness of a country's response i.e. a higher score does not necessarily mean that a country's response is "better" than others lower on the index. 
-
 To define the new time-varying beta that is dependent on the current stringency index, the following equations have been formulated:
-
 \begin{equation}
   \frac{dS}{dt} = -\beta (1 - s(t)/100) \frac{S I}{N}
   \label{eq:S_with_lockdown}
@@ -196,9 +180,7 @@ To define the new time-varying beta that is dependent on the current stringency 
   \frac{dR}{dt} = \gamma I
   \label{eq:R_with_lockdown}
 \end{equation}
-
 Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor of 100 to normalize it and bring it in the range $s(t)/100 \in [0, 1]$. Multiplying the rate of flow from $S$ to $I$ compartment with $1 - s(t)/100$ allows us to account for the effect that stringency has on the disease progression. A higher stringency index can theoretically, stop the flow from the susceptible population to the infected population entirely. Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method, we get the following parameters and loss:
-
 \begin{equation}
   \beta_{optimal} = 0.401
   \label{eq:beta_optimal_with_lockdown}
@@ -225,10 +207,8 @@ Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor
   \textrm{loss\_I} = 11345389.686
   \label{eq:cost_I_with_lockdown}
 \end{equation}
-
 \subsection{SIRV Model with Lockdown}
 Lastly, an additional flow from the susceptible population to the recovered population can be shown by adding a vaccination rate $\nu$ in the model. 
-
 \begin{equation}
   \frac{dS}{dt} = -\beta (1 - s(t)/100) \frac{S I}{N} - \nu S
   \label{eq:S_with_lockdown_and_nu}
@@ -241,9 +221,7 @@ Lastly, an additional flow from the susceptible population to the recovered popu
   \frac{dR}{dt} = \gamma I + \nu S
   \label{eq:R_with_lockdown_and_nu}
 \end{equation}
-
 Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
-
 \begin{equation}
   \beta_{optimal} = 0.409
   \label{eq:beta_optimal_with_lockdown_and_nu}
@@ -263,7 +241,7 @@ Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
     \text{Mode}(R_0) = 0.803 \\
     \sigma_{R_0} = 0.785 \\
     R_0 \in [0.165, 3.047]
-  \begin{split}
+  \end{split}
   \label{eq:r0_with_lockdown_and_nu}
 \end{equation}
 \begin{equation}
@@ -275,9 +253,8 @@ Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
   \label{eq:cost_I_with_lockdown_and_nu}
 \end{equation}
 
-\subsection{Optimizing Window Length for Time-varying $\nu$}\label{optimizing_window_length}
+\subsection{Optimizing Window Length for Time-varying Vaccination Rate}\label{optimizing_window_length}
 However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible and the overestimation of infected individuals in \cref{fig:SIRV_model_with_lockdown_infections_IND} suggests that $\nu$ might be varying with time. This suggests to accurately estimate the infected population a time-varying vaccination rate should be used as the transition from susceptibility to direct recovery fluctuates with time~\cite{Liang2021,Marinov2022}. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \cref{eq:beta_optimal_with_lockdown_and_nu} and \cref{eq:gamma_optimal_with_lockdown_and_nu}, we first find the optimal window length~\cite{Liao2020} i.e., the window length that result in the least loss from \cref{eq:cost_SIR}. Using different window lengths to estimate value of $\nu$ given a sub-interval of $[{start}, {start} + {window\_length}]$, we observe the following. It is crucial to note that the variable $\nu$ is constrained to be a positive integer, reflecting the inherent one-way nature of vaccination: individuals can only receive vaccinations, not return them.
-
 \begin{equation}
   \frac{dS}{dt} = -\beta_{optimal}  (1 - s(t)/100)  \frac{S I}{N} - \nu S
   \label{eq:S_with_lockdown_and_nu_calc_nu}
@@ -290,29 +267,28 @@ However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_wi
   \frac{dR}{dt} = \gamma_{optimal} I + \nu S
   \label{eq:R_with_lockdown_and_nu_calc_nu}
 \end{equation}
-
 The main difference here is instead of supplying these equations with the entire time series, only data lying within the sub-interval of $[{start}, {start} + {window\_length}]$ is given, then in the next step data of the next sub-inteval is provided to optimize for, i.e., $[{start} + {window\_length}, {start} + {window\_length} + {window\_length}]$. This model gives shows how $\nu$ varies with time. Since, the window length acts like a hyperparameter, we can try different window lengths in order to evaluate which would give us the best results. Therefore, the below graphs show us the loss using \cref{eq:cost_SIR,eq:cost_I}.
 
-\begin{figure}
+\begin{figure}[htbp!]
   \caption{Loss for Different Window Lengths}
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\linewidth]{images/window_length_loss_SIR_IND.pdf}
     \caption{Loss for Different Window Lengths for Susceptible, Infected and Recovered Population}
+    \label{fig:window_length_loss_SIR_IND}
   \end{subfigure}
-  \label{fig:window_length_loss_SIR_IND}
   \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\linewidth]{images/window_length_loss_I_IND.pdf}
     \caption{Loss for Different Window Lengths for Infected Population}
+    \label{fig:window_length_loss_I_IND}
   \end{subfigure}
-\label{fig:window_length_loss_I_IND}
 \end{figure}
 
 From the following graph, although the window length of $10$ is best for all three groups of the population but this window length leads to a bad approximation for the infected population therefore, we choose a window length of $15$.
 
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{$\nu$ Varying with Time}
   \includegraphics[width=\linewidth]{images/interpolated_nu_varying_with_time_IND.pdf}
@@ -321,9 +297,9 @@ From the following graph, although the window length of $10$ is best for all thr
 
 This shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India \cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIRV Model with time varying $\nu$.
 
-\subsection{SIRV Model with Lockdown and time-varying $nu$}
+\subsection{SIRV Model with Lockdown (Time-varying Vaccination Rate)}
 Lastly, we present our model using the following set of equations:
-\begin{figure}[H]
+\begin{figure}[htbp!]
 \begin{tikzpicture}[node distance=1cm, auto,
   >=Latex, 
   every node/.append style={align=center},
@@ -337,7 +313,6 @@ Lastly, we present our model using the following set of equations:
            (S) edge[bend left=45] node[above] {$\nu(t)$} (R); % Arrow from S to R with text \nu(t)
 \end{tikzpicture}
 \end{figure}
-
 \begin{equation}
   \frac{dS}{dt} = -\beta  (1 - s(t)/100)  \frac{S I}{N} - \nu(t) S
   \label{eq:S_with_lockdown_and_time_varying_nu}
@@ -376,11 +351,9 @@ Lastly, we present our model using the following set of equations:
   \textrm{loss\_I} = 658537.443
   \label{eq:cost_I_with_lockdown_and_time_varying_nu}
 \end{equation}
-
-See \Crefrange{fig:SIR_model_IND,fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND} and \cref{fig:comparing_costs_IND} to see how the different models compare against each other.
+See \Crefrange{fig:SIR_model_IND}{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND} and \cref{fig:comparing_costs_IND} to see how the different models compare against each other.
 
 Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigated how stringency index affects the normalized Gross domestic product (GDP)~\cite{OECDNormalizedGDP,OECDNormalizedGDP2}. To do this a polynomial equation of the third degree is fitted to the data points $(x, y)$ where $x$ is the $s(t)$ stringency at time $t$, and $y$ the normalized GDP and minimize the squared error. For India after fitting a 3 degree polynomial, the following equation is obtained:
-
 \begin{equation}
     \begin{split}
       GDP = -5.96640236 \times 10^{-5} s^{3} + 6.65064332 \times 10^{-3} s^{2} - 2.23109924 \times 10^{-1} s^{1} \\
@@ -389,6 +362,7 @@ Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigat
     \label{eq:gdp_modelled_with_stringency_IND}
 \end{equation}
 
+\subsection{Reinforcement Learning}
 Given that the government is an agent that takes decisions in a deterministic environment defined above, we use reinforcement learning to model the competing costs of the environment. This environment is formally as a Markov decision process, and can be described as follows:
 
 \begin{itemize}
@@ -399,7 +373,6 @@ Given that the government is an agent that takes decisions in a deterministic en
     \item Immediate reward $\altmathcal{R}\left(\mathbf{s}_t, \mathbf{a}_t, \mathbf{s}_{t+1}\right)$. Here we define a reward strategy however it should be noted that this strategy can be easily changed to prioritize different needs.
     \item Discount Factor $\gamma \in[0,1]$, where lower values place more emphasis on immediate rewards. Here, we choose the default discount factor of 0.99.
 \end{itemize}
-
 In general, the policy $\pi$ is a mapping from states to a probability distribution over actions: $\pi: \altmathcal{S} \rightarrow p(\altmathcal{A}=\mathbf{a} \mid \altmathcal{S})$. If the MDP is episodic, i.e., the state is reset after each episode of length $T$, then the sequence of states, actions and rewards in an episode constitutes a trajectory or rollout of the policy. Every rollout of a policy accumulates rewards from the environment, resulting in the return $R=\sum_{t=0}^{T-1} \gamma^t r_{t+1}$. The goal of RL is to find an optimal policy, $\pi^*$, which achieves the maximum expected return from all states. To achieve this, reinforcement learning start with an initial arbitrary policy, i.e., a $Q$-table with no entries. $Q$-table is a mapping from states $s_k \in \mathscr{S}$ to a predefined set of actions to increase or decrease the stringency at time t, which are the actions $a_k \in \mathscr{A}$. Each entry of the $Q$-table $\left(Q_k\left(s_k, a_k\right)\right)$ associates an action in the finite sequence $\left(\mathscr{A}_j\right)_{j \in \mathbb{J}^{+}}$ to a state of the finite sequence $\left(\mathscr{S}_i\right)_{i \in \mathbb{I}^{+}}$ \cite{sutton2018reinforcement}. In this case of epidemic control by NPI based strategies this policy represents the series of stringencies to be imposed upon the population to shift the initial status of the environment to a targeted status which is equivalent to the desired set of system states. This is how the $Q$-table updates saying, if in state $s_k$ the most ideal action is $a_k$. After having more and more experience with the environment and understanding which actions lead to a higher reward $r$ an optimal policy is derived be maximizing the expected value of discounted reward $J\left(r_k\right)=\mathbb{E}\left[\sum_{k=1}^{\infty} \gamma^{(k-1)} r_k\right]$, where, discount factor $\gamma \in [0, 1]$ and time steps $k = 1, 2, \dots$.
 
 The stringency index emerges as a critical factor influencing both the Gross Domestic Product (GDP) and the rate of infection spread. The decision to escalate or de-escalate the stringency index is a strategic one, with significant implications. Increasing the stringency decreases the spread of the infection. Conversely, it must be noted that herd immunity can only be achieved when the epidemic reaches its peak i.e. when the effective reproductive number is equal to one ($R_e = 1$). This can only happen by lowering the stringency index which would allow the natural dynamics of the epidemic to transpire such that the population of susceptible individuals has depleted enough such that it is insufficient to propagate the disease further. Therefore, stringency is used to control the number of infected people and slow down the rate at which the epidemic reaches its peak, so that hospitals could house the number of infected people.
@@ -415,7 +388,6 @@ It should be realized there can be an infinite number of ways to design the rewa
 The agent observes the percentage of the population that is susceptible, infected, recovered, and the GDP which extrapolated from the stringency index and all the past moves played, i.e., all the past stringency indexes decided by the agent. The following values are fed into a simple network. Stable Baselines3 supports multiple inputs by using Dict Gym space. This can be done using MultiInputPolicy, which by default uses the CombinedExtractor features extractor to turn multiple inputs into a single vector, handled by the network arch network. For data that varies with time (stringency, normalized GDP, $R_e$) we use a simple LSTM architecture \cite{LSTM}. For other data like, the current proportion of the population that is susceptible, infected, and recovered we use a simple fully connected layer. The output from both these networks are concatenated and used by the reinforcement learning agent to train on.
 
 We train the model for $2742$ time steps for $200$ iterations and the best results are presented below.
-
 \newcommand{\DrawNeuronalNetwork}[2][]{
 \xdef\Xmax{0}
 \foreach \Layer/\X/\Col/\Miss/\Lab/\Count/\Content [count=\Y] in {#2}
@@ -461,7 +433,7 @@ We train the model for $2742$ time steps for $200$ iterations and the best resul
 }
 }
 \begin{tikzpicture}[x=1.5cm, y=1.5cm,
->=stealth,font=\sffamily,nodes={align=center}]
+>=stealth,font=\sffamily,nodes={align=center}, scale=0.8, every node/.style={scale=0.8}]
  \begin{scope}[local bounding box=T]
   \path  node[draw,minimum width=6em,minimum height=4em] (state) {State};
   \begin{scope}[local bounding box=NN]
@@ -486,7 +458,7 @@ We train the model for $2742$ time steps for $200$ iterations and the best resul
 \section{Results}
 % https://www.nature.com/articles/s41598-020-79147-8 (see this to write results)
 Using the simple SIR model from \Crefrange{eq:S_without_lockdown}{eq:cost_I_without_lockdown},  to model the disease dynamics we get:
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{SIR Model with lockdown for India}
   \begin{subfigure}[t]{\textwidth}
@@ -505,7 +477,7 @@ Using the simple SIR model from \Crefrange{eq:S_without_lockdown}{eq:cost_I_with
 Here, it can be observed that the SIR model accurately fits the susceptible population and recovered population but overestimates the infected population by a significant margin. Although overestimating the infected population may not always be problematic, in our specific case, it can create complications. This is because our research involves rewarding the agent when the proportion of infected individuals falls below a predetermined threshold. Consequently, an overestimation of the infected population could lead to incorrect decision-making and undesirable outcomes.
 
 Combining the lockdown dynamics in the SIR model using \Crefrange{eq:S_with_lockdown}{eq:cost_I_with_lockdown}, we get the following:
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{SIR Model with lockdown for India}
 
@@ -523,7 +495,7 @@ Combining the lockdown dynamics in the SIR model using \Crefrange{eq:S_with_lock
     \label{fig:stringency_varying_with_time_IND}
   \end{subfigure}
 \end{figure}
-\begin{figure}[H]\ContinuedFloat
+\begin{figure}[htbp!]\ContinuedFloat
   \begin{subfigure}[t]{\textwidth}
     \centering
     \includegraphics[scale=0.50]{images/SIR_model_with_lockdown_infections_IND.pdf}
@@ -534,7 +506,7 @@ Combining the lockdown dynamics in the SIR model using \Crefrange{eq:S_with_lock
 Here, it can be observed there's an overestimation of infected individuals, but, the two stages of the epidemic are being accounted for. This is what suggests that there might be depletion of infected individuals through vaccination.
 
 Combining vaccination dynamics with SIR with lockdown model using \Crefrange{eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}, we get the following:
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{SIRV Model with lockdown for India}
 
@@ -551,12 +523,11 @@ Combining vaccination dynamics with SIR with lockdown model using \Crefrange{eq:
     \caption{Infections modelled with SIRV model with Lockdown}
     \label{fig:SIRV_model_with_lockdown_infections_IND}
   \end{subfigure}
-
 \end{figure}
 Here, because the value of $\nu$ \cref{eq:nu_optimal_with_lockdown_and_nu} is negligible, it makes no change. However, time-varying $\nu$ shall be able to better account for the these dynamics.
 
 For time-varying $\nu$ and SIRV model with lockdown from \Crefrange{eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}, we get the following:
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{SIRV Model with lockdown and time-varying $\nu$ for India}
 
@@ -575,18 +546,27 @@ For time-varying $\nu$ and SIRV model with lockdown from \Crefrange{eq:S_with_lo
   \end{subfigure}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \caption{Loss for Different Models}
-  \includegraphics[width=\linewidth]{images/comparing_costs_IND.pdf}
-  \label{fig:comparing_costs_IND}
+\begin{figure}[htbp!]
+	\caption{Loss for Different Models}
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/comparing_costs_SIR_IND.pdf}
+		\caption{Loss for Different Models for Susceptible, Infected and Recovered Population}
+		\label{fig:comparing_costs_SIR_IND}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/comparing_costs_I_IND.pdf}
+		\caption{Loss for Different Models for Infected Population}
+		\label{fig:comparing_costs_I_IND}
+	\end{subfigure}
 \end{figure}
 
 With a time-varying $\nu$ (vaccination rate) and the effect of lockdown, our model is able to account for the infected individuals and reduce the cost in comparison to all the previously formalized models for the data. This shows how interventions and changes in the way people behave in response of a epidemic \cite{Caldwell2021} play a major role in the way the epidemic unfolds.
 
 However, Non-pharmaceutical Interventions (NPIs) come with costs for developing nations. Below are scatter plots with pearson correlation, for three countries (India, Mexico, Brazil) which are Emerging Market and Developing Economies~\cite{IMFCovid} from May, 2020 to October, 2022.
-
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{Stringency and GDP for Developing Economies}
   \begin{subfigure}[t]{0.48\textwidth}
@@ -631,10 +611,8 @@ However, Non-pharmaceutical Interventions (NPIs) come with costs for developing 
   \end{subfigure}
   \label{fig:gdp_modelled_with_stringency_BRA}
 \end{figure}
-
 It can be observed that stringency has a negative impact on the normalized Gross domestic product (GDP). Therefore, in some countries policies made during an epidemic have competing costs. This is not the case for Advanced Economies like (USA, Japan, Canada).
-
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{Stringency and GDP for Advanced Economies}
   \begin{subfigure}[t]{0.48\textwidth}
@@ -679,12 +657,10 @@ It can be observed that stringency has a negative impact on the normalized Gross
   \end{subfigure}
   \label{fig:gdp_modelled_with_stringency_CAN}
 \end{figure}
-
 From this we conclude, that maybe there are other factors that explain the dip in the normalized GDP than just an increase in the stringency.
 
 After median filtering to smooth the output (to reinforce the negative reward from changing the stringencies) from the trained reinforcement learning agent, here are some of the results obtained:
-
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{Strategy from Reinforcement Learning Agent 1}
   \begin{subfigure}[t]{0.48\textwidth}
@@ -729,11 +705,9 @@ After median filtering to smooth the output (to reinforce the negative reward fr
   \end{subfigure}
   \label{fig:914857_rl_reward}
 \end{figure}
-
 In the presented result, we can see the reinforcement learning agent outperform the modelled outcome. A strategic decision is made by the agent to maintain the stringency index below 80 throughout the course of the study. This approach allows for the natural progression of disease dynamics, resulting in a rapid reduction of the effective reproduction number $R_e$ to $1.2$, significantly ahead of the projected timeline (refer to figure \cref{fig:914857_rl_r_eff}).
 A subsequent decrease in stringency in the later stages leads to an increase in the normalized Gross Domestic Product (GDP), indicating an economic upturn. While this strategy poses a higher risk in terms of infection rates during the initial phase of the epidemic (prior to vaccine rollout), it proves to be more beneficial for the nation's economy in the long run. It is suggested that a more balanced policy, falling between the actual and the proposed strategy in this study, could have been a more effective approach for the government to adopt. This would have potentially led to a more optimal balance between controlling the spread of the disease and minimizing economic impact.
-
-\begin{figure}[H]
+\begin{figure}[htbp!]
   \centering
   \caption{Strategy from Reinforcement Learning Agent 2}
   \begin{subfigure}[t]{0.48\textwidth}
@@ -778,7 +752,6 @@ A subsequent decrease in stringency in the later stages leads to an increase in 
   \end{subfigure}
   \label{fig:244620_rl_reward}
 \end{figure}
-
 An alternative outcome is presented by the agent, demonstrating a gradual escalation in stringency over time. This strategy results in the majority of infections occurring prior to the vaccine's release, with a subsequent cessation of new infections. This approach, however, has implications for the normalized Gross Domestic Product (GDP), as seen by the observed decline in figure \cref{fig:244620_rl_gdp}. Furthermore, the effective reproduction number ($R_e$) does not achieve the target value of 1.2 under this strategy. These findings underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
 
 \section{Discussion}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  6 FEB 2024 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.2)  7 FEB 2024 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,11 +11,8 @@ Document Class: wlscirep 27/02/2017, v1.3
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/02/14 3.40 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
@@ -26,13 +23,12 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count163
+\babel@savecnt=\count167
 \U@D=\dimen134
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count164
+\bbl@dirlevel=\count168
 )
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
@@ -46,15 +42,15 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count165
-\calc@Bcount=\count166
+\calc@Acount=\count169
+\calc@Bcount=\count170
 \calc@Adimen=\dimen135
 \calc@Bdimen=\dimen136
 \calc@Askip=\skip47
 \calc@Bskip=\skip48
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count167
+\calc@Ccount=\count171
 \calc@Cskip=\skip49
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -72,14 +68,14 @@ Already applied: [0000/00/00] Make \] robust on input line 83.
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count168
-\c@section=\count169
-\c@subsection=\count170
-\c@subsubsection=\count171
-\c@paragraph=\count172
-\c@subparagraph=\count173
-\c@figure=\count174
-\c@table=\count175
+\c@part=\count172
+\c@section=\count173
+\c@subsection=\count174
+\c@subsubsection=\count175
+\c@paragraph=\count176
+\c@subparagraph=\count177
+\c@figure=\count178
+\c@table=\count179
 \abovecaptionskip=\skip50
 \belowcaptionskip=\skip51
 \bibindent=\dimen138
@@ -149,13 +145,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count176
+\inf@bad=\count180
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count177
-\leftroot@=\count178
+\uproot@=\count181
+\leftroot@=\count182
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count179
-\DOTSCASE@=\count180
+\classnum@=\count183
+\DOTSCASE@=\count184
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -164,15 +160,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count181
-\c@MaxMatrixCols=\count182
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
 \dotsspace@=\muskip16
-\c@parentequation=\count183
-\dspbrk@lvl=\count184
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
 \tag@help=\toks17
-\row@=\count185
-\column@=\count186
-\maxfields@=\count187
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -213,10 +209,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
@@ -227,8 +223,9 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -249,21 +246,21 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen157
 \cmidrulekern=\dimen158
 \defaultaddspace=\dimen159
-\@cmidla=\count188
-\@cmidlb=\count189
+\@cmidla=\count192
+\@cmidlb=\count193
 \@aboverulesep=\dimen160
 \@belowrulesep=\dimen161
-\@thisruleclass=\count190
-\@lastruleclass=\count191
+\@thisruleclass=\count194
+\@lastruleclass=\count195
 \@thisrulewidth=\dimen162
 )
 (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip55
 \@affilsep=\skip56
-\c@Maxaffil=\count192
-\c@authors=\count193
-\c@affil=\count194
+\c@Maxaffil=\count196
+\c@authors=\count197
+\c@affil=\count198
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -271,9 +268,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count195
-\Gm@cntv=\count196
-\c@Gm@tempcnt=\count197
+\Gm@cnth=\count199
+\Gm@cntv=\count266
+\c@Gm@tempcnt=\count267
 \Gm@bindingoffset=\dimen163
 \Gm@wd@mp=\dimen164
 \Gm@odd@mp=\dimen165
@@ -299,8 +296,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen177
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count198
-\c@continuedfloat=\count199
+\c@caption@flags=\count268
+\c@continuedfloat=\count269
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -317,7 +314,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
@@ -341,11 +338,13 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen178
-\Hy@linkcounter=\count266
-\Hy@pagecounter=\count267
+\Hy@linkcounter=\count270
+\Hy@pagecounter=\count271
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -353,7 +352,8 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count268
+\Hy@SavedSpaceFactor=\count272
+\pdfmajorversion=\count273
 Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
@@ -362,7 +362,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count269
+\c@Hy@tempcnt=\count274
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -378,7 +378,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count270
+\Fld@menulength=\count275
 \Field@Width=\dimen180
 \Fld@charsize=\dimen181
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -394,35 +394,25 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count271
-\c@Item=\count272
-\c@Hfootnote=\count273
+\Hy@abspage=\count276
+\c@Item=\count277
+\c@Hfootnote=\count278
 )
-Package hyperref Info: Driver (autodetected): hxetex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2020/01/14 v7.00d Hyperref driver for XeTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box47
-\c@Hy@AnnotLevel=\count274
-\HyField@AnnotCount=\count275
-\Fld@listcount=\count276
-\c@bookmark@seq@number=\count277
-
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
@@ -455,7 +445,7 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box48
+\ttl@box=\box47
 \beforetitleunit=\skip67
 \aftertitleunit=\skip68
 \ttl@plus=\dimen182
@@ -474,9 +464,9 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip69
 \enit@outerparindent=\dimen188
 \enit@toks=\toks24
-\enit@inbox=\box49
-\enit@count@id=\count278
-\enitdp@description=\count279
+\enit@inbox=\box48
+\enit@count@id=\count281
+\enitdp@description=\count282
 )
 \tocsep=\skip70
 
@@ -484,19 +474,17 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-02-14 L3 programming layer (loader) 
 
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
-File: l3backend-xdvipdfmx.def 2020-02-03 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count280
-\l__pdf_internal_box=\box50
-\g__pdf_backend_object_int=\count281
-\g__pdf_backend_annotation_int=\count282
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count283
+\l__pdf_internal_box=\box49
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-02-14 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count283
-\g__xparse_grabber_int=\count284
-\l__xparse_m_args_int=\count285
-\l__xparse_v_nesting_int=\count286
+\l__xparse_current_arg_int=\count284
+\g__xparse_grabber_int=\count285
+\l__xparse_m_args_int=\count286
+\l__xparse_v_nesting_int=\count287
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -506,24 +494,27 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 Package: jabbrv 2010/08/18 v0.2 Automatic Journal Title Abbreviation Package
 \temp@journal@text=\toks25
 \temp@journal@text@=\toks26
-\c@jabbrv@strlen@count=\count287
-\c@jabbrv@gobble@temp=\count288
-\c@jabbrv@loop@i=\count289
-\c@jabbrv@loop@max=\count290
-\c@jabbrv@word@count=\count291
+\c@jabbrv@strlen@count=\count288
+\c@jabbrv@gobble@temp=\count289
+\c@jabbrv@loop@i=\count290
+\c@jabbrv@loop@max=\count291
+\c@jabbrv@word@count=\count292
 (./jabbrv-ltwa-all.ldf) (./jabbrv-ltwa-en.ldf))
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
 \MT@toks=\toks27
-\MT@count=\count292
+\MT@count=\count293
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen189
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count293
+\MT@listname@count=\count294
 
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
-File: microtype-xetex.def 2019/11/18 v2.7d Definitions specific to xetex (RS)
-LaTeX Info: Redefining \lsstyle on input line 258.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip71
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -535,14 +526,14 @@ Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count294
+\etb@tempcnta=\count295
 )
-\csq@reset=\count295
-\csq@gtype=\count296
-\csq@glevel=\count297
-\csq@qlevel=\count298
-\csq@maxlvl=\count299
-\csq@tshold=\count300
+\csq@reset=\count296
+\csq@gtype=\count297
+\csq@glevel=\count298
+\csq@qlevel=\count299
+\csq@maxlvl=\count300
+\csq@tshold=\count301
 \csq@ltx@everypar=\toks28
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -597,7 +588,7 @@ LaTeX Info: Redefining \bm on input line 209.
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box51
+\pgfutil@abb=\box50
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -632,30 +623,25 @@ ex
 \pgf@yd=\dimen257
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count301
-\c@pgf@countb=\count302
-\c@pgf@countc=\count303
-\c@pgf@countd=\count304
+\c@pgf@counta=\count302
+\c@pgf@countb=\count303
+\c@pgf@countc=\count304
+\c@pgf@countd=\count305
 \t@pgf@toka=\toks33
 \t@pgf@tokb=\toks34
 \t@pgf@tokc=\toks35
-\pgf@sys@id@count=\count305
+\pgf@sys@id@count=\count306
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
-Driver file for pgf: pgfsys-xetex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
-File: pgfsys-xetex.def 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
-)
-\pgfsys@objnum=\count306
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
@@ -676,7 +662,7 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen258
 \pgfmath@count=\count309
-\pgfmath@box=\box52
+\pgfmath@box=\box51
 \pgfmath@toks=\toks36
 \pgfmath@stack@operand=\toks37
 \pgfmath@stack@operation=\toks38
@@ -735,9 +721,9 @@ File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box53
-\pgf@hbox=\box54
-\pgf@layerbox@main=\box55
+\pgfpic=\box52
+\pgf@hbox=\box53
+\pgf@layerbox@main=\box54
 \pgf@picture@serial@count=\count311
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
@@ -780,7 +766,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box56
+\pgfexternal@startupbox=\box55
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -799,7 +785,7 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box57
+\pgfnodeparttextbox=\box56
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -843,10 +829,10 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@lastmovetoy=\dimen293
 \tikzleveldistance=\dimen294
 \tikzsiblingdistance=\dimen295
-\tikz@figbox=\box58
-\tikz@figbox@bg=\box59
-\tikz@tempbox=\box60
-\tikz@tempbox@bg=\box61
+\tikz@figbox=\box57
+\tikz@figbox@bg=\box58
+\tikz@tempbox=\box59
+\tikz@tempbox@bg=\box60
 \tikztreelevel=\count315
 \tikznumberofchildren=\count316
 \tikznumberofcurrentchild=\count317
@@ -875,9 +861,9 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count323
 \float@exts=\toks41
-\float@box=\box62
+\float@box=\box61
 \@float@everytoks=\toks42
-\@floatcapt=\box63
+\@floatcapt=\box62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
@@ -931,13 +917,6 @@ LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-1.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
@@ -945,13 +924,32 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count327
+\scratchdimen=\dimen300
+\scratchbox=\box63
+\nofMPsegments=\count328
+\nofMParguments=\count329
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count330
+\MPscratchDim=\dimen301
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
+\everyMPtoPDFconversion=\toks44
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
-*geometry* detected driver: xetex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: xetex
+* driver: pdftex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -999,11 +997,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 51.
 LaTeX Info: Redefining \microtypecontext on input line 51.
+Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 51.
 Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of spacing.
-Package microtype Info: No adjustment of kerning.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
@@ -1090,408 +1093,389 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+ [1
 
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
-File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
 
-)
-[1
+LaTeX Warning: Citation `Liao2020' on page 7 undefined on input line 257.
 
-] [2] [3]
-
-LaTeX Warning: Reference `optimizing_window_length' on page 1 undefined on inpu
-t line 132.
-
-[4] [5] [6]
-Runaway argument?
- 
-! Paragraph ended before \split was complete.
-<to be read again> 
-                   \par 
-l.277 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.277 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.277 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.277 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278 ...ing Window Length for Time-varying $\nu$}
-                                                  \label{optimizing_window_l...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278 ...ing Window Length for Time-varying $\nu$}
-                                                  \label{optimizing_window_l...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package titlesec Error: Entered in horizontal mode.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278 ...ing Window Length for Time-varying $\nu$}
-                                                  \label{optimizing_window_l...
-
-The <format> argument cannot contain horizontal material
-such as text, \noindent, \makebox, etc.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 278.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\nu' on input line 278.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 278.
-
-
-LaTeX Warning: Citation `Liao2020' on page 7 undefined on input line 279.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.297   \caption
-                {Loss for Different Window Lengths}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-\@float@Hx ...ltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.297   \caption
-                {Loss for Different Window Lengths}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vbox 
-l.297   \caption
-                {Loss for Different Window Lengths}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
+<images/window_length_loss_SIR_IND.pdf, id=274, 765.65736pt x 487.8683pt>
 File: images/window_length_loss_SIR_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_SIR_IND.pdf>
-
-! Package amsmath Error: Multiple \label's: label '{optimizing_window_length}' 
-will be lost.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.303   \label{fig:window_length_loss_SIR_IND}
-                                              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+Package pdftex.def Info: images/window_length_loss_SIR_IND.pdf  used on input l
+ine 276.
+(pdftex.def)             Requested size: 240.23016pt x 153.0689pt.
+<images/window_length_loss_I_IND.pdf, id=275, 765.65736pt x 487.8683pt>
 File: images/window_length_loss_I_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_I_IND.pdf>
-
-! Package amsmath Error: Multiple \label's: label '{fig:window_length_loss_SIR_
-IND}' will be lost.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 \label{fig:window_length_loss_I_IND}
-                                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+Package pdftex.def Info: images/window_length_loss_I_IND.pdf  used on input lin
+e 283.
+(pdftex.def)             Requested size: 240.23016pt x 153.0689pt.
+<images/interpolated_nu_varying_with_time_IND.pdf, id=276, 746.80568pt x 490.97
+19pt>
 File: images/interpolated_nu_varying_with_time_IND.pdf Graphic file (type pdf)
 <use images/interpolated_nu_varying_with_time_IND.pdf>
+Package pdftex.def Info: images/interpolated_nu_varying_with_time_IND.pdf  used
+ on input line 294.
+(pdftex.def)             Requested size: 500.484pt x 329.03935pt.
+[7] [8 <./images/window_length_loss_SIR_IND.pdf> <./images/window_length_loss_I
+_IND.pdf> <./images/interpolated_nu_varying_with_time_IND.pdf>]
 
-! Package amsmath Error: Multiple \label's: label '{fig:window_length_loss_I_IN
-D}' will be lost.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.319 ...ig:interpolated_nu_varying_with_time_IND}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.320 \end{figure}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.320 \end{figure}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.320 \end{figure}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Display math should end with $$.
-<to be read again> 
-                   \vskip 
-l.320 \end{figure}
-                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Undefined control sequence.
-\endfigure ...box \columnwidth \fi \box \@currbox 
-                                                  \vskip \intextsep \relax 
-l.320 \end{figure}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \vskip 
-l.320 \end{figure}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-! LaTeX Error: \begin{equation} on input line 259 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.320 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
-
-[7]
-
-LaTeX Warning: Reference `fig:SIR_model_IND,fig:SIRV_model_with_lockdown_infect
-ions_time_varying_nu_IND' on page 8 undefined on input line 380.
-
-
-LaTeX Warning: Reference `a' on page 8 undefined on input line 380.
+LaTeX Warning: Reference `fig:comparing_costs_IND' on page 1 undefined on input
+ line 354.
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-96.
+70.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [8] [9]
-Overfull \hbox (2.01968pt too wide) in paragraph at lines 481--482
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-File: images/SIR_model_IND.pdf Graphic file (type pdf)
-<use images/SIR_model_IND.pdf>
-File: images/SIR_model_infections_IND.pdf Graphic file (type pdf)
-<use images/SIR_model_infections_IND.pdf>
-
+) [9] [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
+<images/SIR_model_IND.pdf, id=445, 730.71431pt x 484.18265pt>
+File: images/SIR_model_IND.pdf Graphic file (type pdf)
+<use images/SIR_model_IND.pdf>
+Package pdftex.def Info: images/SIR_model_IND.pdf  used on input line 466.
+(pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
+<images/SIR_model_infections_IND.pdf, id=446, 726.417pt x 487.69577pt>
+File: images/SIR_model_infections_IND.pdf Graphic file (type pdf)
+<use images/SIR_model_infections_IND.pdf>
+Package pdftex.def Info: images/SIR_model_infections_IND.pdf  used on input lin
+e 472.
+(pdftex.def)             Requested size: 363.20761pt x 243.84729pt.
+<images/SIR_model_with_lockdown_IND.pdf, id=449, 730.71431pt x 484.18265pt>
 File: images/SIR_model_with_lockdown_IND.pdf Graphic file (type pdf)
 <use images/SIR_model_with_lockdown_IND.pdf>
+Package pdftex.def Info: images/SIR_model_with_lockdown_IND.pdf  used on input 
+line 486.
+(pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
+<images/stringency_varying_with_time_IND.pdf, id=450, 726.417pt x 488.04082pt>
 File: images/stringency_varying_with_time_IND.pdf Graphic file (type pdf)
 <use images/stringency_varying_with_time_IND.pdf>
-
-[12]
+Package pdftex.def Info: images/stringency_varying_with_time_IND.pdf  used on i
+nput line 493.
+(pdftex.def)             Requested size: 363.20761pt x 244.0198pt.
+<images/SIR_model_with_lockdown_infections_IND.pdf, id=451, 718.60658pt x 487.6
+9577pt>
 File: images/SIR_model_with_lockdown_infections_IND.pdf Graphic file (type pdf)
 
 <use images/SIR_model_with_lockdown_infections_IND.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-
-LaTeX Warning: Reference `eq:cost_I_with_lockdown_and_nu' on page 14 undefined 
-on input line 536.
-
+Package pdftex.def Info: images/SIR_model_with_lockdown_infections_IND.pdf  use
+d on input line 501.
+(pdftex.def)             Requested size: 359.30241pt x 243.84729pt.
+<images/SIRV_model_with_lockdown_IND.pdf, id=454, 730.71431pt x 484.18265pt>
 File: images/SIRV_model_with_lockdown_IND.pdf Graphic file (type pdf)
 <use images/SIRV_model_with_lockdown_IND.pdf>
+Package pdftex.def Info: images/SIRV_model_with_lockdown_IND.pdf  used on input
+ line 515.
+(pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
+<images/SIRV_model_with_lockdown_infections_IND.pdf, id=455, 718.60658pt x 487.
+69577pt>
 File: images/SIRV_model_with_lockdown_infections_IND.pdf Graphic file (type pdf
 )
 <use images/SIRV_model_with_lockdown_infections_IND.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
+Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_IND.pdf  us
+ed on input line 522.
+(pdftex.def)             Requested size: 359.30241pt x 243.84729pt.
+<images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf, id=459, 730.71431pt x
+ 484.18265pt>
 File: images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf Graphic file (typ
 e pdf)
 <use images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf>
+Package pdftex.def Info: images/SIRV_model_with_lockdown_time_varying_nu_IND.pd
+f  used on input line 536.
+(pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 566.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 537.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 566.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 537.
+<images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf, id=460, 73
+8.13266pt x 487.69577pt>
 File: images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf Graphi
 c file (type pdf)
 <use images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-File: images/comparing_costs_IND.pdf Graphic file (type pdf)
-<use images/comparing_costs_IND.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
+Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_time_varyin
+g_nu_IND.pdf  used on input line 543.
+(pdftex.def)             Requested size: 369.06543pt x 243.84729pt.
+<images/comparing_costs_SIR_IND.pdf, id=461, 784.7286pt x 503.95654pt>
+File: images/comparing_costs_SIR_IND.pdf Graphic file (type pdf)
+<use images/comparing_costs_SIR_IND.pdf>
+Package pdftex.def Info: images/comparing_costs_SIR_IND.pdf  used on input line
+ 553.
+(pdftex.def)             Requested size: 240.23016pt x 154.27171pt.
+<images/comparing_costs_I_IND.pdf, id=462, 776.69861pt x 503.95654pt>
+File: images/comparing_costs_I_IND.pdf Graphic file (type pdf)
+<use images/comparing_costs_I_IND.pdf>
+Package pdftex.def Info: images/comparing_costs_I_IND.pdf  used on input line 5
+60.
+(pdftex.def)             Requested size: 240.23016pt x 155.87119pt.
+<images/stringency_vs_gdp_IND.pdf, id=465, 745.94308pt x 488.04082pt>
 File: images/stringency_vs_gdp_IND.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_IND.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_IND.pdf  used on input line 5
+74.
+(pdftex.def)             Requested size: 240.23016pt x 157.16669pt.
+<images/gdp_modelled_with_stringency_IND.pdf, id=466, 745.94308pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_IND.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_IND.pdf>
+Package pdftex.def Info: images/gdp_modelled_with_stringency_IND.pdf  used on i
+nput line 581.
+(pdftex.def)             Requested size: 240.23016pt x 157.05557pt.
+<images/stringency_vs_gdp_MEX.pdf, id=467, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_MEX.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_MEX.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_MEX.pdf  used on input line 5
+88.
+(pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
+<images/gdp_modelled_with_stringency_MEX.pdf, id=468, 734.22745pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_MEX.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_MEX.pdf>
+Package pdftex.def Info: images/gdp_modelled_with_stringency_MEX.pdf  used on i
+nput line 595.
+(pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
+<images/stringency_vs_gdp_BRA.pdf, id=469, 734.39494pt x 488.04082pt>
 File: images/stringency_vs_gdp_BRA.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_BRA.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_BRA.pdf  used on input line 6
+02.
+(pdftex.def)             Requested size: 240.23016pt x 159.63905pt.
+<images/gdp_modelled_with_stringency_BRA.pdf, id=470, 734.22745pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_BRA.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_BRA.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
+Package pdftex.def Info: images/gdp_modelled_with_stringency_BRA.pdf  used on i
+nput line 609.
+(pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
+<images/stringency_vs_gdp_USA.pdf, id=471, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_USA.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_USA.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_USA.pdf  used on input line 6
+20.
+(pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
+<images/gdp_modelled_with_stringency_USA.pdf, id=472, 734.22745pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_USA.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_USA.pdf>
+Package pdftex.def Info: images/gdp_modelled_with_stringency_USA.pdf  used on i
+nput line 627.
+(pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
+<images/stringency_vs_gdp_JPN.pdf, id=473, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_JPN.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_JPN.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_JPN.pdf  used on input line 6
+34.
+(pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
+<images/gdp_modelled_with_stringency_JPN.pdf, id=474, 734.22745pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_JPN.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_JPN.pdf>
+Package pdftex.def Info: images/gdp_modelled_with_stringency_JPN.pdf  used on i
+nput line 641.
+(pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
+<images/stringency_vs_gdp_CAN.pdf, id=475, 741.45268pt x 488.04082pt>
 File: images/stringency_vs_gdp_CAN.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_CAN.pdf>
+Package pdftex.def Info: images/stringency_vs_gdp_CAN.pdf  used on input line 6
+48.
+(pdftex.def)             Requested size: 240.23016pt x 158.12733pt.
+<images/gdp_modelled_with_stringency_CAN.pdf, id=476, 734.22745pt x 487.69577pt
+>
 File: images/gdp_modelled_with_stringency_CAN.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_CAN.pdf>
+Package pdftex.def Info: images/gdp_modelled_with_stringency_CAN.pdf  used on i
+nput line 655.
+(pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
 
-[18]
-File: images/914857/rl_sir.eps Graphic file (type eps)
-<images/914857/rl_sir.eps>
-File: images/914857/rl_i.eps Graphic file (type eps)
-<images/914857/rl_i.eps>
-File: images/914857/rl_gdp.eps Graphic file (type eps)
-<images/914857/rl_gdp.eps>
+[12] [13 <./images/SIR_model_IND.pdf> <./images/SIR_model_infections_IND.pdf>]
+[14 <./images/SIR_model_with_lockdown_IND.pdf> <./images/stringency_varying_wit
+h_time_IND.pdf>]
+Package epstopdf Info: Source file: <images/914857/rl_sir.eps>
+(epstopdf)                    date: 2024-01-17 18:45:28
+(epstopdf)                    size: 54411 bytes
+(epstopdf)             Output file: <images/914857/rl_sir-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2024-01-17 18:53:50
+(epstopdf)                    size: 24576 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_sir-eps-c
+onverted-to.pdf images/914857/rl_sir.eps>
+(epstopdf)             \includegraphics on input line 668.
+Package epstopdf Info: Output file is already uptodate.
+<images/914857/rl_sir-eps-converted-to.pdf, id=660, 867.24pt x 578.16pt>
+File: images/914857/rl_sir-eps-converted-to.pdf Graphic file (type pdf)
+<use images/914857/rl_sir-eps-converted-to.pdf>
+Package pdftex.def Info: images/914857/rl_sir-eps-converted-to.pdf  used on inp
+ut line 668.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/914857/rl_i.eps>
+(epstopdf)                    date: 2024-01-17 18:45:29
+(epstopdf)                    size: 46472 bytes
+(epstopdf)             Output file: <images/914857/rl_i-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-17 18:53:50
+(epstopdf)                    size: 21078 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_i-eps-con
+verted-to.pdf images/914857/rl_i.eps>
+(epstopdf)             \includegraphics on input line 675.
+Package epstopdf Info: Output file is already uptodate.
+<images/914857/rl_i-eps-converted-to.pdf, id=661, 867.24pt x 578.16pt>
+File: images/914857/rl_i-eps-converted-to.pdf Graphic file (type pdf)
+<use images/914857/rl_i-eps-converted-to.pdf>
+Package pdftex.def Info: images/914857/rl_i-eps-converted-to.pdf  used on input
+ line 675.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/914857/rl_gdp.eps>
+(epstopdf)                    date: 2024-01-17 18:45:30
+(epstopdf)                    size: 30218 bytes
+(epstopdf)             Output file: <images/914857/rl_gdp-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2024-01-17 18:53:50
+(epstopdf)                    size: 16040 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_gdp-eps-c
+onverted-to.pdf images/914857/rl_gdp.eps>
+(epstopdf)             \includegraphics on input line 682.
+Package epstopdf Info: Output file is already uptodate.
+<images/914857/rl_gdp-eps-converted-to.pdf, id=662, 867.24pt x 578.16pt>
+File: images/914857/rl_gdp-eps-converted-to.pdf Graphic file (type pdf)
+<use images/914857/rl_gdp-eps-converted-to.pdf>
+Package pdftex.def Info: images/914857/rl_gdp-eps-converted-to.pdf  used on inp
+ut line 682.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+<images/914857/rl_stringency.pdf, id=663, 867.24pt x 578.16pt>
 File: images/914857/rl_stringency.pdf Graphic file (type pdf)
 <use images/914857/rl_stringency.pdf>
-File: images/914857/rl_r_eff.eps Graphic file (type eps)
-<images/914857/rl_r_eff.eps>
-File: images/914857/rl_reward.eps Graphic file (type eps)
-<images/914857/rl_reward.eps>
- [19] [20]
-File: images/244620/rl_sir.eps Graphic file (type eps)
-<images/244620/rl_sir.eps>
-File: images/244620/rl_i.eps Graphic file (type eps)
-<images/244620/rl_i.eps>
-File: images/244620/rl_gdp.eps Graphic file (type eps)
-<images/244620/rl_gdp.eps>
+Package pdftex.def Info: images/914857/rl_stringency.pdf  used on input line 68
+9.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/914857/rl_r_eff.eps>
+(epstopdf)                    date: 2024-01-17 18:45:30
+(epstopdf)                    size: 37644 bytes
+(epstopdf)             Output file: <images/914857/rl_r_eff-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2024-01-17 18:53:50
+(epstopdf)                    size: 18607 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_r_eff-eps
+-converted-to.pdf images/914857/rl_r_eff.eps>
+(epstopdf)             \includegraphics on input line 696.
+Package epstopdf Info: Output file is already uptodate.
+<images/914857/rl_r_eff-eps-converted-to.pdf, id=664, 867.24pt x 578.16pt>
+File: images/914857/rl_r_eff-eps-converted-to.pdf Graphic file (type pdf)
+<use images/914857/rl_r_eff-eps-converted-to.pdf>
+Package pdftex.def Info: images/914857/rl_r_eff-eps-converted-to.pdf  used on i
+nput line 696.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/914857/rl_reward.eps>
+(epstopdf)                    date: 2024-01-17 18:45:30
+(epstopdf)                    size: 38636 bytes
+(epstopdf)             Output file: <images/914857/rl_reward-eps-converted-to.p
+df>
+(epstopdf)                    date: 2024-01-17 18:53:51
+(epstopdf)                    size: 19333 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_reward-ep
+s-converted-to.pdf images/914857/rl_reward.eps>
+(epstopdf)             \includegraphics on input line 703.
+Package epstopdf Info: Output file is already uptodate.
+<images/914857/rl_reward-eps-converted-to.pdf, id=665, 867.24pt x 578.16pt>
+File: images/914857/rl_reward-eps-converted-to.pdf Graphic file (type pdf)
+<use images/914857/rl_reward-eps-converted-to.pdf>
+Package pdftex.def Info: images/914857/rl_reward-eps-converted-to.pdf  used on 
+input line 703.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/244620/rl_sir.eps>
+(epstopdf)                    date: 2024-01-17 18:47:01
+(epstopdf)                    size: 53880 bytes
+(epstopdf)             Output file: <images/244620/rl_sir-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2024-01-17 18:53:51
+(epstopdf)                    size: 24367 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_sir-eps-c
+onverted-to.pdf images/244620/rl_sir.eps>
+(epstopdf)             \includegraphics on input line 715.
+Package epstopdf Info: Output file is already uptodate.
+<images/244620/rl_sir-eps-converted-to.pdf, id=667, 867.24pt x 578.16pt>
+File: images/244620/rl_sir-eps-converted-to.pdf Graphic file (type pdf)
+<use images/244620/rl_sir-eps-converted-to.pdf>
+Package pdftex.def Info: images/244620/rl_sir-eps-converted-to.pdf  used on inp
+ut line 715.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/244620/rl_i.eps>
+(epstopdf)                    date: 2024-01-17 18:47:02
+(epstopdf)                    size: 43580 bytes
+(epstopdf)             Output file: <images/244620/rl_i-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-01-17 18:53:51
+(epstopdf)                    size: 20222 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_i-eps-con
+verted-to.pdf images/244620/rl_i.eps>
+(epstopdf)             \includegraphics on input line 722.
+Package epstopdf Info: Output file is already uptodate.
+<images/244620/rl_i-eps-converted-to.pdf, id=668, 867.24pt x 578.16pt>
+File: images/244620/rl_i-eps-converted-to.pdf Graphic file (type pdf)
+<use images/244620/rl_i-eps-converted-to.pdf>
+Package pdftex.def Info: images/244620/rl_i-eps-converted-to.pdf  used on input
+ line 722.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/244620/rl_gdp.eps>
+(epstopdf)                    date: 2024-01-17 18:47:03
+(epstopdf)                    size: 30196 bytes
+(epstopdf)             Output file: <images/244620/rl_gdp-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2024-01-17 18:53:51
+(epstopdf)                    size: 16022 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_gdp-eps-c
+onverted-to.pdf images/244620/rl_gdp.eps>
+(epstopdf)             \includegraphics on input line 729.
+Package epstopdf Info: Output file is already uptodate.
+<images/244620/rl_gdp-eps-converted-to.pdf, id=669, 867.24pt x 578.16pt>
+File: images/244620/rl_gdp-eps-converted-to.pdf Graphic file (type pdf)
+<use images/244620/rl_gdp-eps-converted-to.pdf>
+Package pdftex.def Info: images/244620/rl_gdp-eps-converted-to.pdf  used on inp
+ut line 729.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+<images/244620/rl_stringency.pdf, id=670, 867.24pt x 578.16pt>
 File: images/244620/rl_stringency.pdf Graphic file (type pdf)
 <use images/244620/rl_stringency.pdf>
-File: images/244620/rl_r_eff.eps Graphic file (type eps)
-<images/244620/rl_r_eff.eps>
-File: images/244620/rl_reward.eps Graphic file (type eps)
-<images/244620/rl_reward.eps>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-[22] (./main.bbl
+Package pdftex.def Info: images/244620/rl_stringency.pdf  used on input line 73
+6.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/244620/rl_r_eff.eps>
+(epstopdf)                    date: 2024-01-17 18:47:04
+(epstopdf)                    size: 37090 bytes
+(epstopdf)             Output file: <images/244620/rl_r_eff-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2024-01-17 18:53:51
+(epstopdf)                    size: 18517 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_r_eff-eps
+-converted-to.pdf images/244620/rl_r_eff.eps>
+(epstopdf)             \includegraphics on input line 743.
+Package epstopdf Info: Output file is already uptodate.
+<images/244620/rl_r_eff-eps-converted-to.pdf, id=671, 867.24pt x 578.16pt>
+File: images/244620/rl_r_eff-eps-converted-to.pdf Graphic file (type pdf)
+<use images/244620/rl_r_eff-eps-converted-to.pdf>
+Package pdftex.def Info: images/244620/rl_r_eff-eps-converted-to.pdf  used on i
+nput line 743.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+Package epstopdf Info: Source file: <images/244620/rl_reward.eps>
+(epstopdf)                    date: 2024-01-17 18:47:04
+(epstopdf)                    size: 37366 bytes
+(epstopdf)             Output file: <images/244620/rl_reward-eps-converted-to.p
+df>
+(epstopdf)                    date: 2024-01-17 18:53:52
+(epstopdf)                    size: 18575 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_reward-ep
+s-converted-to.pdf images/244620/rl_reward.eps>
+(epstopdf)             \includegraphics on input line 750.
+Package epstopdf Info: Output file is already uptodate.
+<images/244620/rl_reward-eps-converted-to.pdf, id=672, 867.24pt x 578.16pt>
+File: images/244620/rl_reward-eps-converted-to.pdf Graphic file (type pdf)
+<use images/244620/rl_reward-eps-converted-to.pdf>
+Package pdftex.def Info: images/244620/rl_reward-eps-converted-to.pdf  used on 
+input line 750.
+(pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+ [15 <./images/SIR_model_with_lockdown_infections_IND.pdf>]
+[16 <./images/SIRV_model_with_lockdown_IND.pdf> <./images/SIRV_model_with_lockd
+own_infections_IND.pdf>] [17 <./images/SIRV_model_with_lockdown_time_varying_nu
+_IND.pdf> <./images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf
+>] (./main.bbl
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1521,12 +1505,35 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
-[23]
-Missing character: There is no – in font ptmr8t!
-Invalid UTF-8 byte or sequence at line 91 replaced by U+FFFD.
-Missing character: There is no � in font ptmr8t!
+[18 <./images/comparing_costs_SIR_IND.pdf> <./images/comparing_costs_I_IND.pdf>
+] [19 <./images/stringency_vs_gdp_IND.pdf> <./images/gdp_modelled_with_stringen
+cy_IND.pdf> <./images/stringency_vs_gdp_MEX.pdf> <./images/gdp_modelled_with_st
+ringency_MEX.pdf> <./images/stringency_vs_gdp_BRA.pdf> <./images/gdp_modelled_w
+ith_stringency_BRA.pdf>] [20 <./images/stringency_vs_gdp_USA.pdf> <./images/gdp
+_modelled_with_stringency_USA.pdf> <./images/stringency_vs_gdp_JPN.pdf> <./imag
+es/gdp_modelled_with_stringency_JPN.pdf> <./images/stringency_vs_gdp_CAN.pdf> <
+./images/gdp_modelled_with_stringency_CAN.pdf>] [21 <./images/914857/rl_sir-eps
+-converted-to.pdf> <./images/914857/rl_i-eps-converted-to.pdf> <./images/914857
+/rl_gdp-eps-converted-to.pdf> <./images/914857/rl_stringency.pdf> <./images/914
+857/rl_r_eff-eps-converted-to.pdf> <./images/914857/rl_reward-eps-converted-to.
+pdf>] [22 <./images/244620/rl_sir-eps-converted-to.pdf> <./images/244620/rl_i-e
+ps-converted-to.pdf> <./images/244620/rl_gdp-eps-converted-to.pdf> <./images/24
+4620/rl_stringency.pdf> <./images/244620/rl_r_eff-eps-converted-to.pdf> <./imag
+es/244620/rl_reward-eps-converted-to.pdf>]
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 ...u}n, P.} \& \bibinfo{author}{Yildirim, �.}
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
 
 ! Extra }, or forgotten \endgroup.
 <recently read> }
@@ -1557,8 +1564,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1588,6 +1593,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+[23]
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1619,12 +1625,10 @@ deleted material, e.g., by typing `I$}'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 186--192
-[]\T1/ptm/m/n/12 Rachel, L.  An an-a-lyt-i-cal model of covid-19 lock-downs.   
-(2020).
+[]\T1/ptm/m/n/12 (+20) Rachel, L.  An an-a-lyt-i-cal model of covid-19 lock-dow
+ns.   (2020).
  []
 
-Missing character: There is no – in font ptmr8t!
-[24]
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1654,7 +1658,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no ’ in font ptmr8t!
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1684,10 +1687,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no ’ in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
 ! Misplaced alignment tab character &.
 <inserted text> &
                  amp;
@@ -1700,8 +1699,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-Missing character: There is no – in font ptmr8t!
-[25]
+[24]
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1731,8 +1729,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
@@ -1762,14 +1758,11 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
-Missing character: There is no – in font ptmr8t!
-[26]
-Underfull \hbox (badness 6893) in paragraph at lines 505--509
-[]\T1/ptm/m/n/12 Mathieu, E. \T1/ptm/m/it/12 et al.  \T1/ptm/m/n/12 Coro-n-avir
-us pan-demic (covid-19).  \T1/ptm/m/it/12 Our World Data \T1/ptm/m/n/12 (2020).
-
+[25]
+Underfull \hbox (badness 5681) in paragraph at lines 505--509
+[]\T1/ptm/m/n/12 (+20) Mathieu, E. \T1/ptm/m/it/12 (+20) et al.  \T1/ptm/m/n/12
+ (+20) Coro-n-avirus pan-demic (covid-19).  \T1/ptm/m/it/12 (+20) Our World Dat
+a \T1/ptm/m/n/12 (+20) (2020).
  []
 
 ! Extra }, or forgotten \endgroup.
@@ -1801,7 +1794,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Missing character: There is no – in font ptmr8t!
 ! Misplaced alignment tab character &.
 <inserted text> &
                  
@@ -1816,27 +1808,45 @@ might try typing `S' now just to see what is salvageable.
 
 ) 
 AED: lastpage setting LastPage
-[27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 796.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 796.
+[26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 769.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 769.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 796.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 796.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 769.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 769.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F83375410A4B994C4E6DE73D5F192820;796.
+(rerunfilecheck)             Checksum: EA4760C235D684D4E568DB646B313C8E;932.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 796.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 769.
  ) 
 Here is how much of TeX's memory you used:
- 35023 strings out of 479819
- 691784 string characters out of 5895846
- 984801 words of memory out of 5000000
- 51577 multiletter control sequences out of 15000+600000
- 591087 words of font info for 124 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 60i,12n,74p,2395b,988s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32799 strings out of 481239
+ 663542 string characters out of 5920377
+ 974493 words of memory out of 5000000
+ 47017 multiletter control sequences out of 15000+600000
+ 632076 words of font info for 335 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,12n,74p,2397b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
+hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on main.pdf (26 pages, 801086 bytes).
+PDF statistics:
+ 2245 PDF objects out of 2487 (max. 8388607)
+ 801 compressed objects within 9 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 53051 words of extra memory for PDF output out of 61914 (max. 10000000)
 
-Output written on main.pdf (27 pages).

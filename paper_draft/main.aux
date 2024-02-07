@@ -15,7 +15,8 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand*\HyPL@Entry[1]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{naturemag-doi}
 \citation{Baker2022,inequitableworld}
 \citation{WHOCovid}
@@ -30,7 +31,6 @@
 \citation{Hollingsworth2011,Song2022,Pangallo2023,Ash2022,Ohi2020,PADMANABHAN2021102676,NBERw26981,analytical_covid_lockdown_model}
 \citation{Gagnon2023,Redlin2022,Liang2021}
 \citation{Redlin2022,Patel2021}
-\HyPL@Entry{0<</S/D>>}
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{Gagnon2023,GagnonKorea,Deb2020,Eichenbaum2021}
@@ -73,12 +73,12 @@
 \newlabel{eq:huberloss@cref}{{[equation][7][]7}{[1][4][]4}}
 \newlabel{eq:cost_SIR}{{8}{4}{Simple SIR Model}{equation.2.8}{}}
 \newlabel{eq:cost_SIR@cref}{{[equation][8][]8}{[1][4][]4}}
+\newlabel{eq:cost_I}{{9}{4}{Simple SIR Model}{equation.2.9}{}}
+\newlabel{eq:cost_I@cref}{{[equation][9][]9}{[1][4][]4}}
 \citation{NBERw26867,AlvarezLockdownSIR,SIRLockdown,SIRLockdown2,analytical_covid_lockdown_model}
 \citation{owidcoronavirus}
-\newlabel{eq:cost_I}{{9}{5}{Simple SIR Model}{equation.2.9}{}}
-\newlabel{eq:cost_I@cref}{{[equation][9][]9}{[1][4][]5}}
 \newlabel{eq:beta_optimal_without_lockdown}{{10}{5}{Simple SIR Model}{equation.2.10}{}}
-\newlabel{eq:beta_optimal_without_lockdown@cref}{{[equation][10][]10}{[1][5][]5}}
+\newlabel{eq:beta_optimal_without_lockdown@cref}{{[equation][10][]10}{[1][4][]5}}
 \newlabel{eq:gamma_optimal_without_lockdown}{{11}{5}{Simple SIR Model}{equation.2.11}{}}
 \newlabel{eq:gamma_optimal_without_lockdown@cref}{{[equation][11][]11}{[1][5][]5}}
 \newlabel{eq:r0_without_lockdown}{{12}{5}{Simple SIR Model}{equation.2.12}{}}
@@ -92,12 +92,12 @@
 \newlabel{eq:S_with_lockdown@cref}{{[equation][15][]15}{[1][5][]5}}
 \newlabel{eq:I_with_lockdown}{{16}{5}{SIR Model with Lockdown}{equation.2.16}{}}
 \newlabel{eq:I_with_lockdown@cref}{{[equation][16][]16}{[1][5][]5}}
-\newlabel{eq:R_with_lockdown}{{17}{6}{SIR Model with Lockdown}{equation.2.17}{}}
-\newlabel{eq:R_with_lockdown@cref}{{[equation][17][]17}{[1][5][]6}}
+\newlabel{eq:R_with_lockdown}{{17}{5}{SIR Model with Lockdown}{equation.2.17}{}}
+\newlabel{eq:R_with_lockdown@cref}{{[equation][17][]17}{[1][5][]5}}
 \newlabel{eq:beta_optimal_with_lockdown}{{18}{6}{SIR Model with Lockdown}{equation.2.18}{}}
-\newlabel{eq:beta_optimal_with_lockdown@cref}{{[equation][18][]18}{[1][6][]6}}
+\newlabel{eq:beta_optimal_with_lockdown@cref}{{[equation][18][]18}{[1][5][]6}}
 \newlabel{eq:gamma_optimal_with_lockdown}{{19}{6}{SIR Model with Lockdown}{equation.2.19}{}}
-\newlabel{eq:gamma_optimal_with_lockdown@cref}{{[equation][19][]19}{[1][6][]6}}
+\newlabel{eq:gamma_optimal_with_lockdown@cref}{{[equation][19][]19}{[1][5][]6}}
 \newlabel{eq:r0_with_lockdown}{{20}{6}{SIR Model with Lockdown}{equation.2.20}{}}
 \newlabel{eq:r0_with_lockdown@cref}{{[equation][20][]20}{[1][6][]6}}
 \newlabel{eq:cost_SIR_with_lockdown}{{21}{6}{SIR Model with Lockdown}{equation.2.21}{}}
@@ -111,139 +111,112 @@
 \newlabel{eq:I_with_lockdown_and_nu@cref}{{[equation][24][]24}{[1][6][]6}}
 \newlabel{eq:R_with_lockdown_and_nu}{{25}{6}{SIRV Model with Lockdown}{equation.2.25}{}}
 \newlabel{eq:R_with_lockdown_and_nu@cref}{{[equation][25][]25}{[1][6][]6}}
+\newlabel{eq:beta_optimal_with_lockdown_and_nu}{{26}{6}{SIRV Model with Lockdown}{equation.2.26}{}}
+\newlabel{eq:beta_optimal_with_lockdown_and_nu@cref}{{[equation][26][]26}{[1][6][]6}}
+\newlabel{eq:gamma_optimal_with_lockdown_and_nu}{{27}{6}{SIRV Model with Lockdown}{equation.2.27}{}}
+\newlabel{eq:gamma_optimal_with_lockdown_and_nu@cref}{{[equation][27][]27}{[1][6][]6}}
+\newlabel{eq:nu_optimal_with_lockdown_and_nu}{{28}{6}{SIRV Model with Lockdown}{equation.2.28}{}}
+\newlabel{eq:nu_optimal_with_lockdown_and_nu@cref}{{[equation][28][]28}{[1][6][]6}}
 \citation{Liang2021,Marinov2022}
 \citation{Liao2020}
 \citation{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}
-\newlabel{eq:beta_optimal_with_lockdown_and_nu}{{26}{7}{SIRV Model with Lockdown}{equation.2.26}{}}
-\newlabel{eq:beta_optimal_with_lockdown_and_nu@cref}{{[equation][26][]26}{[1][6][]7}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_nu}{{27}{7}{SIRV Model with Lockdown}{equation.2.27}{}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_nu@cref}{{[equation][27][]27}{[1][6][]7}}
-\newlabel{eq:nu_optimal_with_lockdown_and_nu}{{28}{7}{SIRV Model with Lockdown}{equation.2.28}{}}
-\newlabel{eq:nu_optimal_with_lockdown_and_nu@cref}{{[equation][28][]28}{[1][6][]7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Loss for Different Window Lengths\relax }}{7}{figure.caption.2}\protected@file@percent }
+\newlabel{eq:r0_with_lockdown_and_nu}{{29}{7}{SIRV Model with Lockdown}{equation.2.29}{}}
+\newlabel{eq:r0_with_lockdown_and_nu@cref}{{[equation][29][]29}{[1][6][]7}}
+\newlabel{eq:cost_SIR_with_lockdown_and_nu}{{30}{7}{SIRV Model with Lockdown}{equation.2.30}{}}
+\newlabel{eq:cost_SIR_with_lockdown_and_nu@cref}{{[equation][30][]30}{[1][6][]7}}
+\newlabel{eq:cost_I_with_lockdown_and_nu}{{31}{7}{SIRV Model with Lockdown}{equation.2.31}{}}
+\newlabel{eq:cost_I_with_lockdown_and_nu@cref}{{[equation][31][]31}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Optimizing Window Length for Time-varying Vaccination Rate}{7}{subsection.2.4}\protected@file@percent }
+\newlabel{optimizing_window_length}{{2.4}{7}{Optimizing Window Length for Time-varying Vaccination Rate}{subsection.2.4}{}}
+\newlabel{optimizing_window_length@cref}{{[subsection][4][2]2.4}{[1][7][]7}}
+\newlabel{eq:S_with_lockdown_and_nu_calc_nu}{{32}{7}{Optimizing Window Length for Time-varying Vaccination Rate}{equation.2.32}{}}
+\newlabel{eq:S_with_lockdown_and_nu_calc_nu@cref}{{[equation][32][]32}{[1][7][]7}}
+\newlabel{eq:I_with_lockdown_and_nu_calc_nu}{{33}{7}{Optimizing Window Length for Time-varying Vaccination Rate}{equation.2.33}{}}
+\newlabel{eq:I_with_lockdown_and_nu_calc_nu@cref}{{[equation][33][]33}{[1][7][]7}}
+\newlabel{eq:R_with_lockdown_and_nu_calc_nu}{{34}{7}{Optimizing Window Length for Time-varying Vaccination Rate}{equation.2.34}{}}
+\newlabel{eq:R_with_lockdown_and_nu_calc_nu@cref}{{[equation][34][]34}{[1][7][]7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Loss for Different Window Lengths\relax }}{8}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}SIRV Model with Lockdown and time-varying $nu$}{7}{subsection.2.5}\protected@file@percent }
-\newlabel{eq:S_with_lockdown_and_time_varying_nu}{{30}{7}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.30}{}}
-\newlabel{eq:S_with_lockdown_and_time_varying_nu@cref}{{[equation][30][]30}{[1][7][]7}}
+\newlabel{fig:window_length_loss_SIR_IND}{{1a}{8}{Loss for Different Window Lengths for Susceptible, Infected and Recovered Population\relax }{figure.caption.2}{}}
+\newlabel{fig:window_length_loss_SIR_IND@cref}{{[subfigure][1][1]1a}{[1][7][]8}}
+\newlabel{sub@fig:window_length_loss_SIR_IND}{{a}{8}{Loss for Different Window Lengths for Susceptible, Infected and Recovered Population\relax }{figure.caption.2}{}}
+\newlabel{sub@fig:window_length_loss_SIR_IND@cref}{{[subfigure][1][1]1a}{[1][7][]8}}
+\newlabel{fig:window_length_loss_I_IND}{{1b}{8}{Loss for Different Window Lengths for Infected Population\relax }{figure.caption.2}{}}
+\newlabel{fig:window_length_loss_I_IND@cref}{{[subfigure][2][1]1b}{[1][7][]8}}
+\newlabel{sub@fig:window_length_loss_I_IND}{{b}{8}{Loss for Different Window Lengths for Infected Population\relax }{figure.caption.2}{}}
+\newlabel{sub@fig:window_length_loss_I_IND@cref}{{[subfigure][2][1]1b}{[1][7][]8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces $\nu $ Varying with Time\relax }}{8}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:interpolated_nu_varying_with_time_IND}{{2}{8}{$\nu $ Varying with Time\relax }{figure.caption.3}{}}
+\newlabel{fig:interpolated_nu_varying_with_time_IND@cref}{{[figure][2][]2}{[1][7][]8}}
 \citation{OECDNormalizedGDP,OECDNormalizedGDP2}
-\newlabel{eq:I_with_lockdown_and_time_varying_nu}{{31}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.31}{}}
-\newlabel{eq:I_with_lockdown_and_time_varying_nu@cref}{{[equation][31][]31}{[1][7][]8}}
-\newlabel{eq:R_with_lockdown_and_time_varying_nu}{{32}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.32}{}}
-\newlabel{eq:R_with_lockdown_and_time_varying_nu@cref}{{[equation][32][]32}{[1][7][]8}}
-\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu}{{33}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.33}{}}
-\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][33][]33}{[1][8][]8}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu}{{34}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.34}{}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][34][]34}{[1][8][]8}}
-\newlabel{eq:r0_with_lockdown_and_time_varying_nu}{{35}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.35}{}}
-\newlabel{eq:r0_with_lockdown_and_time_varying_nu@cref}{{[equation][35][]35}{[1][8][]8}}
-\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu}{{36}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.36}{}}
-\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu@cref}{{[equation][36][]36}{[1][8][]8}}
-\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu}{{37}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.37}{}}
-\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu@cref}{{[equation][37][]37}{[1][8][]8}}
-\newlabel{eq:gdp_modelled_with_stringency_IND}{{38}{8}{SIRV Model with Lockdown and time-varying $nu$}{equation.2.38}{}}
-\newlabel{eq:gdp_modelled_with_stringency_IND@cref}{{[equation][38][]38}{[1][8][]8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}SIRV Model with Lockdown (Time-varying Vaccination Rate)}{9}{subsection.2.5}\protected@file@percent }
+\newlabel{eq:S_with_lockdown_and_time_varying_nu}{{35}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.35}{}}
+\newlabel{eq:S_with_lockdown_and_time_varying_nu@cref}{{[equation][35][]35}{[1][7][]9}}
+\newlabel{eq:I_with_lockdown_and_time_varying_nu}{{36}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.36}{}}
+\newlabel{eq:I_with_lockdown_and_time_varying_nu@cref}{{[equation][36][]36}{[1][9][]9}}
+\newlabel{eq:R_with_lockdown_and_time_varying_nu}{{37}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.37}{}}
+\newlabel{eq:R_with_lockdown_and_time_varying_nu@cref}{{[equation][37][]37}{[1][9][]9}}
+\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu}{{38}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.38}{}}
+\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][38][]38}{[1][9][]9}}
+\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu}{{39}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.39}{}}
+\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][39][]39}{[1][9][]9}}
+\newlabel{eq:r0_with_lockdown_and_time_varying_nu}{{40}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.40}{}}
+\newlabel{eq:r0_with_lockdown_and_time_varying_nu@cref}{{[equation][40][]40}{[1][9][]9}}
+\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu}{{41}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.41}{}}
+\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu@cref}{{[equation][41][]41}{[1][9][]9}}
+\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu}{{42}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.42}{}}
+\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu@cref}{{[equation][42][]42}{[1][9][]9}}
+\newlabel{eq:gdp_modelled_with_stringency_IND}{{43}{9}{SIRV Model with Lockdown (Time-varying Vaccination Rate)}{equation.2.43}{}}
+\newlabel{eq:gdp_modelled_with_stringency_IND@cref}{{[equation][43][]43}{[1][9][]9}}
 \citation{sutton2018reinforcement}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Reinforcement Learning}{10}{subsection.2.6}\protected@file@percent }
 \citation{Ohi2020}
 \citation{AWSDeepRacer}
 \citation{LSTM}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{11}{section.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces SIR Model with lockdown for India\relax }}{12}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:SIR_model_IND}{{3a}{12}{SIR model with lockdown\relax }{figure.caption.5}{}}
-\newlabel{fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][11][]12}}
-\newlabel{sub@fig:SIR_model_IND}{{a}{12}{SIR model with lockdown\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][11][]12}}
-\newlabel{fig:SIR_model_infections_IND}{{3b}{12}{Infections modelled with SIR model\relax }{figure.caption.5}{}}
-\newlabel{fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][11][]12}}
-\newlabel{sub@fig:SIR_model_infections_IND}{{b}{12}{Infections modelled with SIR model\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][11][]12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces SIR Model with lockdown for India\relax }}{13}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:SIR_model_with_lockdown_IND}{{4a}{13}{SIR model with lockdown\relax }{figure.caption.6}{}}
-\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]13}}
-\newlabel{sub@fig:SIR_model_with_lockdown_IND}{{a}{13}{SIR model with lockdown\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]13}}
-\newlabel{fig:stringency_varying_with_time_IND}{{4b}{13}{Stringency varying with Time\relax }{figure.caption.6}{}}
-\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]13}}
-\newlabel{sub@fig:stringency_varying_with_time_IND}{{b}{13}{Stringency varying with Time\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]13}}
-\newlabel{fig:SIR_model_with_lockdown_infections_IND}{{4c}{14}{Infections modelled with SIR model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][13][]14}}
-\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND}{{c}{14}{Infections modelled with SIR model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][13][]14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces SIRV Model with lockdown for India\relax }}{15}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:SIRV_model_with_lockdown_IND}{{5a}{15}{SIRV model with lockdown\relax }{figure.caption.8}{}}
-\newlabel{fig:SIRV_model_with_lockdown_IND@cref}{{[subfigure][1][5]5a}{[1][14][]15}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_IND}{{a}{15}{SIRV model with lockdown\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_IND@cref}{{[subfigure][1][5]5a}{[1][14][]15}}
-\newlabel{fig:SIRV_model_with_lockdown_infections_IND}{{5b}{15}{Infections modelled with SIRV model with Lockdown\relax }{figure.caption.8}{}}
-\newlabel{fig:SIRV_model_with_lockdown_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]15}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_infections_IND}{{b}{15}{Infections modelled with SIRV model with Lockdown\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces SIRV Model with lockdown and time-varying $\nu $ for India\relax }}{16}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:SIRV_model_with_lockdown_time_varying_nu_IND}{{6a}{16}{SIRV model with lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
-\newlabel{fig:SIRV_model_with_lockdown_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]16}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_time_varying_nu_IND}{{a}{16}{SIRV model with lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]16}}
-\newlabel{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND}{{6b}{16}{Infections modelled with SIRV model with Lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
-\newlabel{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]16}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND}{{b}{16}{Infections modelled with SIRV model with Lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]16}}
 \citation{Caldwell2021}
 \citation{IMFCovid}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Loss for Different Models\relax }}{17}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:comparing_costs_IND}{{7}{17}{Loss for Different Models\relax }{figure.caption.10}{}}
-\newlabel{fig:comparing_costs_IND@cref}{{[figure][7][]7}{[1][16][]17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Stringency and GDP for Developing Economies\relax }}{18}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:stringency_vs_gdp_IND}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_IND@cref}{{[figure][8][]8}{[1][17][]18}}
-\newlabel{fig:gdp_modelled_with_stringency_IND}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[figure][8][]8}{[1][17][]18}}
-\newlabel{fig:stringency_vs_gdp_MEX}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[figure][8][]8}{[1][17][]18}}
-\newlabel{fig:gdp_modelled_with_stringency_MEX}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[figure][8][]8}{[1][17][]18}}
-\newlabel{fig:stringency_vs_gdp_BRA}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[figure][8][]8}{[1][17][]18}}
-\newlabel{fig:gdp_modelled_with_stringency_BRA}{{8}{18}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[figure][8][]8}{[1][17][]18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Stringency and GDP for Advanced Economies\relax }}{19}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:stringency_vs_gdp_USA}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_USA@cref}{{[figure][9][]9}{[1][18][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_USA}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[figure][9][]9}{[1][18][]19}}
-\newlabel{fig:stringency_vs_gdp_JPN}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[figure][9][]9}{[1][18][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_JPN}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[figure][9][]9}{[1][18][]19}}
-\newlabel{fig:stringency_vs_gdp_CAN}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[figure][9][]9}{[1][18][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_CAN}{{9}{19}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[figure][9][]9}{[1][18][]19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Strategy from Reinforcement Learning Agent 1\relax }}{20}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:914857_rl_sir}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_sir@cref}{{[figure][10][]10}{[1][19][]20}}
-\newlabel{fig:914857_rl_i}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_i@cref}{{[figure][10][]10}{[1][19][]20}}
-\newlabel{fig:914857_rl_gdp}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_gdp@cref}{{[figure][10][]10}{[1][19][]20}}
-\newlabel{fig:914857_rl_stringency}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_stringency@cref}{{[figure][10][]10}{[1][19][]20}}
-\newlabel{fig:914857_rl_r_eff}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_r_eff@cref}{{[figure][10][]10}{[1][19][]20}}
-\newlabel{fig:914857_rl_reward}{{10}{20}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
-\newlabel{fig:914857_rl_reward@cref}{{[figure][10][]10}{[1][19][]20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Strategy from Reinforcement Learning Agent 2\relax }}{22}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:244620_rl_sir}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_sir@cref}{{[figure][11][]11}{[1][21][]22}}
-\newlabel{fig:244620_rl_i}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_i@cref}{{[figure][11][]11}{[1][21][]22}}
-\newlabel{fig:244620_rl_gdp}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_gdp@cref}{{[figure][11][]11}{[1][21][]22}}
-\newlabel{fig:244620_rl_stringency}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_stringency@cref}{{[figure][11][]11}{[1][21][]22}}
-\newlabel{fig:244620_rl_r_eff}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_r_eff@cref}{{[figure][11][]11}{[1][21][]22}}
-\newlabel{fig:244620_rl_reward}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:244620_rl_reward@cref}{{[figure][11][]11}{[1][21][]22}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{12}{section.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces SIR Model with lockdown for India\relax }}{13}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:SIR_model_IND}{{3a}{13}{SIR model with lockdown\relax }{figure.caption.5}{}}
+\newlabel{fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][12][]13}}
+\newlabel{sub@fig:SIR_model_IND}{{a}{13}{SIR model with lockdown\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][12][]13}}
+\newlabel{fig:SIR_model_infections_IND}{{3b}{13}{Infections modelled with SIR model\relax }{figure.caption.5}{}}
+\newlabel{fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][12][]13}}
+\newlabel{sub@fig:SIR_model_infections_IND}{{b}{13}{Infections modelled with SIR model\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][12][]13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces SIR Model with lockdown for India\relax }}{14}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:SIR_model_with_lockdown_IND}{{4a}{14}{SIR model with lockdown\relax }{figure.caption.6}{}}
+\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]14}}
+\newlabel{sub@fig:SIR_model_with_lockdown_IND}{{a}{14}{SIR model with lockdown\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]14}}
+\newlabel{fig:stringency_varying_with_time_IND}{{4b}{14}{Stringency varying with Time\relax }{figure.caption.6}{}}
+\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]14}}
+\newlabel{sub@fig:stringency_varying_with_time_IND}{{b}{14}{Stringency varying with Time\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]14}}
+\newlabel{fig:SIR_model_with_lockdown_infections_IND}{{4c}{15}{Infections modelled with SIR model with Lockdown\relax }{figure.caption.7}{}}
+\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][12][]15}}
+\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND}{{c}{15}{Infections modelled with SIR model with Lockdown\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][12][]15}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{15}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces SIRV Model with lockdown for India\relax }}{16}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:SIRV_model_with_lockdown_IND}{{5a}{16}{SIRV model with lockdown\relax }{figure.caption.8}{}}
+\newlabel{fig:SIRV_model_with_lockdown_IND@cref}{{[subfigure][1][5]5a}{[1][12][]16}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_IND}{{a}{16}{SIRV model with lockdown\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_IND@cref}{{[subfigure][1][5]5a}{[1][12][]16}}
+\newlabel{fig:SIRV_model_with_lockdown_infections_IND}{{5b}{16}{Infections modelled with SIRV model with Lockdown\relax }{figure.caption.8}{}}
+\newlabel{fig:SIRV_model_with_lockdown_infections_IND@cref}{{[subfigure][2][5]5b}{[1][12][]16}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_infections_IND}{{b}{16}{Infections modelled with SIRV model with Lockdown\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_infections_IND@cref}{{[subfigure][2][5]5b}{[1][12][]16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces SIRV Model with lockdown and time-varying $\nu $ for India\relax }}{17}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:SIRV_model_with_lockdown_time_varying_nu_IND}{{6a}{17}{SIRV model with lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
+\newlabel{fig:SIRV_model_with_lockdown_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][12][]17}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_time_varying_nu_IND}{{a}{17}{SIRV model with lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][12][]17}}
+\newlabel{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND}{{6b}{17}{Infections modelled with SIRV model with Lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
+\newlabel{fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][12][]17}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND}{{b}{17}{Infections modelled with SIRV model with Lockdown and time-varying $\nu $\relax }{figure.caption.9}{}}
+\newlabel{sub@fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][12][]17}}
 \citation{owidcoronavirus}
 \citation{WorldometerCorona}
 \citation{InternetArchive}
@@ -258,14 +231,74 @@
 \bibcite{WHOCovid}{3}
 \bibcite{IMFCovid}{4}
 \bibcite{Nicola2020}{5}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Loss for Different Models\relax }}{18}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:comparing_costs_SIR_IND}{{7a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
+\newlabel{fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][12][]18}}
+\newlabel{sub@fig:comparing_costs_SIR_IND}{{a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][12][]18}}
+\newlabel{fig:comparing_costs_I_IND}{{7b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
+\newlabel{fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][12][]18}}
+\newlabel{sub@fig:comparing_costs_I_IND}{{b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][12][]18}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{18}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{18}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{18}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{18}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Stringency and GDP for Developing Economies\relax }}{19}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:stringency_vs_gdp_IND}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_IND@cref}{{[figure][8][]8}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_IND}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[figure][8][]8}{[1][12][]19}}
+\newlabel{fig:stringency_vs_gdp_MEX}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[figure][8][]8}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_MEX}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[figure][8][]8}{[1][12][]19}}
+\newlabel{fig:stringency_vs_gdp_BRA}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[figure][8][]8}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_BRA}{{8}{19}{Stringency and GDP for Developing Economies\relax }{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[figure][8][]8}{[1][12][]19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Stringency and GDP for Advanced Economies\relax }}{20}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:stringency_vs_gdp_USA}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_USA@cref}{{[figure][9][]9}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_USA}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[figure][9][]9}{[1][12][]20}}
+\newlabel{fig:stringency_vs_gdp_JPN}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[figure][9][]9}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_JPN}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[figure][9][]9}{[1][12][]20}}
+\newlabel{fig:stringency_vs_gdp_CAN}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[figure][9][]9}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_CAN}{{9}{20}{Stringency and GDP for Advanced Economies\relax }{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[figure][9][]9}{[1][12][]20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Strategy from Reinforcement Learning Agent 1\relax }}{21}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:914857_rl_sir}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_sir@cref}{{[figure][10][]10}{[1][15][]21}}
+\newlabel{fig:914857_rl_i}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_i@cref}{{[figure][10][]10}{[1][15][]21}}
+\newlabel{fig:914857_rl_gdp}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_gdp@cref}{{[figure][10][]10}{[1][15][]21}}
+\newlabel{fig:914857_rl_stringency}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_stringency@cref}{{[figure][10][]10}{[1][15][]21}}
+\newlabel{fig:914857_rl_r_eff}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_r_eff@cref}{{[figure][10][]10}{[1][15][]21}}
+\newlabel{fig:914857_rl_reward}{{10}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
+\newlabel{fig:914857_rl_reward@cref}{{[figure][10][]10}{[1][15][]21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Strategy from Reinforcement Learning Agent 2\relax }}{22}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:244620_rl_sir}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_sir@cref}{{[figure][11][]11}{[1][15][]22}}
+\newlabel{fig:244620_rl_i}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_i@cref}{{[figure][11][]11}{[1][15][]22}}
+\newlabel{fig:244620_rl_gdp}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_gdp@cref}{{[figure][11][]11}{[1][15][]22}}
+\newlabel{fig:244620_rl_stringency}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_stringency@cref}{{[figure][11][]11}{[1][15][]22}}
+\newlabel{fig:244620_rl_r_eff}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_r_eff@cref}{{[figure][11][]11}{[1][15][]22}}
+\newlabel{fig:244620_rl_reward}{{11}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
+\newlabel{fig:244620_rl_reward@cref}{{[figure][11][]11}{[1][15][]22}}
 \bibcite{Gagnon2023}{6}
 \bibcite{Anderson2020}{7}
 \bibcite{Song2022}{8}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{23}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{23}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{23}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{23}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{23}{subsection.5.2}\protected@file@percent }
 \bibcite{Chinazzi2020}{9}
 \bibcite{Nguyen2021}{10}
 \bibcite{Kim2022}{11}
@@ -333,7 +366,7 @@
 \bibcite{paszke2019pytorch}{73}
 \bibcite{Virtanen_2020}{74}
 \bibcite{ScientificPython}{75}
-\newlabel{LastPage}{{}{27}{}{page.27}{}}
-\xdef\lastpage@lastpage{27}
-\xdef\lastpage@lastpageHy{27}
+\newlabel{LastPage}{{}{26}{}{page.26}{}}
+\xdef\lastpage@lastpage{26}
+\xdef\lastpage@lastpageHy{26}
 \ttl@finishall
