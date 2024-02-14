@@ -88,7 +88,7 @@
 
 \bibitem{Kim2022}
 \bibinfo{author}{Kim, D.}, \bibinfo{author}{Keskinocak, P.},
-  \bibinfo{author}{Pekg\"{u}n, P.} \& \bibinfo{author}{Yildirim, �.}
+  \bibinfo{author}{Pekg\"{u}n, P.} \& \bibinfo{author}{Yildirim, I.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The balancing role of distribution
   speed against varying efficacy levels of covid-19 vaccines under variants}}.
 \newblock {\emph{\JournalTitle{Scientific Reports}}}
@@ -254,13 +254,11 @@
   \bibinfo{howpublished}{\url{https://www.bbc.com/news/av/world-asia-51897979}}.
 \newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
-\bibitem{Hale2021}
-\bibinfo{author}{Hale, T.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{A global panel database of pandemic
-  policies (oxford covid-19 government response tracker)}}.
-\newblock {\emph{\JournalTitle{Nature Human Behaviour}}}
-  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{529--538},
-  \doiprefix\url{10.1038/s41562-021-01079-8} (\bibinfo{year}{2021}).
+\bibitem{WorldometerCorona}
+\bibinfo{title}{Covid-19 coronavirus pandemic}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.worldometers.info/coronavirus/}}.
+\newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{Hethcote1989}
 \bibinfo{author}{Hethcote, H.~W.}
@@ -358,6 +356,14 @@
   \doiprefix\url{https://doi.org/10.1016/j.cegh.2022.101052}
   (\bibinfo{year}{2022}).
 
+\bibitem{Hale2021}
+\bibinfo{author}{Hale, T.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{A global panel database of pandemic
+  policies (oxford covid-19 government response tracker)}}.
+\newblock {\emph{\JournalTitle{Nature Human Behaviour}}}
+  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{529--538},
+  \doiprefix\url{10.1038/s41562-021-01079-8} (\bibinfo{year}{2021}).
+
 \bibitem{SIRLockdown}
 \bibinfo{title}{Lockdowns in sir models}.
 \newblock
@@ -378,6 +384,32 @@
 \newblock {\emph{\JournalTitle{IEEE Transactions on Network Science and
   Engineering}}} \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{3279--3294},
   \doiprefix\url{10.1109/TNSE.2020.3024723} (\bibinfo{year}{2020}).
+
+\bibitem{StringencyEconomicDecline}
+\bibinfo{author}{Ujkan Q.~Bajra, B.~A., Florin~Aliu} \& \bibinfo{author}{Cadez,
+  S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Covid-19 pandemic-related policy
+  stringency and economic decline: was it really inevitable?}}
+\newblock {\emph{\JournalTitle{Economic Research-Ekonomska Istrazivanja}}}
+  \textbf{\bibinfo{volume}{36}}, \bibinfo{pages}{499--515},
+  \doiprefix\url{10.1080/1331677X.2022.2077792} (\bibinfo{year}{2023}).
+\newblock \eprint{https://doi.org/10.1080/1331677X.2022.2077792}.
+
+\bibitem{Cilloni2020}
+\bibinfo{author}{Cilloni, L.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The potential impact of the
+  covid-19 pandemic on the tuberculosis epidemic a modelling analysis}}.
+\newblock {\emph{\JournalTitle{EClinicalMedicine}}}
+  \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{100603},
+  \doiprefix\url{10.1016/j.eclinm.2020.100603} (\bibinfo{year}{2020}).
+
+\bibitem{Arinaminpathy2010}
+\bibinfo{author}{Arinaminpathy, N.} \& \bibinfo{author}{Dye, C.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Health in financial crises:
+  economic recession and tuberculosis in central and eastern europe}}.
+\newblock {\emph{\JournalTitle{Journal of The Royal Society Interface}}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{1559–1569},
+  \doiprefix\url{10.1098/rsif.2010.0072} (\bibinfo{year}{2010}).
 
 \bibitem{Nguyen2022}
 \bibinfo{author}{Nguyen, Q.~D.} \& \bibinfo{author}{Prokopenko, M.}
@@ -470,6 +502,16 @@
   \textbf{\bibinfo{volume}{138}}, \bibinfo{pages}{802–812},
   \doiprefix\url{10.1017/S0950268809990781} (\bibinfo{year}{2010}).
 
+\bibitem{MASSAD2017232}
+\bibinfo{author}{Massad, E.}
+\newblock \bibinfo{title}{Chapter 11 - ethical and transborder issues}.
+\newblock In \bibinfo{editor}{{de Fátima Marin}, H.}, \bibinfo{editor}{Massad,
+  E.}, \bibinfo{editor}{Gutierrez, M.~A.}, \bibinfo{editor}{Rodrigues, R.~J.}
+  \& \bibinfo{editor}{Sigulem, D.} (eds.) \emph{\bibinfo{booktitle}{Global
+  Health Informatics}}, \bibinfo{pages}{232--263},
+  \doiprefix\url{https://doi.org/10.1016/B978-0-12-804591-6.00012-4}
+  (\bibinfo{publisher}{Academic Press}, \bibinfo{year}{2017}).
+
 \bibitem{huberloss}
 \bibinfo{author}{Huber, P.~J.}
 \newblock \bibinfo{journal}{\bibinfo{title}{{Robust Estimation of a Location
@@ -507,6 +549,15 @@
 \newblock {\emph{\JournalTitle{Our World in Data}}}  (\bibinfo{year}{2020}).
 \newblock \bibinfo{note}{Https://ourworldindata.org/coronavirus}.
 
+\bibitem{Liao2020}
+\bibinfo{author}{Liao, Z.}, \bibinfo{author}{Lan, P.}, \bibinfo{author}{Liao,
+  Z.}, \bibinfo{author}{Zhang, Y.} \& \bibinfo{author}{Liu, S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Tw-sir: time-window based sir for
+  covid-19 forecasts}}.
+\newblock {\emph{\JournalTitle{Scientific Reports}}}
+  \textbf{\bibinfo{volume}{10}}, \doiprefix\url{10.1038/s41598-020-80007-8}
+  (\bibinfo{year}{2020}).
+
 \bibitem{UnicefCovidVaccine}
 \bibinfo{title}{Covid-19 vaccine launch in india}.
 \newblock
@@ -541,12 +592,6 @@
 \bibinfo{title}{Aws deepracer}.
 \newblock
   \bibinfo{howpublished}{\url{https://aws.amazon.com/deepracer/league/}}.
-\newblock \bibinfo{note}{Accessed: 2024-01-12}.
-
-\bibitem{WorldometerCorona}
-\bibinfo{title}{Covid-19 coronavirus pandemic}.
-\newblock
-  \bibinfo{howpublished}{\url{https://www.worldometers.info/coronavirus/}}.
 \newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
 \bibitem{InternetArchive}

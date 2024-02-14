@@ -8,3 +8,12 @@ With the development of the epidemic, these epidemic parameters are constantly c
 
 from: https://www.nature.com/articles/s41598-020-80007-8
 
+
+R_0 look at the reference here:
+gsearch(basic reproduction number, ℛ0, for infectious diseases): https://wwwnc.cdc.gov/eid/article/25/1/17-1901_article#r19
+https://sci-hub.se/https://doi.org/10.1093/oxfordjournals.epirev.a036121 -> we get the base paper for R_0
+
+
+normal r0 = https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9205483/
+
+r0 calculation actual paper: https://books.google.co.in/books?hl=en&lr=&id=HT0--xXBguQC&oi=fnd&pg=PA1&dq=info:4FV7yG3cMsAJ:scholar.google.com&ots=IfggNMXSii&sig=wKqD-SYpvLHV8U3QcyOTTNpAiyE&redir_esc=y#v=onepage&q&f=false

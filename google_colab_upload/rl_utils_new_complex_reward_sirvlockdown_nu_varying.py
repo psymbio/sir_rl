@@ -162,7 +162,7 @@ class SIREnvironment(gym.Env):
         info = {
             "action": action,
             "reward_inertia": reward_inertia,
-            "reward_r_eff": reward_r_eff,
+            # "reward_r_eff": reward_r_eff,
             "reward_I_percentage": reward_I_percentage,
             "reward_weigthed": reward_weighted,
             "reward": self.reward,

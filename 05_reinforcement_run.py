@@ -3,34 +3,8 @@ from rl_utils_new_complex_reward_sirvlockdown_nu_varying import *
 env = SIREnvironment()
 env.reset()
 
-# models/1704106458/10000.zip
-# models/1704189286/1033.zip
-# models/1704190312/4132.zip
-# models/1704192521/72310.zip
-# models/1704205452_ppo_100iter/103300.zip
-# models/1704256387_ppo_100iter_hospital-100/103300.zip
-# models/1704275312/1033.zip
-# models/1704351335/542325.zip
-# models/1704382102/346055.zip
-
-# models/1704534388/1229270.zip
-# models/1704534388/356385.zip
-# models/1704534388/139455.zip
-
-# models/1704873042/5165.zip
-# models/1704874281/374740.zip
-# models/1704994098/2742.zip
-# models/1705049761/79518.zip
-# models/1705085840/16452.zip
-# models/1705154668/548400.zi
-# models/1705305871/578562.zip
-# model_path = os.path.join(MODELS_DIR, "1705305871", "578562.zip")\
-# models/1705330479/839052.zip
-# model_path = os.path.join(MODELS_DIR, "1705330479", "839052.zip")
-# model_path = os.path.join(MODELS_DIR, "1705049761", "79518.zip")
-# models/1705427702_herd/274200.zip
-# model_path = os.path.join(MODELS_DIR, "1705427702_herd", "274200.zip")
-model_path = os.path.join(MODELS_DIR, "hpc_run", "1746654.zip")
+# models/hpc_run/2667966.zip
+model_path = os.path.join(MODELS_DIR, "hpc_run", "2667966.zip")
 model = PPO.load(model_path, env=env)
 
 episodes = 10

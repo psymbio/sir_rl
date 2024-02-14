@@ -51,17 +51,13 @@ def deriv(y, t, N, beta, gamma, nu_varying, lockdown):
     return dSdt, dIdt, dRdt
 
 def calculate_reward_weighted(gdp_min_max_normalized_list, r_eff_list):
-    GDP_WEIGHT_1 = 100 # change this value and see how it affects the reward
-    GDP_WEIGHT_2 = 200 # change this value and see how it affects the reward
-    reward = []
-    for i in range(len(gdp_min_max_normalized_list)):
-        if r_eff_list[i] > 1.9:
-            reward.append(-20 * r_eff_list[i])
-        elif r_eff_list[i] <= 1.9 and r_eff_list[i] >= 1.5:
-            reward.append(GDP_WEIGHT_1 * gdp_min_max_normalized_list[i])
-        else:
-            reward.append(GDP_WEIGHT_2 * gdp_min_max_normalized_list[i])
-    return reward
+    reward_list = []
+    for gdp, r_eff in zip(gdp_min_max_normalized_list, r_eff_list):
+        gdp_reward = ((gdp ** 5)*300) - 80
+        r_eff_reward = ((r_eff**2)*-100) + 100
+        total_reward = gdp_reward + r_eff_reward
+        reward_list.append(total_reward)
+    return reward_list
 
 class SIREnvironment(gym.Env):
     metadata = {"render_modes": ["human"], "render_fps": 30}
@@ -119,42 +115,33 @@ class SIREnvironment(gym.Env):
         self.S_proportion = self.store_S[self.ith_day]/self.N
         self.I_proportion = self.store_I[self.ith_day]/self.N
         self.R_proportion = self.store_R[self.ith_day]/self.N
-        self.normalized_GDP = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        self.r_eff = (self.optimal_beta / self.optimal_gamma) * (self.store_S[self.ith_day] / self.N)
+        self.normalized_GDP_min_max_normalized = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
+        self.r_eff = (self.optimal_beta / self.optimal_gamma) *  (1 - (self.stringency_index/100)) * (self.store_S[self.ith_day] / self.N)
         self.store_r_eff[self.ith_day] = self.r_eff
-        self.store_normalized_gdp[self.ith_day] = self.normalized_GDP
+        self.store_normalized_gdp_min_max_normalized[self.ith_day] = self.normalized_GDP_min_max_normalized
         
         # REMEMBER: to change this definition of the reward in the render as well!!!
-        # self.reward = self.normalized_GDP - (2 * self.r_eff)
+        # self.reward = self.normalized_GDP_min_max_normalized - (2 * self.r_eff)
 
-        reward_inertia= abs(diff_action)*-1*5
-        # reward_inertia = abs(self.stringency_index_list[-2] - self.stringency_index_list[-1]) * -1 * 5
-        # print("reward_inertia: ", reward_inertia, "reward_inertia_old: ", reward_inertia_old)
-        reward_r_eff = 10 if self.r_eff <= 1.9 else -10
-        reward_I_percentage = -5000 if self.I_proportion >= 0.003 else 0
-        reward_herd_immunity = 2000 if self.I_proportion <= 0.003 and self.I_proportion >= 0.0005 else 0
-
-        gdp_reward_weight_1 = 100
-        gdp_reward_weight_2 = 200
-        if self.r_eff > 1.9:
-            reward_weighted = -20 * self.r_eff
-        elif self.r_eff <= 1.9 and self.r_eff >= 1.5:
-            reward_weighted = gdp_reward_weight_1 * self.normalized_GDP
-        else:
-            reward_weighted = gdp_reward_weight_2 * self.normalized_GDP
-
-        self.reward = reward_weighted + reward_inertia + reward_r_eff + reward_I_percentage + reward_herd_immunity
+        reward_inertia= abs(diff_action)*-1*20
+        reward_I_percentage = -2000 if self.I_proportion >= 0.003 else 50
+        
+        gdp_reward = ((self.normalized_GDP_min_max_normalized**5)*300) - 80
+        r_eff_reward = ((self.r_eff**2)*-100) + 100
+        reward_weighted = gdp_reward + r_eff_reward
+        
+        self.reward = reward_weighted + reward_inertia + reward_I_percentage
         # print(self.ith_day, self.reward)
         self.store_reward[self.ith_day] = self.reward
         if RL_LEARNING_TYPE == "normal":
             observation = [self.S_proportion, self.I_proportion, 
-                        self.R_proportion, self.normalized_GDP, 
+                        self.R_proportion, self.normalized_GDP_min_max_normalized, 
                         self.r_eff] + list(self.prev_actions)
             observation = np.array(observation)
         else:
             observation = {}
             observation["stringency"] = np.array(self.prev_actions)
-            observation["normalized_gdp"] = np.array(self.store_normalized_gdp)
+            observation["normalized_gdp"] = np.array(self.store_normalized_gdp_min_max_normalized)
             observation["r_eff"] = np.array(self.store_r_eff)
             observation["other_stats"] = np.array([self.S_proportion, self.I_proportion, self.R_proportion])
 
@@ -166,7 +153,7 @@ class SIREnvironment(gym.Env):
         info = {
             "action": action,
             "reward_inertia": reward_inertia,
-            "reward_r_eff": reward_r_eff,
+            # "reward_r_eff": reward_r_eff,
             "reward_I_percentage": reward_I_percentage,
             "reward_weigthed": reward_weighted,
             "reward": self.reward,
@@ -190,7 +177,7 @@ class SIREnvironment(gym.Env):
         self.df["R_moves"] = moves_R
         
         modelling_type = "with_lockdown_with_vaccination_time_varying_nu"
-        r0 = self.optimal_beta / self.optimal_gamma
+        r0 = self.optimal_beta / self.optimal_gamma * (1 - moves_lockdown)
         self.df["r_eff_moves_" + modelling_type] = r0 * df["S_moves"] / N
         self.df["gdp_normalized_moves"] = fit_line_loaded(stringency)
         self.df["gdp_normalized_moves_min_max_normalized"] = ((fit_line_loaded(stringency) - MIN_GDP) / (MAX_GDP - MIN_GDP))
@@ -198,27 +185,21 @@ class SIREnvironment(gym.Env):
         self.t = np.linspace(0, TOTAL_DAYS, TOTAL_DAYS + 1)
         
         hospital_capacity = 0.003
-        hospital_capacity_punishment = -5000
+        hospital_capacity_punishment = -2000
         hospital_capacity_reward = 20
         I_reward_actual = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I"] / self.df["N"]]
         I_reward_modelled = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_modelled_" + modelling_type] / self.N]
         I_reward_moves = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_moves"] / N]
 
-        r_eff_reward_choosen = 10
-        r_eff_punishment_choosen = -10
-        r_eff_level = 1.9
-        r_eff_reward_actual = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_actual_" + modelling_type]])
-        r_eff_reward_modelled = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_modelled_" + modelling_type]])
-        r_eff_reward_moves = np.array([r_eff_reward_choosen if r_eff <= r_eff_level else r_eff_punishment_choosen for r_eff in self.df["r_eff_moves_" + modelling_type]])
-
-        inertia_rewards_actual = np.array([0] + [abs(diff)*5*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        
+        inertia_rewards_actual = np.array([0] + [abs(diff)*20*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
         # modelled reward for intertia is same as actual
-        inertia_rewards_modelled = np.array([0] + [abs(diff)*5*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
-        inertia_rewards_moves = np.array([0] + [abs(diff)*5*-1 for diff in (stringency[i] - stringency[i - 1] for i in range(1, len(stringency)))])
+        inertia_rewards_modelled = np.array([0] + [abs(diff)*20*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        inertia_rewards_moves = np.array([0] + [abs(diff)*20*-1 for diff in (stringency[i] - stringency[i - 1] for i in range(1, len(stringency)))])
 
-        reward_actual = np.array(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_" + modelling_type])) + I_reward_actual + r_eff_reward_actual + inertia_rewards_actual
-        reward_modelled = np.array(calculate_reward_weighted(self.df["gdp_normalized_modelled_min_max_normalized"], self.df["r_eff_modelled_" + modelling_type])) + I_reward_modelled + r_eff_reward_modelled + inertia_rewards_modelled
-        reward_moves = np.array(calculate_reward_weighted(self.df["gdp_normalized_moves_min_max_normalized"], self.df["r_eff_moves_" + modelling_type])) + I_reward_moves + r_eff_reward_moves + inertia_rewards_moves
+        reward_actual = np.array(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_" + modelling_type])) + I_reward_actual + inertia_rewards_actual
+        reward_modelled = np.array(calculate_reward_weighted(self.df["gdp_normalized_modelled_min_max_normalized"], self.df["r_eff_modelled_" + modelling_type])) + I_reward_modelled + inertia_rewards_modelled
+        reward_moves = np.array(calculate_reward_weighted(self.df["gdp_normalized_moves_min_max_normalized"], self.df["r_eff_moves_" + modelling_type])) + I_reward_moves + inertia_rewards_moves
 
         # output_path_img = os.path.join(OUTPUT_RL, str(int(reward_moves.sum())))
         output_path_img = os.path.join(OUTPUT_RL, str(score))
@@ -341,7 +322,7 @@ class SIREnvironment(gym.Env):
         self.store_stringency = np.zeros(TOTAL_DAYS + 1)
         self.stringency_index_list = [START_STRINGENCY]
         self.store_gdp = np.zeros(TOTAL_DAYS + 1)
-        self.store_normalized_gdp = np.zeros(TOTAL_DAYS + 1)
+        self.store_normalized_gdp_min_max_normalized = np.zeros(TOTAL_DAYS + 1)
         self.store_r_eff = np.zeros(TOTAL_DAYS + 1)
         self.store_reward = np.zeros(TOTAL_DAYS + 1)
         
@@ -352,8 +333,8 @@ class SIREnvironment(gym.Env):
         self.S_proportion = self.y0[0]/self.N
         self.I_proportion = self.y0[1]/self.N
         self.R_proportion = self.y0[2]/self.N
-        self.normalized_GDP = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
-        self.r_eff = (self.optimal_beta / self.optimal_gamma) * (self.store_S[self.ith_day] / self.N)
+        self.normalized_GDP_min_max_normalized = (fit_line_loaded(self.stringency_index) - MIN_GDP) / (MAX_GDP - MIN_GDP)
+        self.r_eff = (self.optimal_beta / self.optimal_gamma) * (1 - (self.stringency_index/100)) * (self.store_S[self.ith_day] / self.N)
         
         self.prev_actions = deque(maxlen = TOTAL_DAYS + 1)
         for i in range(TOTAL_DAYS + 1):
@@ -362,13 +343,13 @@ class SIREnvironment(gym.Env):
         # create the observation
         if RL_LEARNING_TYPE == "normal":
             observation = [self.S_proportion, self.I_proportion, 
-                       self.R_proportion, self.normalized_GDP, 
+                       self.R_proportion, self.normalized_GDP_min_max_normalized, 
                        self.r_eff] + list(self.prev_actions)
             observation = np.array(observation)
         elif RL_LEARNING_TYPE == "deep":
             observation = {}
             observation["stringency"] = np.array(self.prev_actions)
-            observation["normalized_gdp"] = np.array(self.store_normalized_gdp)
+            observation["normalized_gdp"] = np.array(self.store_normalized_gdp_min_max_normalized)
             observation["r_eff"] = np.array(self.store_r_eff)
             observation["other_stats"] = np.array([self.S_proportion, self.I_proportion, self.R_proportion])
         info = {}

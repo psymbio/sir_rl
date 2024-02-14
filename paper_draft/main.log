@@ -1,32 +1,28 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.2)  7 FEB 2024 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.2)  14 FEB 2024 11:55
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex
+(/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex
 LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14> (./wlscirep.cls
+L3 programming layer <2020-02-14> (/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/wlscirep.cls
 Document Class: wlscirep 27/02/2017, v1.3
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/02/14 3.40 The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2020/02/14 3.40 Babel switching mechanism
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/02/14 3.40 Babel common definitions
 \babel@savecnt=\count167
 \U@D=\dimen134
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count168
 )
@@ -36,11 +32,9 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 (babel)             (\language31) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language31) on input line 108.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count169
 \calc@Bcount=\count170
@@ -52,8 +46,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count171
 \calc@Cskip=\skip49
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+) (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/fleqn.clo
 File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
@@ -64,8 +57,7 @@ Already applied: [0000/00/00] Make \[ robust on input line 62.
 Applying: [2015/01/01] Make \] robust on input line 74.
 LaTeX Info: Redefining \] on input line 75.
 Already applied: [0000/00/00] Make \] robust on input line 83.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+) (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count172
@@ -79,11 +71,9 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip50
 \belowcaptionskip=\skip51
 \bibindent=\dimen138
-)
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -118,31 +108,25 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2019/11/07 v1.0c TeX engine tests
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen139
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count180
@@ -182,45 +166,35 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup6
 \symAMSb=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -233,8 +207,7 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen150
 \lightrulewidth=\dimen151
@@ -253,19 +226,16 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count194
 \@lastruleclass=\count195
 \@thisrulewidth=\dimen162
-)
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip55
 \@affilsep=\skip56
 \c@Maxaffil=\count196
 \c@authors=\count197
 \c@affil=\count198
-)
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count199
@@ -280,11 +250,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen169
 \Gm@layoutvoffset=\dimen170
 \Gm@dimlist=\toks22
-)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen171
@@ -298,58 +266,43 @@ Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count268
 \c@continuedfloat=\count269
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen178
 \Hy@linkcounter=\count270
 \Hy@pagecounter=\count271
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count272
@@ -363,20 +316,16 @@ Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
 \c@Hy@tempcnt=\count274
-
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
 \XeTeXLinkMargin=\dimen179
-
-(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count275
 \Field@Width=\dimen180
@@ -390,8 +339,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6455.
 Package hyperref Info: PDF/A mode OFF on input line 6460.
 LaTeX Info: Redefining \ref on input line 6500.
 LaTeX Info: Redefining \pageref on input line 6504.
-
-(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
 \Hy@abspage=\count276
@@ -399,37 +347,29 @@ Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 \c@Hfootnote=\count278
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
 \Fld@listcount=\count279
 \c@bookmark@seq@number=\count280
-
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip57
-)
-(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 LaTeX Info: Redefining \cite on input line 441.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip58
 \f@nch@O@elh=\skip59
 \f@nch@O@erh=\skip60
@@ -439,11 +379,9 @@ s
 \f@nch@O@erf=\skip64
 \f@nch@O@olf=\skip65
 \f@nch@O@orf=\skip66
-)
-(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box47
 \beforetitleunit=\skip67
@@ -454,12 +392,10 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidth=\dimen184
 \titlewidthlast=\dimen185
 \titlewidthfirst=\dimen186
-)
-(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
 \ttl@leftsep=\dimen187
-)
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip69
 \enit@outerparindent=\dimen188
@@ -469,17 +405,13 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitdp@description=\count282
 )
 \tocsep=\skip70
-
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-02-14 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count283
 \l__pdf_internal_box=\box49
-))
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-02-14 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count284
 \g__xparse_grabber_int=\count285
@@ -487,10 +419,9 @@ Package: xparse 2020-02-14 L3 Experimental document command parser
 \l__xparse_v_nesting_int=\count287
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
-
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+ (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
-))) (./jabbrv.sty
+))) (/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/jabbrv.sty
 Package: jabbrv 2010/08/18 v0.2 Automatic Journal Title Abbreviation Package
 \temp@journal@text=\toks25
 \temp@journal@text@=\toks26
@@ -499,8 +430,7 @@ Package: jabbrv 2010/08/18 v0.2 Automatic Journal Title Abbreviation Package
 \c@jabbrv@loop@i=\count290
 \c@jabbrv@loop@max=\count291
 \c@jabbrv@word@count=\count292
-(./jabbrv-ltwa-all.ldf) (./jabbrv-ltwa-en.ldf))
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+ (/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/jabbrv-ltwa-all.ldf) (/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/jabbrv-ltwa-en.ldf)) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
 \MT@toks=\toks27
 \MT@count=\count293
@@ -508,23 +438,18 @@ LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen189
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
 \MT@listname@count=\count294
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 914.
 LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip71
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count295
 )
@@ -535,20 +460,17 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \csq@maxlvl=\count300
 \csq@tshold=\count301
 \csq@ltx@everypar=\toks28
-
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 )
 Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Redefining alias 'english' -> 'english/american'.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -561,54 +483,34 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
-Package cleveref Info: include cross-reference names in hyperlinks on input lin
-e 7836.
-Package cleveref Info: include cross-reference names in hyperlinks on input lin
-e 7852.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7836.
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7852.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
-2.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 LaTeX Info: Redefining \bm on input line 209.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen190
 \pgfutil@tempdimb=\dimen191
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
-ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box50
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 ))
 Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks30
 \pgfkeys@temptoks=\toks31
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
-ex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks32
 ))
 \pgf@x=\dimen192
@@ -635,61 +537,28 @@ ex
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
-f
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
-tex
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfsyssoftpath@smallbuffer@items=\count307
 \pgfsyssoftpath@bigbuffer@items=\count308
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
-tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen258
 \pgfmath@count=\count309
 \pgfmath@box=\box51
 \pgfmath@toks=\toks36
 \pgfmath@stack@operand=\toks37
 \pgfmath@stack@operation=\toks38
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
-ric.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
-e.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
-.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
-.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
-tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count310
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
-x
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@picminx=\dimen259
 \pgf@picmaxx=\dimen260
@@ -705,118 +574,76 @@ File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yy=\dimen270
 \pgf@zx=\dimen271
 \pgf@zy=\dimen272
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
-code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@path@lastx=\dimen273
 \pgf@path@lasty=\dimen274
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
-.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@shorten@end@additional=\dimen275
 \pgf@shorten@start@additional=\dimen276
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
-x
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box52
 \pgf@hbox=\box53
 \pgf@layerbox@main=\box54
 \pgf@picture@serial@count=\count311
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
-ode.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgflinewidth=\dimen277
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
-s.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@pt@x=\dimen278
 \pgf@pt@y=\dimen279
 \pgf@pt@temp=\dimen280
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
-ex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
-.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
-x
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfarrowsep=\dimen281
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen282
 \pgf@sys@shading@range@num=\count312
 \pgf@shadingcount=\count313
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
-tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfexternal@startupbox=\box55
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
-x
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
-ode.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
-tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfnodeparttextbox=\box56
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@nodesepstart=\dimen283
 \pgf@nodesepend=\dimen284
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen285
 \pgffor@skip=\dimen286
 \pgffor@stack=\toks39
 \pgffor@toks=\toks40
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@plot@mark@count=\count314
 \pgfplotmarksize=\dimen287
@@ -837,64 +664,49 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikznumberofchildren=\count316
 \tikznumberofcurrentchild=\count317
 \tikz@fig@count=\count318
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfmatrixcurrentrow=\count319
 \pgfmatrixcurrentcolumn=\count320
 \pgf@matrix@numberofcolumns=\count321
 )
 \tikz@expandcount=\count322
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2020/01/24 v 0.09 modify URL breaks
-)
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup8
-)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count323
 \float@exts=\toks41
 \float@box=\box61
 \@float@everytoks=\toks42
 \@floatcapt=\box62
-)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count324
 \c@subtable=\count325
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count326
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
-code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfarrowinset=\dimen296
 \pgfarrowlength=\dimen297
 \pgfarrowwidth=\dimen298
 \pgfarrowlinewidth=\dimen299
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarypositioning.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryfit.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 Package csquotes Info: Allocating character ".
@@ -905,7 +717,7 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Warning: Unused global option(s):
     [tikz].
 
-(./main.aux)
+(/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -939,12 +751,9 @@ LaTeX Font Info:    ... okay on input line 51.
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -989,7 +798,6 @@ Package hyperref Info: Link coloring ON on input line 51.
 LaTeX Info: Redefining \ref on input line 51.
 LaTeX Info: Redefining \pageref on input line 51.
 LaTeX Info: Redefining \nameref on input line 51.
-(./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1007,65 +815,49 @@ LaTeX Info: Redefining \showhyphens on input line 51.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 Package csquotes Info: Making character " active on input line 51.
-
-ABD: EveryShipout initializing macros
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 54
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+ ABD: EveryShipout initializing macros
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 5
-4.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 54.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 54.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 54.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 54.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-4.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
@@ -1074,17 +866,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
@@ -1093,220 +881,615 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+
+LaTeX Warning: Citation `Baker2022' on page 1 undefined on input line 56.
+
+
+LaTeX Warning: Citation `inequitableworld' on page 1 undefined on input line 56.
+
+
+LaTeX Warning: Citation `WHOCovid' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `IMFCovid' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `Nicola2020' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `Gagnon2023' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Citation `Anderson2020' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Song2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Chinazzi2020' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Nguyen2021' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Kim2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Jalloh2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Caldwell2021' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Ferguson2020' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `DeFoo2023' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Hollingsworth2011' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Song2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Pangallo2023' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Ash2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Ohi2020' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `PADMANABHAN2021102676' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `NBERw26981' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `analytical_covid_lockdown_model' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Gagnon2023' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Redlin2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Liang2021' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Redlin2022' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Patel2021' on page 1 undefined on input line 60.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Gagnon2023' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `GagnonKorea' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Deb2020' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Eichenbaum2021' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `GagnonKorea' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Lim2023' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `KoreaMinister' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `Deb2020' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Citation `WorldometerCorona' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hethcote1989' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hethcote2008' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `ALLEN2017128' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Cooper2020' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Bjrnstad2020' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Mwalili2020' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Marinov2022' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `MaurciodeCarvalho2023' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Thater' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Turkyilmazoglu2022' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `YALADANDA2022101052' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hale2021' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `SIRLockdown' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `NBERw26981' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `NBERw26867' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `TimeDependentSIR' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hethcote2008' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `StringencyEconomicDecline' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Cilloni2020' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Arinaminpathy2010' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Nguyen2022' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Bastani2021' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Song2022' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Ohi2020' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `PADMANABHAN2021102676' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `sutton2018reinforcement' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Song2022' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Dunn2017' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Citation `Demir2006' on page 2 undefined on input line 66.
+
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 67.
+
+[2]
+
+LaTeX Warning: Citation `Mnih2015' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Lavet2018' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Arulkumaran2017' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Henderson_Islam_Bachman_Pineau_Precup_Meger_2018' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Mnih2015' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `NIPS2001_a38b1617' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `LSTM' on page 3 undefined on input line 68.
+
+
+LaTeX Warning: Citation `hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010' on page 3 undefined on input line 101.
+
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 105.
+
+[3]
+
+LaTeX Warning: Citation `MASSAD2017232' on page 4 undefined on input line 115.
+
+
+LaTeX Warning: Citation `Cooper2020' on page 4 undefined on input line 122.
+
+
+LaTeX Warning: Reference `eq:cost_I' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Citation `huberloss' on page 4 undefined on input line 124.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `eq:cost_I' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `optimizing_window_length' on page 1 undefined on input line 124.
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 144.
+
+[4]
+
+LaTeX Warning: Reference `eq:S_without_lockdown' on page 5 undefined on input line 145.
+
+
+LaTeX Warning: Reference `eq:R_without_lockdown' on page 5 undefined on input line 145.
+
+
+LaTeX Warning: Reference `eq:cost_SIR_without_lockdown' on page 1 undefined on input line 145.
+
+
+LaTeX Warning: Citation `Gao2010' on page 5 undefined on input line 145.
+
+
+LaTeX Warning: Reference `fig:SIR_model_IND' on page 1 undefined on input line 166.
+
+
+LaTeX Warning: Citation `NBERw26867' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Citation `AlvarezLockdownSIR' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Citation `SIRLockdown' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Citation `SIRLockdown2' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Citation `analytical_covid_lockdown_model' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Citation `owidcoronavirus' on page 5 undefined on input line 169.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 183.
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 187.
+
+[5]
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 224.
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 246.
+
+[6]
+
+LaTeX Warning: Reference `eq:nu_optimal_with_lockdown_and_nu' on page 1 undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig:SIRV_model_with_lockdown_infections_IND' on page 1 undefined on input line 257.
+
+
+LaTeX Warning: Citation `Liang2021' on page 7 undefined on input line 257.
+
+
+LaTeX Warning: Citation `Marinov2022' on page 7 undefined on input line 257.
+
+
+LaTeX Warning: Reference `eq:beta_optimal_with_lockdown_and_nu' on page 1 undefined on input line 257.
+
+
+LaTeX Warning: Reference `eq:gamma_optimal_with_lockdown_and_nu' on page 1 undefined on input line 257.
+
 
 LaTeX Warning: Citation `Liao2020' on page 7 undefined on input line 257.
 
-<images/window_length_loss_SIR_IND.pdf, id=274, 765.65736pt x 487.8683pt>
+
+LaTeX Warning: Reference `eq:cost_I' on page 1 undefined on input line 257.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 257.
+
+
+LaTeX Warning: Reference `eq:cost_I' on page 1 undefined on input line 270.
+
+
+LaTeX Warning: Reference `eq:cost_SIR' on page 1 undefined on input line 270.
+
+<images/window_length_loss_SIR_IND.pdf, id=75, 765.65736pt x 487.8683pt>
 File: images/window_length_loss_SIR_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_SIR_IND.pdf>
-Package pdftex.def Info: images/window_length_loss_SIR_IND.pdf  used on input l
-ine 276.
+Package pdftex.def Info: images/window_length_loss_SIR_IND.pdf  used on input line 276.
 (pdftex.def)             Requested size: 240.23016pt x 153.0689pt.
-<images/window_length_loss_I_IND.pdf, id=275, 765.65736pt x 487.8683pt>
+<images/window_length_loss_I_IND.pdf, id=76, 765.65736pt x 487.8683pt>
 File: images/window_length_loss_I_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_I_IND.pdf>
-Package pdftex.def Info: images/window_length_loss_I_IND.pdf  used on input lin
-e 283.
+Package pdftex.def Info: images/window_length_loss_I_IND.pdf  used on input line 283.
 (pdftex.def)             Requested size: 240.23016pt x 153.0689pt.
-<images/interpolated_nu_varying_with_time_IND.pdf, id=276, 746.80568pt x 490.97
-19pt>
+<images/interpolated_nu_varying_with_time_IND.pdf, id=77, 746.80568pt x 490.9719pt>
 File: images/interpolated_nu_varying_with_time_IND.pdf Graphic file (type pdf)
 <use images/interpolated_nu_varying_with_time_IND.pdf>
-Package pdftex.def Info: images/interpolated_nu_varying_with_time_IND.pdf  used
- on input line 294.
+Package pdftex.def Info: images/interpolated_nu_varying_with_time_IND.pdf  used on input line 294.
 (pdftex.def)             Requested size: 500.484pt x 329.03935pt.
-[7] [8 <./images/window_length_loss_SIR_IND.pdf> <./images/window_length_loss_I
-_IND.pdf> <./images/interpolated_nu_varying_with_time_IND.pdf>]
 
-LaTeX Warning: Reference `fig:comparing_costs_IND' on page 1 undefined on input
- line 354.
+LaTeX Warning: Citation `UnicefCovidVaccine' on page 7 undefined on input line 298.
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-70.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+
+LaTeX Warning: Citation `PIBCovidVaccine' on page 7 undefined on input line 298.
+
+
+LaTeX Warning: Citation `WikipediaCovidVaccine' on page 7 undefined on input line 298.
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 316.
+
+[7]
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 316.
+
+[8 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/window_length_loss_SIR_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/window_length_loss_I_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/interpolated_nu_varying_with_time_IND.pdf>]
+
+LaTeX Warning: Reference `fig:SIR_model_IND' on page 9 undefined on input line 354.
+
+
+LaTeX Warning: Reference `fig:SIRV_model_with_lockdown_infections_time_varying_nu_IND' on page 9 undefined on input line 354.
+
+
+LaTeX Warning: Reference `fig:comparing_costs_SIR_IND' on page 9 undefined on input line 354.
+
+
+LaTeX Warning: Reference `fig:comparing_costs_I_IND' on page 9 undefined on input line 354.
+
+
+LaTeX Warning: Citation `OECDNormalizedGDP' on page 9 undefined on input line 357.
+
+
+LaTeX Warning: Citation `OECDNormalizedGDP2' on page 9 undefined on input line 357.
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 371.
+
+[9]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 371.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [9] [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+)
 
- [11]
-<images/SIR_model_IND.pdf, id=445, 730.71431pt x 484.18265pt>
+LaTeX Warning: Reference `defining_reward_function' on page 1 undefined on input line 374.
+
+
+LaTeX Warning: Citation `sutton2018reinforcement' on page 10 undefined on input line 378.
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 379.
+
+[10]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 382.
+
+
+LaTeX Warning: Citation `Ohi2020' on page 11 undefined on input line 385.
+
+
+LaTeX Warning: Citation `sutton2018reinforcement' on page 11 undefined on input line 385.
+
+
+LaTeX Warning: Citation `AWSDeepRacer' on page 11 undefined on input line 392.
+
+
+LaTeX Warning: Citation `LSTM' on page 11 undefined on input line 394.
+
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 395.
+
+[11]
+
+LaTeX Warning: Reference `eq:S_without_lockdown' on page 12 undefined on input line 466.
+
+
+LaTeX Warning: Reference `eq:cost_I_without_lockdown' on page 12 undefined on input line 466.
+
+<images/SIR_model_IND.pdf, id=228, 730.71431pt x 484.18265pt>
 File: images/SIR_model_IND.pdf Graphic file (type pdf)
 <use images/SIR_model_IND.pdf>
-Package pdftex.def Info: images/SIR_model_IND.pdf  used on input line 466.
+Package pdftex.def Info: images/SIR_model_IND.pdf  used on input line 472.
 (pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
-<images/SIR_model_infections_IND.pdf, id=446, 726.417pt x 487.69577pt>
+<images/SIR_model_infections_IND.pdf, id=229, 726.417pt x 487.69577pt>
 File: images/SIR_model_infections_IND.pdf Graphic file (type pdf)
 <use images/SIR_model_infections_IND.pdf>
-Package pdftex.def Info: images/SIR_model_infections_IND.pdf  used on input lin
-e 472.
+Package pdftex.def Info: images/SIR_model_infections_IND.pdf  used on input line 478.
 (pdftex.def)             Requested size: 363.20761pt x 243.84729pt.
-<images/SIR_model_with_lockdown_IND.pdf, id=449, 730.71431pt x 484.18265pt>
+
+LaTeX Warning: Reference `eq:S_with_lockdown' on page 12 undefined on input line 485.
+
+
+LaTeX Warning: Reference `eq:cost_I_with_lockdown' on page 12 undefined on input line 485.
+
+<images/SIR_model_with_lockdown_IND.pdf, id=230, 730.71431pt x 484.18265pt>
 File: images/SIR_model_with_lockdown_IND.pdf Graphic file (type pdf)
 <use images/SIR_model_with_lockdown_IND.pdf>
-Package pdftex.def Info: images/SIR_model_with_lockdown_IND.pdf  used on input 
-line 486.
+Package pdftex.def Info: images/SIR_model_with_lockdown_IND.pdf  used on input line 492.
 (pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
-<images/stringency_varying_with_time_IND.pdf, id=450, 726.417pt x 488.04082pt>
+<images/stringency_varying_with_time_IND.pdf, id=231, 726.417pt x 488.04082pt>
 File: images/stringency_varying_with_time_IND.pdf Graphic file (type pdf)
 <use images/stringency_varying_with_time_IND.pdf>
-Package pdftex.def Info: images/stringency_varying_with_time_IND.pdf  used on i
-nput line 493.
+Package pdftex.def Info: images/stringency_varying_with_time_IND.pdf  used on input line 499.
 (pdftex.def)             Requested size: 363.20761pt x 244.0198pt.
-<images/SIR_model_with_lockdown_infections_IND.pdf, id=451, 718.60658pt x 487.6
-9577pt>
+<images/SIR_model_with_lockdown_infections_IND.pdf, id=232, 718.60658pt x 487.69577pt>
 File: images/SIR_model_with_lockdown_infections_IND.pdf Graphic file (type pdf)
-
 <use images/SIR_model_with_lockdown_infections_IND.pdf>
-Package pdftex.def Info: images/SIR_model_with_lockdown_infections_IND.pdf  use
-d on input line 501.
+Package pdftex.def Info: images/SIR_model_with_lockdown_infections_IND.pdf  used on input line 507.
 (pdftex.def)             Requested size: 359.30241pt x 243.84729pt.
-<images/SIRV_model_with_lockdown_IND.pdf, id=454, 730.71431pt x 484.18265pt>
+
+LaTeX Warning: Reference `eq:S_with_lockdown_and_nu' on page 12 undefined on input line 514.
+
+
+LaTeX Warning: Reference `eq:cost_I_with_lockdown_and_nu' on page 12 undefined on input line 514.
+
+<images/SIRV_model_with_lockdown_IND.pdf, id=233, 730.71431pt x 484.18265pt>
 File: images/SIRV_model_with_lockdown_IND.pdf Graphic file (type pdf)
 <use images/SIRV_model_with_lockdown_IND.pdf>
-Package pdftex.def Info: images/SIRV_model_with_lockdown_IND.pdf  used on input
- line 515.
+Package pdftex.def Info: images/SIRV_model_with_lockdown_IND.pdf  used on input line 521.
 (pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
-<images/SIRV_model_with_lockdown_infections_IND.pdf, id=455, 718.60658pt x 487.
-69577pt>
-File: images/SIRV_model_with_lockdown_infections_IND.pdf Graphic file (type pdf
-)
+<images/SIRV_model_with_lockdown_infections_IND.pdf, id=234, 718.60658pt x 487.69577pt>
+File: images/SIRV_model_with_lockdown_infections_IND.pdf Graphic file (type pdf)
 <use images/SIRV_model_with_lockdown_infections_IND.pdf>
-Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_IND.pdf  us
-ed on input line 522.
+Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_IND.pdf  used on input line 528.
 (pdftex.def)             Requested size: 359.30241pt x 243.84729pt.
-<images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf, id=459, 730.71431pt x
- 484.18265pt>
-File: images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf Graphic file (typ
-e pdf)
+
+LaTeX Warning: Reference `eq:nu_optimal_with_lockdown_and_nu' on page 1 undefined on input line 533.
+
+
+LaTeX Warning: Reference `eq:S_with_lockdown_and_time_varying_nu' on page 12 undefined on input line 535.
+
+
+LaTeX Warning: Reference `eq:cost_I_with_lockdown_and_time_varying_nu' on page 12 undefined on input line 535.
+
+<images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf, id=235, 730.71431pt x 484.18265pt>
+File: images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf Graphic file (type pdf)
 <use images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf>
-Package pdftex.def Info: images/SIRV_model_with_lockdown_time_varying_nu_IND.pd
-f  used on input line 536.
+Package pdftex.def Info: images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf  used on input line 542.
 (pdftex.def)             Requested size: 365.35626pt x 242.09073pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 537.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 543.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 537.
-<images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf, id=460, 73
-8.13266pt x 487.69577pt>
-File: images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf Graphi
-c file (type pdf)
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 543.
+<images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf, id=236, 738.13266pt x 487.69577pt>
+File: images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf Graphic file (type pdf)
 <use images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf>
-Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_time_varyin
-g_nu_IND.pdf  used on input line 543.
+Package pdftex.def Info: images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf  used on input line 549.
 (pdftex.def)             Requested size: 369.06543pt x 243.84729pt.
-<images/comparing_costs_SIR_IND.pdf, id=461, 784.7286pt x 503.95654pt>
+<images/comparing_costs_SIR_IND.pdf, id=237, 784.7286pt x 503.95654pt>
 File: images/comparing_costs_SIR_IND.pdf Graphic file (type pdf)
 <use images/comparing_costs_SIR_IND.pdf>
-Package pdftex.def Info: images/comparing_costs_SIR_IND.pdf  used on input line
- 553.
+Package pdftex.def Info: images/comparing_costs_SIR_IND.pdf  used on input line 559.
 (pdftex.def)             Requested size: 240.23016pt x 154.27171pt.
-<images/comparing_costs_I_IND.pdf, id=462, 776.69861pt x 503.95654pt>
+<images/comparing_costs_I_IND.pdf, id=238, 776.69861pt x 503.95654pt>
 File: images/comparing_costs_I_IND.pdf Graphic file (type pdf)
 <use images/comparing_costs_I_IND.pdf>
-Package pdftex.def Info: images/comparing_costs_I_IND.pdf  used on input line 5
-60.
+Package pdftex.def Info: images/comparing_costs_I_IND.pdf  used on input line 566.
 (pdftex.def)             Requested size: 240.23016pt x 155.87119pt.
-<images/stringency_vs_gdp_IND.pdf, id=465, 745.94308pt x 488.04082pt>
+
+LaTeX Warning: Citation `Caldwell2021' on page 12 undefined on input line 572.
+
+
+LaTeX Warning: Citation `IMFCovid' on page 12 undefined on input line 574.
+
+<images/stringency_vs_gdp_IND.pdf, id=239, 745.94308pt x 488.04082pt>
 File: images/stringency_vs_gdp_IND.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_IND.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_IND.pdf  used on input line 5
-74.
+Package pdftex.def Info: images/stringency_vs_gdp_IND.pdf  used on input line 580.
 (pdftex.def)             Requested size: 240.23016pt x 157.16669pt.
-<images/gdp_modelled_with_stringency_IND.pdf, id=466, 745.94308pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_IND.pdf, id=240, 745.94308pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_IND.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_IND.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_IND.pdf  used on i
-nput line 581.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_IND.pdf  used on input line 587.
 (pdftex.def)             Requested size: 240.23016pt x 157.05557pt.
-<images/stringency_vs_gdp_MEX.pdf, id=467, 734.22745pt x 488.04082pt>
+<images/stringency_vs_gdp_MEX.pdf, id=241, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_MEX.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_MEX.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_MEX.pdf  used on input line 5
-88.
+Package pdftex.def Info: images/stringency_vs_gdp_MEX.pdf  used on input line 594.
 (pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
-<images/gdp_modelled_with_stringency_MEX.pdf, id=468, 734.22745pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_MEX.pdf, id=242, 734.22745pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_MEX.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_MEX.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_MEX.pdf  used on i
-nput line 595.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_MEX.pdf  used on input line 601.
 (pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
-<images/stringency_vs_gdp_BRA.pdf, id=469, 734.39494pt x 488.04082pt>
+<images/stringency_vs_gdp_BRA.pdf, id=243, 734.39494pt x 488.04082pt>
 File: images/stringency_vs_gdp_BRA.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_BRA.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_BRA.pdf  used on input line 6
-02.
+Package pdftex.def Info: images/stringency_vs_gdp_BRA.pdf  used on input line 608.
 (pdftex.def)             Requested size: 240.23016pt x 159.63905pt.
-<images/gdp_modelled_with_stringency_BRA.pdf, id=470, 734.22745pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_BRA.pdf, id=244, 734.22745pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_BRA.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_BRA.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_BRA.pdf  used on i
-nput line 609.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_BRA.pdf  used on input line 615.
 (pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
-<images/stringency_vs_gdp_USA.pdf, id=471, 734.22745pt x 488.04082pt>
+<images/stringency_vs_gdp_USA.pdf, id=245, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_USA.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_USA.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_USA.pdf  used on input line 6
-20.
+Package pdftex.def Info: images/stringency_vs_gdp_USA.pdf  used on input line 626.
 (pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
-<images/gdp_modelled_with_stringency_USA.pdf, id=472, 734.22745pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_USA.pdf, id=246, 734.22745pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_USA.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_USA.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_USA.pdf  used on i
-nput line 627.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_USA.pdf  used on input line 633.
 (pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
-<images/stringency_vs_gdp_JPN.pdf, id=473, 734.22745pt x 488.04082pt>
+<images/stringency_vs_gdp_JPN.pdf, id=247, 734.22745pt x 488.04082pt>
 File: images/stringency_vs_gdp_JPN.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_JPN.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_JPN.pdf  used on input line 6
-34.
+Package pdftex.def Info: images/stringency_vs_gdp_JPN.pdf  used on input line 640.
 (pdftex.def)             Requested size: 240.23016pt x 159.67628pt.
-<images/gdp_modelled_with_stringency_JPN.pdf, id=474, 734.22745pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_JPN.pdf, id=248, 734.22745pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_JPN.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_JPN.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_JPN.pdf  used on i
-nput line 641.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_JPN.pdf  used on input line 647.
 (pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
-<images/stringency_vs_gdp_CAN.pdf, id=475, 741.45268pt x 488.04082pt>
+<images/stringency_vs_gdp_CAN.pdf, id=249, 741.45268pt x 488.04082pt>
 File: images/stringency_vs_gdp_CAN.pdf Graphic file (type pdf)
 <use images/stringency_vs_gdp_CAN.pdf>
-Package pdftex.def Info: images/stringency_vs_gdp_CAN.pdf  used on input line 6
-48.
+Package pdftex.def Info: images/stringency_vs_gdp_CAN.pdf  used on input line 654.
 (pdftex.def)             Requested size: 240.23016pt x 158.12733pt.
-<images/gdp_modelled_with_stringency_CAN.pdf, id=476, 734.22745pt x 487.69577pt
->
+<images/gdp_modelled_with_stringency_CAN.pdf, id=250, 734.22745pt x 487.69577pt>
 File: images/gdp_modelled_with_stringency_CAN.pdf Graphic file (type pdf)
 <use images/gdp_modelled_with_stringency_CAN.pdf>
-Package pdftex.def Info: images/gdp_modelled_with_stringency_CAN.pdf  used on i
-nput line 655.
+Package pdftex.def Info: images/gdp_modelled_with_stringency_CAN.pdf  used on input line 661.
 (pdftex.def)             Requested size: 240.23016pt x 159.5634pt.
 
-[12] [13 <./images/SIR_model_IND.pdf> <./images/SIR_model_infections_IND.pdf>]
-[14 <./images/SIR_model_with_lockdown_IND.pdf> <./images/stringency_varying_wit
-h_time_IND.pdf>]
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 667.
+
+[12]
+
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 667.
+
+[13 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_infections_IND.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 667.
+
+[14 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_varying_with_time_IND.pdf>]
 Package epstopdf Info: Source file: <images/914857/rl_sir.eps>
 (epstopdf)                    date: 2024-01-17 18:45:28
 (epstopdf)                    size: 54411 bytes
 (epstopdf)             Output file: <images/914857/rl_sir-eps-converted-to.pdf>
-
 (epstopdf)                    date: 2024-01-17 18:53:50
 (epstopdf)                    size: 24576 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_sir-eps-c
-onverted-to.pdf images/914857/rl_sir.eps>
-(epstopdf)             \includegraphics on input line 668.
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_sir-eps-converted-to.pdf images/914857/rl_sir.eps>
+(epstopdf)             \includegraphics on input line 674.
 Package epstopdf Info: Output file is already uptodate.
-<images/914857/rl_sir-eps-converted-to.pdf, id=660, 867.24pt x 578.16pt>
+<images/914857/rl_sir-eps-converted-to.pdf, id=432, 867.24pt x 578.16pt>
 File: images/914857/rl_sir-eps-converted-to.pdf Graphic file (type pdf)
 <use images/914857/rl_sir-eps-converted-to.pdf>
-Package pdftex.def Info: images/914857/rl_sir-eps-converted-to.pdf  used on inp
-ut line 668.
+Package pdftex.def Info: images/914857/rl_sir-eps-converted-to.pdf  used on input line 674.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/914857/rl_i.eps>
 (epstopdf)                    date: 2024-01-17 18:45:29
@@ -1314,89 +1497,78 @@ Package epstopdf Info: Source file: <images/914857/rl_i.eps>
 (epstopdf)             Output file: <images/914857/rl_i-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:50
 (epstopdf)                    size: 21078 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_i-eps-con
-verted-to.pdf images/914857/rl_i.eps>
-(epstopdf)             \includegraphics on input line 675.
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_i-eps-converted-to.pdf images/914857/rl_i.eps>
+(epstopdf)             \includegraphics on input line 681.
 Package epstopdf Info: Output file is already uptodate.
-<images/914857/rl_i-eps-converted-to.pdf, id=661, 867.24pt x 578.16pt>
+<images/914857/rl_i-eps-converted-to.pdf, id=433, 867.24pt x 578.16pt>
 File: images/914857/rl_i-eps-converted-to.pdf Graphic file (type pdf)
 <use images/914857/rl_i-eps-converted-to.pdf>
-Package pdftex.def Info: images/914857/rl_i-eps-converted-to.pdf  used on input
- line 675.
+Package pdftex.def Info: images/914857/rl_i-eps-converted-to.pdf  used on input line 681.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/914857/rl_gdp.eps>
 (epstopdf)                    date: 2024-01-17 18:45:30
 (epstopdf)                    size: 30218 bytes
 (epstopdf)             Output file: <images/914857/rl_gdp-eps-converted-to.pdf>
-
 (epstopdf)                    date: 2024-01-17 18:53:50
 (epstopdf)                    size: 16040 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_gdp-eps-c
-onverted-to.pdf images/914857/rl_gdp.eps>
-(epstopdf)             \includegraphics on input line 682.
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_gdp-eps-converted-to.pdf images/914857/rl_gdp.eps>
+(epstopdf)             \includegraphics on input line 688.
 Package epstopdf Info: Output file is already uptodate.
-<images/914857/rl_gdp-eps-converted-to.pdf, id=662, 867.24pt x 578.16pt>
+<images/914857/rl_gdp-eps-converted-to.pdf, id=434, 867.24pt x 578.16pt>
 File: images/914857/rl_gdp-eps-converted-to.pdf Graphic file (type pdf)
 <use images/914857/rl_gdp-eps-converted-to.pdf>
-Package pdftex.def Info: images/914857/rl_gdp-eps-converted-to.pdf  used on inp
-ut line 682.
+Package pdftex.def Info: images/914857/rl_gdp-eps-converted-to.pdf  used on input line 688.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
-<images/914857/rl_stringency.pdf, id=663, 867.24pt x 578.16pt>
+<images/914857/rl_stringency.pdf, id=435, 867.24pt x 578.16pt>
 File: images/914857/rl_stringency.pdf Graphic file (type pdf)
 <use images/914857/rl_stringency.pdf>
-Package pdftex.def Info: images/914857/rl_stringency.pdf  used on input line 68
-9.
+Package pdftex.def Info: images/914857/rl_stringency.pdf  used on input line 695.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/914857/rl_r_eff.eps>
 (epstopdf)                    date: 2024-01-17 18:45:30
 (epstopdf)                    size: 37644 bytes
-(epstopdf)             Output file: <images/914857/rl_r_eff-eps-converted-to.pd
-f>
+(epstopdf)             Output file: <images/914857/rl_r_eff-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:50
 (epstopdf)                    size: 18607 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_r_eff-eps
--converted-to.pdf images/914857/rl_r_eff.eps>
-(epstopdf)             \includegraphics on input line 696.
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_r_eff-eps-converted-to.pdf images/914857/rl_r_eff.eps>
+(epstopdf)             \includegraphics on input line 702.
 Package epstopdf Info: Output file is already uptodate.
-<images/914857/rl_r_eff-eps-converted-to.pdf, id=664, 867.24pt x 578.16pt>
+<images/914857/rl_r_eff-eps-converted-to.pdf, id=436, 867.24pt x 578.16pt>
 File: images/914857/rl_r_eff-eps-converted-to.pdf Graphic file (type pdf)
 <use images/914857/rl_r_eff-eps-converted-to.pdf>
-Package pdftex.def Info: images/914857/rl_r_eff-eps-converted-to.pdf  used on i
-nput line 696.
+Package pdftex.def Info: images/914857/rl_r_eff-eps-converted-to.pdf  used on input line 702.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/914857/rl_reward.eps>
 (epstopdf)                    date: 2024-01-17 18:45:30
 (epstopdf)                    size: 38636 bytes
-(epstopdf)             Output file: <images/914857/rl_reward-eps-converted-to.p
-df>
+(epstopdf)             Output file: <images/914857/rl_reward-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:51
 (epstopdf)                    size: 19333 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_reward-ep
-s-converted-to.pdf images/914857/rl_reward.eps>
-(epstopdf)             \includegraphics on input line 703.
+(epstopdf)             Command: <repstopdf --outfile=images/914857/rl_reward-eps-converted-to.pdf images/914857/rl_reward.eps>
+(epstopdf)             \includegraphics on input line 709.
 Package epstopdf Info: Output file is already uptodate.
-<images/914857/rl_reward-eps-converted-to.pdf, id=665, 867.24pt x 578.16pt>
+<images/914857/rl_reward-eps-converted-to.pdf, id=437, 867.24pt x 578.16pt>
 File: images/914857/rl_reward-eps-converted-to.pdf Graphic file (type pdf)
 <use images/914857/rl_reward-eps-converted-to.pdf>
-Package pdftex.def Info: images/914857/rl_reward-eps-converted-to.pdf  used on 
-input line 703.
+Package pdftex.def Info: images/914857/rl_reward-eps-converted-to.pdf  used on input line 709.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
+
+
+LaTeX Warning: Reference `fig:914857_rl_r_eff' on page 1 undefined on input line 714.
+
 Package epstopdf Info: Source file: <images/244620/rl_sir.eps>
 (epstopdf)                    date: 2024-01-17 18:47:01
 (epstopdf)                    size: 53880 bytes
 (epstopdf)             Output file: <images/244620/rl_sir-eps-converted-to.pdf>
-
 (epstopdf)                    date: 2024-01-17 18:53:51
 (epstopdf)                    size: 24367 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_sir-eps-c
-onverted-to.pdf images/244620/rl_sir.eps>
-(epstopdf)             \includegraphics on input line 715.
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_sir-eps-converted-to.pdf images/244620/rl_sir.eps>
+(epstopdf)             \includegraphics on input line 721.
 Package epstopdf Info: Output file is already uptodate.
-<images/244620/rl_sir-eps-converted-to.pdf, id=667, 867.24pt x 578.16pt>
+<images/244620/rl_sir-eps-converted-to.pdf, id=438, 867.24pt x 578.16pt>
 File: images/244620/rl_sir-eps-converted-to.pdf Graphic file (type pdf)
 <use images/244620/rl_sir-eps-converted-to.pdf>
-Package pdftex.def Info: images/244620/rl_sir-eps-converted-to.pdf  used on inp
-ut line 715.
+Package pdftex.def Info: images/244620/rl_sir-eps-converted-to.pdf  used on input line 721.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/244620/rl_i.eps>
 (epstopdf)                    date: 2024-01-17 18:47:02
@@ -1404,79 +1576,122 @@ Package epstopdf Info: Source file: <images/244620/rl_i.eps>
 (epstopdf)             Output file: <images/244620/rl_i-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:51
 (epstopdf)                    size: 20222 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_i-eps-con
-verted-to.pdf images/244620/rl_i.eps>
-(epstopdf)             \includegraphics on input line 722.
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_i-eps-converted-to.pdf images/244620/rl_i.eps>
+(epstopdf)             \includegraphics on input line 728.
 Package epstopdf Info: Output file is already uptodate.
-<images/244620/rl_i-eps-converted-to.pdf, id=668, 867.24pt x 578.16pt>
+<images/244620/rl_i-eps-converted-to.pdf, id=439, 867.24pt x 578.16pt>
 File: images/244620/rl_i-eps-converted-to.pdf Graphic file (type pdf)
 <use images/244620/rl_i-eps-converted-to.pdf>
-Package pdftex.def Info: images/244620/rl_i-eps-converted-to.pdf  used on input
- line 722.
+Package pdftex.def Info: images/244620/rl_i-eps-converted-to.pdf  used on input line 728.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/244620/rl_gdp.eps>
 (epstopdf)                    date: 2024-01-17 18:47:03
 (epstopdf)                    size: 30196 bytes
 (epstopdf)             Output file: <images/244620/rl_gdp-eps-converted-to.pdf>
-
 (epstopdf)                    date: 2024-01-17 18:53:51
 (epstopdf)                    size: 16022 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_gdp-eps-c
-onverted-to.pdf images/244620/rl_gdp.eps>
-(epstopdf)             \includegraphics on input line 729.
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_gdp-eps-converted-to.pdf images/244620/rl_gdp.eps>
+(epstopdf)             \includegraphics on input line 735.
 Package epstopdf Info: Output file is already uptodate.
-<images/244620/rl_gdp-eps-converted-to.pdf, id=669, 867.24pt x 578.16pt>
+<images/244620/rl_gdp-eps-converted-to.pdf, id=440, 867.24pt x 578.16pt>
 File: images/244620/rl_gdp-eps-converted-to.pdf Graphic file (type pdf)
 <use images/244620/rl_gdp-eps-converted-to.pdf>
-Package pdftex.def Info: images/244620/rl_gdp-eps-converted-to.pdf  used on inp
-ut line 729.
+Package pdftex.def Info: images/244620/rl_gdp-eps-converted-to.pdf  used on input line 735.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
-<images/244620/rl_stringency.pdf, id=670, 867.24pt x 578.16pt>
+<images/244620/rl_stringency.pdf, id=441, 867.24pt x 578.16pt>
 File: images/244620/rl_stringency.pdf Graphic file (type pdf)
 <use images/244620/rl_stringency.pdf>
-Package pdftex.def Info: images/244620/rl_stringency.pdf  used on input line 73
-6.
+Package pdftex.def Info: images/244620/rl_stringency.pdf  used on input line 742.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/244620/rl_r_eff.eps>
 (epstopdf)                    date: 2024-01-17 18:47:04
 (epstopdf)                    size: 37090 bytes
-(epstopdf)             Output file: <images/244620/rl_r_eff-eps-converted-to.pd
-f>
+(epstopdf)             Output file: <images/244620/rl_r_eff-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:51
 (epstopdf)                    size: 18517 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_r_eff-eps
--converted-to.pdf images/244620/rl_r_eff.eps>
-(epstopdf)             \includegraphics on input line 743.
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_r_eff-eps-converted-to.pdf images/244620/rl_r_eff.eps>
+(epstopdf)             \includegraphics on input line 749.
 Package epstopdf Info: Output file is already uptodate.
-<images/244620/rl_r_eff-eps-converted-to.pdf, id=671, 867.24pt x 578.16pt>
+<images/244620/rl_r_eff-eps-converted-to.pdf, id=442, 867.24pt x 578.16pt>
 File: images/244620/rl_r_eff-eps-converted-to.pdf Graphic file (type pdf)
 <use images/244620/rl_r_eff-eps-converted-to.pdf>
-Package pdftex.def Info: images/244620/rl_r_eff-eps-converted-to.pdf  used on i
-nput line 743.
+Package pdftex.def Info: images/244620/rl_r_eff-eps-converted-to.pdf  used on input line 749.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
 Package epstopdf Info: Source file: <images/244620/rl_reward.eps>
 (epstopdf)                    date: 2024-01-17 18:47:04
 (epstopdf)                    size: 37366 bytes
-(epstopdf)             Output file: <images/244620/rl_reward-eps-converted-to.p
-df>
+(epstopdf)             Output file: <images/244620/rl_reward-eps-converted-to.pdf>
 (epstopdf)                    date: 2024-01-17 18:53:52
 (epstopdf)                    size: 18575 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_reward-ep
-s-converted-to.pdf images/244620/rl_reward.eps>
-(epstopdf)             \includegraphics on input line 750.
+(epstopdf)             Command: <repstopdf --outfile=images/244620/rl_reward-eps-converted-to.pdf images/244620/rl_reward.eps>
+(epstopdf)             \includegraphics on input line 756.
 Package epstopdf Info: Output file is already uptodate.
-<images/244620/rl_reward-eps-converted-to.pdf, id=672, 867.24pt x 578.16pt>
+<images/244620/rl_reward-eps-converted-to.pdf, id=443, 867.24pt x 578.16pt>
 File: images/244620/rl_reward-eps-converted-to.pdf Graphic file (type pdf)
 <use images/244620/rl_reward-eps-converted-to.pdf>
-Package pdftex.def Info: images/244620/rl_reward-eps-converted-to.pdf  used on 
-input line 750.
+Package pdftex.def Info: images/244620/rl_reward-eps-converted-to.pdf  used on input line 756.
 (pdftex.def)             Requested size: 240.23016pt x 160.14575pt.
- [15 <./images/SIR_model_with_lockdown_infections_IND.pdf>]
-[16 <./images/SIRV_model_with_lockdown_IND.pdf> <./images/SIRV_model_with_lockd
-own_infections_IND.pdf>] [17 <./images/SIRV_model_with_lockdown_time_varying_nu
-_IND.pdf> <./images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf
->] (./main.bbl
-! Extra }, or forgotten \endgroup.
+
+LaTeX Warning: Reference `fig:244620_rl_gdp' on page 1 undefined on input line 761.
+
+
+LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 765.
+
+[15 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_infections_IND.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 765.
+
+[16 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIRV_model_with_lockdown_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIRV_model_with_lockdown_infections_IND.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 765.
+
+[17 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIRV_model_with_lockdown_time_varying_nu_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIRV_model_with_lockdown_infections_time_varying_nu_IND.pdf>]
+
+LaTeX Warning: Citation `owidcoronavirus' on page 18 undefined on input line 768.
+
+
+LaTeX Warning: Citation `WorldometerCorona' on page 18 undefined on input line 768.
+
+
+LaTeX Warning: Citation `InternetArchive' on page 18 undefined on input line 768.
+
+
+LaTeX Warning: Citation `economic_indicators_data' on page 18 undefined on input line 768.
+
+
+LaTeX Warning: Citation `JMLR:v22:20-1364' on page 18 undefined on input line 771.
+
+
+LaTeX Warning: Citation `paszke2019pytorch' on page 18 undefined on input line 771.
+
+
+LaTeX Warning: Citation `Virtanen_2020' on page 18 undefined on input line 771.
+
+
+LaTeX Warning: Citation `ScientificPython' on page 18 undefined on input line 771.
+
+(/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl
+
+LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 28.
+
+[18 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/comparing_costs_SIR_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/comparing_costs_I_IND.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 28.
+
+[19 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_IND.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_MEX.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_MEX.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_BRA.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_BRA.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 28.
+
+[20 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_USA.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_USA.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_JPN.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_JPN.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/stringency_vs_gdp_CAN.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/gdp_modelled_with_stringency_CAN.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 28.
+
+[21 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_sir-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_i-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_gdp-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_stringency.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_r_eff-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/914857/rl_reward-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 28.
+
+[22 </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_sir-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_i-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_gdp-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_stringency.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_r_eff-eps-converted-to.pdf> </home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/244620/rl_reward-eps-converted-to.pdf>]
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:36: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.36 \newblock }
@@ -1487,7 +1702,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:36: Extra }, or forgotten \endgroup.
 l.36 \newblock }}
                  } \bibinfo{note}{Accessed: 2024-01-12}.
 I've deleted a group-closing symbol because it seems to be
@@ -1496,7 +1711,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:36: Extra }, or forgotten \endgroup.
 l.36 \newblock }}}
                    \bibinfo{note}{Accessed: 2024-01-12}.
 I've deleted a group-closing symbol because it seems to be
@@ -1505,37 +1720,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[18 <./images/comparing_costs_SIR_IND.pdf> <./images/comparing_costs_I_IND.pdf>
-] [19 <./images/stringency_vs_gdp_IND.pdf> <./images/gdp_modelled_with_stringen
-cy_IND.pdf> <./images/stringency_vs_gdp_MEX.pdf> <./images/gdp_modelled_with_st
-ringency_MEX.pdf> <./images/stringency_vs_gdp_BRA.pdf> <./images/gdp_modelled_w
-ith_stringency_BRA.pdf>] [20 <./images/stringency_vs_gdp_USA.pdf> <./images/gdp
-_modelled_with_stringency_USA.pdf> <./images/stringency_vs_gdp_JPN.pdf> <./imag
-es/gdp_modelled_with_stringency_JPN.pdf> <./images/stringency_vs_gdp_CAN.pdf> <
-./images/gdp_modelled_with_stringency_CAN.pdf>] [21 <./images/914857/rl_sir-eps
--converted-to.pdf> <./images/914857/rl_i-eps-converted-to.pdf> <./images/914857
-/rl_gdp-eps-converted-to.pdf> <./images/914857/rl_stringency.pdf> <./images/914
-857/rl_r_eff-eps-converted-to.pdf> <./images/914857/rl_reward-eps-converted-to.
-pdf>] [22 <./images/244620/rl_sir-eps-converted-to.pdf> <./images/244620/rl_i-e
-ps-converted-to.pdf> <./images/244620/rl_gdp-eps-converted-to.pdf> <./images/24
-4620/rl_stringency.pdf> <./images/244620/rl_r_eff-eps-converted-to.pdf> <./imag
-es/244620/rl_reward-eps-converted-to.pdf>]
-
-! Package inputenc Error: Invalid UTF-8 byte sequence.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 ...u}n, P.} \& \bibinfo{author}{Yildirim, Ä.}
-                                                  
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:121: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.121 \newblock }
@@ -1546,7 +1731,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:121: Extra }, or forgotten \endgroup.
 l.121 \newblock }}
                   } \doiprefix\url{10.25561/77482} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1555,7 +1740,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:121: Extra }, or forgotten \endgroup.
 l.121 \newblock }}}
                     \doiprefix\url{10.25561/77482} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1564,7 +1749,11 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+
+LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 167.
+
+[23]
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:183: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.183 \newblock }
@@ -1575,7 +1764,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:183: Extra }, or forgotten \endgroup.
 l.183 \newblock }}
                   } \doiprefix\url{10.3386/w26981} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1584,7 +1773,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:183: Extra }, or forgotten \endgroup.
 l.183 \newblock }}}
                     \doiprefix\url{10.3386/w26981} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1593,8 +1782,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[23]
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:189: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.189 \newblock }
@@ -1605,7 +1793,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:189: Extra }, or forgotten \endgroup.
 l.189 \newblock }}
                   }  (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1614,7 +1802,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:189: Extra }, or forgotten \endgroup.
 l.189 \newblock }}}
                      (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
@@ -1625,11 +1813,10 @@ deleted material, e.g., by typing `I$}'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 186--192
-[]\T1/ptm/m/n/12 (+20) Rachel, L.  An an-a-lyt-i-cal model of covid-19 lock-dow
-ns.   (2020).
+[]\T1/ptm/m/n/12 (+20) Rachel, L.  An an-a-lyt-i-cal model of covid-19 lock-downs.   (2020).
  []
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:216: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.216 \newblock }
@@ -1640,7 +1827,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:216: Extra }, or forgotten \endgroup.
 l.216 \newblock }}
                   } \doiprefix\url{10.1101/2020.12.30.20248888}
 I've deleted a group-closing symbol because it seems to be
@@ -1649,7 +1836,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:216: Extra }, or forgotten \endgroup.
 l.216 \newblock }}}
                     \doiprefix\url{10.1101/2020.12.30.20248888}
 I've deleted a group-closing symbol because it seems to be
@@ -1658,7 +1845,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:223: Extra }, or forgotten \endgroup.
 <recently read> }
                  
 l.223 \newblock }
@@ -1669,7 +1856,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:223: Extra }, or forgotten \endgroup.
 l.223 \newblock }}
                   }  (\bibinfo{year}{2023}).
 I've deleted a group-closing symbol because it seems to be
@@ -1678,7 +1865,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:223: Extra }, or forgotten \endgroup.
 l.223 \newblock }}}
                      (\bibinfo{year}{2023}).
 I've deleted a group-closing symbol because it seems to be
@@ -1687,10 +1874,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Misplaced alignment tab character &.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:290: Misplaced alignment tab character &.
 <inserted text> &
                  amp;
-l.292 ...nalTitle{Chaos, Solitons &amp; Fractals}}
+l.290 ...nalTitle{Chaos, Solitons &amp; Fractals}}
                                                   }
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1699,11 +1886,14 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+
+LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 313.
+
 [24]
-! Extra }, or forgotten \endgroup.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:377: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.371 \newblock }
+l.377 \newblock }
                  }} \doiprefix\url{10.3386/w26867} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1711,8 +1901,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.371 \newblock }}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:377: Extra }, or forgotten \endgroup.
+l.377 \newblock }}
                   } \doiprefix\url{10.3386/w26867} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1720,8 +1910,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.371 \newblock }}}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:377: Extra }, or forgotten \endgroup.
+l.377 \newblock }}}
                     \doiprefix\url{10.3386/w26867} (\bibinfo{year}{2020}).
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1729,10 +1919,14 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
+
+LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 456.
+
+[25]
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:463: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.431 \newblock }
+l.463 \newblock }
                  }} \doiprefix\url{10.48550/ARXIV.1811.12560} (\bibinfo{year...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1740,8 +1934,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.431 \newblock }}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:463: Extra }, or forgotten \endgroup.
+l.463 \newblock }}
                   } \doiprefix\url{10.48550/ARXIV.1811.12560} (\bibinfo{year...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1749,8 +1943,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.431 \newblock }}}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:463: Extra }, or forgotten \endgroup.
+l.463 \newblock }}}
                     \doiprefix\url{10.48550/ARXIV.1811.12560} (\bibinfo{year...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1758,17 +1952,19 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[25]
-Underfull \hbox (badness 5681) in paragraph at lines 505--509
-[]\T1/ptm/m/n/12 (+20) Mathieu, E. \T1/ptm/m/it/12 (+20) et al.  \T1/ptm/m/n/12
- (+20) Coro-n-avirus pan-demic (covid-19).  \T1/ptm/m/it/12 (+20) Our World Dat
-a \T1/ptm/m/n/12 (+20) (2020).
+
+Underfull \hbox (badness 5681) in paragraph at lines 547--551
+[]\T1/ptm/m/n/12 (+20) Mathieu, E. \T1/ptm/m/it/12 (+20) et al.  \T1/ptm/m/n/12 (+20) Coro-n-avirus pan-demic (covid-19).  \T1/ptm/m/it/12 (+20) Our World Data \T1/ptm/m/n/12 (+20) (2020).
  []
 
-! Extra }, or forgotten \endgroup.
+
+LaTeX Warning: Reference `LastPage' on page 26 undefined on input line 597.
+
+[26]
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:606: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.561 \newblock }
+l.606 \newblock }
                  }}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1776,8 +1972,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.561 \newblock }}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:606: Extra }, or forgotten \endgroup.
+l.606 \newblock }}
                   }
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1785,8 +1981,8 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Extra }, or forgotten \endgroup.
-l.561 \newblock }}}
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:606: Extra }, or forgotten \endgroup.
+l.606 \newblock }}}
                    
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1794,10 +1990,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Misplaced alignment tab character &.
+/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.bbl:634: Misplaced alignment tab character &.
 <inserted text> &
                  
-l.589 ...itle{Computing in Science & Engineering}}
+l.634 ...itle{Computing in Science & Engineering}}
                                                   }
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1806,47 +2002,51 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) 
-AED: lastpage setting LastPage
-[26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 769.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 769.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 769.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 769.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EA4760C235D684D4E568DB646B313C8E;932.
+)
 
+Package lastpage Warning: Rerun to get the references right on input line 775.
+
+
+AED: lastpage setting LastPage
+
+LaTeX Warning: Reference `LastPage' on page 27 undefined on input line 775.
+
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 775.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 775.
+ (/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 775.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 775.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  69AD580AC323C9CD76E4B2AEA09C1C6D;1110.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 769.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 775.
  ) 
 Here is how much of TeX's memory you used:
- 32799 strings out of 481239
- 663542 string characters out of 5920377
- 974493 words of memory out of 5000000
- 47017 multiletter control sequences out of 15000+600000
- 632076 words of font info for 335 fonts, out of 8000000 for 9000
+ 32845 strings out of 481239
+ 666199 string characters out of 5920377
+ 961633 words of memory out of 5000000
+ 47052 multiletter control sequences out of 15000+600000
+ 636264 words of font info for 340 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,74p,2397b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
-hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on main.pdf (26 pages, 801086 bytes).
+ 60i,12n,74p,2531b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf (27 pages, 807920 bytes).
 PDF statistics:
- 2245 PDF objects out of 2487 (max. 8388607)
- 801 compressed objects within 9 object streams
- 172 named destinations out of 1000 (max. 500000)
- 53051 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2080 PDF objects out of 2487 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 53451 words of extra memory for PDF output out of 61914 (max. 10000000)
 
