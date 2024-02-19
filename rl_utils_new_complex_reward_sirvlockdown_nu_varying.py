@@ -50,13 +50,24 @@ def deriv(y, t, N, beta, gamma, nu_varying, lockdown):
     dRdt = gamma * I + nu_varying[int(t)] * S
     return dSdt, dIdt, dRdt
 
+# def calculate_reward_weighted(gdp_min_max_normalized_list, r_eff_list):
+#     reward_list = []
+#     for gdp, r_eff in zip(gdp_min_max_normalized_list, r_eff_list):
+#         gdp_reward = ((gdp ** 5)*300) - 80
+#         r_eff_reward = ((r_eff**2)*-100) + 100
+#         total_reward = gdp_reward + r_eff_reward
+#         reward_list.append(total_reward)
+#     return reward_list
+
 def calculate_reward_weighted(gdp_min_max_normalized_list, r_eff_list):
     reward_list = []
     for gdp, r_eff in zip(gdp_min_max_normalized_list, r_eff_list):
-        gdp_reward = ((gdp ** 5)*300) - 80
-        r_eff_reward = ((r_eff**2)*-100) + 100
-        total_reward = gdp_reward + r_eff_reward
-        reward_list.append(total_reward)
+        if r_eff > 1.5:
+            reward_list.append(-20 * r_eff)
+        elif r_eff >= 1.25 and r_eff <= 1.5:
+            reward_list.append(100 * gdp)
+        else:
+            reward_list.append(200 * gdp)
     return reward_list
 
 class SIREnvironment(gym.Env):
@@ -123,12 +134,18 @@ class SIREnvironment(gym.Env):
         # REMEMBER: to change this definition of the reward in the render as well!!!
         # self.reward = self.normalized_GDP_min_max_normalized - (2 * self.r_eff)
 
-        reward_inertia= abs(diff_action)*-1*20
+        reward_inertia= abs(diff_action)*-1*8
         reward_I_percentage = -2000 if self.I_proportion >= 0.003 else 50
         
-        gdp_reward = ((self.normalized_GDP_min_max_normalized**5)*300) - 80
-        r_eff_reward = ((self.r_eff**2)*-100) + 100
-        reward_weighted = gdp_reward + r_eff_reward
+        # gdp_reward = ((self.normalized_GDP_min_max_normalized**5)*300) - 80
+        # r_eff_reward = ((self.r_eff**2)*-100) + 100
+        # reward_weighted = gdp_reward + r_eff_reward
+        if self.r_eff > 1.5:
+            reward_weighted = -20 * self.r_eff
+        elif self.r_eff >= 1.25 and self.r_eff <= 1.5:
+            reward_weighted = 100 * self.normalized_GDP_min_max_normalized
+        else:
+            reward_weighted = 200 * self.normalized_GDP_min_max_normalized
         
         self.reward = reward_weighted + reward_inertia + reward_I_percentage
         # print(self.ith_day, self.reward)

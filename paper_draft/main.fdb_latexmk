@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1708168109
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1708234124
   "./naturemag-doi.bst" 1701319204 36153 a59af0557a0f0c0e857533e984f737bb ""
   "main.aux" 0 -1 0 "pdflatex"
   "sample.bib" 1707891517 50690 1134807a88b8af0a9d64b01e76520121 ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1708168105 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1708168109
+  "main.bbl"
+["pdflatex"] 1708234121 "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf" "main" 1708234124
   "/etc/texmf/web2c/texmf.cnf" 1650994201 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1708168105 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1708168104 57841 34cdfc1546f96cd802d20014e6fc8f0c ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.aux" 1708234120 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.tex" 1708234120 57684 67ac678de412274cbee020a0375a9e33 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -292,12 +292,12 @@
   "main.aux" 0 -1 0 "pdflatex"
   "main.bbl" 1707891517 29405 4d60d65a7e50948a4a7ca2b8d146772b "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1708168104 57841 34cdfc1546f96cd802d20014e6fc8f0c ""
+  "main.tex" 1708234120 57684 67ac678de412274cbee020a0375a9e33 ""
   "wlscirep.cls" 1701324279 5788 9df2749839c3a8af12c7b5623dab1715 ""
   (generated)
-  "main.log"
-  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf"
   "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.log"
-  "main.out"
   "main.pdf"
+  "main.log"
+  "main.out"
   "main.aux"
+  "/home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/main.pdf"
