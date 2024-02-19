@@ -209,10 +209,10 @@ class SIREnvironment(gym.Env):
         I_reward_moves = [hospital_capacity_punishment if I_percentage >= hospital_capacity else hospital_capacity_reward for I_percentage in self.df["I_moves"] / N]
 
         
-        inertia_rewards_actual = np.array([0] + [abs(diff)*20*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        inertia_rewards_actual = np.array([0] + [abs(diff)*8*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
         # modelled reward for intertia is same as actual
-        inertia_rewards_modelled = np.array([0] + [abs(diff)*20*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
-        inertia_rewards_moves = np.array([0] + [abs(diff)*20*-1 for diff in (stringency[i] - stringency[i - 1] for i in range(1, len(stringency)))])
+        inertia_rewards_modelled = np.array([0] + [abs(diff)*8*-1 for diff in (self.df['stringency_index'][i] - self.df['stringency_index'][i - 1] for i in range(1, len(self.df)))])
+        inertia_rewards_moves = np.array([0] + [abs(diff)*8*-1 for diff in (stringency[i] - stringency[i - 1] for i in range(1, len(stringency)))])
 
         reward_actual = np.array(calculate_reward_weighted(self.df["gdp_min_max_normalized"], self.df["r_eff_actual_" + modelling_type])) + I_reward_actual + inertia_rewards_actual
         reward_modelled = np.array(calculate_reward_weighted(self.df["gdp_normalized_modelled_min_max_normalized"], self.df["r_eff_modelled_" + modelling_type])) + I_reward_modelled + inertia_rewards_modelled
