@@ -6,10 +6,10 @@ env.reset()
 # models/hpc_run/2667966.zip
 # models/hpc_run/4483170.zip
 # models/hpc_run_2/1225674.zip
-model_path = os.path.join(MODELS_DIR, "hpc_run_2", "2141502.zip")
+model_path = os.path.join(MODELS_DIR, "hpc_run_2", "786954.zip")
 model = PPO.load(model_path, env=env)
 
-episodes = 10
+episodes = 30
 for episode in range(1, episodes+1):
     obs, info = env.reset()
     terminated = False
