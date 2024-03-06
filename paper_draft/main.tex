@@ -284,7 +284,7 @@ This model gives shows how $\nu$ varies with time. Since, the window length acts
     \caption{Loss for Different Window Lengths for Infected Population}
     \label{fig:window_length_loss_I_IND}
   \end{subfigure}
-  \caption{\textbf{Loss for Different Window Lengths}. Here we change the window length to see which window length yields the best loss in both cases, while predicting the susceptible, infected and recovered populations or just the infected population.}
+  \caption{\textbf{Loss for Different Window Lengths.} Here we change the window length to see which window length yields the best loss in both cases, while predicting the susceptible, infected and recovered populations or just the infected population.}
 \end{figure}
 
 The following results in \Crefrange{fig:window_length_loss_SIR_IND}{fig:window_length_loss_I_IND}, indicate that a window length of $10$ days yields the least overall loss for all three population groups. However, this window length results in a poor approximation for just the infected group, which is crucial for accurately modelling the spread of the disease. Consequently, we have decided to use a window length of $15$ days, which provides a more accurate approximation for the infected population while still maintaining reasonable loss for the other groups.
@@ -665,97 +665,97 @@ From \Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_CAN}
 After median filtering to smooth the output (to reinforce the negative reward from changing the stringencies) from the trained reinforcement learning agent, here are some of the results obtained:
 \begin{figure}[htbp!]
   \centering
-  \caption{Strategy from Reinforcement Learning Agent 1}
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_sir.eps}
-    \caption{SIR Dynamics}
-  \end{subfigure}
-  \label{fig:914857_rl_sir}
-  \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_i.eps}
-    \caption{Infected Population changing over Time}
-  \end{subfigure}
-  \label{fig:914857_rl_i}
-
-  \begin{subfigure}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_gdp.eps}
-    \caption{Normalized GDP changing over Time}
-  \end{subfigure}
-  \label{fig:914857_rl_gdp}
-  \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_stringency.pdf}
+    \includegraphics[width=\linewidth]{images/176647/rl_stringency.pdf}
     \caption{Stringency changing over Time}
   \end{subfigure}
-  \label{fig:914857_rl_stringency}
-
-  \begin{subfigure}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_r_eff.eps}
-    \caption{$R_e$ changing over Time}
-  \end{subfigure}
-  \label{fig:914857_rl_r_eff}
+  \label{fig:176647_rl_stringency}
   \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/914857/rl_reward.eps}
+    \includegraphics[width=\linewidth]{images/176647/rl_sir.pdf}
+    \caption{SIR Dynamics}
+  \end{subfigure}
+  \label{fig:176647_rl_sir}
+  \hfill
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/176647/rl_i.pdf}
+    \caption{Infected Population changing over Time}
+  \end{subfigure}
+  \label{fig:176647_rl_i}
+  \hfill
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/176647/rl_gdp.pdf}
+    \caption{Normalized GDP changing over Time}
+  \end{subfigure}
+  \label{fig:176647_rl_gdp}
+  \hfill
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/176647/rl_r_eff.pdf}
+    \caption{$R_e$ changing over Time}
+  \end{subfigure}
+  \label{fig:176647_rl_r_eff}
+  \hfill
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/176647/rl_reward.pdf}
     \caption{Reward changing over Time}
   \end{subfigure}
-  \label{fig:914857_rl_reward}
+  \label{fig:176647_rl_reward}
+  \caption{\textbf{Strategy from Reinforcement Learning Agent.} Here, "(actual)" is the real data, and "(rl)" is the new strategy we propose. \textbf{(a)} The new strategy proposed highlights a decrease in stringency from July, 2020 till October, 2020 and after which there's an increase and then a steady decline towards the end. \textbf{(b)} SIR Dynamics, no observable differences. \textbf{(c)} }
 \end{figure}
-In the presented result, we can see the reinforcement learning agent outperform the modelled outcome. A strategic decision is made by the agent to maintain the stringency index below 80 throughout the course of the study. This approach allows for the natural progression of disease dynamics, resulting in a rapid reduction of the effective reproduction number $R_e$ to $1.2$, significantly ahead of the projected timeline (refer to figure \cref{fig:914857_rl_r_eff}).
+In the presented result, we can see the reinforcement learning agent outperform the modelled outcome. A strategic decision is made by the agent to maintain the stringency index below 80 throughout the course of the study. This approach allows for the natural progression of disease dynamics, resulting in a rapid reduction of the effective reproduction number $R_e$ to $1.2$, significantly ahead of the projected timeline (refer to figure \cref{fig:176647_rl_r_eff}).
 A subsequent decrease in stringency in the later stages leads to an increase in the normalized Gross Domestic Product (GDP), indicating an economic upturn. While this strategy poses a higher risk in terms of infection rates during the initial phase of the epidemic (prior to vaccine rollout), it proves to be more beneficial for the nation's economy in the long run. It is suggested that a more balanced policy, falling between the actual and the proposed strategy in this study, could have been a more effective approach for the government to adopt. This would have potentially led to a more optimal balance between controlling the spread of the disease and minimizing economic impact.
 \begin{figure}[htbp!]
   \centering
   \caption{Strategy from Reinforcement Learning Agent 2}
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_sir.eps}
+    \includegraphics[width=\linewidth]{images/175975/rl_sir.pdf}
     \caption{SIR Dynamics}
   \end{subfigure}
-  \label{fig:244620_rl_sir}
+  \label{fig:175975_rl_sir}
   \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_i.eps}
+    \includegraphics[width=\linewidth]{images/175975/rl_i.pdf}
     \caption{Infected Population changing over Time}
   \end{subfigure}
-  \label{fig:244620_rl_i}
+  \label{fig:175975_rl_i}
 
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_gdp.eps}
+    \includegraphics[width=\linewidth]{images/175975/rl_gdp.pdf}
     \caption{Normalized GDP changing over Time}
   \end{subfigure}
-  \label{fig:244620_rl_gdp}
+  \label{fig:175975_rl_gdp}
   \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_stringency.pdf}
+    \includegraphics[width=\linewidth]{images/175975/rl_stringency.pdf}
     \caption{Stringency changing over Time}
   \end{subfigure}
-  \label{fig:244620_rl_stringency}
+  \label{fig:175975_rl_stringency}
 
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_r_eff.eps}
+    \includegraphics[width=\linewidth]{images/175975/rl_r_eff.pdf}
     \caption{$R_e$ changing over Time}
   \end{subfigure}
-  \label{fig:244620_rl_r_eff}
+  \label{fig:175975_rl_r_eff}
   \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{images/244620/rl_reward.eps}
+    \includegraphics[width=\linewidth]{images/175975/rl_reward.pdf}
     \caption{Reward changing over Time}
   \end{subfigure}
-  \label{fig:244620_rl_reward}
+  \label{fig:175975_rl_reward}
 \end{figure}
-An alternative outcome is presented by the agent, demonstrating a gradual escalation in stringency over time. This strategy results in the majority of infections occurring prior to the vaccine's release, with a subsequent cessation of new infections. This approach, however, has implications for the normalized Gross Domestic Product (GDP), as seen by the observed decline in figure \cref{fig:244620_rl_gdp}. Furthermore, the effective reproduction number ($R_e$) does not achieve the target value of 1.2 under this strategy. These findings underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
+An alternative outcome is presented by the agent, demonstrating a gradual escalation in stringency over time. This strategy results in the majority of infections occurring prior to the vaccine's release, with a subsequent cessation of new infections. This approach, however, has implications for the normalized Gross Domestic Product (GDP), as seen by the observed decline in figure \cref{fig:175975_rl_gdp}. Furthermore, the effective reproduction number ($R_e$) does not achieve the target value of 1.2 under this strategy. These findings underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
 
 \section{Discussion}
 The paper seeks to inspire epidemiologists by highlighting the advancements achieved through the application of reinforcement learning in policy making during the pandemic. We introduce a virtual environment that closely simulates a pandemic scenario and thoroughly explore innovative strategies for disease mitigation using reinforcement learning. Our proposed approach demonstrates compelling efficacy in achieving optimal decision-making, effectively balancing the formidable challenges posed by the pandemic and economic considerations. We are confident that this research contribution will forge a connection between epidemic studies and reinforcement learning, offering valuable insights to help humanity better defend against the ongoing pandemic crisis.
