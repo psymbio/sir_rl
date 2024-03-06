@@ -15,8 +15,7 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
-\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand*\HyPL@Entry[1]{}
 \bibstyle{naturemag-doi}
 \citation{Baker2022,inequitableworld}
 \citation{WHOCovid}
@@ -31,6 +30,7 @@
 \citation{Hollingsworth2011,Song2022,Pangallo2023,Ash2022,Ohi2020,PADMANABHAN2021102676,NBERw26981,analytical_covid_lockdown_model}
 \citation{Gagnon2023,Redlin2022,Liang2021}
 \citation{Redlin2022,Patel2021}
+\HyPL@Entry{0<</S/D>>}
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{Gagnon2023,GagnonKorea,Deb2020,Eichenbaum2021}
@@ -52,20 +52,20 @@
 \citation{Mnih2015}
 \citation{Lavet2018,Arulkumaran2017,Henderson_Islam_Bachman_Pineau_Precup_Meger_2018,Mnih2015}
 \citation{NIPS2001_a38b1617,LSTM}
-\citation{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Mathematical Formulation and Numerical Computation}{3}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Simple SIR Model}{3}{subsection.2.1}\protected@file@percent }
 \newlabel{eq:S_without_lockdown}{{1}{3}{Simple SIR Model}{equation.2.1}{}}
 \newlabel{eq:S_without_lockdown@cref}{{[equation][1][]1}{[1][3][]3}}
 \newlabel{eq:I_without_lockdown}{{2}{3}{Simple SIR Model}{equation.2.2}{}}
 \newlabel{eq:I_without_lockdown@cref}{{[equation][2][]2}{[1][3][]3}}
+\citation{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}
 \citation{MASSAD2017232}
 \citation{Cooper2020}
 \citation{huberloss}
 \newlabel{eq:R_without_lockdown}{{3}{4}{Simple SIR Model}{equation.2.3}{}}
 \newlabel{eq:R_without_lockdown@cref}{{[equation][3][]3}{[1][3][]4}}
 \newlabel{eq:lambda_force_of_infection}{{4}{4}{Simple SIR Model}{equation.2.4}{}}
-\newlabel{eq:lambda_force_of_infection@cref}{{[equation][4][]4}{[1][3][]4}}
+\newlabel{eq:lambda_force_of_infection@cref}{{[equation][4][]4}{[1][4][]4}}
 \newlabel{eq:beta_effective_transmission_rate}{{5}{4}{Simple SIR Model}{equation.2.5}{}}
 \newlabel{eq:beta_effective_transmission_rate@cref}{{[equation][5][]5}{[1][4][]4}}
 \newlabel{eq:R_effective}{{6}{4}{Simple SIR Model}{equation.2.6}{}}
@@ -92,8 +92,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}SIR Model with Lockdown}{5}{subsection.2.2}\protected@file@percent }
 \newlabel{eq:S_with_lockdown}{{15}{5}{SIR Model with Lockdown}{equation.2.15}{}}
 \newlabel{eq:S_with_lockdown@cref}{{[equation][15][]15}{[1][5][]5}}
-\newlabel{eq:I_with_lockdown}{{16}{5}{SIR Model with Lockdown}{equation.2.16}{}}
-\newlabel{eq:I_with_lockdown@cref}{{[equation][16][]16}{[1][5][]5}}
+\newlabel{eq:I_with_lockdown}{{16}{6}{SIR Model with Lockdown}{equation.2.16}{}}
+\newlabel{eq:I_with_lockdown@cref}{{[equation][16][]16}{[1][5][]6}}
 \newlabel{eq:R_with_lockdown}{{17}{6}{SIR Model with Lockdown}{equation.2.17}{}}
 \newlabel{eq:R_with_lockdown@cref}{{[equation][17][]17}{[1][5][]6}}
 \newlabel{eq:beta_optimal_with_lockdown}{{18}{6}{SIR Model with Lockdown}{equation.2.18}{}}
@@ -113,17 +113,16 @@
 \newlabel{eq:I_with_lockdown_and_nu@cref}{{[equation][24][]24}{[1][6][]6}}
 \newlabel{eq:R_with_lockdown_and_nu}{{25}{6}{SIR Model with Lockdown and Vaccination}{equation.2.25}{}}
 \newlabel{eq:R_with_lockdown_and_nu@cref}{{[equation][25][]25}{[1][6][]6}}
-\newlabel{eq:beta_optimal_with_lockdown_and_nu}{{26}{6}{SIR Model with Lockdown and Vaccination}{equation.2.26}{}}
-\newlabel{eq:beta_optimal_with_lockdown_and_nu@cref}{{[equation][26][]26}{[1][6][]6}}
 \citation{Liang2021,Marinov2022}
 \citation{Liao2020}
-\citation{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}
+\newlabel{eq:beta_optimal_with_lockdown_and_nu}{{26}{7}{SIR Model with Lockdown and Vaccination}{equation.2.26}{}}
+\newlabel{eq:beta_optimal_with_lockdown_and_nu@cref}{{[equation][26][]26}{[1][6][]7}}
 \newlabel{eq:gamma_optimal_with_lockdown_and_nu}{{27}{7}{SIR Model with Lockdown and Vaccination}{equation.2.27}{}}
 \newlabel{eq:gamma_optimal_with_lockdown_and_nu@cref}{{[equation][27][]27}{[1][6][]7}}
 \newlabel{eq:nu_optimal_with_lockdown_and_nu}{{28}{7}{SIR Model with Lockdown and Vaccination}{equation.2.28}{}}
 \newlabel{eq:nu_optimal_with_lockdown_and_nu@cref}{{[equation][28][]28}{[1][6][]7}}
 \newlabel{eq:r0_with_lockdown_and_nu}{{29}{7}{SIR Model with Lockdown and Vaccination}{equation.2.29}{}}
-\newlabel{eq:r0_with_lockdown_and_nu@cref}{{[equation][29][]29}{[1][6][]7}}
+\newlabel{eq:r0_with_lockdown_and_nu@cref}{{[equation][29][]29}{[1][7][]7}}
 \newlabel{eq:cost_SIR_with_lockdown_and_nu}{{30}{7}{SIR Model with Lockdown and Vaccination}{equation.2.30}{}}
 \newlabel{eq:cost_SIR_with_lockdown_and_nu@cref}{{[equation][30][]30}{[1][7][]7}}
 \newlabel{eq:cost_I_with_lockdown_and_nu}{{31}{7}{SIR Model with Lockdown and Vaccination}{equation.2.31}{}}
@@ -137,6 +136,7 @@
 \newlabel{eq:I_with_lockdown_and_nu_calc_nu@cref}{{[equation][33][]33}{[1][7][]7}}
 \newlabel{eq:R_with_lockdown_and_nu_calc_nu}{{34}{7}{Optimizing Window Length for Time-varying Vaccination Rate}{equation.2.34}{}}
 \newlabel{eq:R_with_lockdown_and_nu_calc_nu@cref}{{[equation][34][]34}{[1][7][]7}}
+\citation{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:window_length_loss_SIR_IND}{{1a}{8}{Loss for Different Window Lengths for Susceptible, Infected and Recovered Population\relax }{figure.caption.2}{}}
 \newlabel{fig:window_length_loss_SIR_IND@cref}{{[subfigure][1][1]1a}{[1][7][]8}}
@@ -147,42 +147,40 @@
 \newlabel{sub@fig:window_length_loss_I_IND}{{b}{8}{Loss for Different Window Lengths for Infected Population\relax }{figure.caption.2}{}}
 \newlabel{sub@fig:window_length_loss_I_IND@cref}{{[subfigure][2][1]1b}{[1][7][]8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Loss for Different Window Lengths}. Here we change the window length to see which window length yields the best loss in both cases, while predicting the susceptible, infected and recovered populations or just the infected population.\relax }}{8}{figure.caption.2}\protected@file@percent }
-\newlabel{fig:interpolated_nu_varying_with_time_IND}{{\caption@xref {fig:interpolated_nu_varying_with_time_IND}{ on input line 295}}{8}{Optimizing Window Length for Time-varying Vaccination Rate}{figure.caption.3}{}}
-\newlabel{fig:interpolated_nu_varying_with_time_IND@cref}{{[subsection][4][2]2.4}{[1][7][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {$\nu $ Varying with Time.} This shows how the vaccination rate $\nu $ varies with time and when the vaccination drive was launched in India.\relax }}{8}{figure.caption.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}SIR Model with Lockdown and Time-varying Vaccination Rate}{8}{subsection.2.5}\protected@file@percent }
+\newlabel{eq:S_with_lockdown_and_time_varying_nu}{{35}{8}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.35}{}}
+\newlabel{eq:S_with_lockdown_and_time_varying_nu@cref}{{[equation][35][]35}{[1][8][]8}}
+\newlabel{eq:I_with_lockdown_and_time_varying_nu}{{36}{8}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.36}{}}
+\newlabel{eq:I_with_lockdown_and_time_varying_nu@cref}{{[equation][36][]36}{[1][8][]8}}
+\newlabel{eq:R_with_lockdown_and_time_varying_nu}{{37}{8}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.37}{}}
+\newlabel{eq:R_with_lockdown_and_time_varying_nu@cref}{{[equation][37][]37}{[1][8][]8}}
+\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu}{{38}{8}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.38}{}}
+\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][38][]38}{[1][8][]8}}
+\newlabel{fig:interpolated_nu_varying_with_time_IND}{{\caption@xref {fig:interpolated_nu_varying_with_time_IND}{ on input line 295}}{9}{Optimizing Window Length for Time-varying Vaccination Rate}{figure.caption.3}{}}
+\newlabel{fig:interpolated_nu_varying_with_time_IND@cref}{{[subsection][4][2]2.4}{[1][8][]9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {$\nu $ Varying with Time.} This shows how the vaccination rate $\nu $ varies with time and when the vaccination drive was launched in India.\relax }}{9}{figure.caption.3}\protected@file@percent }
 \citation{OECDNormalizedGDP,OECDNormalizedGDP2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}SIR Model with Lockdown and Time-varying Vaccination Rate}{9}{subsection.2.5}\protected@file@percent }
-\newlabel{eq:S_with_lockdown_and_time_varying_nu}{{35}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.35}{}}
-\newlabel{eq:S_with_lockdown_and_time_varying_nu@cref}{{[equation][35][]35}{[1][9][]9}}
-\newlabel{eq:I_with_lockdown_and_time_varying_nu}{{36}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.36}{}}
-\newlabel{eq:I_with_lockdown_and_time_varying_nu@cref}{{[equation][36][]36}{[1][9][]9}}
-\newlabel{eq:R_with_lockdown_and_time_varying_nu}{{37}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.37}{}}
-\newlabel{eq:R_with_lockdown_and_time_varying_nu@cref}{{[equation][37][]37}{[1][9][]9}}
-\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu}{{38}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.38}{}}
-\newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][38][]38}{[1][9][]9}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu}{{39}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.39}{}}
-\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][39][]39}{[1][9][]9}}
-\newlabel{eq:r0_with_lockdown_and_time_varying_nu}{{40}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.40}{}}
-\newlabel{eq:r0_with_lockdown_and_time_varying_nu@cref}{{[equation][40][]40}{[1][9][]9}}
-\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu}{{41}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.41}{}}
-\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu@cref}{{[equation][41][]41}{[1][9][]9}}
-\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu}{{42}{9}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.42}{}}
-\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu@cref}{{[equation][42][]42}{[1][9][]9}}
-\citation{sutton2018reinforcement}
+\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu}{{39}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.39}{}}
+\newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][39][]39}{[1][8][]10}}
+\newlabel{eq:r0_with_lockdown_and_time_varying_nu}{{40}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.40}{}}
+\newlabel{eq:r0_with_lockdown_and_time_varying_nu@cref}{{[equation][40][]40}{[1][8][]10}}
+\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu}{{41}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.41}{}}
+\newlabel{eq:cost_SIR_with_lockdown_and_time_varying_nu@cref}{{[equation][41][]41}{[1][10][]10}}
+\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu}{{42}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.42}{}}
+\newlabel{eq:cost_I_with_lockdown_and_time_varying_nu@cref}{{[equation][42][]42}{[1][10][]10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Modelling Normalized GDP with Stringency}{10}{subsection.2.6}\protected@file@percent }
 \newlabel{eq:gdp_modelled_with_stringency_IND}{{43}{10}{Modelling Normalized GDP with Stringency}{equation.2.43}{}}
 \newlabel{eq:gdp_modelled_with_stringency_IND@cref}{{[equation][43][]43}{[1][10][]10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Reinforcement Learning}{10}{subsection.2.7}\protected@file@percent }
 \citation{sutton2018reinforcement}
+\citation{sutton2018reinforcement}
 \citation{Ohi2020}
-\citation{AWSDeepRacer}
-\citation{LSTM}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Defining the Reward Function}{11}{subsubsection.2.7.1}\protected@file@percent }
 \newlabel{defining_reward_function}{{2.7.1}{11}{Defining the Reward Function}{subsubsection.2.7.1}{}}
 \newlabel{defining_reward_function@cref}{{[subsubsection][1][2,7]2.7.1}{[1][11][]11}}
-\citation{Caldwell2021}
-\citation{IMFCovid}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{12}{section.3}\protected@file@percent }
+\citation{AWSDeepRacer}
+\citation{LSTM}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{13}{section.3}\protected@file@percent }
 \newlabel{fig:SIR_model_IND}{{3a}{13}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
 \newlabel{fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][12][]13}}
 \newlabel{sub@fig:SIR_model_IND}{{a}{13}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
@@ -193,82 +191,73 @@
 \newlabel{sub@fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][12][]13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {SIR Model for India.} The following shows the fit for the simple SIR model(\Crefrange  {eq:S_without_lockdown}{eq:cost_I_without_lockdown}) compared to the real data. Here we can see an over approximation of the infected population.\relax }}{13}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:SIR_model_with_lockdown_IND}{{4a}{14}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
-\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]14}}
+\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][14][]14}}
 \newlabel{sub@fig:SIR_model_with_lockdown_IND}{{a}{14}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][12][]14}}
+\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][14][]14}}
 \newlabel{fig:stringency_varying_with_time_IND}{{4b}{14}{Stringency Varying with Time\relax }{figure.caption.6}{}}
-\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]14}}
+\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][14][]14}}
 \newlabel{sub@fig:stringency_varying_with_time_IND}{{b}{14}{Stringency Varying with Time\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][12][]14}}
+\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][14][]14}}
+\citation{Caldwell2021}
+\citation{IMFCovid}
 \newlabel{fig:SIR_model_with_lockdown_infections_IND}{{4c}{15}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][12][]15}}
+\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][14][]15}}
 \newlabel{sub@fig:SIR_model_with_lockdown_infections_IND}{{c}{15}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][12][]15}}
+\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][14][]15}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {SIR Model with lockdown for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown}{eq:cost_I_with_lockdown}) compared to the real data. Here we observe how introducing stringency shows an effect on the dynamics of the disease progression. There's still an over approximation, but the peaks of the model align with the data.\relax }}{15}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND}{{5a}{16}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][12][]16}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][14][]16}}
 \newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND}{{a}{16}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][12][]16}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][14][]16}}
 \newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{5b}{16}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][12][]16}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]16}}
 \newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{b}{16}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][12][]16}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {SIR Model with Lockdown and Vaccination for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}) compared to the real data. This is similar to the infections shown by the SIR model with lockdown as seen in \cref  {fig:SIR_model_with_lockdown_infections_IND} and this is because the rate of vaccination is negligible \cref  {eq:nu_optimal_with_lockdown_and_nu}. This is suggestive of a rate of vaccination that varies with time.\relax }}{16}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{6a}{17}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][12][]17}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]17}}
 \newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{a}{17}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][12][]17}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]17}}
 \newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{6b}{17}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][12][]17}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]17}}
 \newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{b}{17}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][12][]17}}
-\citation{owidcoronavirus}
-\citation{WorldometerCorona}
-\citation{InternetArchive}
-\citation{economic_indicators_data}
-\citation{JMLR:v22:20-1364}
-\citation{paszke2019pytorch}
-\citation{Virtanen_2020}
-\citation{ScientificPython}
-\bibdata{sample}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]17}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Loss for Different Models\relax }}{18}{figure.caption.10}\protected@file@percent }
 \newlabel{fig:comparing_costs_SIR_IND}{{7a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
-\newlabel{fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][12][]18}}
+\newlabel{fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][15][]18}}
 \newlabel{sub@fig:comparing_costs_SIR_IND}{{a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][12][]18}}
+\newlabel{sub@fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][15][]18}}
 \newlabel{fig:comparing_costs_I_IND}{{7b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
-\newlabel{fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][12][]18}}
+\newlabel{fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][15][]18}}
 \newlabel{sub@fig:comparing_costs_I_IND}{{b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][12][]18}}
+\newlabel{sub@fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][15][]18}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {SIR Model with Lockdown and Time-varying Vaccination Rate for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}) compared to the real data. This model captures the trends in infected population accurately.\relax }}{18}{figure.caption.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{18}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{18}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{18}{subsection.5.1}\protected@file@percent }
 \newlabel{fig:stringency_vs_gdp_IND}{{\caption@xref {fig:stringency_vs_gdp_IND}{ on input line 579}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_IND@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:stringency_vs_gdp_IND@cref}{{[section][3][]3}{[1][15][]19}}
 \newlabel{fig:gdp_modelled_with_stringency_IND}{{\caption@xref {fig:gdp_modelled_with_stringency_IND}{ on input line 586}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[section][3][]3}{[1][15][]19}}
 \newlabel{fig:stringency_vs_gdp_MEX}{{\caption@xref {fig:stringency_vs_gdp_MEX}{ on input line 593}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[section][3][]3}{[1][15][]19}}
 \newlabel{fig:gdp_modelled_with_stringency_MEX}{{\caption@xref {fig:gdp_modelled_with_stringency_MEX}{ on input line 600}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[section][3][]3}{[1][15][]19}}
 \newlabel{fig:stringency_vs_gdp_BRA}{{\caption@xref {fig:stringency_vs_gdp_BRA}{ on input line 607}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[section][3][]3}{[1][15][]19}}
 \newlabel{fig:gdp_modelled_with_stringency_BRA}{{\caption@xref {fig:gdp_modelled_with_stringency_BRA}{ on input line 614}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[section][3][]3}{[1][12][]19}}
+\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[section][3][]3}{[1][15][]19}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Stringency and GDP for Developing Economies.} For countries with developing economies, when we model the normalized GDP with stringency we see significant p-values and high r2 scores.\relax }}{19}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:stringency_vs_gdp_USA}{{\caption@xref {fig:stringency_vs_gdp_USA}{ on input line 625}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_USA@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:stringency_vs_gdp_USA@cref}{{[section][3][]3}{[1][15][]20}}
 \newlabel{fig:gdp_modelled_with_stringency_USA}{{\caption@xref {fig:gdp_modelled_with_stringency_USA}{ on input line 632}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[section][3][]3}{[1][15][]20}}
 \newlabel{fig:stringency_vs_gdp_JPN}{{\caption@xref {fig:stringency_vs_gdp_JPN}{ on input line 639}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[section][3][]3}{[1][15][]20}}
 \newlabel{fig:gdp_modelled_with_stringency_JPN}{{\caption@xref {fig:gdp_modelled_with_stringency_JPN}{ on input line 646}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[section][3][]3}{[1][15][]20}}
 \newlabel{fig:stringency_vs_gdp_CAN}{{\caption@xref {fig:stringency_vs_gdp_CAN}{ on input line 653}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[section][3][]3}{[1][15][]20}}
 \newlabel{fig:gdp_modelled_with_stringency_CAN}{{\caption@xref {fig:gdp_modelled_with_stringency_CAN}{ on input line 660}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[section][3][]3}{[1][12][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[section][3][]3}{[1][15][]20}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we consistently observe substantial p-values, providing robust evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies(\Crefrange  {fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.\relax }}{20}{figure.caption.12}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Strategy from Reinforcement Learning Agent 1\relax }}{21}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:914857_rl_sir}{{11}{21}{Strategy from Reinforcement Learning Agent 1\relax }{figure.caption.13}{}}
@@ -296,6 +285,15 @@
 \newlabel{fig:244620_rl_r_eff@cref}{{[figure][12][]12}{[1][15][]22}}
 \newlabel{fig:244620_rl_reward}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
 \newlabel{fig:244620_rl_reward@cref}{{[figure][12][]12}{[1][15][]22}}
+\citation{owidcoronavirus}
+\citation{WorldometerCorona}
+\citation{InternetArchive}
+\citation{economic_indicators_data}
+\citation{JMLR:v22:20-1364}
+\citation{paszke2019pytorch}
+\citation{Virtanen_2020}
+\citation{ScientificPython}
+\bibdata{sample}
 \bibcite{Baker2022}{1}
 \bibcite{inequitableworld}{2}
 \bibcite{WHOCovid}{3}
@@ -309,11 +307,13 @@
 \bibcite{Kim2022}{11}
 \bibcite{Jalloh2022}{12}
 \bibcite{Caldwell2021}{13}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{23}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{23}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{23}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{23}{subsection.5.2}\protected@file@percent }
 \bibcite{Ferguson2020}{14}
 \bibcite{DeFoo2023}{15}
 \bibcite{Hollingsworth2011}{16}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{23}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{23}{subsection.5.2}\protected@file@percent }
 \bibcite{Pangallo2023}{17}
 \bibcite{Ash2022}{18}
 \bibcite{Ohi2020}{19}
