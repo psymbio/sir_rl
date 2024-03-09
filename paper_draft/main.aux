@@ -146,7 +146,7 @@
 \newlabel{fig:window_length_loss_I_IND@cref}{{[subfigure][2][1]1b}{[1][7][]8}}
 \newlabel{sub@fig:window_length_loss_I_IND}{{b}{8}{Loss for Different Window Lengths for Infected Population\relax }{figure.caption.2}{}}
 \newlabel{sub@fig:window_length_loss_I_IND@cref}{{[subfigure][2][1]1b}{[1][7][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Loss for Different Window Lengths.} Here we change the window length to see which window length yields the best loss in both cases, while predicting the susceptible, infected and recovered populations or just the infected population.\relax }}{8}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Loss for Different Window Lengths.} We try different window lengths to find the optimal loss for both cases, either when predicting all three populations(susceptible, infected, recovered) or just the infected population.\relax }}{8}{figure.caption.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}SIR Model with Lockdown and Time-varying Vaccination Rate}{8}{subsection.2.5}\protected@file@percent }
 \newlabel{eq:S_with_lockdown_and_time_varying_nu}{{35}{8}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.35}{}}
 \newlabel{eq:S_with_lockdown_and_time_varying_nu@cref}{{[equation][35][]35}{[1][8][]8}}
@@ -158,8 +158,9 @@
 \newlabel{eq:beta_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][38][]38}{[1][8][]8}}
 \newlabel{fig:interpolated_nu_varying_with_time_IND}{{\caption@xref {fig:interpolated_nu_varying_with_time_IND}{ on input line 295}}{9}{Optimizing Window Length for Time-varying Vaccination Rate}{figure.caption.3}{}}
 \newlabel{fig:interpolated_nu_varying_with_time_IND@cref}{{[subsection][4][2]2.4}{[1][8][]9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {$\nu $ Varying with Time.} This shows how the vaccination rate $\nu $ varies with time and when the vaccination drive was launched in India.\relax }}{9}{figure.caption.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {$\nu $ Varying with Time.} This depicts how the vaccination rate($\nu $) changes over time and highlights the introduction of the vaccination campaign in India.\relax }}{9}{figure.caption.3}\protected@file@percent }
 \citation{OECDNormalizedGDP,OECDNormalizedGDP2}
+\citation{sutton2018reinforcement}
 \newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu}{{39}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.39}{}}
 \newlabel{eq:gamma_optimal_with_lockdown_and_time_varying_nu@cref}{{[equation][39][]39}{[1][8][]10}}
 \newlabel{eq:r0_with_lockdown_and_time_varying_nu}{{40}{10}{SIR Model with Lockdown and Time-varying Vaccination Rate}{equation.2.40}{}}
@@ -173,118 +174,117 @@
 \newlabel{eq:gdp_modelled_with_stringency_IND@cref}{{[equation][43][]43}{[1][10][]10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Reinforcement Learning}{10}{subsection.2.7}\protected@file@percent }
 \citation{sutton2018reinforcement}
-\citation{sutton2018reinforcement}
-\citation{Ohi2020}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Defining the Reward Function}{11}{subsubsection.2.7.1}\protected@file@percent }
 \newlabel{defining_reward_function}{{2.7.1}{11}{Defining the Reward Function}{subsubsection.2.7.1}{}}
 \newlabel{defining_reward_function@cref}{{[subsubsection][1][2,7]2.7.1}{[1][11][]11}}
+\citation{sutton2018reinforcement}
+\citation{Ohi2020}
 \citation{AWSDeepRacer}
 \citation{LSTM}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{13}{section.3}\protected@file@percent }
-\newlabel{fig:SIR_model_IND}{{3a}{13}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
-\newlabel{fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][12][]13}}
-\newlabel{sub@fig:SIR_model_IND}{{a}{13}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][12][]13}}
-\newlabel{fig:SIR_model_infections_IND}{{3b}{13}{Infections Modelled with SIR Model\relax }{figure.caption.5}{}}
-\newlabel{fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][12][]13}}
-\newlabel{sub@fig:SIR_model_infections_IND}{{b}{13}{Infections Modelled with SIR Model\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][12][]13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {SIR Model for India.} The following shows the fit for the simple SIR model(\Crefrange  {eq:S_without_lockdown}{eq:cost_I_without_lockdown}) compared to the real data. Here we can see an over approximation of the infected population.\relax }}{13}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:SIR_model_with_lockdown_IND}{{4a}{14}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
-\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][14][]14}}
-\newlabel{sub@fig:SIR_model_with_lockdown_IND}{{a}{14}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][14][]14}}
-\newlabel{fig:stringency_varying_with_time_IND}{{4b}{14}{Stringency Varying with Time\relax }{figure.caption.6}{}}
-\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][14][]14}}
-\newlabel{sub@fig:stringency_varying_with_time_IND}{{b}{14}{Stringency Varying with Time\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][14][]14}}
+\newlabel{fig:SIR_model_IND}{{3a}{14}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
+\newlabel{fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][13][]14}}
+\newlabel{sub@fig:SIR_model_IND}{{a}{14}{SIR Model with Lockdown\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:SIR_model_IND@cref}{{[subfigure][1][3]3a}{[1][13][]14}}
+\newlabel{fig:SIR_model_infections_IND}{{3b}{14}{Infections Modelled with SIR Model\relax }{figure.caption.5}{}}
+\newlabel{fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][13][]14}}
+\newlabel{sub@fig:SIR_model_infections_IND}{{b}{14}{Infections Modelled with SIR Model\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:SIR_model_infections_IND@cref}{{[subfigure][2][3]3b}{[1][13][]14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {SIR Model Comparison for India.} The figure presents a comparison between the fitted simple SIR model(\Crefrange  {eq:S_without_lockdown}{eq:cost_I_without_lockdown}) and real data. Here an evident overestimation of the infected population is observed.\relax }}{14}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:SIR_model_with_lockdown_IND}{{4a}{15}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
+\newlabel{fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][13][]15}}
+\newlabel{sub@fig:SIR_model_with_lockdown_IND}{{a}{15}{SIR Model with Lockdown\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_IND@cref}{{[subfigure][1][4]4a}{[1][13][]15}}
+\newlabel{fig:stringency_varying_with_time_IND}{{4b}{15}{Stringency Varying with Time\relax }{figure.caption.6}{}}
+\newlabel{fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][13][]15}}
+\newlabel{sub@fig:stringency_varying_with_time_IND}{{b}{15}{Stringency Varying with Time\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:stringency_varying_with_time_IND@cref}{{[subfigure][2][4]4b}{[1][13][]15}}
+\newlabel{fig:SIR_model_with_lockdown_infections_IND}{{4c}{16}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
+\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][13][]16}}
+\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND}{{c}{16}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][13][]16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {SIR Model with Lockdown Analysis for India.} This figure illustrates the fitting of the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown}{eq:cost_I_with_lockdown}) in comparison to real data. The introduction of lockdown measures showcases discernible effects on the dynamics of disease progression. While an overestimation persists, the model's peaks now closely align with the observed data and are able to capture key trends.\relax }}{16}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND}{{5a}{17}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][13][]17}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND}{{a}{17}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][13][]17}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{5b}{17}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][13][]17}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{b}{17}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][13][]17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {SIR Model with Lockdown and Vaccination for India.} This figure displays the fitting of the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}) compared to the real data. The infection trends closely resemble those depicted by the SIR model with lockdown, as illustrated in \cref  {fig:SIR_model_with_lockdown_infections_IND} and this is because the rate of vaccination is negligible \cref  {eq:nu_optimal_with_lockdown_and_nu}. This is suggestive of a rate of vaccination that varies with time.\relax }}{17}{figure.caption.8}\protected@file@percent }
 \citation{Caldwell2021}
 \citation{IMFCovid}
-\newlabel{fig:SIR_model_with_lockdown_infections_IND}{{4c}{15}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][14][]15}}
-\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND}{{c}{15}{Infections Modelled with SIR Model with Lockdown\relax }{figure.caption.7}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_infections_IND@cref}{{[subfigure][3][4]4c}{[1][14][]15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {SIR Model with lockdown for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown}{eq:cost_I_with_lockdown}) compared to the real data. Here we observe how introducing stringency shows an effect on the dynamics of the disease progression. There's still an over approximation, but the peaks of the model align with the data.\relax }}{15}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND}{{5a}{16}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][14][]16}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND}{{a}{16}{SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_IND@cref}{{[subfigure][1][5]5a}{[1][14][]16}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{5b}{16}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]16}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND}{{b}{16}{Infections Modelled with SIR Model with Lockdown and Vaccination\relax }{figure.caption.8}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_IND@cref}{{[subfigure][2][5]5b}{[1][14][]16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {SIR Model with Lockdown and Vaccination for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}) compared to the real data. This is similar to the infections shown by the SIR model with lockdown as seen in \cref  {fig:SIR_model_with_lockdown_infections_IND} and this is because the rate of vaccination is negligible \cref  {eq:nu_optimal_with_lockdown_and_nu}. This is suggestive of a rate of vaccination that varies with time.\relax }}{16}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{6a}{17}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]17}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{a}{17}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][15][]17}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{6b}{17}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]17}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{b}{17}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][15][]17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Loss for Different Models\relax }}{18}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:comparing_costs_SIR_IND}{{7a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
-\newlabel{fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][15][]18}}
-\newlabel{sub@fig:comparing_costs_SIR_IND}{{a}{18}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][15][]18}}
-\newlabel{fig:comparing_costs_I_IND}{{7b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
-\newlabel{fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][15][]18}}
-\newlabel{sub@fig:comparing_costs_I_IND}{{b}{18}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][15][]18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {SIR Model with Lockdown and Time-varying Vaccination Rate for India.} The following shows the fit for the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}) compared to the real data. This model captures the trends in infected population accurately.\relax }}{18}{figure.caption.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{18}{section.4}\protected@file@percent }
-\newlabel{fig:stringency_vs_gdp_IND}{{\caption@xref {fig:stringency_vs_gdp_IND}{ on input line 579}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_IND@cref}{{[section][3][]3}{[1][15][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_IND}{{\caption@xref {fig:gdp_modelled_with_stringency_IND}{ on input line 586}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[section][3][]3}{[1][15][]19}}
-\newlabel{fig:stringency_vs_gdp_MEX}{{\caption@xref {fig:stringency_vs_gdp_MEX}{ on input line 593}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[section][3][]3}{[1][15][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_MEX}{{\caption@xref {fig:gdp_modelled_with_stringency_MEX}{ on input line 600}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[section][3][]3}{[1][15][]19}}
-\newlabel{fig:stringency_vs_gdp_BRA}{{\caption@xref {fig:stringency_vs_gdp_BRA}{ on input line 607}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[section][3][]3}{[1][15][]19}}
-\newlabel{fig:gdp_modelled_with_stringency_BRA}{{\caption@xref {fig:gdp_modelled_with_stringency_BRA}{ on input line 614}}{19}{Results}{figure.caption.11}{}}
-\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[section][3][]3}{[1][15][]19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Stringency and GDP for Developing Economies.} For countries with developing economies, when we model the normalized GDP with stringency we see significant p-values and high r2 scores.\relax }}{19}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:stringency_vs_gdp_USA}{{\caption@xref {fig:stringency_vs_gdp_USA}{ on input line 625}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_USA@cref}{{[section][3][]3}{[1][15][]20}}
-\newlabel{fig:gdp_modelled_with_stringency_USA}{{\caption@xref {fig:gdp_modelled_with_stringency_USA}{ on input line 632}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[section][3][]3}{[1][15][]20}}
-\newlabel{fig:stringency_vs_gdp_JPN}{{\caption@xref {fig:stringency_vs_gdp_JPN}{ on input line 639}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[section][3][]3}{[1][15][]20}}
-\newlabel{fig:gdp_modelled_with_stringency_JPN}{{\caption@xref {fig:gdp_modelled_with_stringency_JPN}{ on input line 646}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[section][3][]3}{[1][15][]20}}
-\newlabel{fig:stringency_vs_gdp_CAN}{{\caption@xref {fig:stringency_vs_gdp_CAN}{ on input line 653}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[section][3][]3}{[1][15][]20}}
-\newlabel{fig:gdp_modelled_with_stringency_CAN}{{\caption@xref {fig:gdp_modelled_with_stringency_CAN}{ on input line 660}}{20}{Results}{figure.caption.12}{}}
-\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[section][3][]3}{[1][15][]20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we consistently observe substantial p-values, providing robust evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies(\Crefrange  {fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.\relax }}{20}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:176647_rl_stringency}{{\caption@xref {fig:176647_rl_stringency}{ on input line 673}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_stringency@cref}{{[section][3][]3}{[1][15][]21}}
-\newlabel{fig:176647_rl_sir}{{\caption@xref {fig:176647_rl_sir}{ on input line 680}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_sir@cref}{{[section][3][]3}{[1][15][]21}}
-\newlabel{fig:176647_rl_i}{{\caption@xref {fig:176647_rl_i}{ on input line 687}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_i@cref}{{[section][3][]3}{[1][15][]21}}
-\newlabel{fig:176647_rl_gdp}{{\caption@xref {fig:176647_rl_gdp}{ on input line 694}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_gdp@cref}{{[section][3][]3}{[1][15][]21}}
-\newlabel{fig:176647_rl_r_eff}{{\caption@xref {fig:176647_rl_r_eff}{ on input line 701}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_r_eff@cref}{{[section][3][]3}{[1][15][]21}}
-\newlabel{fig:176647_rl_reward}{{\caption@xref {fig:176647_rl_reward}{ on input line 708}}{21}{Results}{figure.caption.13}{}}
-\newlabel{fig:176647_rl_reward@cref}{{[section][3][]3}{[1][15][]21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Strategy from Reinforcement Learning Agent.} Here, \csqQQ {34}(actual)\csqQQ {34} is the real data, and \csqQQ {34}(rl)\csqQQ {34} is the new strategy we propose. \textbf  {(a)} The new strategy proposed highlights a decrease in stringency from July, 2020 till October, 2020 and after which there's an increase and then a steady decline towards the end. \textbf  {(b)} SIR Dynamics, no observable differences. \textbf  {(c)} \relax }}{21}{figure.caption.13}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Strategy from Reinforcement Learning Agent 2\relax }}{22}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:175975_rl_sir}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_sir@cref}{{[figure][12][]12}{[1][15][]22}}
-\newlabel{fig:175975_rl_i}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_i@cref}{{[figure][12][]12}{[1][15][]22}}
-\newlabel{fig:175975_rl_gdp}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_gdp@cref}{{[figure][12][]12}{[1][15][]22}}
-\newlabel{fig:175975_rl_stringency}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_stringency@cref}{{[figure][12][]12}{[1][15][]22}}
-\newlabel{fig:175975_rl_r_eff}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_r_eff@cref}{{[figure][12][]12}{[1][15][]22}}
-\newlabel{fig:175975_rl_reward}{{12}{22}{Strategy from Reinforcement Learning Agent 2\relax }{figure.caption.14}{}}
-\newlabel{fig:175975_rl_reward@cref}{{[figure][12][]12}{[1][15][]22}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{6a}{18}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][13][]18}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND}{{a}{18}{SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND@cref}{{[subfigure][1][6]6a}{[1][13][]18}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{6b}{18}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
+\newlabel{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][13][]18}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND}{{b}{18}{Infections Modelled with SIR Model with Lockdown and Time-varying Vaccination Rate\relax }{figure.caption.9}{}}
+\newlabel{sub@fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND@cref}{{[subfigure][2][6]6b}{[1][13][]18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Loss for Different Models\relax }}{19}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:comparing_costs_SIR_IND}{{7a}{19}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
+\newlabel{fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][18][]19}}
+\newlabel{sub@fig:comparing_costs_SIR_IND}{{a}{19}{Loss for Different Models for Susceptible, Infected and Recovered Population\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:comparing_costs_SIR_IND@cref}{{[subfigure][1][7]7a}{[1][18][]19}}
+\newlabel{fig:comparing_costs_I_IND}{{7b}{19}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
+\newlabel{fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][18][]19}}
+\newlabel{sub@fig:comparing_costs_I_IND}{{b}{19}{Loss for Different Models for Infected Population\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:comparing_costs_I_IND@cref}{{[subfigure][2][7]7b}{[1][18][]19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {SIR Model with Lockdown and Time-varying Vaccination Rate for India.} This figure presents the fitting of the SIR model with lockdown(\Crefrange  {eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}) compared to the actual data. This model captures the trends in infected population accurately.\relax }}{19}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:stringency_vs_gdp_IND}{{\caption@xref {fig:stringency_vs_gdp_IND}{ on input line 590}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_IND@cref}{{[section][3][]3}{[1][18][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_IND}{{\caption@xref {fig:gdp_modelled_with_stringency_IND}{ on input line 597}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_IND@cref}{{[section][3][]3}{[1][18][]20}}
+\newlabel{fig:stringency_vs_gdp_MEX}{{\caption@xref {fig:stringency_vs_gdp_MEX}{ on input line 604}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_MEX@cref}{{[section][3][]3}{[1][18][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_MEX}{{\caption@xref {fig:gdp_modelled_with_stringency_MEX}{ on input line 611}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_MEX@cref}{{[section][3][]3}{[1][18][]20}}
+\newlabel{fig:stringency_vs_gdp_BRA}{{\caption@xref {fig:stringency_vs_gdp_BRA}{ on input line 618}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:stringency_vs_gdp_BRA@cref}{{[section][3][]3}{[1][18][]20}}
+\newlabel{fig:gdp_modelled_with_stringency_BRA}{{\caption@xref {fig:gdp_modelled_with_stringency_BRA}{ on input line 625}}{20}{Results}{figure.caption.11}{}}
+\newlabel{fig:gdp_modelled_with_stringency_BRA@cref}{{[section][3][]3}{[1][18][]20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {Stringency and GDP for Developing Economies.} For countries with developing economies, when we model the normalized GDP with stringency we see significant p-values and high r2 scores.\relax }}{20}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:stringency_vs_gdp_USA}{{\caption@xref {fig:stringency_vs_gdp_USA}{ on input line 636}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_USA@cref}{{[section][3][]3}{[1][18][]21}}
+\newlabel{fig:gdp_modelled_with_stringency_USA}{{\caption@xref {fig:gdp_modelled_with_stringency_USA}{ on input line 643}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_USA@cref}{{[section][3][]3}{[1][18][]21}}
+\newlabel{fig:stringency_vs_gdp_JPN}{{\caption@xref {fig:stringency_vs_gdp_JPN}{ on input line 650}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_JPN@cref}{{[section][3][]3}{[1][18][]21}}
+\newlabel{fig:gdp_modelled_with_stringency_JPN}{{\caption@xref {fig:gdp_modelled_with_stringency_JPN}{ on input line 657}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_JPN@cref}{{[section][3][]3}{[1][18][]21}}
+\newlabel{fig:stringency_vs_gdp_CAN}{{\caption@xref {fig:stringency_vs_gdp_CAN}{ on input line 664}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:stringency_vs_gdp_CAN@cref}{{[section][3][]3}{[1][18][]21}}
+\newlabel{fig:gdp_modelled_with_stringency_CAN}{{\caption@xref {fig:gdp_modelled_with_stringency_CAN}{ on input line 671}}{21}{Results}{figure.caption.12}{}}
+\newlabel{fig:gdp_modelled_with_stringency_CAN@cref}{{[section][3][]3}{[1][18][]21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we observe substantial p-values, providing evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies(\Crefrange  {fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.\relax }}{21}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:176647_rl_stringency}{{\caption@xref {fig:176647_rl_stringency}{ on input line 684}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_stringency@cref}{{[section][3][]3}{[1][19][]22}}
+\newlabel{fig:176647_rl_sir}{{\caption@xref {fig:176647_rl_sir}{ on input line 691}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_sir@cref}{{[section][3][]3}{[1][19][]22}}
+\newlabel{fig:176647_rl_i}{{\caption@xref {fig:176647_rl_i}{ on input line 698}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_i@cref}{{[section][3][]3}{[1][19][]22}}
+\newlabel{fig:176647_rl_gdp}{{\caption@xref {fig:176647_rl_gdp}{ on input line 705}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_gdp@cref}{{[section][3][]3}{[1][19][]22}}
+\newlabel{fig:176647_rl_r_eff}{{\caption@xref {fig:176647_rl_r_eff}{ on input line 712}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_r_eff@cref}{{[section][3][]3}{[1][19][]22}}
+\newlabel{fig:176647_rl_reward}{{\caption@xref {fig:176647_rl_reward}{ on input line 719}}{22}{Results}{figure.caption.13}{}}
+\newlabel{fig:176647_rl_reward@cref}{{[section][3][]3}{[1][19][]22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Strategy from Reinforcement Learning Agent.} Here, \csqQQ {34}(actual)\csqQQ {34} is the real data, and \csqQQ {34}(rl)\csqQQ {34} is the new strategy we propose. \textbf  {(a)} The new strategy proposed highlights a decrease in stringency from July, 2020 till October, 2020 compared to the actual data. After October, 2020 there's an increase and then a steady decline towards the end. \textbf  {(c)} There's a peak in the number of infected people around October, 2020 and then a second peak after October, 2022 \textbf  {(d)} The normalized GDP is also maintained and doesn't show a dip during April, 2022. \textbf  {(e)} The $R_e$ is maintained below $1.5$ throughout, and below $1.2$ after October, 2020. \textbf  {(f)} A higher reward is achieved by the reinforcement learning agent.\relax }}{22}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:175975_rl_stringency}{{\caption@xref {fig:175975_rl_stringency}{ on input line 732}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_stringency@cref}{{[section][3][]3}{[1][19][]23}}
+\newlabel{fig:175975_rl_sir}{{\caption@xref {fig:175975_rl_sir}{ on input line 739}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_sir@cref}{{[section][3][]3}{[1][19][]23}}
+\newlabel{fig:175975_rl_i}{{\caption@xref {fig:175975_rl_i}{ on input line 746}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_i@cref}{{[section][3][]3}{[1][19][]23}}
+\newlabel{fig:175975_rl_gdp}{{\caption@xref {fig:175975_rl_gdp}{ on input line 753}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_gdp@cref}{{[section][3][]3}{[1][19][]23}}
+\newlabel{fig:175975_rl_r_eff}{{\caption@xref {fig:175975_rl_r_eff}{ on input line 760}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_r_eff@cref}{{[section][3][]3}{[1][19][]23}}
+\newlabel{fig:175975_rl_reward}{{\caption@xref {fig:175975_rl_reward}{ on input line 767}}{23}{Results}{figure.caption.14}{}}
+\newlabel{fig:175975_rl_reward@cref}{{[section][3][]3}{[1][19][]23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \textbf  {Strategy from Reinforcement Learning Agent.} Here, \csqQQ {34}(actual)\csqQQ {34} is the real data, and \csqQQ {34}(rl)\csqQQ {34} is the new strategy we propose. \textbf  {(a)} The new strategy proposed highlights an increase in stringency from October, 2020 till April, 2021 compared to the actual data and then a steady decline towards the end. \textbf  {(c)} No sharp peaks in the infected population is observed. \textbf  {(d)} The normalized GDP is affected by the increase in the stringency from October, 2020 till April, 2021. \textbf  {(e)} The $R_e$ is maintained below $1.2$ throughout. \textbf  {(f)} A higher reward is achieved by the reinforcement learning agent.\relax }}{23}{figure.caption.14}\protected@file@percent }
 \citation{owidcoronavirus}
 \citation{WorldometerCorona}
 \citation{InternetArchive}
@@ -303,14 +303,15 @@
 \bibcite{Anderson2020}{7}
 \bibcite{Song2022}{8}
 \bibcite{Chinazzi2020}{9}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{24}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{24}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{24}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{24}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{24}{subsection.5.2}\protected@file@percent }
 \bibcite{Nguyen2021}{10}
 \bibcite{Kim2022}{11}
 \bibcite{Jalloh2022}{12}
 \bibcite{Caldwell2021}{13}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Settings}{23}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{23}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Code}{23}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\hspace  *{-\tocsep }References}{23}{subsection.5.2}\protected@file@percent }
 \bibcite{Ferguson2020}{14}
 \bibcite{DeFoo2023}{15}
 \bibcite{Hollingsworth2011}{16}
@@ -378,7 +379,7 @@
 \bibcite{paszke2019pytorch}{78}
 \bibcite{Virtanen_2020}{79}
 \bibcite{ScientificPython}{80}
-\newlabel{LastPage}{{}{27}{}{page.27}{}}
-\xdef\lastpage@lastpage{27}
-\xdef\lastpage@lastpageHy{27}
+\newlabel{LastPage}{{}{29}{}{page.29}{}}
+\xdef\lastpage@lastpage{29}
+\xdef\lastpage@lastpageHy{29}
 \ttl@finishall

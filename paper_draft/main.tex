@@ -121,7 +121,7 @@ $S$ is the number of susceptible people, $N$ is the total population. At the sta
 
 Most government policies look at the value of $R_e$ to come us with an effective strategy to combat the disease as the fate of the evolution of the disease depends upon it. When $R_e$ is less than one, the infected population $I$ will steadily decline to zero. Conversely, if $R_e$ is greater than one, the infected population will increase. In other words, when $\frac{dI(t)}{dt} < 0 \Rightarrow R_e < 1$ and $\frac{dI(t)}{dt} > 0 \Rightarrow R_e > 1$, therefore, the effective reproductive rate $R_e$ serves as a critical threshold that determines whether an infectious disease will rapidly extinguish or escalate into an epidemic~\cite{Cooper2020}.
 
-To estimate the parameters $\beta$ and $\gamma$ for India, based on the data from May, 2020, to October, 2022, we simply define two cost functions \cref{eq:cost_SIR,eq:cost_I} to calibrate the model with the use of huber loss~\cite{huberloss}. We generally calibrate the model using \cref{eq:cost_SIR}. However, sometimes we must strike a balance between modelling all three population groups (susceptible, infected, and recovered) and focusing just on the infected group, which is most important because it drives the spread of the disease, therefore, in that case we consider the loss obtained from \cref{eq:cost_SIR,eq:cost_I} (see \cref{optimizing_window_length}, where a hyperparameter is selected keeping both these losses in mind).
+To estimate the parameters $\beta$ and $\gamma$ for India, based on the data from May, 2020, to October, 2022, we simply define two cost functions \cref{eq:cost_SIR,eq:cost_I} to calibrate the model with the use of huber loss~\cite{huberloss}. Our model typically uses \cref{eq:cost_SIR}, considering all three compartments: susceptible, infected, and recovered. However, there are instances where we need to balance modeling all groups and focusing on the infected group, which largely drives disease spread. In such cases, we consider losses from both \cref{eq:cost_SIR,eq:cost_I}. A weighted sum of the loss functions allows for trade-offs between comprehensive modeling and focusing on infected group dynamics(see \cref{optimizing_window_length}, where a hyperparameter(window length) is selected keeping both these losses in mind).
 \begin{equation}
   L_{\delta}(y, f(x)) = 
   \begin{cases}
@@ -284,7 +284,7 @@ This model gives shows how $\nu$ varies with time. Since, the window length acts
     \caption{Loss for Different Window Lengths for Infected Population}
     \label{fig:window_length_loss_I_IND}
   \end{subfigure}
-  \caption{\textbf{Loss for Different Window Lengths.} Here we change the window length to see which window length yields the best loss in both cases, while predicting the susceptible, infected and recovered populations or just the infected population.}
+  \caption{\textbf{Loss for Different Window Lengths.} We try different window lengths to find the optimal loss for both cases, either when predicting all three populations(susceptible, infected, recovered) or just the infected population.}
 \end{figure}
 
 The following results in \Crefrange{fig:window_length_loss_SIR_IND}{fig:window_length_loss_I_IND}, indicate that a window length of $10$ days yields the least overall loss for all three population groups. However, this window length results in a poor approximation for just the infected group, which is crucial for accurately modelling the spread of the disease. Consequently, we have decided to use a window length of $15$ days, which provides a more accurate approximation for the infected population while still maintaining reasonable loss for the other groups.
@@ -293,10 +293,10 @@ The following results in \Crefrange{fig:window_length_loss_SIR_IND}{fig:window_l
   \centering
   \includegraphics[width=\linewidth]{images/interpolated_nu_varying_with_time_IND.pdf}
   \label{fig:interpolated_nu_varying_with_time_IND}
-  \caption{\textbf{$\nu$ Varying with Time.} This shows how the vaccination rate $\nu$ varies with time and when the vaccination drive was launched in India.}
+  \caption{\textbf{$\nu$ Varying with Time.} This depicts how the vaccination rate($\nu$) changes over time and highlights the introduction of the vaccination campaign in India.}
 \end{figure}
 
-This shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
+This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 
 \subsection{SIR Model with Lockdown and Time-varying Vaccination Rate}
 Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR model that includes lockdown measures, resulting in the following set of equations, which represents our final model:
@@ -365,7 +365,7 @@ Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigat
 \end{equation}
 
 \subsection{Reinforcement Learning}
-Given that the government is an agent that takes decisions in a deterministic environment defined above, we use reinforcement learning to model the competing costs of the environment. This environment is known as a Markov decision process (MDP), and can be described as follows:
+Given that the government is an agent that takes decisions in a deterministic environment defined above, we use reinforcement learning to model the competing costs of the environment. This environment is known as a Markov decision process (MDP) and is characterized by the Markov property. To possess the Markov property is to create a compact state signal that retains all relevant information from past sensations without requiring the complete history. The Markov property ensures that the probability of transitioning to the next state and receiving a reward depends only on the current state and action, without requiring the entire history~\cite{sutton2018reinforcement}. Our MDP is defined as follows:
 % https://arxiv.org/pdf/1708.05866.pdf
 \begin{itemize}
     % \item \url{https://jmlr.org/papers/volume22/20-1364/20-1364.pdf} RL Paper that references \url{https://araffin.github.io/slides/rl-tuto-jnrr19/#/13} RL ppt (for our RL notes).
@@ -385,15 +385,23 @@ The stringency index emerges as a critical factor influencing both the Gross Dom
 
 In reinforcement learning, positive rewards promote and negative rewards demote actions. The agent tries to generate such a policy/knowledge to avoid the discouraging situation by following the policy. By designing a proper reward function, it is possible to generate such an agent that may follow the human desired situation. While designing a reward function it is important to note that the rewards we set up truly indicate what we want accomplished. In particular, the reward signal is not the place to impart to the agent prior knowledge about how to achieve what we want it to do~\cite{sutton2018reinforcement}. Taking inspiration from similar work~\cite{Ohi2020}, we define the reward function. % TODO add: http://www.incompleteideas.net/book/ebook/node29.html
 
-The reward function is parameterized to account for key factors influencing decision-making. To incentivize reduction of $R_e$ (effective reproductive number) the reward is $((R_e^{2}) \times -100) + 100$, this means when $R_e = 1$ there is no reward, but it exponentially decreases when $R_e > 1$ and increases if $R_e < 1$. Similarly, for the normalized GDP the reward function is $((\textrm{min\_max\_normalized\_GDP}^5) \times 300) - 80$ which tends to become negative somewhere below the average of the $\textrm{min\_max\_normalized\_GDP}$ which is $0.75$. Since these are competing costs when added together for the real data they either cancel each other out for the duration of the pandemic and towards the end when both objectives are met they add up together.
-% TODO: add image here
-If the proportion of the infected population were to rise above 0.003 (peak in the actual data) the model is punished ($-2000$) and otherwise rewarded ($+20$). To reward not changing the stringencies frequently, we reward the absolute different between the previous stringency and the current stringency negatively ($|s(t) - s(t-1)| \times -20$).
+The reward function is parameterized to account for key factors influencing decision-making. To incentivize reduction of $R_e$(effective reproductive number) and the increase in the normalized GDP the reward is:
+$$\[
+\textrm{Reward} = \begin{cases}
+-20 \times R_e & \textrm{if } R_e > 1.5 \\
+100 \times \textrm{min\_max\_normalized\_GDP} & \textrm{if } 1.25 \leq R_e \leq 1.5 \\
+200 \times \textrm{min\_max\_normalized\_GDP} & \textrm{if } R_e < 1.25
+\end{cases}
+\]$$
+
+This reward function is parameterized to account for key factors influencing decision-making. When the effective reproductive number ($R_e$) exceeds 1.5, indicating a high transmission rate of the disease, the reward is negatively impacted to incentivize a reduction in $R_e$. As $R_e$ decreases within the range $1.25 \leq R_e \leq 1.5$, indicating a moderate transmission rate, the reward is directly proportional to the normalized GDP, reflecting the importance of both controlling the spread of the disease and maintaining economic stability. Notably, when $R_e$ drops below 1, signaling a declining transmission rate and potential containment of the disease, the reward function shifts focus towards economic recovery. In this scenario, the reward incentivizes an increase in the normalized GDP, emphasizing the need to stimulate economic activity and promote recovery efforts following successful control measures.
+
+Additionally, if the proportion of the infected population were to rise above 0.003(peak in the actual data) the model is punished ($-2000$) and otherwise rewarded ($50$). To reward not changing the stringencies frequently, we reward the absolute different between the previous stringency and the current stringency negatively ($|s(t) - s(t-1)| \times -12$).
 
 It should be realized there can be an infinite number of ways to design the reward function to be more human and upgrade the way a decision is taken given the situation~\cite{AWSDeepRacer}. Therefore, this research act as a  framework for promoting the development of more efficient reward strategies for the same. 
 
 The agent observes the percentage of the population that is susceptible, infected, recovered, and time-varying data like the GDP, and previous actions taken to change the stringency, and $R_e$. Since Stable Baselines3 can support multiple inputs(time-series data, single data points and images) by using Dict Gym space. For data that varies with time (stringency, normalized GDP, $R_e$) we use a simple LSTM architecture~\cite{LSTM}. For other data like, the current proportion of the population that is susceptible, infected, and recovered we use a simple fully connected layer. The output from both these networks are concatenated and used by the reinforcement learning agent to train on.
 
-We train the model for $2742$ time steps for $200$ iterations and the best results are presented below.
 \newcommand{\DrawNeuronalNetwork}[2][]{
 \xdef\Xmax{0}
 \foreach \Layer/\X/\Col/\Miss/\Lab/\Count/\Content [count=\Y] in {#2}
@@ -439,7 +447,7 @@ We train the model for $2742$ time steps for $200$ iterations and the best resul
 }
 }
 \begin{tikzpicture}[x=1.5cm, y=1.5cm,
->=stealth,font=\sffamily,nodes={align=center}, scale=0.8, every node/.style={scale=0.8}]
+>=stealth,font=\sffamily,nodes={align=center}]
  \begin{scope}[local bounding box=T]
   \path  node[draw,minimum width=6em,minimum height=4em] (state) {State};
   \begin{scope}[local bounding box=NN]
@@ -457,6 +465,8 @@ We train the model for $2742$ time steps for $200$ iterations and the best resul
  \draw[<-] (TF.180) -- ++ (-2em,0) |- (Env.180) node[pos=0.45,left]{$s_t$};
  \draw[->] (NN.east) -- ++ (7em,0)node[right]{$a_t$} |- (Env);
 \end{tikzpicture}
+
+We train the model for $2742$ time steps and some of the best results are presented below.
 
 % Use this for the RL formulae: https://arxiv.org/pdf/1708.05866.pdf and https://www.nature.com/articles/s41598-022-23668-x
 % for reward function use this: https://www.nature.com/articles/s41598-020-79147-8
@@ -478,7 +488,7 @@ Using the simple SIR model from \Crefrange{eq:S_without_lockdown}{eq:cost_I_with
     \caption{Infections Modelled with SIR Model}
     \label{fig:SIR_model_infections_IND}
   \end{subfigure}
-  \caption{\textbf{SIR Model for India.} The following shows the fit for the simple SIR model(\Crefrange{eq:S_without_lockdown}{eq:cost_I_without_lockdown}) compared to the real data. Here we can see an over approximation of the infected population.}
+  \caption{\textbf{SIR Model Comparison for India.} The figure presents a comparison between the fitted simple SIR model(\Crefrange{eq:S_without_lockdown}{eq:cost_I_without_lockdown}) and real data. Here an evident overestimation of the infected population is observed.}
 \end{figure}
 Here, it can be observed that the SIR model accurately fits the susceptible population and recovered population but overestimates the infected population by a significant margin. Although overestimating the infected population may not always be problematic, in our specific case, it can create complications. This is because our research involves rewarding the agent when the proportion of infected individuals falls below a predetermined threshold. Consequently, an overestimation of the infected population could lead to incorrect decision-making and undesirable outcomes.
 
@@ -506,8 +516,9 @@ Combining the lockdown dynamics in the SIR model using \Crefrange{eq:S_with_lock
     \caption{Infections Modelled with SIR Model with Lockdown}
     \label{fig:SIR_model_with_lockdown_infections_IND}
   \end{subfigure}
-  \caption{\textbf{SIR Model with lockdown for India.} The following shows the fit for the SIR model with lockdown(\Crefrange{eq:S_with_lockdown}{eq:cost_I_with_lockdown}) compared to the real data. Here we observe how introducing stringency shows an effect on the dynamics of the disease progression. There's still an over approximation, but the peaks of the model align with the data.}
+  \caption{\textbf{SIR Model with Lockdown Analysis for India.} This figure illustrates the fitting of the SIR model with lockdown(\Crefrange{eq:S_with_lockdown}{eq:cost_I_with_lockdown}) in comparison to real data. The introduction of lockdown measures showcases discernible effects on the dynamics of disease progression. While an overestimation persists, the model's peaks now closely align with the observed data and are able to capture key trends.}
 \end{figure}
+
 Here, it can be observed there's an overestimation of infected individuals, but, the two stages of the epidemic are being accounted for. This is what suggests that there might be depletion of infected individuals through vaccination.
 
 Combining vaccination dynamics with SIR with lockdown model using \Crefrange{eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}, we get the following:
@@ -526,7 +537,7 @@ Combining vaccination dynamics with SIR with lockdown model using \Crefrange{eq:
     \caption{Infections Modelled with SIR Model with Lockdown and Vaccination}
     \label{fig:SIR_model_with_lockdown_with_vaccination_infections_IND}
   \end{subfigure}
-  \caption{\textbf{SIR Model with Lockdown and Vaccination for India.} The following shows the fit for the SIR model with lockdown(\Crefrange{eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}) compared to the real data. This is similar to the infections shown by the SIR model with lockdown as seen in \cref{fig:SIR_model_with_lockdown_infections_IND} and this is because the rate of vaccination is negligible \cref{eq:nu_optimal_with_lockdown_and_nu}. This is suggestive of a rate of vaccination that varies with time.}
+  \caption{\textbf{SIR Model with Lockdown and Vaccination for India.} This figure displays the fitting of the SIR model with lockdown(\Crefrange{eq:S_with_lockdown_and_nu}{eq:cost_I_with_lockdown_and_nu}) compared to the real data. The infection trends closely resemble those depicted by the SIR model with lockdown, as illustrated in \cref{fig:SIR_model_with_lockdown_infections_IND} and this is because the rate of vaccination is negligible \cref{eq:nu_optimal_with_lockdown_and_nu}. This is suggestive of a rate of vaccination that varies with time.}
 \end{figure}
 Here, because the value of $\nu$ \cref{eq:nu_optimal_with_lockdown_and_nu} is negligible, it makes no change. However, time-varying $\nu$ shall be able to better account for the these dynamics.
 
@@ -563,7 +574,7 @@ For SIR model with lockdown and time-varying vaccination rate from \Crefrange{eq
 		\caption{Loss for Different Models for Infected Population}
 		\label{fig:comparing_costs_I_IND}
 	\end{subfigure}
-  \caption{\textbf{SIR Model with Lockdown and Time-varying Vaccination Rate for India.} The following shows the fit for the SIR model with lockdown(\Crefrange{eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}) compared to the real data. This model captures the trends in infected population accurately.}
+  \caption{\textbf{SIR Model with Lockdown and Time-varying Vaccination Rate for India.}  This figure presents the fitting of the SIR model with lockdown(\Crefrange{eq:S_with_lockdown_and_time_varying_nu}{eq:cost_I_with_lockdown_and_time_varying_nu}) compared to the actual data. This model captures the trends in infected population accurately.}
 \end{figure}
 
 With a time-varying $\nu$ (vaccination rate) and the effect of lockdown, our model is able to account for the infected individuals and reduce the cost in comparison to all the previously formalized models for the data. This shows how interventions and changes in the way people behave in response of a epidemic~\cite{Caldwell2021} play a major role in the way the epidemic unfolds.
@@ -658,11 +669,11 @@ It can be observed that stringency has a negative impact on the normalized Gross
     \caption{Normalized GDP modelled with Stringency for Canada}
   \end{subfigure}
   \label{fig:gdp_modelled_with_stringency_CAN}
-  \caption{\textbf{Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we consistently observe substantial p-values, providing robust evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies(\Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.}
+  \caption{\textbf{Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we observe substantial p-values, providing evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies(\Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.}
 \end{figure}
 From \Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_CAN} we conclude, that there are other factors that explain the dip in the normalized GDP than just an increase in the stringency in advanced economies.
 
-After median filtering to smooth the output (to reinforce the negative reward from changing the stringencies) from the trained reinforcement learning agent, here are some of the results obtained:
+After median filtering to smooth the output(to reinforce the negative reward from changing the stringencies) from the trained reinforcement learning agent, here are some of the results obtained:
 \begin{figure}[htbp!]
   \centering
   \begin{subfigure}[t]{0.48\textwidth}
@@ -706,13 +717,20 @@ After median filtering to smooth the output (to reinforce the negative reward fr
     \caption{Reward changing over Time}
   \end{subfigure}
   \label{fig:176647_rl_reward}
-  \caption{\textbf{Strategy from Reinforcement Learning Agent.} Here, "(actual)" is the real data, and "(rl)" is the new strategy we propose. \textbf{(a)} The new strategy proposed highlights a decrease in stringency from July, 2020 till October, 2020 and after which there's an increase and then a steady decline towards the end. \textbf{(b)} SIR Dynamics, no observable differences. \textbf{(c)} }
+  \caption{\textbf{Strategy from Reinforcement Learning Agent.} Here, "(actual)" is the real data, and "(rl)" is the new strategy we propose. \textbf{(a)} The new strategy proposed highlights a decrease in stringency from July, 2020 till October, 2020 compared to the actual data. After October, 2020 there's an increase and then a steady decline towards the end. \textbf{(c)} There's a peak in the number of infected people around October, 2020 and then a second peak after October, 2022 \textbf{(d)} The normalized GDP is also maintained and doesn't show a dip during April, 2022. \textbf{(e)} The $R_e$ is maintained below $1.5$ throughout, and below $1.2$ after October, 2020. \textbf{(f)} A higher reward is achieved by the reinforcement learning agent.}
 \end{figure}
-In the presented result, we can see the reinforcement learning agent outperform the modelled outcome. A strategic decision is made by the agent to maintain the stringency index below 80 throughout the course of the study. This approach allows for the natural progression of disease dynamics, resulting in a rapid reduction of the effective reproduction number $R_e$ to $1.2$, significantly ahead of the projected timeline (refer to figure \cref{fig:176647_rl_r_eff}).
-A subsequent decrease in stringency in the later stages leads to an increase in the normalized Gross Domestic Product (GDP), indicating an economic upturn. While this strategy poses a higher risk in terms of infection rates during the initial phase of the epidemic (prior to vaccine rollout), it proves to be more beneficial for the nation's economy in the long run. It is suggested that a more balanced policy, falling between the actual and the proposed strategy in this study, could have been a more effective approach for the government to adopt. This would have potentially led to a more optimal balance between controlling the spread of the disease and minimizing economic impact.
+In the presented result, we can see the reinforcement learning agent outperform the modelled outcome. A strategic decision is made by the agent to maintain the stringency index below 80 after the April, 2020 \cref{fig:176647_rl_stringency}. This approach allows for the natural progression of disease dynamics, resulting in a rapid reduction of the effective reproduction number $R_e$ to below $1.2$ after October, 2020(refer to figure \cref{fig:176647_rl_r_eff}).
+
+A subsequent decrease in stringency in the later stages leads to an increase in the normalized GDP, indicating an economic upturn. While this strategy poses a higher risk in terms of infection rates during the initial phase of the epidemic (prior to vaccine rollout), it proves to be more beneficial for the nation's economy in the long run. It is suggested that a more balanced policy, falling between the actual and the proposed strategy in this study, could have been a more effective approach for the government to adopt. This would have potentially led to a more optimal balance between controlling the spread of the disease and minimizing economic impact.
 \begin{figure}[htbp!]
   \centering
-  \caption{Strategy from Reinforcement Learning Agent 2}
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/175975/rl_stringency.pdf}
+    \caption{Stringency changing over Time}
+  \end{subfigure}
+  \label{fig:175975_rl_stringency}
+  \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\linewidth]{images/175975/rl_sir.pdf}
@@ -726,7 +744,7 @@ A subsequent decrease in stringency in the later stages leads to an increase in 
     \caption{Infected Population changing over Time}
   \end{subfigure}
   \label{fig:175975_rl_i}
-
+  \hfill
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\linewidth]{images/175975/rl_gdp.pdf}
@@ -734,13 +752,6 @@ A subsequent decrease in stringency in the later stages leads to an increase in 
   \end{subfigure}
   \label{fig:175975_rl_gdp}
   \hfill
-  \begin{subfigure}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{images/175975/rl_stringency.pdf}
-    \caption{Stringency changing over Time}
-  \end{subfigure}
-  \label{fig:175975_rl_stringency}
-
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\linewidth]{images/175975/rl_r_eff.pdf}
@@ -754,8 +765,10 @@ A subsequent decrease in stringency in the later stages leads to an increase in 
     \caption{Reward changing over Time}
   \end{subfigure}
   \label{fig:175975_rl_reward}
+  \caption{\textbf{Strategy from Reinforcement Learning Agent.} Here, "(actual)" is the real data, and "(rl)" is the new strategy we propose. \textbf{(a)} The new strategy proposed highlights an increase in stringency from October, 2020 till April, 2021 compared to the actual data and then a steady decline towards the end. \textbf{(c)} No sharp peaks in the infected population is observed. \textbf{(d)} The normalized GDP is affected by the increase in the stringency from October, 2020 till April, 2021. \textbf{(e)} The $R_e$ is maintained below $1.2$ throughout. \textbf{(f)} A higher reward is achieved by the reinforcement learning agent.}
 \end{figure}
-An alternative outcome is presented by the agent, demonstrating a gradual escalation in stringency over time. This strategy results in the majority of infections occurring prior to the vaccine's release, with a subsequent cessation of new infections. This approach, however, has implications for the normalized Gross Domestic Product (GDP), as seen by the observed decline in figure \cref{fig:175975_rl_gdp}. Furthermore, the effective reproduction number ($R_e$) does not achieve the target value of 1.2 under this strategy. These findings underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
+
+An alternative outcome is presented by the agent, demonstrating a gradual escalation in stringency over time. This strategy results in the majority of infections occurring prior to the vaccine's release, with a subsequent cessation of new infections. This approach, however, has implications for the normalized Gross Domestic Product (GDP), as seen by the observed decline in figure \cref{fig:175975_rl_gdp}. These findings underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
 
 \section{Discussion}
 The paper seeks to inspire epidemiologists by highlighting the advancements achieved through the application of reinforcement learning in policy making during the pandemic. We introduce a virtual environment that closely simulates a pandemic scenario and thoroughly explore innovative strategies for disease mitigation using reinforcement learning. Our proposed approach demonstrates compelling efficacy in achieving optimal decision-making, effectively balancing the formidable challenges posed by the pandemic and economic considerations. We are confident that this research contribution will forge a connection between epidemic studies and reinforcement learning, offering valuable insights to help humanity better defend against the ongoing pandemic crisis.
