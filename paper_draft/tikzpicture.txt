@@ -1,0 +1,63 @@
+\newcommand{\DrawNeuronalNetwork}[2][]{
+\xdef\Xmax{0}
+\foreach \Layer/\X/\Col/\Miss/\Lab/\Count/\Content [count=\Y] in {#2}
+{\pgfmathsetmacro{\Xmax}{max(\X,\Xmax)}
+ \xdef\Xmax{\Xmax}
+ \xdef\Ymax{\Y}
+}
+\foreach \Layer/\X/\Col/\Miss/\Lab/\Count/\Content [count=\Y] in {#2}
+{\node[anchor=south] at ({2*\Y},{\Xmax/2+0.1}) {\Layer};
+ \foreach \m in {1,...,\X}
+ {
+  \ifnum\m=\Miss
+   \node [neuron missing] (neuron-\Y-\m) at ({2*\Y},{\X/2-\m}) {};
+  \else
+   \node [circle,fill=\Col!50,minimum size=1cm] (neuron-\Y-\m) at 
+  ({2*\Y},{\X/2-\m}) {\Content};
+ \ifnum\Y=1
+  \else
+   \pgfmathtruncatemacro{\LastY}{\Y-1}
+   \foreach \Z in {1,...,\LastX}
+   {
+    \ifnum\Z=\LastMiss
+    \else
+     \draw[->] (neuron-\LastY-\Z) -- (neuron-\Y-\m);
+    \fi
+    }
+  \fi
+ \fi
+ \ifnum\Y=1
+  \ifnum\m=\X
+   \draw [overlay] (neuron-\Y-\m) -- (state);
+  \else
+   \ifnum\m=\Miss
+   \else
+    \draw [overlay] (neuron-\Y-\m) -- (state);
+   \fi
+  \fi
+ \else
+ \fi     
+ }
+ \xdef\LastMiss{\Miss}
+ \xdef\LastX{\X}
+}
+}
+\begin{tikzpicture}[x=1.5cm, y=1.5cm,
+>=stealth,font=\sffamily,nodes={align=center}]
+ \begin{scope}[local bounding box=T]
+  \path  node[draw,minimum width=6em,minimum height=4em] (state) {State};
+  \begin{scope}[local bounding box=NN]
+   \DrawNeuronalNetwork{Input Layer/5/green/4///,
+     Hidden Layer/5/blue/4//11/,
+     Output Layer/4/red/3//11/}
+  \end{scope}
+  \path (NN.south) node[below]{Estimated parameter\\ $\theta$};
+  \path(NN.east) -- node[above]{Policy\\ $\Pi(\theta,a)$}++ (4em,0);
+ \end{scope} 
+ \node[fit=(T),label={[anchor=north west]north west:Agent},inner sep=1em,draw]
+  (TF){};
+ \node[below=3em of TF,draw,inner sep=1em] (Env) {Environment};
+ \draw[<-] (TF.200) -- ++ (-1em,0) |- (Env.160) node[pos=0.45,right]{$r_t$};
+ \draw[<-] (TF.180) -- ++ (-2em,0) |- (Env.180) node[pos=0.45,left]{$s_t$};
+ \draw[->] (NN.east) -- ++ (7em,0)node[right]{$a_t$} |- (Env);
+\end{tikzpicture}

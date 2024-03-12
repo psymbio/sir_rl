@@ -467,6 +467,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvbo8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8r.tfm
+INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/sir_arch.pdf
+INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/sir_arch.pdf
+INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/sir_arch.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_IND.pdf
@@ -488,8 +491,6 @@ INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/ima
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_infections_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_infections_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_infections_IND.pdf
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND.pdf
 INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/images/SIR_model_with_lockdown_with_vaccination_time_varying_nu_IND.pdf
@@ -613,7 +614,9 @@ INPUT /home/vanilla_skies/projects/sbp/sir_submission/clean_code/paper_draft/mai
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
