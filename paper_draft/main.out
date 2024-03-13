@@ -8,9 +8,10 @@
 \BOOKMARK [2][-]{subsection.2.6}{Modelling\040Normalized\040GDP\040with\040Stringency}{section.2}% 8
 \BOOKMARK [2][-]{subsection.2.7}{Reinforcement\040Learning}{section.2}% 9
 \BOOKMARK [3][-]{subsubsection.2.7.1}{Defining\040the\040Reward\040Function}{subsection.2.7}% 10
-\BOOKMARK [1][-]{section.3}{Results}{}% 11
-\BOOKMARK [1][-]{section.4}{Discussion}{}% 12
-\BOOKMARK [1][-]{section.5}{Experiment\040Settings}{}% 13
-\BOOKMARK [2][-]{subsection.5.1}{Dataset}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.2}{Code}{section.5}% 15
-\BOOKMARK [1][-]{subsection.5.2}{References}{}% 16
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Deep\040Reinforcement\040Learning\040and\040Training}{subsection.2.7}% 11
+\BOOKMARK [1][-]{section.3}{Results}{}% 12
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 13
+\BOOKMARK [1][-]{section.5}{Experiment\040Settings}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Dataset}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{Code}{section.5}% 16
+\BOOKMARK [1][-]{subsection.5.2}{References}{}% 17
