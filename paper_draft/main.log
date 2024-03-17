@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  13 MAR 2024 19:28
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  17 MAR 2024 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,10 +995,6 @@ LaTeX Info: Redefining \nameref on input line 42.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 42.
@@ -1008,6 +1004,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
+
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
@@ -1546,25 +1543,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 717.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 717.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 717.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 33B21D25E577A1E4E451B66A6BDD838B;1344.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D629634D7C52A1A9224D93E63153898C;1224
-(rerunfilecheck)             After:  33B21D25E577A1E4E451B66A6BDD838B;1344.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 717.
  ) 
 Here is how much of TeX's memory you used:
- 34909 strings out of 479819
- 692435 string characters out of 5895846
- 1006148 words of memory out of 5000000
- 51461 multiletter control sequences out of 15000+600000
+ 34907 strings out of 479819
+ 692389 string characters out of 5895846
+ 1006159 words of memory out of 5000000
+ 51459 multiletter control sequences out of 15000+600000
  591087 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,12n,74p,2492b,958s stack positions out of 5000i,500n,10000p,200000b,80000s
