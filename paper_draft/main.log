@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  17 MAR 2024 11:46
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.12.2)  20 MAR 2024 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,10 +1102,9 @@ File: images/window_length_loss_SIR_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_SIR_IND.pdf>
 File: images/window_length_loss_I_IND.pdf Graphic file (type pdf)
 <use images/window_length_loss_I_IND.pdf>
- [7]
 File: images/interpolated_nu_varying_with_time_IND.pdf Graphic file (type pdf)
 <use images/interpolated_nu_varying_with_time_IND.pdf>
- [8] [9]
+ [7] [8] [9]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 64.
 
@@ -1554,7 +1553,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 717.
 Here is how much of TeX's memory you used:
  34907 strings out of 479819
  692389 string characters out of 5895846
- 1006159 words of memory out of 5000000
+ 1006153 words of memory out of 5000000
  51459 multiletter control sequences out of 15000+600000
  591087 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
