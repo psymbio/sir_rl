@@ -347,7 +347,7 @@ Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR mod
 See \Crefrange{fig:SIR_model_with_lockdown_IND_parent}{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND_parent} and \cref{fig:comparing_costs_IND_parent} to see how the different models compare against each other.
 
 \subsection{Modelling Normalized GDP with Stringency}
-Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigated how stringency index affects the normalized gross domestic product (GDP)~\cite{OECDNormalizedGDP,OECDNormalizedGDP2}. To do this a polynomial equation of the third degree is fitted to the data points $f(x) = a x^3 + b x^2 + c x + d = y$, here, $x$ is the $s(t)$ stringency at time $t$, and $y$ the normalized GDP, and we minimize the squared error to find the values of coefficients $a, b, c, d$. For India after fitting a 3 degree polynomial, the following equation is obtained:
+Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigated how stringency index affects the normalized gross domestic product (GDP)~\cite{OECDNormalizedGDP,OECDNormalizedGDP2}. To do this a polynomial equation of the third degree is fitted to the data points $f(x) = a x^3 + b x^2 + c x + d = y$, here, $x$ is the stringency ($s$), and $y$ the normalized GDP, and we minimize the squared error to find the values of coefficients $a, b, c, d$. For India after fitting a 3 degree polynomial, the following equation is obtained:
 \begin{equation}
     \begin{split}
       \textrm{normalized\_GDP} = -5.96640236 \times 10^{-5} s^{3} + 6.65064332 \times 10^{-3} s^{2} - 2.23109924 \times 10^{-1} s^{1} \\
