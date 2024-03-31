@@ -12,18 +12,13 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Infectious disease in an era of
   global change}}.
 \newblock {\emph{\JournalTitle{Nature Reviews Microbiology}}}
-  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{193--205},
-  \doiprefix\url{10.1038/s41579-021-00639-z} (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{20}}, \bibinfo{pages}{193--205}
+  (\bibinfo{year}{2022}).
 
 \bibitem{inequitableworld}
-\bibinfo{author}{Tan, M. K.~I.}
-\newblock \bibinfo{journal}{\bibinfo{title}{{COVID-19 in an inequitable world:
-  the last, the lost and the least}}}.
-\newblock {\emph{\JournalTitle{International Health}}}
-  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{493--496},
-  \doiprefix\url{10.1093/inthealth/ihab057} (\bibinfo{year}{2021}).
-\newblock
-  \eprint{https://academic.oup.com/inthealth/article-pdf/13/6/493/41430650/ihab057.pdf}.
+\bibinfo{author}{Tan, M.~K.}
+\newblock \bibinfo{title}{Covid-19 in an inequitable world: the last, the lost
+  and the least} (\bibinfo{year}{2021}).
 
 \bibitem{WHOCovid}
 \bibinfo{title}{Who coronavirus (covid-19) dashboard}.
@@ -39,9 +34,9 @@
 \bibinfo{author}{Nicola, M.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The socio-economic implications of
   the coronavirus pandemic (covid-19): A review}}.
-\newblock {\emph{\JournalTitle{International Journal of Surgery}}}
-  \textbf{\bibinfo{volume}{78}}, \bibinfo{pages}{185–193},
-  \doiprefix\url{10.1016/j.ijsu.2020.04.018} (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{International journal of surgery}}}
+  \textbf{\bibinfo{volume}{78}}, \bibinfo{pages}{185--193}
+  (\bibinfo{year}{2020}).
 
 \bibitem{Gagnon2023}
 \bibinfo{author}{Gagnon, J.~E.}, \bibinfo{author}{Kamin, S.~B.} \&
@@ -49,17 +44,16 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{The impact of the covid-19 pandemic
   on global gdp growth}}.
 \newblock {\emph{\JournalTitle{Journal of the Japanese and International
-  Economies}}} \textbf{\bibinfo{volume}{68}}, \bibinfo{pages}{101258},
-  \doiprefix\url{10.1016/j.jjie.2023.101258} (\bibinfo{year}{2023}).
+  Economies}}} \textbf{\bibinfo{volume}{68}}, \bibinfo{pages}{101258}
+  (\bibinfo{year}{2023}).
 
 \bibitem{Anderson2020}
 \bibinfo{author}{Anderson, R.~M.}, \bibinfo{author}{Heesterbeek, H.},
   \bibinfo{author}{Klinkenberg, D.} \& \bibinfo{author}{Hollingsworth, T.~D.}
 \newblock \bibinfo{journal}{\bibinfo{title}{How will country-based mitigation
   measures influence the course of the covid-19 epidemic?}}
-\newblock {\emph{\JournalTitle{The Lancet}}} \textbf{\bibinfo{volume}{395}},
-  \bibinfo{pages}{931–934}, \doiprefix\url{10.1016/s0140-6736(20)30567-5}
-  (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{The lancet}}} \textbf{\bibinfo{volume}{395}},
+  \bibinfo{pages}{931--934} (\bibinfo{year}{2020}).
 
 \bibitem{Song2022}
 \bibinfo{author}{Song, S.}, \bibinfo{author}{Liu, X.}, \bibinfo{author}{Li, Y.}
@@ -67,33 +61,29 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Pandemic policy assessment by
   artificial intelligence}}.
 \newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{13843},
-  \doiprefix\url{10.1038/s41598-022-17892-8} (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{13843} (\bibinfo{year}{2022}).
 
 \bibitem{Chinazzi2020}
 \bibinfo{author}{Chinazzi, M.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The effect of travel restrictions
   on the spread of the 2019 novel coronavirus (covid-19) outbreak}}.
 \newblock {\emph{\JournalTitle{Science}}} \textbf{\bibinfo{volume}{368}},
-  \bibinfo{pages}{395–400}, \doiprefix\url{10.1126/science.aba9757}
-  (\bibinfo{year}{2020}).
+  \bibinfo{pages}{395--400} (\bibinfo{year}{2020}).
 
 \bibitem{Nguyen2021}
 \bibinfo{author}{Nguyen, T.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Covid-19 vaccine strategies for
   aotearoa new zealand: a mathematical modelling study}}.
-\newblock {\emph{\JournalTitle{The Lancet Regional Health - Western Pacific}}}
-  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{100256},
-  \doiprefix\url{10.1016/j.lanwpc.2021.100256} (\bibinfo{year}{2021}).
+\newblock {\emph{\JournalTitle{The Lancet Regional Health--Western Pacific}}}
+  \textbf{\bibinfo{volume}{15}} (\bibinfo{year}{2021}).
 
 \bibitem{Kim2022}
 \bibinfo{author}{Kim, D.}, \bibinfo{author}{Keskinocak, P.},
-  \bibinfo{author}{Pekg\"{u}n, P.} \& \bibinfo{author}{Yildirim, I.}
+  \bibinfo{author}{Pekg{\"u}n, P.} \& \bibinfo{author}{Yildirim, I.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The balancing role of distribution
   speed against varying efficacy levels of covid-19 vaccines under variants}}.
-\newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.1038/s41598-022-11060-8}
-  (\bibinfo{year}{2022}).
+\newblock {\emph{\JournalTitle{Scientific reports}}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{7493} (\bibinfo{year}{2022}).
 
 \bibitem{Jalloh2022}
 \bibinfo{author}{Jalloh, M.~F.} \emph{et~al.}
@@ -101,24 +91,22 @@
   stringency in 175 countries and territories: Covid-19 cases and deaths, gross
   domestic products per capita, and health expenditures}}.
 \newblock {\emph{\JournalTitle{Journal of Global Health}}}
-  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.7189/jogh.12.05049}
-  (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{12}} (\bibinfo{year}{2022}).
 
 \bibitem{Caldwell2021}
 \bibinfo{author}{Caldwell, J.~M.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Understanding covid-19 dynamics and
   the effects of interventions in the philippines: A mathematical modelling
   study}}.
-\newblock {\emph{\JournalTitle{The Lancet Regional Health - Western Pacific}}}
-  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{100211},
-  \doiprefix\url{10.1016/j.lanwpc.2021.100211} (\bibinfo{year}{2021}).
+\newblock {\emph{\JournalTitle{The Lancet Regional Health--Western Pacific}}}
+  \textbf{\bibinfo{volume}{14}} (\bibinfo{year}{2021}).
 
 \bibitem{Ferguson2020}
-\bibinfo{author}{Ferguson, N.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Report 9: Impact of
-  non-pharmaceutical interventions (npis) to reduce covid19 mortality and
-  healthcare demand}}.
-\newblock }}} \doiprefix\url{10.25561/77482} (\bibinfo{year}{2020}).
+\bibinfo{author}{Ferguson, N.~M.} \emph{et~al.}
+\newblock \emph{\bibinfo{title}{Report 9: Impact of non-pharmaceutical
+  interventions (NPIs) to reduce COVID19 mortality and healthcare demand}},
+  vol.~\bibinfo{volume}{16} (\bibinfo{publisher}{Imperial College London
+  London}, \bibinfo{year}{2020}).
 
 \bibitem{DeFoo2023}
 \bibinfo{author}{De~Foo, C.} \emph{et~al.}
@@ -126,24 +114,24 @@
   the covid-19 pandemic and implications for universal health care: a case
   study of 15 countries}}.
 \newblock {\emph{\JournalTitle{The Lancet Global Health}}}
-  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{e1964–e1977},
-  \doiprefix\url{10.1016/s2214-109x(23)00448-5} (\bibinfo{year}{2023}).
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{e1964--e1977}
+  (\bibinfo{year}{2023}).
 
 \bibitem{Hollingsworth2011}
 \bibinfo{author}{Hollingsworth, T.~D.}, \bibinfo{author}{Klinkenberg, D.},
   \bibinfo{author}{Heesterbeek, H.} \& \bibinfo{author}{Anderson, R.~M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Mitigation strategies for pandemic
-  influenza a: Balancing conflicting policy objectives}}.
-\newblock {\emph{\JournalTitle{PLoS Computational Biology}}}
-  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{e1001076},
-  \doiprefix\url{10.1371/journal.pcbi.1001076} (\bibinfo{year}{2011}).
+  influenza a: balancing conflicting policy objectives}}.
+\newblock {\emph{\JournalTitle{PLoS computational biology}}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{e1001076}
+  (\bibinfo{year}{2011}).
 
 \bibitem{Pangallo2023}
 \bibinfo{author}{Pangallo, M.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The unequal effects of the
-  health–economy trade-off during the covid-19 pandemic}}.
-\newblock {\emph{\JournalTitle{Nature Human Behaviour}}}
-  \doiprefix\url{10.1038/s41562-023-01747-x} (\bibinfo{year}{2023}).
+  health--economy trade-off during the covid-19 pandemic}}.
+\newblock {\emph{\JournalTitle{Nature Human Behaviour}}} \bibinfo{pages}{1--12}
+  (\bibinfo{year}{2023}).
 
 \bibitem{Ash2022}
 \bibinfo{author}{Ash, T.}, \bibinfo{author}{Bento, A.~M.},
@@ -151,18 +139,16 @@
   \bibinfo{author}{Bento, A.~I.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Disease-economy trade-offs under
   alternative epidemic control strategies}}.
-\newblock {\emph{\JournalTitle{Nature Communications}}}
-  \textbf{\bibinfo{volume}{13}}, \doiprefix\url{10.1038/s41467-022-30642-8}
-  (\bibinfo{year}{2022}).
+\newblock {\emph{\JournalTitle{Nature communications}}}
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{3319} (\bibinfo{year}{2022}).
 
 \bibitem{Ohi2020}
-\bibinfo{author}{Ohi, A.~Q.}, \bibinfo{author}{Mridha, M.~F.},
+\bibinfo{author}{Ohi, A.~Q.}, \bibinfo{author}{Mridha, M.},
   \bibinfo{author}{Monowar, M.~M.} \& \bibinfo{author}{Hamid, M.~A.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Exploring optimal control of
   epidemic spread using reinforcement learning}}.
-\newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{10}}, \doiprefix\url{10.1038/s41598-020-79147-8}
-  (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Scientific reports}}}
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{22106} (\bibinfo{year}{2020}).
 
 \bibitem{PADMANABHAN2021102676}
 \bibinfo{author}{Padmanabhan, R.}, \bibinfo{author}{Meskin, N.},
@@ -171,32 +157,29 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Reinforcement learning-based
   decision support system for covid-19}}.
 \newblock {\emph{\JournalTitle{Biomedical Signal Processing and Control}}}
-  \textbf{\bibinfo{volume}{68}}, \bibinfo{pages}{102676},
-  \doiprefix\url{https://doi.org/10.1016/j.bspc.2021.102676}
+  \textbf{\bibinfo{volume}{68}}, \bibinfo{pages}{102676}
   (\bibinfo{year}{2021}).
 
 \bibitem{NBERw26981}
-\bibinfo{author}{Alvarez, F.~E.}, \bibinfo{author}{Argente, D.} \&
+\bibinfo{author}{Alvarez, F.}, \bibinfo{author}{Argente, D.} \&
   \bibinfo{author}{Lippi, F.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A simple planning problem for
-  covid-19 lockdown}}.
-\newblock }}} \doiprefix\url{10.3386/w26981} (\bibinfo{year}{2020}).
+  covid-19 lock-down, testing, and tracing}}.
+\newblock {\emph{\JournalTitle{American Economic Review: Insights}}}
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{367--382}
+  (\bibinfo{year}{2021}).
 
 \bibitem{analytical_covid_lockdown_model}
-\bibinfo{author}{Rachel, L.}
-\newblock \bibinfo{journal}{\bibinfo{title}{An analytical model of covid-19
-  lockdowns}}.
-\newblock }}}  (\bibinfo{year}{2020}).
-\newblock
-  \bibinfo{note}{Https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-29-Paper.pdf}.
+\bibinfo{author}{Lukasz, R.}
+\newblock \bibinfo{title}{An analytical model of covid-19 lockdowns}
+  (\bibinfo{year}{2020}).
 
 \bibitem{Redlin2022}
 \bibinfo{author}{Redlin, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Differences in npi strategies
   against covid-19}}.
 \newblock {\emph{\JournalTitle{Journal of Regulatory Economics}}}
-  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{1–23},
-  \doiprefix\url{10.1007/s11149-022-09452-9} (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{1--23} (\bibinfo{year}{2022}).
 
 \bibitem{Liang2021}
 \bibinfo{author}{Liang, L.-L.}, \bibinfo{author}{Kao, C.-T.},
@@ -204,49 +187,45 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Covid-19 case doubling time
   associated with non-pharmaceutical interventions and vaccination: A global
   experience}}.
-\newblock {\emph{\JournalTitle{Journal of Global Health}}}
-  \textbf{\bibinfo{volume}{11}}, \doiprefix\url{10.7189/jogh.11.05021}
-  (\bibinfo{year}{2021}).
+\newblock {\emph{\JournalTitle{Journal of global health}}}
+  \textbf{\bibinfo{volume}{11}} (\bibinfo{year}{2021}).
 
 \bibitem{Patel2021}
 \bibinfo{author}{Patel, M.~D.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The joint impact of covid-19
   vaccination and non-pharmaceutical interventions on infections,
-  hospitalizations, and mortality: An agent-based simulation}}.
-\newblock }}} \doiprefix\url{10.1101/2020.12.30.20248888}
-  (\bibinfo{year}{2021}).
+  hospitalizations, and mortality: an agent-based simulation}}.
+\newblock {\emph{\JournalTitle{MedRxiv}}}  (\bibinfo{year}{2021}).
 
 \bibitem{GagnonKorea}
-\bibinfo{author}{Gagnon, J.~E.} \& \bibinfo{author}{Rose, A.}
-\newblock \bibinfo{journal}{\bibinfo{title}{23-8 how did korea’s fiscal
-  accounts fare during the covid-19 pandemic?}}
-\newblock }}}  (\bibinfo{year}{2023}).
+\bibinfo{author}{Gagnon, J.} \& \bibinfo{author}{Rose, A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{How did korea's fiscal accounts
+  fare during the covid-19 pandemic?}}
+\newblock {\emph{\JournalTitle{Peterson Institute for International Economics
+  Policy Brief}}} \bibinfo{pages}{23--8} (\bibinfo{year}{2023}).
 
 \bibitem{Deb2020}
 \bibinfo{author}{Deb, P.}, \bibinfo{author}{Furceri, D.},
-  \bibinfo{author}{Ostry, J.} \& \bibinfo{author}{Tawk, N.}
+  \bibinfo{author}{Ostry, J.~D.} \& \bibinfo{author}{Tawk, N.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The economic effects of covid-19
   containment measures}}.
-\newblock {\emph{\JournalTitle{IMF Working Papers}}}
-  \textbf{\bibinfo{volume}{20}}, \doiprefix\url{10.5089/9781513550251.001}
-  (\bibinfo{year}{2020}).
+\newblock }}}  (\bibinfo{year}{2020}).
 
 \bibitem{Eichenbaum2021}
 \bibinfo{author}{Eichenbaum, M.~S.}, \bibinfo{author}{Rebelo, S.} \&
   \bibinfo{author}{Trabandt, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The macroeconomics of epidemics}}.
 \newblock {\emph{\JournalTitle{The Review of Financial Studies}}}
-  \textbf{\bibinfo{volume}{34}}, \bibinfo{pages}{5149–5187},
-  \doiprefix\url{10.1093/rfs/hhab040} (\bibinfo{year}{2021}).
+  \textbf{\bibinfo{volume}{34}}, \bibinfo{pages}{5149--5187}
+  (\bibinfo{year}{2021}).
 
 \bibitem{Lim2023}
 \bibinfo{author}{Lim, S.} \& \bibinfo{author}{Sohn, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{How to cope with emerging viral
-  diseases: lessons from south korea’s strategy for covid-19, and collateral
+  diseases: Lessons from south korea's strategy for covid-19, and collateral
   damage to cardiometabolic health}}.
-\newblock {\emph{\JournalTitle{The Lancet Regional Health - Western Pacific}}}
-  \textbf{\bibinfo{volume}{30}}, \bibinfo{pages}{100581},
-  \doiprefix\url{10.1016/j.lanwpc.2022.100581} (\bibinfo{year}{2023}).
+\newblock {\emph{\JournalTitle{The Lancet Regional Health--Western Pacific}}}
+  \textbf{\bibinfo{volume}{30}} (\bibinfo{year}{2023}).
 
 \bibitem{KoreaMinister}
 \bibinfo{title}{Coronavirus: South korea seeing a 'stabilising trend'}.
@@ -262,24 +241,25 @@
 
 \bibitem{Hethcote1989}
 \bibinfo{author}{Hethcote, H.~W.}
-\newblock \emph{\bibinfo{title}{Three Basic Epidemiological Models}},
-  \bibinfo{pages}{119–144} (\bibinfo{publisher}{Springer Berlin Heidelberg},
+\newblock \bibinfo{title}{Three basic epidemiological models}.
+\newblock In \emph{\bibinfo{booktitle}{Applied mathematical ecology}},
+  \bibinfo{pages}{119--144} (\bibinfo{publisher}{Springer},
   \bibinfo{year}{1989}).
 
 \bibitem{Hethcote2008}
 \bibinfo{author}{Hethcote, H.~W.}
-\newblock \emph{\bibinfo{title}{The Basic Epidemiology Models: Models,
-  Expressions for R0, Parameter Estimation, and Applications}},
-  \bibinfo{pages}{1–61} (\bibinfo{publisher}{WORLD SCIENTIFIC},
-  \bibinfo{year}{2008}).
+\newblock \bibinfo{title}{The basic epidemiology models: models, expressions
+  for r0, parameter estimation, and applications}.
+\newblock In \emph{\bibinfo{booktitle}{Mathematical understanding of infectious
+  disease dynamics}}, \bibinfo{pages}{1--61} (\bibinfo{publisher}{World
+  Scientific}, \bibinfo{year}{2009}).
 
 \bibitem{ALLEN2017128}
 \bibinfo{author}{Allen, L.~J.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A primer on stochastic epidemic
   models: Formulation, numerical simulation, and analysis}}.
 \newblock {\emph{\JournalTitle{Infectious Disease Modelling}}}
-  \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{128--142},
-  \doiprefix\url{https://doi.org/10.1016/j.idm.2017.03.001}
+  \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{128--142}
   (\bibinfo{year}{2017}).
 
 \bibitem{Cooper2020}
@@ -287,18 +267,17 @@
   \bibinfo{author}{Antonopoulos, C.~G.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A sir model assumption for the
   spread of covid-19 in different communities}}.
-\newblock {\emph{\JournalTitle{Chaos, Solitons &amp; Fractals}}}
-  \textbf{\bibinfo{volume}{139}}, \bibinfo{pages}{110057},
-  \doiprefix\url{10.1016/j.chaos.2020.110057} (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Chaos, Solitons \& Fractals}}}
+  \textbf{\bibinfo{volume}{139}}, \bibinfo{pages}{110057}
+  (\bibinfo{year}{2020}).
 
 \bibitem{Bjrnstad2020}
-\bibinfo{author}{Bjørnstad, O.~N.}, \bibinfo{author}{Shea, K.},
+\bibinfo{author}{Bj{\o}rnstad, O.~N.}, \bibinfo{author}{Shea, K.},
   \bibinfo{author}{Krzywinski, M.} \& \bibinfo{author}{Altman, N.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The seirs model for infectious
-  disease dynamics}}.
-\newblock {\emph{\JournalTitle{Nature Methods}}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{557–558}, \doiprefix\url{10.1038/s41592-020-0856-2}
-  (\bibinfo{year}{2020}).
+  disease dynamics.}}
+\newblock {\emph{\JournalTitle{Nature methods}}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{557--559} (\bibinfo{year}{2020}).
 
 \bibitem{Mwalili2020}
 \bibinfo{author}{Mwalili, S.}, \bibinfo{author}{Kimathi, M.},
@@ -307,43 +286,40 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Seir model for covid-19 dynamics
   incorporating the environment and social distancing}}.
 \newblock {\emph{\JournalTitle{BMC Research Notes}}}
-  \textbf{\bibinfo{volume}{13}}, \doiprefix\url{10.1186/s13104-020-05192-1}
-  (\bibinfo{year}{2020}).
+  \textbf{\bibinfo{volume}{13}}, \bibinfo{pages}{352} (\bibinfo{year}{2020}).
 
 \bibitem{Marinov2022}
 \bibinfo{author}{Marinov, T.~T.} \& \bibinfo{author}{Marinova, R.~S.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Adaptive sir model with
-  vaccination: simultaneous identification of rates and functions illustrated
+  vaccination: Simultaneous identification of rates and functions illustrated
   with covid-19}}.
 \newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.1038/s41598-022-20276-7}
-  (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{15688} (\bibinfo{year}{2022}).
 
 \bibitem{MaurciodeCarvalho2023}
-\bibinfo{author}{Maurício~de Carvalho, J. P.~S.} \&
+\bibinfo{author}{Maur{\'\i}cio~de Carvalho, J.~P.} \&
   \bibinfo{author}{Rodrigues, A.~A.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Sir model with vaccination:
-  Bifurcation analysis}}.
-\newblock {\emph{\JournalTitle{Qualitative Theory of Dynamical Systems}}}
-  \textbf{\bibinfo{volume}{22}}, \doiprefix\url{10.1007/s12346-023-00802-2}
-  (\bibinfo{year}{2023}).
+  bifurcation analysis}}.
+\newblock {\emph{\JournalTitle{Qualitative theory of dynamical systems}}}
+  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{105} (\bibinfo{year}{2023}).
 
 \bibitem{Thater}
-\bibinfo{author}{Thäter, M.}, \bibinfo{author}{Chudej, K.} \&
+\bibinfo{author}{Th{\"a}ter, M.}, \bibinfo{author}{Chudej, K.} \&
   \bibinfo{author}{Pesch, H.~J.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Optimal vaccination strategies for
   an seir model of infectious diseases with logistic growth}}.
-\newblock {\emph{\JournalTitle{Mathematical Biosciences and Engineering}}}
-  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{485--505},
-  \doiprefix\url{10.3934/mbe.2018022} (\bibinfo{year}{2018}).
+\newblock {\emph{\JournalTitle{Mathematical Biosciences \& Engineering}}}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{485--505}
+  (\bibinfo{year}{2017}).
 
 \bibitem{Turkyilmazoglu2022}
 \bibinfo{author}{Turkyilmazoglu, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{An extended epidemic model with
   vaccination: Weak-immune sirvi}}.
 \newblock {\emph{\JournalTitle{Physica A: Statistical Mechanics and its
-  Applications}}} \textbf{\bibinfo{volume}{598}}, \bibinfo{pages}{127429},
-  \doiprefix\url{10.1016/j.physa.2022.127429} (\bibinfo{year}{2022}).
+  Applications}}} \textbf{\bibinfo{volume}{598}}, \bibinfo{pages}{127429}
+  (\bibinfo{year}{2022}).
 
 \bibitem{YALADANDA2022101052}
 \bibinfo{author}{Yaladanda, N.}, \bibinfo{author}{Mopuri, R.},
@@ -352,64 +328,60 @@
   imperfect vaccination strategy against sars cov-2 by assuming varied vaccine
   efficacy over india}}.
 \newblock {\emph{\JournalTitle{Clinical Epidemiology and Global Health}}}
-  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{101052},
-  \doiprefix\url{https://doi.org/10.1016/j.cegh.2022.101052}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{101052}
   (\bibinfo{year}{2022}).
 
 \bibitem{Hale2021}
 \bibinfo{author}{Hale, T.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A global panel database of pandemic
   policies (oxford covid-19 government response tracker)}}.
-\newblock {\emph{\JournalTitle{Nature Human Behaviour}}}
-  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{529--538},
-  \doiprefix\url{10.1038/s41562-021-01079-8} (\bibinfo{year}{2021}).
+\newblock {\emph{\JournalTitle{Nature human behaviour}}}
+  \textbf{\bibinfo{volume}{5}}, \bibinfo{pages}{529--538}
+  (\bibinfo{year}{2021}).
 
 \bibitem{SIRLockdown}
-\bibinfo{title}{Lockdowns in sir models}.
-\newblock
-  \bibinfo{howpublished}{\url{https://benjaminmoll.com/wp-content/uploads/2020/05/SIR_notes.pdf}}.
-\newblock \bibinfo{note}{Accessed: 2023-12-26}.
+\bibinfo{journal}{\bibinfo{title}{Lockdowns in sir models}}.
+\newblock }}}  (\bibinfo{year}{2020}).
 
 \bibitem{NBERw26867}
 \bibinfo{author}{Atkeson, A.}
-\newblock \bibinfo{journal}{\bibinfo{title}{What will be the economic impact of
-  covid-19 in the us? rough estimates of disease scenarios}}.
-\newblock }}} \doiprefix\url{10.3386/w26867} (\bibinfo{year}{2020}).
+\newblock \bibinfo{title}{What will be the economic impact of covid-19 in the
+  us? rough estimates of disease scenarios}.
+\newblock \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{National Bureau of
+  Economic Research} (\bibinfo{year}{2020}).
 
 \bibitem{TimeDependentSIR}
 \bibinfo{author}{Chen, Y.-C.}, \bibinfo{author}{Lu, P.-E.},
   \bibinfo{author}{Chang, C.-S.} \& \bibinfo{author}{Liu, T.-H.}
 \newblock \bibinfo{journal}{\bibinfo{title}{A time-dependent sir model for
   covid-19 with undetectable infected persons}}.
-\newblock {\emph{\JournalTitle{IEEE Transactions on Network Science and
-  Engineering}}} \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{3279--3294},
-  \doiprefix\url{10.1109/TNSE.2020.3024723} (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Ieee transactions on network science and
+  engineering}}} \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{3279--3294}
+  (\bibinfo{year}{2020}).
 
 \bibitem{StringencyEconomicDecline}
-\bibinfo{author}{Ujkan Q.~Bajra, B.~A., Florin~Aliu} \& \bibinfo{author}{Cadez,
-  S.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Covid-19 pandemic-related policy
+\bibinfo{author}{Bajra, U.~Q.}, \bibinfo{author}{Aliu, F.},
+  \bibinfo{author}{Aver, B.} \& \bibinfo{author}{{\v{C}}ade{\v{z}}, S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Covid-19 pandemic--related policy
   stringency and economic decline: was it really inevitable?}}
-\newblock {\emph{\JournalTitle{Economic Research-Ekonomska Istrazivanja}}}
-  \textbf{\bibinfo{volume}{36}}, \bibinfo{pages}{499--515},
-  \doiprefix\url{10.1080/1331677X.2022.2077792} (\bibinfo{year}{2023}).
-\newblock \eprint{https://doi.org/10.1080/1331677X.2022.2077792}.
+\newblock {\emph{\JournalTitle{Economic research-Ekonomska
+  istra{\v{z}}ivanja}}} \textbf{\bibinfo{volume}{36}},
+  \bibinfo{pages}{499--515} (\bibinfo{year}{2023}).
 
 \bibitem{Cilloni2020}
 \bibinfo{author}{Cilloni, L.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The potential impact of the
   covid-19 pandemic on the tuberculosis epidemic a modelling analysis}}.
 \newblock {\emph{\JournalTitle{EClinicalMedicine}}}
-  \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{100603},
-  \doiprefix\url{10.1016/j.eclinm.2020.100603} (\bibinfo{year}{2020}).
+  \textbf{\bibinfo{volume}{28}} (\bibinfo{year}{2020}).
 
 \bibitem{Arinaminpathy2010}
 \bibinfo{author}{Arinaminpathy, N.} \& \bibinfo{author}{Dye, C.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Health in financial crises:
   economic recession and tuberculosis in central and eastern europe}}.
-\newblock {\emph{\JournalTitle{Journal of The Royal Society Interface}}}
-  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{1559–1569},
-  \doiprefix\url{10.1098/rsif.2010.0072} (\bibinfo{year}{2010}).
+\newblock {\emph{\JournalTitle{Journal of the Royal Society Interface}}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{1559--1569}
+  (\bibinfo{year}{2010}).
 
 \bibitem{Nguyen2022}
 \bibinfo{author}{Nguyen, Q.~D.} \& \bibinfo{author}{Prokopenko, M.}
@@ -417,16 +389,14 @@
   cost-effectiveness of pandemic response under partial intervention
   measures}}.
 \newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{12}}, \doiprefix\url{10.1038/s41598-022-23668-x}
-  (\bibinfo{year}{2022}).
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{19482} (\bibinfo{year}{2022}).
 
 \bibitem{Bastani2021}
 \bibinfo{author}{Bastani, H.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Efficient and targeted covid-19
   border testing via reinforcement learning}}.
 \newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{599}},
-  \bibinfo{pages}{108–113}, \doiprefix\url{10.1038/s41586-021-04014-z}
-  (\bibinfo{year}{2021}).
+  \bibinfo{pages}{108--113} (\bibinfo{year}{2021}).
 
 \bibitem{sutton2018reinforcement}
 \bibinfo{author}{Sutton, R.~S.} \& \bibinfo{author}{Barto, A.~G.}
@@ -436,8 +406,7 @@
 \bibitem{Dunn2017}
 \bibinfo{author}{Dunn, W.~N.}
 \newblock \emph{\bibinfo{title}{Public policy analysis}}
-  (\bibinfo{publisher}{Routledge}, \bibinfo{address}{London, England},
-  \bibinfo{year}{2017}), \bibinfo{edition}{6} edn.
+  (\bibinfo{publisher}{routledge}, \bibinfo{year}{2015}).
 
 \bibitem{Demir2006}
 \bibinfo{author}{Demir, T.} \& \bibinfo{author}{Miller, H.}
@@ -450,17 +419,16 @@
 \bibinfo{author}{Mnih, V.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Human-level control through deep
   reinforcement learning}}.
-\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{518}},
-  \bibinfo{pages}{529–533}, \doiprefix\url{10.1038/nature14236}
-  (\bibinfo{year}{2015}).
+\newblock {\emph{\JournalTitle{nature}}} \textbf{\bibinfo{volume}{518}},
+  \bibinfo{pages}{529--533} (\bibinfo{year}{2015}).
 
 \bibitem{Lavet2018}
-\bibinfo{author}{Francois-Lavet, V.}, \bibinfo{author}{Henderson, P.},
-  \bibinfo{author}{Islam, R.}, \bibinfo{author}{Bellemare, M.~G.} \&
-  \bibinfo{author}{Pineau, J.}
+\bibinfo{author}{Francois-Lavet, V.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{An introduction to deep
   reinforcement learning}}.
-\newblock }}} \doiprefix\url{10.48550/ARXIV.1811.12560} (\bibinfo{year}{2018}).
+\newblock {\emph{\JournalTitle{Foundations and Trends in Machine Learning}}}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{219--354}
+  (\bibinfo{year}{2018}).
 
 \bibitem{Arulkumaran2017}
 \bibinfo{author}{Arulkumaran, K.}, \bibinfo{author}{Deisenroth, M.~P.},
@@ -468,65 +436,58 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Deep reinforcement learning: A
   brief survey}}.
 \newblock {\emph{\JournalTitle{IEEE Signal Processing Magazine}}}
-  \textbf{\bibinfo{volume}{34}}, \bibinfo{pages}{26–38},
-  \doiprefix\url{10.1109/msp.2017.2743240} (\bibinfo{year}{2017}).
+  \textbf{\bibinfo{volume}{34}}, \bibinfo{pages}{26--38}
+  (\bibinfo{year}{2017}).
 
 \bibitem{Henderson_Islam_Bachman_Pineau_Precup_Meger_2018}
 \bibinfo{author}{Henderson, P.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Deep reinforcement learning that
-  matters}}.
-\newblock {\emph{\JournalTitle{Proceedings of the AAAI Conference on Artificial
-  Intelligence}}} \textbf{\bibinfo{volume}{32}},
-  \doiprefix\url{10.1609/aaai.v32i1.11694} (\bibinfo{year}{2018}).
+\newblock \bibinfo{title}{Deep reinforcement learning that matters}.
+\newblock In \emph{\bibinfo{booktitle}{Proceedings of the AAAI conference on
+  artificial intelligence}}, vol.~\bibinfo{volume}{32} (\bibinfo{year}{2018}).
 
 \bibitem{NIPS2001_a38b1617}
 \bibinfo{author}{Bakker, B.}
-\newblock \bibinfo{title}{Reinforcement learning with long short-term memory}.
-\newblock In \bibinfo{editor}{Dietterich, T.}, \bibinfo{editor}{Becker, S.} \&
-  \bibinfo{editor}{Ghahramani, Z.} (eds.) \emph{\bibinfo{booktitle}{Advances in
-  Neural Information Processing Systems}}, vol.~\bibinfo{volume}{14}
-  (\bibinfo{publisher}{MIT Press}, \bibinfo{year}{2001}).
+\newblock \bibinfo{journal}{\bibinfo{title}{Reinforcement learning with long
+  short-term memory}}.
+\newblock {\emph{\JournalTitle{Advances in neural information processing
+  systems}}} \textbf{\bibinfo{volume}{14}} (\bibinfo{year}{2001}).
 
 \bibitem{LSTM}
 \bibinfo{author}{Hochreiter, S.} \& \bibinfo{author}{Schmidhuber, J.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Long short-term memory}}.
-\newblock {\emph{\JournalTitle{Neural Computation}}}
-  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{1735--1780},
-  \doiprefix\url{10.1162/neco.1997.9.8.1735} (\bibinfo{year}{1997}).
+\newblock {\emph{\JournalTitle{Neural computation}}}
+  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{1735--1780}
+  (\bibinfo{year}{1997}).
 
 \bibitem{hens_aerts_faes_shkedy_lejeune_vandamme_beutels_2010}
-\bibinfo{author}{HENS, N.} \emph{et~al.}
+\bibinfo{author}{Hens, N.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Seventy-five years of estimating
   the force of infection from current status data}}.
-\newblock {\emph{\JournalTitle{Epidemiology and Infection}}}
-  \textbf{\bibinfo{volume}{138}}, \bibinfo{pages}{802–812},
-  \doiprefix\url{10.1017/S0950268809990781} (\bibinfo{year}{2010}).
+\newblock {\emph{\JournalTitle{Epidemiology \& Infection}}}
+  \textbf{\bibinfo{volume}{138}}, \bibinfo{pages}{802--812}
+  (\bibinfo{year}{2010}).
 
 \bibitem{MASSAD2017232}
 \bibinfo{author}{Massad, E.}
-\newblock \bibinfo{title}{Chapter 11 - ethical and transborder issues}.
-\newblock In \bibinfo{editor}{{de Fátima Marin}, H.}, \bibinfo{editor}{Massad,
-  E.}, \bibinfo{editor}{Gutierrez, M.~A.}, \bibinfo{editor}{Rodrigues, R.~J.}
-  \& \bibinfo{editor}{Sigulem, D.} (eds.) \emph{\bibinfo{booktitle}{Global
-  Health Informatics}}, \bibinfo{pages}{232--263},
-  \doiprefix\url{https://doi.org/10.1016/B978-0-12-804591-6.00012-4}
-  (\bibinfo{publisher}{Academic Press}, \bibinfo{year}{2017}).
+\newblock \bibinfo{title}{Ethical and transborder issues}.
+\newblock In \emph{\bibinfo{booktitle}{Global Health Informatics}},
+  \bibinfo{pages}{232--263} (\bibinfo{publisher}{Elsevier},
+  \bibinfo{year}{2017}).
 
 \bibitem{huberloss}
 \bibinfo{author}{Huber, P.~J.}
-\newblock \bibinfo{journal}{\bibinfo{title}{{Robust Estimation of a Location
-  Parameter}}}.
-\newblock {\emph{\JournalTitle{The Annals of Mathematical Statistics}}}
-  \textbf{\bibinfo{volume}{35}}, \bibinfo{pages}{73 -- 101},
-  \doiprefix\url{10.1214/aoms/1177703732} (\bibinfo{year}{1964}).
+\newblock \bibinfo{title}{Robust estimation of a location parameter}.
+\newblock In \emph{\bibinfo{booktitle}{Breakthroughs in statistics: Methodology
+  and distribution}}, \bibinfo{pages}{492--518} (\bibinfo{publisher}{Springer},
+  \bibinfo{year}{1992}).
 
 \bibitem{Gao2010}
 \bibinfo{author}{Gao, F.} \& \bibinfo{author}{Han, L.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Implementing the nelder-mead
   simplex algorithm with adaptive parameters}}.
 \newblock {\emph{\JournalTitle{Computational Optimization and Applications}}}
-  \textbf{\bibinfo{volume}{51}}, \bibinfo{pages}{259–277},
-  \doiprefix\url{10.1007/s10589-010-9329-3} (\bibinfo{year}{2010}).
+  \textbf{\bibinfo{volume}{51}}, \bibinfo{pages}{259--277}
+  (\bibinfo{year}{2012}).
 
 \bibitem{AlvarezLockdownSIR}
 \bibinfo{author}{Alvarez, F.}, \bibinfo{author}{Argente, D.} \&
@@ -534,29 +495,24 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{A simple planning problem for
   covid-19 lock-down, testing, and tracing}}.
 \newblock {\emph{\JournalTitle{American Economic Review: Insights}}}
-  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{367--82},
-  \doiprefix\url{10.1257/aeri.20200201} (\bibinfo{year}{2021}).
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{367--382}
+  (\bibinfo{year}{2021}).
 
 \bibitem{SIRLockdown2}
-\bibinfo{title}{Lockdowns in sir models (code)}.
-\newblock
-  \bibinfo{howpublished}{\url{https://benjaminmoll.com/wp-content/uploads/2020/05/SIR_lockdown.m}}.
-\newblock \bibinfo{note}{Accessed: 2023-12-26}.
+\bibinfo{title}{Lockdowns in sir models (code)} (\bibinfo{year}{2020}).
 
 \bibitem{owidcoronavirus}
 \bibinfo{author}{Mathieu, E.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Coronavirus pandemic (covid-19)}}.
-\newblock {\emph{\JournalTitle{Our World in Data}}}  (\bibinfo{year}{2020}).
-\newblock \bibinfo{note}{Https://ourworldindata.org/coronavirus}.
+\newblock {\emph{\JournalTitle{Our world in data}}}  (\bibinfo{year}{2020}).
 
 \bibitem{Liao2020}
 \bibinfo{author}{Liao, Z.}, \bibinfo{author}{Lan, P.}, \bibinfo{author}{Liao,
   Z.}, \bibinfo{author}{Zhang, Y.} \& \bibinfo{author}{Liu, S.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Tw-sir: time-window based sir for
   covid-19 forecasts}}.
-\newblock {\emph{\JournalTitle{Scientific Reports}}}
-  \textbf{\bibinfo{volume}{10}}, \doiprefix\url{10.1038/s41598-020-80007-8}
-  (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Scientific reports}}}
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{22454} (\bibinfo{year}{2020}).
 
 \bibitem{UnicefCovidVaccine}
 \bibinfo{title}{Covid-19 vaccine launch in india}.
@@ -603,9 +559,7 @@
 \bibinfo{author}{OECD}.
 \newblock \bibinfo{journal}{\bibinfo{title}{Main economic indicators - complete
   database}}.
-\newblock }}}
-  \doiprefix\url{https://doi.org/https://doi.org/10.1787/data-00052-en}
-  (\bibinfo{year}{2015}).
+\newblock }}}  (\bibinfo{year}{2015}).
 
 \bibitem{JMLR:v22:20-1364}
 \bibinfo{author}{Raffin, A.} \emph{et~al.}
@@ -624,15 +578,13 @@
 \bibinfo{author}{Virtanen, P.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Scipy 1.0: fundamental algorithms
   for scientific computing in python}}.
-\newblock {\emph{\JournalTitle{Nature Methods}}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{261–272}, \doiprefix\url{10.1038/s41592-019-0686-2}
-  (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Nature methods}}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{261--272} (\bibinfo{year}{2020}).
 
 \bibitem{ScientificPython}
 \bibinfo{author}{Oliphant, T.~E.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Python for scientific computing}}.
-\newblock {\emph{\JournalTitle{Computing in Science & Engineering}}}
-  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{10--20},
-  \doiprefix\url{10.1109/MCSE.2007.58} (\bibinfo{year}{2007}).
+\newblock {\emph{\JournalTitle{Computing in science \& engineering}}}
+  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{10--20} (\bibinfo{year}{2007}).
 
 \end{thebibliography}

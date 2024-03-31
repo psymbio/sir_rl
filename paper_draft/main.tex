@@ -30,7 +30,7 @@
 \urlstyle{same}
 
 
-\title{NEW SIR-RL: Reinforcement Learning for Optimized Policy Control during Epidemiological Outbreaks in Emerging Market and Developing Economies}
+\title{SIR-RL: Reinforcement Learning for Optimized Policy Control during Epidemiological Outbreaks in Emerging Market and Developing Economies}
 \author[1,*]{Maeghal Jain}
 \author[1]{Ziya Uddin}
 
@@ -288,7 +288,8 @@ The results in \cref{fig:window_length_loss_IND}, indicate that a window length 
   \label{fig:interpolated_nu_varying_with_time_IND}
 \end{figure}
 
-This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
+% This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
+This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 
 \subsection{SIR Model with Lockdown and Time-varying Vaccination Rate}
 Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR model that includes lockdown measures, resulting in the following set of equations, which represents our final model:
@@ -714,5 +715,5 @@ We used stable-baseline3~\cite{JMLR:v22:20-1364}, Pytorch~\cite{paszke2019pytorc
 Code: \url{https://github.com/psymbio/sir_rl}
 % \bibliographystyle{plain}
 % \bibliographystyle{apalike}
-\bibliography{sample2}
+\bibliography{newsample}
 \end{document}

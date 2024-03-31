@@ -1,17 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Mathematical\040Formulation\040and\040Numerical\040Computation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Simple\040SIR\040Model}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{SIR\040Model\040with\040Lockdown}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{SIR\040Model\040with\040Lockdown\040and\040Vaccination}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Optimizing\040Window\040Length\040for\040Time-varying\040Vaccination\040Rate}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{SIR\040Model\040with\040Lockdown\040and\040Time-varying\040Vaccination\040Rate}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.6}{Modelling\040Normalized\040GDP\040with\040Stringency}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.7}{Reinforcement\040Learning}{section.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.7.1}{Defining\040the\040Reward\040Function}{subsection.2.7}% 10
-\BOOKMARK [3][-]{subsubsection.2.7.2}{Deep\040Reinforcement\040Learning\040and\040Training}{subsection.2.7}% 11
+\BOOKMARK [1][-]{section.2}{Mathematical Formulation and Numerical Computation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Simple SIR Model}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{SIR Model with Lockdown}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{SIR Model with Lockdown and Vaccination}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Optimizing Window Length for Time-varying Vaccination Rate}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{SIR Model with Lockdown and Time-varying Vaccination Rate}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Modelling Normalized GDP with Stringency}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Reinforcement Learning}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Defining the Reward Function}{subsection.2.7}% 10
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Deep Reinforcement Learning and Training}{subsection.2.7}% 11
 \BOOKMARK [1][-]{section.3}{Results}{}% 12
 \BOOKMARK [1][-]{section.4}{Discussion}{}% 13
-\BOOKMARK [1][-]{section.5}{Experiment\040Settings}{}% 14
+\BOOKMARK [1][-]{section.5}{Experiment Settings}{}% 14
 \BOOKMARK [2][-]{subsection.5.1}{Dataset}{section.5}% 15
 \BOOKMARK [2][-]{subsection.5.2}{Code}{section.5}% 16
 \BOOKMARK [1][-]{subsection.5.2}{References}{}% 17
