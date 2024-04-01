@@ -1,0 +1,9 @@
+fig:SIR_model_IND_parent
+
+fig:SIR_model_with_lockdown_IND_parent
+
+fig:SIR_model_with_lockdown_with_vaccination_IND_parent
+
+fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND_parent
+
+fig:comparing_costs_IND_parent

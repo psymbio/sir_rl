@@ -228,7 +228,7 @@
   \textbf{\bibinfo{volume}{30}} (\bibinfo{year}{2023}).
 
 \bibitem{KoreaMinister}
-\bibinfo{title}{Coronavirus: South korea seeing a 'stabilising trend'}.
+\bibinfo{title}{Coronavirus: South korea seeing a "stabilising trend"}.
 \newblock
   \bibinfo{howpublished}{\url{https://www.bbc.com/news/av/world-asia-51897979}}.
 \newblock \bibinfo{note}{Accessed: 2024-01-12}.
@@ -520,19 +520,6 @@
   \bibinfo{howpublished}{\url{https://www.unicef.org/india/stories/covid-19-vaccine-launch-india}}.
 \newblock \bibinfo{note}{Accessed: 2024-01-12}.
 
-\bibitem{PIBCovidVaccine}
-\bibinfo{title}{Press information bureau, government of india, prime minister's
-  office, pm launches pan india rollout of covid-19 vaccination drive}.
-\newblock
-  \bibinfo{howpublished}{\url{https://pib.gov.in/Pressreleaseshare.aspx?PRID=1689021}}.
-\newblock \bibinfo{note}{Accessed: 2024-01-12}.
-
-\bibitem{WikipediaCovidVaccine}
-\bibinfo{title}{Covid-19 vaccination in india}.
-\newblock
-  \bibinfo{howpublished}{\url{https://en.wikipedia.org/wiki/COVID-19_vaccination_in_India}}.
-\newblock \bibinfo{note}{Accessed: 2024-01-12}.
-
 \bibitem{OECDNormalizedGDP}
 \bibinfo{title}{Oecd system of composite leading indicators}.
 \newblock \bibinfo{howpublished}{\url{https://www.oecd.org/sdd/41629509.pdf}}.
@@ -560,31 +547,5 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Main economic indicators - complete
   database}}.
 \newblock }}}  (\bibinfo{year}{2015}).
-
-\bibitem{JMLR:v22:20-1364}
-\bibinfo{author}{Raffin, A.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Stable-baselines3: Reliable
-  reinforcement learning implementations}}.
-\newblock {\emph{\JournalTitle{Journal of Machine Learning Research}}}
-  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{1--8} (\bibinfo{year}{2021}).
-
-\bibitem{paszke2019pytorch}
-\bibinfo{author}{Paszke, A.} \emph{et~al.}
-\newblock \bibinfo{title}{Pytorch: An imperative style, high-performance deep
-  learning library} (\bibinfo{year}{2019}).
-\newblock \eprint{1912.01703}.
-
-\bibitem{Virtanen_2020}
-\bibinfo{author}{Virtanen, P.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Scipy 1.0: fundamental algorithms
-  for scientific computing in python}}.
-\newblock {\emph{\JournalTitle{Nature methods}}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{261--272} (\bibinfo{year}{2020}).
-
-\bibitem{ScientificPython}
-\bibinfo{author}{Oliphant, T.~E.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Python for scientific computing}}.
-\newblock {\emph{\JournalTitle{Computing in science \& engineering}}}
-  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{10--20} (\bibinfo{year}{2007}).
 
 \end{thebibliography}

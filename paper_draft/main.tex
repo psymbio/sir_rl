@@ -2,7 +2,7 @@
 % xelatex -interaction=nonstopmode main.tex
 \documentclass[tikz,fleqn,12pt]{wlscirep}
 \usepackage[english]{babel}
-\usepackage[autostyle, english = american]{csquotes}
+\usepackage[autostyle]{csquotes}
 \usepackage[nameinlink]{cleveref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -27,6 +27,7 @@
 % \creflabelformat{equation}{\textup{(#2#1#3)}}
 \newcommand{\crefrangeconjunction}{--}
 \MakeOuterQuote{"}
+\MakeAutoQuote{«}{»}
 \urlstyle{same}
 
 
@@ -143,7 +144,7 @@ Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted nu
   \label{eq:gamma_optimal_without_lockdown}
 \end{equation}
 \begin{equation}
-  R_{0_{optimal}} = \frac{\beta_{optimal}}{\gamma_{optimal}} = 1.762
+  R_0 = \frac{\beta_{optimal}}{\gamma_{optimal}} = 1.762
   \label{eq:r0_without_lockdown}
 \end{equation}
 \begin{equation}
@@ -154,7 +155,8 @@ Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted nu
   \textrm{loss\_I} = 45187665.281
   \label{eq:cost_I_without_lockdown}
 \end{equation}
-See \cref{fig:SIR_model_IND} to see how the model compares with the actual data. [TODO: should we add this to all the models or remove it for the first mention and let the reader read in the results' section which equations were used??]
+See \cref{fig:SIR_model_IND_parent} to see how the model compares with the actual data. 
+% [TODO: should we add this to all the models or remove it for the first mention and let the reader read in the results' section which equations were used??]
 
 \subsection{SIR Model with Lockdown}
 Now that, a simple SIR model has been established -- we need to model the effects of the stringency index (measure for the strictness of lockdown) on $\beta$ (the effective transmission rate). To do this, we say the flow of susceptibles not only depend on $\beta$ but also $s(t)$ the stringency index at time~\cite{NBERw26867,AlvarezLockdownSIR,SIRLockdown,SIRLockdown2,analytical_covid_lockdown_model}. The stringency index is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)~\cite{owidcoronavirus}. This index simply records the strictness of government policies and does not measure or imply the appropriateness or effectiveness of a country's response i.e., a higher score does not necessarily mean that a country's response is "better" than others lower on the index.
@@ -183,6 +185,7 @@ Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor
 \end{equation}
 \begin{equation}
   \begin{split}
+    R_0 = \frac{\beta_{optimal}}{\gamma_{optimal}} (1 - s(t)) \\
     \overbar{R_0} = 1.693 \quad \text{(Mean)} \\
     \widetilde{R_0} = 1.624 \quad \text{(Median)} \\
     \text{Mode}(R_0) = 0.804 \quad \text{(Mode)} \\
@@ -199,6 +202,9 @@ Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor
   \textrm{loss\_I} = 11345389.686
   \label{eq:cost_I_with_lockdown}
 \end{equation}
+See \cref{
+  fig:SIR_model_with_lockdown_IND_parent} to see how the model compares with the actual data. 
+
 \subsection{SIR Model with Lockdown and Vaccination}
 Lastly, an additional flow from the susceptible to recovered population can be shown by adding a vaccination rate $\nu$ in the model. 
 \begin{equation}
@@ -228,6 +234,7 @@ Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
 \end{equation}
 \begin{equation}
   \begin{split}
+    R_0 = \frac{\beta_{optimal}}{\gamma_{optimal}} (1 - s(t)) \\
     \overbar{R_0} = 1.691 \\
     \widetilde{R_0} = 1.623 \\
     \text{Mode}(R_0) = 0.803 \\
@@ -246,7 +253,7 @@ Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
 \end{equation}
 
 \subsection{Optimizing Window Length for Time-varying Vaccination Rate}\label{optimizing_window_length}
-However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible and the overestimation of infected individuals in \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_IND} suggests that $\nu$ might be varying with time. This suggests to accurately estimate the infected population a time-varying vaccination rate should be used as the transition from susceptibility to direct recovery fluctuates with time~\cite{Liang2021,Marinov2022}. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \cref{eq:beta_optimal_with_lockdown_and_nu} and \cref{eq:gamma_optimal_with_lockdown_and_nu}, we first find the optimal window length~\cite{Liao2020} for which the value of $\nu$ is constant and results in the least loss from \cref{eq:cost_SIR,eq:cost_I}. Using different window lengths ($\textrm{window\_length} = 5, 10, 15 \dots 40, 45, 50$), we estimate value of $\nu$ given a sub-interval of $[{start}, {start} + {window\_length}]$ then for the next time-step $[{start} + {window\_length}, {start} + {window\_length} + {window\_length}]$ we again estimate $\nu$ -- so on and so forth. It is crucial to note that the variable $\nu$ is constrained to be a positive integer, reflecting the inherent one-way nature of vaccination: individuals can only receive vaccinations, not return them.
+However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible and the overestimation of infected individuals in \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_IND} suggests that $\nu$ might be varying with time. This suggests to accurately estimate the infected population a time-varying vaccination rate should be used as the transition from susceptibility to direct recovery fluctuates with time~\cite{Liang2021,Marinov2022}. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \cref{eq:beta_optimal_with_lockdown_and_nu} and \cref{eq:gamma_optimal_with_lockdown_and_nu}, we first find the optimal window length~\cite{Liao2020} for which the value of $\nu$ is constant and results in the least loss from \cref{eq:cost_SIR,eq:cost_I}. Using different window lengths ($\textrm{window\_length} = 5, 10, 15 \dots 40, 45, 50 \textrm{days}$), we estimate value of $\nu$ given a sub-interval of $[{start}, {start} + {window\_length}]$ going through the entire data, i.e., $\nu_{optimal}$ is constant only for a specific time window. For example, if the entire data period is 100 days, and the window length is 10 days, then $\nu$ is estimated for days $1-10$, then for days $11-20$, and so on. It is crucial to note that the variable $\nu$ is constrained to be a positive integer, reflecting the inherent one-way nature of vaccination: individuals can only receive vaccinations, not return them.
 \begin{equation}
   \frac{dS}{dt} = -\beta_{optimal}  (1 - s(t)/100)  \frac{S I}{N} - \nu S
   \label{eq:S_with_lockdown_and_nu_calc_nu}
@@ -291,6 +298,10 @@ The results in \cref{fig:window_length_loss_IND}, indicate that a window length 
 % This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 
+See \cref{
+  
+fig:SIR_model_with_lockdown_with_vaccination_IND_parent} to see how the model compares with the actual data.
+
 \subsection{SIR Model with Lockdown and Time-varying Vaccination Rate}
 Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR model that includes lockdown measures, resulting in the following set of equations, which represents our final model:
 \begin{figure}[htbp!]
@@ -329,6 +340,17 @@ Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR mod
 \end{equation}
 \begin{equation}
   \begin{split}
+    \overbar{\nu_{optimal}} = 0.001 \\
+    \widetilde{\nu_{optimal}} = 0.001 \\
+    \text{Mode}(\nu_{optimal}) = 0.000 \\
+    \sigma_{\nu_{optimal}} = 0.002 \\
+    \nu_{optimal} \in [0.000, 0.006]
+  \end{split}
+  \label{eq:nu_optimal_with_lockdown_and_time_varying_nu}
+\end{equation}
+\begin{equation}
+  \begin{split}
+    R_0 = \frac{\beta_{optimal}}{\gamma_{optimal}} (1 - s(t)) \\
     \overbar{R_0} = 1.546 \\
     \widetilde{R_0} = 1.483 \\
     \text{Mode}(R_0) = 0.734 \\
@@ -345,7 +367,7 @@ Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR mod
   \textrm{loss\_I} = 658537.443
   \label{eq:cost_I_with_lockdown_and_time_varying_nu}
 \end{equation}
-See \Crefrange{fig:SIR_model_with_lockdown_IND_parent}{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND_parent} and \cref{fig:comparing_costs_IND_parent} to see how the different models compare against each other.
+See \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND_parent} to see how the model compares with the actual data and \cref{fig:comparing_costs_IND_parent} to see how the different models compare against each other.
 
 \subsection{Modelling Normalized GDP with Stringency}
 Now, that a relation between $\beta$ and $s(t)$ is set up, it must be investigated how stringency index affects the normalized gross domestic product (GDP)~\cite{OECDNormalizedGDP,OECDNormalizedGDP2}. To do this a polynomial equation of the third degree is fitted to the data points $f(x) = a x^3 + b x^2 + c x + d = y$, here, $x$ is the stringency ($s$), and $y$ the normalized GDP, and we minimize the squared error to find the values of coefficients $a, b, c, d$. For India after fitting a 3 degree polynomial, the following equation is obtained:
@@ -556,7 +578,7 @@ While non-pharmaceutical interventions (NPIs) can effectively manage the epidemi
     \caption{Normalized GDP modelled with Stringency for Brazil}
     \label{fig:gdp_modelled_with_stringency_BRA}
   \end{subfigure}
-  \caption{\textbf{Stringency and GDP for Developing Economies.} For countries with developing economies, when we model the normalized GDP with stringency we see significant p-values and high r2 scores.}
+  \caption{\textbf{Stringency and GDP for Developing Economies.} Here, "(actual)" is the real data, "(modelled)" is the model for normalized GDP given the stringency. For countries with developing economies, when we model the normalized GDP with stringency we see significant p-values and high r2 scores.}
   \label{fig:stringency_gdp_developing}
 \end{figure}
 
@@ -601,7 +623,7 @@ While non-pharmaceutical interventions (NPIs) can effectively manage the epidemi
     \caption{Normalized GDP modelled with Stringency for Canada}
     \label{fig:gdp_modelled_with_stringency_CAN}
   \end{subfigure}
-  \caption{\textbf{Stringency and GDP for Advanced Economies.} In economically advanced nations, when modeling the normalized GDP against stringency measures, we observe substantial p-values, providing evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies (\Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.}
+  \caption{\textbf{Stringency and GDP for Advanced Economies.} Here, "(actual)" is the real data, "(modelled)" is the model for normalized GDP given the stringency. In economically advanced nations, when modeling the normalized GDP against stringency measures, we observe substantial p-values, providing evidence against the null hypothesis. However, the significance levels are not as high as those found for developing economies (\Crefrange{fig:stringency_vs_gdp_IND}{fig:gdp_modelled_with_stringency_BRA}). This is reflected in the lower R-squared scores, which indicates that the relationship between these variables may be less pronounced when compared to developing economies.}
   \label{fig:stringency_gdp_advanced}
 \end{figure}
 
@@ -704,15 +726,16 @@ After median filtering to smooth the output (to reinforce the negative reward fr
 In contrast, an alternative output is presented in \cref{fig:175975_parent}, which demonstrates a gradual increase in stringency from October, 2020 till April, 2021. This strategy results in a decline of infections occurring prior to the vaccine's release, and a subsequent cessation of new infections. This approach, however, has implications for the normalized GDP, as seen by the observed decline in \cref{fig:175975_rl_gdp}. While both these approaches (\cref{fig:175975_parent,fig:176647_parent}) outperform the actual strategy, they underscore the complexity of managing public health crises and the need for careful strategic planning to balance health outcomes with economic considerations.
 
 \section{Discussion}
-The paper seeks to inspire epidemiologists by highlighting the advancements achieved through the application of reinforcement learning in policy making during the pandemic. We introduce a virtual environment that closely simulates a pandemic scenario and thoroughly explore innovative strategies for disease mitigation using reinforcement learning. Our proposed approach demonstrates compelling efficacy in achieving optimal decision-making, effectively balancing the formidable challenges posed by the pandemic and economic considerations. We are confident that this research contribution will forge a connection between epidemic studies and reinforcement learning, offering valuable insights that will help humanity better defend against potential pandemic crises in the future.
+The paper seeks to inspire epidemiologists by highlighting the advancements achieved through the application of reinforcement learning in policymaking during the pandemic. We introduce a virtual environment that closely simulates a pandemic scenario and thoroughly explore innovative strategies for disease mitigation using reinforcement learning. Our proposed approach demonstrates compelling efficacy in achieving optimal decision-making, effectively balancing the formidable challenges posed by the pandemic and economic considerations. We are confident that this research contribution will forge a connection between epidemic studies and reinforcement learning, offering valuable insights that will help humanity better defend against potential pandemic crises in the future.
 
 \section{Experiment Settings}
 \subsection{Dataset}
-The population-level epidemiological data can be obtained from the 'Our World In Data COVID-19' dataset: \url{https://ourworldindata.org/coronavirus} or more specifically: \url{https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv}~\cite{owidcoronavirus}. Data for the total cases, and recovered was acquired by scraping the Worldometers website~\cite{WorldometerCorona} used Internet Archive~\cite{InternetArchive}. Quaterly GDP data can be obtained from the 'Organisation for Economic Co-operation and Development': \url{https://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database_data-00052-en}~\cite{economic_indicators_data}.
+The population-level epidemiological data can be obtained from the "Our World In Data COVID-19" dataset: \url{https://ourworldindata.org/coronavirus} or more specifically: \url{https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data.csv}~\cite{owidcoronavirus}. Data for the total cases, and recovered was acquired by scraping the Worldometers website~\cite{WorldometerCorona} used Internet Archive~\cite{InternetArchive}. Quaterly GDP data can be obtained from the "Organisation for Economic Co-operation and Development": \url{https://www.oecd-ilibrary.org/economics/data/main-economic-indicators/main-economic-indicators-complete-database_data-00052-en}~\cite{economic_indicators_data}.
 
 \subsection{Code}
-We used stable-baseline3~\cite{JMLR:v22:20-1364}, Pytorch~\cite{paszke2019pytorch}, Scipy~\cite{Virtanen_2020}, Pandas, Matplotlib, in Python~\cite{ScientificPython}.
-Code: \url{https://github.com/psymbio/sir_rl}
+% We used stable-baseline3~\cite{JMLR:v22:20-1364}, Pytorch~\cite{paszke2019pytorch}, Scipy~\cite{Virtanen_2020}, Pandas, Matplotlib, in Python~\cite{ScientificPython}.
+All code and data will be made open source upon acceptance of the paper.
+% Code: \url{https://github.com/psymbio/sir_rl}
 % \bibliographystyle{plain}
 % \bibliographystyle{apalike}
 \bibliography{newsample}
