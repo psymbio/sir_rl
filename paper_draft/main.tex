@@ -126,13 +126,13 @@ To estimate the parameters $\beta$ and $\gamma$ for India, based on the data fro
 In the above equation, $y$ is the actual data and $f(x)$ is the prediction.
 \begin{equation}
   \begin{split}
-  \textrm{loss\_SIR} = \textrm{cost\_function\_SIR}(S, \hat{S}, I, \hat{I}, R, \hat{R}) \\
+  loss\_SIR = \textrm{cost\_function\_SIR}(S, \hat{S}, I, \hat{I}, R, \hat{R}) \\
   = L_{\delta = 1}(S, \hat{S}) + L_{\delta = 1}(I, \hat{I}) + L_{\delta = 1}(R, \hat{R})
   \end{split}
   \label{eq:cost_SIR}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_I} = \textrm{cost\_function\_I}(I, \hat{I}) = L_{\delta = 1}(I, \hat{I})
+  loss\_I = \textrm{cost\_function\_I}(I, \hat{I}) = L_{\delta = 1}(I, \hat{I})
   \label{eq:cost_I}
 \end{equation}
 Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted number of susceptible people, similarly, $I$ for infected and $\hat{I}$ for the predicted number of infected people, and $R$ for recovered. Using the equations \Crefrange{eq:S_without_lockdown}{eq:R_without_lockdown}, we minimize the cost function \cref{eq:cost_SIR_without_lockdown} using the Nelder-Mead method~\cite{Gao2010} to estimate the parameters like $\beta$, $\gamma$, and fit the model to actual data. The following parameters and loss is obtained:
@@ -149,11 +149,11 @@ Where, $S$ is the number of susceptible people and $\hat{S}$ is the predicted nu
   \label{eq:r0_without_lockdown}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_SIR} = 85051490.533
+  loss\_SIR = 85051490.533
   \label{eq:cost_SIR_without_lockdown}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_I} = 45187665.281
+  loss\_I = 45187665.281
   \label{eq:cost_I_without_lockdown}
 \end{equation}
 See \cref{fig:SIR_model_IND_parent} to see how the model compares with the actual data. 
@@ -196,15 +196,14 @@ Where, $s(t)$ is the stringency index at time $t$ and is scaled down by a factor
   \label{eq:r0_with_lockdown}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_SIR} = 98438821.456
+  loss\_SIR = 98438821.456
   \label{eq:cost_SIR_with_lockdown}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_I} = 11345389.686
+  loss\_I = 11345389.686
   \label{eq:cost_I_with_lockdown}
 \end{equation}
-See \cref{
-  fig:SIR_model_with_lockdown_IND_parent} to see how the model compares with the actual data. 
+See \cref{fig:SIR_model_with_lockdown_IND_parent} to see how the model compares with the actual data. 
 
 \subsection{SIR Model with Lockdown and Vaccination}
 Lastly, an additional flow from the susceptible to recovered population can be shown by adding a vaccination rate $\nu$ in the model. 
@@ -245,16 +244,17 @@ Optimizing these equations with \cref{eq:cost_SIR} using the Nelder-Mead method:
   \label{eq:r0_with_lockdown_and_nu}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_SIR} = 94636860.384
+  loss\_SIR = 94636860.384
   \label{eq:cost_SIR_with_lockdown_and_nu}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_I} = 10840360.995
+  loss\_I = 10840360.995
   \label{eq:cost_I_with_lockdown_and_nu}
 \end{equation}
 
 \subsection{Optimizing Window Length for Time-varying Vaccination Rate}\label{optimizing_window_length}
-However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible and the overestimation of infected individuals in \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_IND} suggests that $\nu$ might be varying with time. This suggests to accurately estimate the infected population a time-varying vaccination rate should be used as the transition from susceptibility to direct recovery fluctuates with time~\cite{Liang2021,Marinov2022}. Therefore, using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \cref{eq:beta_optimal_with_lockdown_and_nu} and \cref{eq:gamma_optimal_with_lockdown_and_nu}, we first find the optimal window length~\cite{Liao2020} for which the value of $\nu$ is constant and results in the least loss from \cref{eq:cost_SIR,eq:cost_I}. Using different window lengths ($\textrm{window\_length} = 5, 10, 15 \dots 40, 45, 50 \textrm{days}$), we estimate value of $\nu$ given a sub-interval of $[{start}, {start} + {window\_length}]$ going through the entire data, i.e., $\nu_{optimal}$ is constant only for a specific time window. For example, if the entire data period is 100 days, and the window length is 10 days, then $\nu$ is estimated for days $1-10$, then for days $11-20$, and so on. It is crucial to note that the variable $\nu$ is constrained to be a positive integer, reflecting the inherent one-way nature of vaccination: individuals can only receive vaccinations, not return them.
+However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_with_lockdown_and_nu} which is almost negligible and the overestimation of infected individuals in \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_IND} suggests that $\nu$ might be varying with time. This suggests to accurately estimate the infected population a time-varying vaccination rate should be used as the transition from susceptibility to direct recovery fluctuates with time~\cite{Liang2021,Marinov2022}. We first find the optimal window length~\cite{Liao2020} for which the value of $\nu$ is constant for a time sub-interval and results in the least loss from \cref{eq:cost_SIR,eq:cost_I}. For this we use different window lengths ($window\_lengths = 5, 10, 15 \dots 40, 45, 50 \textrm{ days}$).
+
 \begin{equation}
   \frac{dS}{dt} = -\beta_{optimal}  (1 - s(t)/100)  \frac{S I}{N} - \nu S
   \label{eq:S_with_lockdown_and_nu_calc_nu}
@@ -267,8 +267,24 @@ However, as observed by the value of $\nu_{optimal}$ from \cref{eq:nu_optimal_wi
   \frac{dR}{dt} = \gamma_{optimal} I + \nu S
   \label{eq:R_with_lockdown_and_nu_calc_nu}
 \end{equation}
-% This model gives shows how $\nu$ varies with time. Since, the window length acts like a hyperparameter, we can try different window lengths in order to evaluate which would give us the best results. Therefore, the below graphs show us the loss using \cref{eq:cost_SIR,eq:cost_I}.
 
+Using the model described by \Crefrange{eq:S_with_lockdown_and_nu_calc_nu}{eq:R_with_lockdown_and_nu_calc_nu} for each $window\_length_{i}$ in $window\_lengths$, where $i = 1, 2, 3 \dots 10$, we calculate the $time\_varying\_\nu$. For each $time\_varying\_\nu$ we then calculate the $loss\_SIR$ and $loss\_I$. This is done as follows:
+
+\begin{enumerate}
+  \item Let $start = 1$ (initial start day), $time\_varying\_\nu = [ ]$ (empty list).
+  \item Repeat the following steps until $start + window\_length_{i}$ exceeds the total number of days in the data:
+  \begin{enumerate}
+    \item Estimate the value of $\nu$ for the sub-interval $[start, start + window\_length_{i}]$.
+    \item Update $start = start + window\_length_{i}$.
+    \item $time\_varying\_\nu.append(\nu)$
+  \end{enumerate}
+  \item Calculate $loss\_SIR$ and $loss\_I$ using the $time\_varying\_\nu$ using the $\beta_{optimal}$ and $\gamma_{optimal}$ from \cref{eq:beta_optimal_with_lockdown_and_nu} and \cref{eq:gamma_optimal_with_lockdown_and_nu}. The loss from the different $window\_lengths$ is compared in \cref{fig:window_length_loss_IND}.
+\end{enumerate}
+
+Note that the variable $\nu$ is constrained to be a positive integer, reflecting the inherent one-way nature of vaccination: individuals can only receive vaccinations, not return them.
+
+% , we estimate value of $\nu$ given a sub-interval of $[{start}, {start} + {window\_length}]$ going through the entire data, i.e., $\nu_{optimal}$ is constant only for a specific time window. For example, if the entire data period is 100 days, and the window length is 10 days, then $\nu$ is estimated for days $1-10$, then for days $11-20$, and so on.
+% This model gives shows how $\nu$ varies with time. Since, the window length acts like a hyperparameter, we can try different window lengths in order to evaluate which would give us the best results. Therefore, the below graphs show us the loss using \cref{eq:cost_SIR,eq:cost_I}.
 \begin{figure}[htbp!]
   \begin{subfigure}[t]{0.48\textwidth}
     \centering
@@ -299,9 +315,7 @@ The results in \cref{fig:window_length_loss_IND}, indicate that a window length 
 % This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine,PIBCovidVaccine,WikipediaCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 This \cref{fig:interpolated_nu_varying_with_time_IND} shows us that the $\nu$ coincides with the actual of data of when the vaccination drive was first launched in India~\cite{UnicefCovidVaccine}. Therefore, using these values we finally, recompute $\beta_{optimal}$ and $\gamma_{optimal}$ by supplying them into the equations for the SIR Model with lockdown and time-varying $\nu$.
 
-See \cref{
-  
-fig:SIR_model_with_lockdown_with_vaccination_IND_parent} to see how the model compares with the actual data.
+See \cref{fig:SIR_model_with_lockdown_with_vaccination_IND_parent} to see how the model compares with the actual data.
 
 \subsection{SIR Model with Lockdown and Time-varying Vaccination Rate}
 Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR model that includes lockdown measures, resulting in the following set of equations, which represents our final model:
@@ -361,11 +375,11 @@ Finally, we integrate the time-varying vaccination rate ($\nu$) into the SIR mod
   \label{eq:r0_with_lockdown_and_time_varying_nu}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_SIR} = 29116762.926
+  loss\_SIR = 29116762.926
   \label{eq:cost_SIR_with_lockdown_and_time_varying_nu}
 \end{equation}
 \begin{equation}
-  \textrm{loss\_I} = 658537.443
+  loss\_I = 658537.443
   \label{eq:cost_I_with_lockdown_and_time_varying_nu}
 \end{equation}
 See \cref{fig:SIR_model_with_lockdown_with_vaccination_infections_time_varying_nu_IND_parent} to see how the model compares with the actual data and \cref{fig:comparing_costs_IND_parent} to see how the different models compare against each other.
